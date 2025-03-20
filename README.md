@@ -1,5 +1,6 @@
 - [**March Madness Predictor**](#march-madness-predictor)
   - [**Project Purpose**](#project-purpose)
+  - [**Kaggle Data Links**](#kaggle-data-links)
   - [**Navigating the Repo**](#navigating-the-repo)
     - [**Data**](#data)
       - [**CurrentData**](#currentdata)
@@ -11,6 +12,16 @@
 ## **Project Purpose**
 - This project is an attempt at predicting the March Madness NCAA tournament perfectly
 - At the very least this is supposed to be more accurate than a person's surface-level analysis and projection
+## **Kaggle Data Links**
+- https://www.kaggle.com/datasets/nishaanamin/march-madness-data
+- https://www.kaggle.com/code/nishaanamin/bracketology-part-1-upset-stats
+- https://www.kaggle.com/code/nishaanamin/bracketology-part-2-confs-seeds-regions
+- https://www.kaggle.com/code/nishaanamin/bracketology-part-3-heatmaps-archetypes
+- https://www.kaggle.com/code/nishaanamin/bracketology-part-4-miscellaneous
+- https://www.kaggle.com/code/nishaanamin/bracketology-part-5-seed-matchups
+- https://www.kaggle.com/code/nishaanamin/bracketology-part-6-team-stats
+- https://www.kaggle.com/code/nishaanamin/bracketology-part-7-machine-learning-model
+
 ## **Navigating the Repo**
 ### **Data** 
 - Houses all the data files that will be used for training the model
