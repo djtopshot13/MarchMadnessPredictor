@@ -13,6 +13,10 @@ from sklearn.metrics import accuracy_score, classification_report
 
 import xgboost as xgb
 
+from pycaret.classification import *
+
+
+
 # =============================================================================
 # 1. Data Collection and Data Cleaning
 # =============================================================================
@@ -91,6 +95,11 @@ for idx, row in tourney_results.iterrows():
 training_df = pd.DataFrame(training_rows)
 print("Training dataset shape:", training_df.shape)
 print(training_df.head())
+
+s = setup(training_df, target='Target', session_id=123)
+
+# Compare models
+best_model = compare_models()
 
 # =============================================================================
 # 3. Model Training & Evaluation
