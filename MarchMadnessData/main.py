@@ -19,7 +19,7 @@ import xgboost as xgb
 
 # Load additional NCAA datasets
 team_spellings = pd.read_csv('MTeamSpellings.csv')
-tourney_seeds = pd.read_csv('../MarchMadnessData/MNCAATourneySeeds.csv')
+tourney_seeds = pd.read_csv('MNCAATourneySeeds.csv')
 team_conferences = pd.read_csv('../MarchMadnessData/MTeamConferences.csv')
 reg_results = pd.read_csv('../MarchMadnessData/MRegularSeasonDetailedResults.csv')
 tourney_results = pd.read_csv('../MarchMadnessData/MNCAATourneyCompactResults.csv')
