@@ -15,18 +15,16 @@ import xgboost as xgb
 
 from pycaret.classification import *
 
-
-
 # =============================================================================
 # 1. Data Collection and Data Cleaning
 # =============================================================================
 
 # Load additional NCAA datasets
-team_spellings = pd.read_csv('MTeamSpellings.csv')
-tourney_seeds = pd.read_csv('MNCAATourneySeeds.csv')
-team_conferences = pd.read_csv('../MarchMadnessData/MTeamConferences.csv')
-reg_results = pd.read_csv('../MarchMadnessData/MRegularSeasonDetailedResults.csv')
-tourney_results = pd.read_csv('../MarchMadnessData/MNCAATourneyCompactResults.csv')
+team_spellings = pd.read_csv('MarchMadnessData/MTeamSpellings.csv')
+tourney_seeds = pd.read_csv('MarchMadnessData/MNCAATourneySeeds.csv')
+team_conferences = pd.read_csv('MarchMadnessData/MTeamConferences.csv')
+reg_results = pd.read_csv('MarchMadnessData/MRegularSeasonDetailedResults.csv')
+tourney_results = pd.read_csv('MarchMadnessData/MNCAATourneyCompactResults.csv')
 
 # ----------------------------
 # Process Regular Season Data
