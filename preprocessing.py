@@ -95,10 +95,69 @@ def clean_ncaa_tourney_compact_results():
     ntcr_df["WName"] = ntcr_df["WTeamID"].map(team_dict)
     ntcr_df["LName"] = ntcr_df["LTeamID"].map(team_dict)
 
-
-    
     write_data(ntcr_df, filepath)
+
+def clean_ncaa_tourney_detailed_results():
+
+    filepath = "MarchMadnessData/MNCAATourneyDetailedResults.csv"
+    ntdr_df = load_data(filepath)
+
+    ntdr_df.drop(columns=["LName", "WName"], inplace=True)
+
+    ntdr_df.insert(column="WName", loc=2, value=None)
+    ntdr_df.insert(column="LName", loc=5, value=None)
+
+    # Create dictionaries for to populate team names properly to their respective names
+    team_dict = dict(zip(teams_df.TeamID, teams_df.TeamName))
+
+    ntdr_df["WName"] = ntdr_df["WTeamID"].map(team_dict)
+    ntdr_df["LName"] = ntdr_df["LTeamID"].map(team_dict)
+
+    write_data(ntdr_df, filepath)
+
+def clean_tourney_seeds():
+    filepath = "MarchMadnessData/MNCAATourneySeeds.csv"
+
+    ts_df = load_data(filepath)
+    ts_df.drop(columns=["TeamName"], inplace=True)
+
+    ts_df.insert(column="TeamName", loc=2, value=None)
+
+    team_dict = dict(zip(teams_df.TeamID, teams_df.TeamName))
+    ts_df["TeamName"] = ts_df["TeamID"].map(team_dict)
+
+    write_data(ts_df, filepath)
+
+"""
+Look at getting the tournament values populated past the first round possibly 
+for modeling the tournament results more easily. Use the NCAATourneyCompactResults.csv
+to find the winning teams and get the proper round mapping for the winning team to be used
+"""
+def clean_tourney_slots():
+    filepath = "MarchMadnessData/MNCAATourneySlots.csv"
+    tsl_df = load_data(filepath)
+
+    tsl_df.drop(columns=["StrongTeamName", "WeakTeamName"], inplace=True)
+
+    ts_df = load_data("MarchMadnessData/MNCAATourneySeeds.csv")
+    tsl_df.insert(column="StrongTeamName", loc=2, value=None)
+    tsl_df.insert(column="WeakTeamName", loc=4, value=None)
+
+    ts_dict = {}
+    for _, row in ts_df.iterrows():
+        if row['Season'] not in ts_dict:
+            ts_dict[row['Season']] = {}
+        ts_dict[row['Season']][row['Seed']] = row['TeamName']
+
+    tsl_df['StrongTeamName'] = tsl_df.apply(lambda row: ts_dict.get(row['Season'], {}).get(row['StrongSeed']), axis=1)
+    tsl_df['WeakTeamName'] = tsl_df.apply(lambda row: ts_dict.get(row['Season'], {}).get(row['WeakSeed']), axis=1)
+
+
+    write_data(tsl_df, filepath)
 
 # clean_tourney_games()
 # clean_game_cities()
-clean_ncaa_tourney_compact_results()
+# clean_ncaa_tourney_compact_results()
+# clean_ncaa_tourney_detailed_results()
+# clean_tourney_seeds()
+clean_tourney_slots()
