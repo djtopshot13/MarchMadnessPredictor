@@ -20,6 +20,7 @@
 # """)
 
 import pandas as pd
+import re
 
 def load_data(file_path):
     return pd.read_csv(file_path)
@@ -155,9 +156,124 @@ def clean_tourney_slots():
 
     write_data(tsl_df, filepath)
 
+def clean_regular_season_compact_results():
+    filepath = "MarchMadnessData/MRegularSeasonCompactResults.csv"
+    rsc_df = load_data(filepath)
+
+    rsc_df.drop(columns=["LName", "WName"], inplace=True)
+
+    rsc_df.insert(column="WName", loc=2, value=None)
+    rsc_df.insert(column="LName", loc=5, value=None)
+
+    # Create dictionaries for to populate team names properly to their respective names
+    team_dict = dict(zip(teams_df.TeamID, teams_df.TeamName))
+
+    rsc_df["WName"] = rsc_df["WTeamID"].map(team_dict)
+    rsc_df["LName"] = rsc_df["LTeamID"].map(team_dict)
+
+    write_data(rsc_df, filepath)
+
+def clean_regular_season_detailed_results():
+
+    filepath = "MarchMadnessData/MRegularSeasonDetailedResults.csv"
+    rsd_df = load_data(filepath)
+
+    rsd_df.drop(columns=["LName", "WName"], inplace=True)
+
+    rsd_df.insert(column="WName", loc=2, value=None)
+    rsd_df.insert(column="LName", loc=5, value=None)
+
+    # Create dictionaries for to populate team names properly to their respective names
+    team_dict = dict(zip(teams_df.TeamID, teams_df.TeamName))
+
+    rsd_df["WName"] = rsd_df["WTeamID"].map(team_dict)
+    rsd_df["LName"] = rsd_df["LTeamID"].map(team_dict)
+
+    write_data(rsd_df, filepath)
+
+def clean_seasons():
+    filepath = "MarchMadnessData/MSeasons.csv"
+    s_df = load_data(filepath)
+
+    s_df.drop(columns=["SeasonStart","SeasonEnd"], inplace=True)
+
+    s_df.insert(column="SeasonStart", loc=1, value=None)
+    s_df.insert(column="SeasonEnd", loc=2, value=None)
+
+    s_df["SeasonStart"] = pd.to_datetime(s_df["DayZero"])
+    s_df["SeasonEnd"] = pd.to_datetime(s_df["DayZero"]) + pd.to_timedelta(154, unit='D')
+
+    s_df.drop(columns=["DayZero"], inplace=True)
+    
+    write_data(s_df, filepath)
+
+
+def capitalize_name(name):
+    # Split the name into parts
+    parts = re.split(r'[_\s]+', name)
+    
+    # Capitalize each part, with special handling for 'mc' and apostrophes
+    capitalized_parts = []
+    for part in parts:
+        # Handle 'mc' prefix
+        if part.lower().startswith('mc'):
+            part = 'Mc' + part[2].upper() + part[3:]
+        else:
+            # Split by apostrophe and capitalize each subpart
+            subparts = part.split("'")
+            part = "'".join(subpart.capitalize() for subpart in subparts)
+        
+        capitalized_parts.append(part)
+    
+    return ' '.join(capitalized_parts)
+
+
+
+
+def clean_team_coaches():
+    filepath = "MarchMadnessData/MTeamCoaches.csv"
+    tc_df = load_data(filepath)
+
+    tc_df.drop(columns=["TeamName"], inplace=True)
+
+    tc_df.insert(column="TeamName", loc=1, value=None)
+
+    team_dict = dict(zip(teams_df.TeamID, teams_df.TeamName))
+
+    tc_df["TeamName"] = tc_df["TeamID"].map(team_dict)
+
+    tc_df["CoachName"] = tc_df["CoachName"].apply(capitalize_name)
+
+    write_data(tc_df, filepath)
+
+def clean_team_conferences():
+    filepath = "MarchMadnessData/MTeamConferences.csv"
+    t_conf_df = load_data(filepath)
+    
+    t_conf_df.drop(columns=["TeamName", "ConfName"], inplace=True)
+
+    t_conf_df.insert(column="TeamName", loc=1, value=None)
+    t_conf_df.insert(column="ConfName", loc=4, value=None)
+
+    team_dict = dict(zip(teams_df.TeamID, teams_df.TeamName))
+    conf_dict = dict(zip(conf_df.ConfAbbrev, conf_df.Description))
+
+    t_conf_df["TeamName"] = t_conf_df["TeamID"].map(team_dict)
+    t_conf_df["ConfName"] = t_conf_df["ConfAbbrev"].map(conf_dict)
+    
+    write_data(t_conf_df, filepath)
+
+
 # clean_tourney_games()
 # clean_game_cities()
 # clean_ncaa_tourney_compact_results()
 # clean_ncaa_tourney_detailed_results()
+
 # clean_tourney_seeds()
-clean_tourney_slots()
+# ^^^This function needs some more proofing
+
+# clean_regular_season_compact_results()
+# clean_regular_season_detailed_results()
+# clean_seasons()
+# clean_team_coaches()
+clean_team_conferences()
