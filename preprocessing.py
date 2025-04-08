@@ -276,4 +276,4 @@ def clean_team_conferences():
 # clean_regular_season_detailed_results()
 # clean_seasons()
 # clean_team_coaches()
-clean_team_conferences()
+# clean_team_conferences()
