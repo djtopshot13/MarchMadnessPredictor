@@ -227,7 +227,16 @@ def capitalize_name(name):
     
     return ' '.join(capitalized_parts)
 
+def add_period_to_st(filepath, output_filepath):
+    # Load the data
+    df = pd.read_csv(filepath)
 
+    # Check if the column containing college names is named 'CollegeName'
+    if 'TeamName' in df.columns:
+        # Use regex to add a period after 'St' at the end of names
+        df['TeamName'] = df['TeamName'].str.replace(r'\bSt$', 'St.', regex=True)
+
+    write_data(df, output_filepath)
 
 
 def clean_team_coaches():
@@ -264,6 +273,7 @@ def clean_team_conferences():
     write_data(t_conf_df, filepath)
 
 
+add_period_to_st("MarchMadnessData/MTeams.csv", "MarchMadnessData/MTeams.csv")
 # clean_tourney_games()
 # clean_game_cities()
 # clean_ncaa_tourney_compact_results()
