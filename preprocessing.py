@@ -234,7 +234,7 @@ def add_period_to_st(filepath, output_filepath):
     # Check if the column containing college names is named 'CollegeName'
     if 'TeamName' in df.columns:
         # Use regex to add a period after 'St' at the end of names
-        df['TeamName'] = df['TeamName'].str.replace(r'\bSt$', 'St.', regex=True)
+        df['TeamName'] = df['TeamName'].str.replace(r'St\b ', 'St. ', regex=True)
 
     write_data(df, output_filepath)
 
@@ -274,16 +274,16 @@ def clean_team_conferences():
 
 
 add_period_to_st("MarchMadnessData/MTeams.csv", "MarchMadnessData/MTeams.csv")
-# clean_tourney_games()
-# clean_game_cities()
-# clean_ncaa_tourney_compact_results()
-# clean_ncaa_tourney_detailed_results()
+clean_tourney_games()
+clean_game_cities()
+clean_ncaa_tourney_compact_results()
+clean_ncaa_tourney_detailed_results()
 
-# clean_tourney_seeds()
+clean_tourney_seeds()
 # ^^^This function needs some more proofing
 
-# clean_regular_season_compact_results()
-# clean_regular_season_detailed_results()
+clean_regular_season_compact_results()
+clean_regular_season_detailed_results()
 # clean_seasons()
-# clean_team_coaches()
-# clean_team_conferences()
+clean_team_coaches()
+clean_team_conferences()

@@ -189,7 +189,7 @@ TeamID,TeamName,FirstD1Season,LastD1Season
 1288,Morgan St.,1985,2025
 1289,Morris Brown,2002,2003
 1290,MS Valley St.,1985,2025
-1291,Mt St Mary's,1989,2025
+1291,Mt St. Mary's,1989,2025
 1292,MTSU,1985,2025
 1293,Murray St.,1985,2025
 1294,N Colorado,2005,2025
@@ -280,14 +280,14 @@ TeamID,TeamName,FirstD1Season,LastD1Season
 1379,Southern Miss,1985,2025
 1380,Southern Univ,1985,2025
 1381,Southern Utah,1989,2025
-1382,St Bonaventure,1985,2025
-1383,St Francis NY,1985,2023
-1384,St Francis PA,1985,2025
-1385,St John's,1985,2025
-1386,St Joseph's PA,1985,2025
-1387,St Louis,1985,2025
-1388,St Mary's CA,1985,2025
-1389,St Peter's,1985,2025
+1382,St. Bonaventure,1985,2025
+1383,Saint Francis NY,1985,2023
+1384,Saint Francis PA,1985,2025
+1385,St. John's,1985,2025
+1386,Saint Joseph's,1985,2025
+1387,Saint Louis,1985,2025
+1388,Saint Mary's,1985,2025
+1389,Saint Peter's,1985,2025
 1390,Stanford,1985,2025
 1391,Stetson,1985,2025
 1392,Stony Brook,2000,2025
@@ -370,7 +370,7 @@ TeamID,TeamName,FirstD1Season,LastD1Season
 1469,Utah Tech,2021,2025
 1470,Tarleton St.,2021,2025
 1471,UC San Diego,2021,2025
-1472,St Thomas MN,2022,2025
+1472,St. Thomas MN,2022,2025
 1473,Lindenwood,2023,2025
 1474,Queens NC,2023,2025
 1475,Southern Indiana,2023,2025

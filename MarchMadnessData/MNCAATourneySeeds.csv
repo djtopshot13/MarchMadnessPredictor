@@ -9,13 +9,13 @@ Season,Seed,TeamName,TeamID
 1985,W08,Temple,1396
 1985,W09,Virginia Tech,1439
 1985,W10,DePaul,1177
-1985,W11,Wichita St,1455
+1985,W11,Wichita St.,1455
 1985,W12,Old Dominion,1330
 1985,W13,Iona,1233
 1985,W14,Northeastern,1318
 1985,W15,Mercer,1273
 1985,W16,Lehigh,1250
-1985,X01,St John's,1385
+1985,X01,St. John's,1385
 1985,X02,VCU,1433
 1985,X03,NC State,1301
 1985,X04,UNLV,1424
@@ -27,23 +27,23 @@ Season,Seed,TeamName,TeamID
 1985,X10,Arizona,1112
 1985,X11,UTEP,1431
 1985,X12,Kentucky,1246
-1985,X13,San Diego St,1361
+1985,X13,San Diego St.,1361
 1985,X14,Nevada,1305
 1985,X15,Marshall,1267
 1985,X16,Southern Univ,1380
 1985,Y01,Oklahoma,1328
 1985,Y02,Memphis,1272
 1985,Y03,Duke,1181
-1985,Y04,Ohio St,1326
+1985,Y04,Ohio St.,1326
 1985,Y05,Louisiana Tech,1256
 1985,Y06,Texas Tech,1403
 1985,Y07,UAB,1412
 1985,Y08,USC,1425
-1985,Y09,Illinois St,1229
-1985,Y10,Michigan St,1277
+1985,Y09,Illinois St.,1229
+1985,Y10,Michigan St.,1277
 1985,Y11,Boston College,1130
 1985,Y12,Pittsburgh,1338
-1985,Y13,Iowa St,1235
+1985,Y13,Iowa St.,1235
 1985,Y14,Pepperdine,1337
 1985,Y15,Penn,1335
 1985,Y16,NC A&T,1299
@@ -56,7 +56,7 @@ Season,Seed,TeamName,TeamID
 1985,Z07,Notre Dame,1323
 1985,Z08,Villanova,1437
 1985,Z09,Dayton,1173
-1985,Z10,Oregon St,1333
+1985,Z10,Oregon St.,1333
 1985,Z11,Auburn,1120
 1985,Z12,Miami OH,1275
 1985,Z13,Navy,1298
@@ -68,7 +68,7 @@ Season,Seed,TeamName,TeamID
 1986,W03,Indiana,1231
 1986,W04,Oklahoma,1328
 1986,W05,Virginia,1438
-1986,W06,St Joseph's PA,1386
+1986,W06,Saint Joseph's,1386
 1986,W07,Navy,1298
 1986,W08,Old Dominion,1330
 1986,W09,West Virginia,1452
@@ -76,16 +76,16 @@ Season,Seed,TeamName,TeamID
 1986,W11,Richmond,1350
 1986,W12,DePaul,1177
 1986,W13,Northeastern,1318
-1986,W14,Cleveland St,1156
+1986,W14,Cleveland St.,1156
 1986,W15,Brown,1135
-1986,W16,MS Valley St,1290
+1986,W16,MS Valley St.,1290
 1986,X01,Kansas,1242
 1986,X02,Michigan,1276
 1986,X03,Notre Dame,1323
 1986,X04,Georgetown,1207
-1986,X05,Michigan St,1277
+1986,X05,Michigan St.,1277
 1986,X06,NC State,1301
-1986,X07,Iowa St,1235
+1986,X07,Iowa St.,1235
 1986,X08,Jacksonville,1239
 1986,X09,Temple,1396
 1986,X10,Miami OH,1275
@@ -108,10 +108,10 @@ Season,Seed,TeamName,TeamID
 1986,Y11,LSU,1261
 1986,Y12,Xavier,1462
 1986,Y13,Fairfield,1193
-1986,Y14,Ball St,1123
+1986,Y14,Ball St.,1123
 1986,Y15,Marist,1265
 1986,Y16,Davidson,1172
-1986,Z01,St John's,1385
+1986,Z01,St. John's,1385
 1986,Z02,Louisville,1257
 1986,Z03,North Carolina,1314
 1986,Z04,UNLV,1424
@@ -126,7 +126,7 @@ Season,Seed,TeamName,TeamID
 1986,Z13,ULM,1419
 1986,Z14,Utah,1428
 1986,Z15,Drexel,1180
-1986,Z16,Montana St,1286
+1986,Z16,Montana St.,1286
 1987,W01,North Carolina,1314
 1987,W02,Syracuse,1393
 1987,W03,Purdue,1345
@@ -151,11 +151,11 @@ Season,Seed,TeamName,TeamID
 1987,X06,Providence,1344
 1987,X07,New Orleans,1309
 1987,X08,Kentucky,1246
-1987,X09,Ohio St,1326
+1987,X09,Ohio St.,1326
 1987,X10,BYU,1140
 1987,X11,UAB,1412
 1987,X12,Houston,1222
-1987,X13,Missouri St,1283
+1987,X13,Missouri St.,1283
 1987,X14,Austin Peay,1122
 1987,X15,NC A&T,1299
 1987,X16,Bucknell,1137
@@ -164,12 +164,12 @@ Season,Seed,TeamName,TeamID
 1987,Y03,DePaul,1177
 1987,Y04,Missouri,1281
 1987,Y05,Duke,1181
-1987,Y06,St John's,1385
+1987,Y06,St. John's,1385
 1987,Y07,Georgia Tech,1210
 1987,Y08,Auburn,1120
 1987,Y09,San Diego,1360
 1987,Y10,LSU,1261
-1987,Y11,Wichita St,1455
+1987,Y11,Wichita St.,1455
 1987,Y12,Texas A&M,1401
 1987,Y13,Xavier,1462
 1987,Y14,Louisiana Tech,1256
@@ -183,14 +183,14 @@ Season,Seed,TeamName,TeamID
 1987,Z06,Oklahoma,1328
 1987,Z07,UTEP,1431
 1987,Z08,Georgia,1208
-1987,Z09,Kansas St,1243
+1987,Z09,Kansas St.,1243
 1987,Z10,Arizona,1112
 1987,Z11,Tulsa,1409
 1987,Z12,Wyoming,1461
 1987,Z13,C Michigan,1141
 1987,Z14,Marist,1265
 1987,Z15,Santa Clara,1365
-1987,Z16,Idaho St,1226
+1987,Z16,Idaho St.,1226
 1988,W01,Temple,1396
 1988,W02,Duke,1181
 1988,W03,Syracuse,1393
@@ -202,7 +202,7 @@ Season,Seed,TeamName,TeamID
 1988,W09,LSU,1261
 1988,W10,Notre Dame,1323
 1988,W11,Rhode Island,1348
-1988,W12,Iowa St,1235
+1988,W12,Iowa St.,1235
 1988,W13,Richmond,1350
 1988,W14,NC A&T,1299
 1988,W15,Boston Univ,1131
@@ -210,17 +210,17 @@ Season,Seed,TeamName,TeamID
 1988,X01,Purdue,1345
 1988,X02,Pittsburgh,1338
 1988,X03,NC State,1301
-1988,X04,Kansas St,1243
+1988,X04,Kansas St.,1243
 1988,X05,DePaul,1177
 1988,X06,Kansas,1242
 1988,X07,Vanderbilt,1435
 1988,X08,Baylor,1124
 1988,X09,Memphis,1272
-1988,X10,Utah St,1429
+1988,X10,Utah St.,1429
 1988,X11,Xavier,1462
-1988,X12,Wichita St,1455
+1988,X12,Wichita St.,1455
 1988,X13,La Salle,1247
-1988,X14,Murray St,1293
+1988,X14,Murray St.,1293
 1988,X15,E Michigan,1185
 1988,X16,F Dickinson,1192
 1988,Y01,Oklahoma,1328
@@ -234,7 +234,7 @@ Season,Seed,TeamName,TeamID
 1988,Y09,Bradley,1133
 1988,Y10,UC Santa Barbara,1364
 1988,Y11,Arkansas,1116
-1988,Y12,Oregon St,1333
+1988,Y12,Oregon St.,1333
 1988,Y13,Charlotte,1150
 1988,Y14,UT San Antonio,1427
 1988,Y15,Southern Univ,1380
@@ -249,10 +249,10 @@ Season,Seed,TeamName,TeamID
 1988,Z08,Seton Hall,1371
 1988,Z09,UTEP,1431
 1988,Z10,Loy Marymount,1258
-1988,Z11,St John's,1385
-1988,Z12,Florida St,1199
-1988,Z13,Missouri St,1283
-1988,Z14,Boise St,1129
+1988,Z11,St. John's,1385
+1988,Z12,Florida St.,1199
+1988,Z13,Missouri St.,1283
+1988,Z14,Boise St.,1129
 1988,Z15,North Texas,1317
 1988,Z16,Cornell,1165
 1989,W01,Georgetown,1207
@@ -260,7 +260,7 @@ Season,Seed,TeamName,TeamID
 1989,W03,Stanford,1390
 1989,W04,Iowa,1234
 1989,W05,NC State,1301
-1989,W06,Kansas St,1243
+1989,W06,Kansas St.,1243
 1989,W07,West Virginia,1452
 1989,W08,Vanderbilt,1435
 1989,W09,Notre Dame,1323
@@ -269,22 +269,22 @@ Season,Seed,TeamName,TeamID
 1989,W12,South Carolina,1376
 1989,W13,Rutgers,1353
 1989,W14,Siena,1373
-1989,W15,S Carolina St,1354
+1989,W15,S Carolina St.,1354
 1989,W16,Princeton,1343
 1989,X01,Arizona,1112
 1989,X02,Indiana,1231
 1989,X03,Seton Hall,1371
 1989,X04,UNLV,1424
 1989,X05,Memphis,1272
-1989,X06,Oregon St,1333
+1989,X06,Oregon St.,1333
 1989,X07,UTEP,1431
-1989,X08,St Mary's CA,1388
+1989,X08,Saint Mary's,1388
 1989,X09,Clemson,1155
 1989,X10,LSU,1261
 1989,X11,Evansville,1191
 1989,X12,DePaul,1177
 1989,X13,Idaho,1225
-1989,X14,Missouri St,1283
+1989,X14,Missouri St.,1283
 1989,X15,George Mason,1206
 1989,X16,Robert Morris,1352
 1989,Y01,Illinois,1228
@@ -295,24 +295,24 @@ Season,Seed,TeamName,TeamID
 1989,Y06,Georgia Tech,1210
 1989,Y07,Florida,1196
 1989,Y08,Pittsburgh,1338
-1989,Y09,Ball St,1123
-1989,Y10,Colorado St,1161
+1989,Y09,Ball St.,1123
+1989,Y10,Colorado St.,1161
 1989,Y11,Texas,1400
 1989,Y12,Loy Marymount,1258
 1989,Y13,Ark Little Rock,1114
 1989,Y14,Creighton,1166
 1989,Y15,Bucknell,1137
-1989,Y16,McNeese St,1270
+1989,Y16,McNeese St.,1270
 1989,Z01,Oklahoma,1328
 1989,Z02,North Carolina,1314
 1989,Z03,Michigan,1276
-1989,Z04,Florida St,1199
+1989,Z04,Florida St.,1199
 1989,Z05,Virginia,1438
 1989,Z06,Alabama,1104
 1989,Z07,UCLA,1417
 1989,Z08,La Salle,1247
 1989,Z09,Louisiana Tech,1256
-1989,Z10,Iowa St,1235
+1989,Z10,Iowa St.,1235
 1989,Z11,South Alabama,1375
 1989,Z12,Providence,1344
 1989,Z13,MTSU,1292
@@ -324,7 +324,7 @@ Season,Seed,TeamName,TeamID
 1990,W03,Duke,1181
 1990,W04,La Salle,1247
 1990,W05,Clemson,1155
-1990,W06,St John's,1385
+1990,W06,St. John's,1385
 1990,W07,UCLA,1417
 1990,W08,Indiana,1231
 1990,W09,California,1143
@@ -343,15 +343,15 @@ Season,Seed,TeamName,TeamID
 1990,X06,Xavier,1462
 1990,X07,Georgia,1208
 1990,X08,North Carolina,1314
-1990,X09,Missouri St,1283
+1990,X09,Missouri St.,1283
 1990,X10,Texas,1400
-1990,X11,Kansas St,1243
+1990,X11,Kansas St.,1243
 1990,X12,Dayton,1173
 1990,X13,Princeton,1343
 1990,X14,TX Southern,1411
 1990,X15,ULM,1419
 1990,X16,Towson,1406
-1990,Y01,Michigan St,1277
+1990,Y01,Michigan St.,1277
 1990,Y02,Syracuse,1393
 1990,Y03,Missouri,1281
 1990,Y04,Georgia Tech,1210
@@ -365,29 +365,29 @@ Season,Seed,TeamName,TeamID
 1990,Y12,Villanova,1437
 1990,Y13,ETSU,1190
 1990,Y14,Northern Iowa,1320
-1990,Y15,Coppin St,1164
-1990,Y16,Murray St,1293
+1990,Y15,Coppin St.,1164
+1990,Y16,Murray St.,1293
 1990,Z01,UNLV,1424
 1990,Z02,Arizona,1112
 1990,Z03,Michigan,1276
 1990,Z04,Louisville,1257
-1990,Z05,Oregon St,1333
-1990,Z06,New Mexico St,1308
+1990,Z05,Oregon St.,1333
+1990,Z06,New Mexico St.,1308
 1990,Z07,Alabama,1104
-1990,Z08,Ohio St,1326
+1990,Z08,Ohio St.,1326
 1990,Z09,Providence,1344
-1990,Z10,Colorado St,1161
+1990,Z10,Colorado St.,1161
 1990,Z11,Loy Marymount,1258
-1990,Z12,Ball St,1123
+1990,Z12,Ball St.,1123
 1990,Z13,Idaho,1225
-1990,Z14,Illinois St,1229
+1990,Z14,Illinois St.,1229
 1990,Z15,South Florida,1378
 1990,Z16,Ark Little Rock,1114
 1991,W01,North Carolina,1314
 1991,W02,Syracuse,1393
-1991,W03,Oklahoma St,1329
+1991,W03,Oklahoma St.,1329
 1991,W04,UCLA,1417
-1991,W05,Mississippi St,1280
+1991,W05,Mississippi St.,1280
 1991,W06,NC State,1301
 1991,W07,Purdue,1345
 1991,W08,Princeton,1343
@@ -395,7 +395,7 @@ Season,Seed,TeamName,TeamID
 1991,W10,Temple,1396
 1991,W11,Southern Miss,1379
 1991,W12,E Michigan,1185
-1991,W13,Penn St,1336
+1991,W13,Penn St.,1336
 1991,W14,New Mexico,1307
 1991,W15,Richmond,1350
 1991,W16,Northeastern,1318
@@ -405,20 +405,20 @@ Season,Seed,TeamName,TeamID
 1991,X04,Alabama,1104
 1991,X05,Wake Forest,1448
 1991,X06,Pittsburgh,1338
-1991,X07,Florida St,1199
-1991,X08,Arizona St,1113
+1991,X07,Florida St.,1199
+1991,X08,Arizona St.,1113
 1991,X09,Rutgers,1353
 1991,X10,USC,1425
 1991,X11,Georgia,1208
 1991,X12,Louisiana Tech,1256
-1991,X13,Murray St,1293
+1991,X13,Murray St.,1293
 1991,X14,New Orleans,1309
 1991,X15,Coastal Car,1157
-1991,X16,Georgia St,1209
-1991,Y01,Ohio St,1326
+1991,X16,Georgia St.,1209
+1991,Y01,Ohio St.,1326
 1991,Y02,Duke,1181
 1991,Y03,Nebraska,1304
-1991,Y04,St John's,1385
+1991,Y04,St. John's,1385
 1991,Y05,Texas,1400
 1991,Y06,LSU,1261
 1991,Y07,Iowa,1234
@@ -426,7 +426,7 @@ Season,Seed,TeamName,TeamID
 1991,Y09,DePaul,1177
 1991,Y10,ETSU,1190
 1991,Y11,Connecticut,1163
-1991,Y12,St Peter's,1389
+1991,Y12,Saint Peter's,1389
 1991,Y13,N Illinois,1296
 1991,Y14,Xavier,1462
 1991,Y15,ULM,1419
@@ -435,8 +435,8 @@ Season,Seed,TeamName,TeamID
 1991,Z02,Arizona,1112
 1991,Z03,Seton Hall,1371
 1991,Z04,Utah,1428
-1991,Z05,Michigan St,1277
-1991,Z06,New Mexico St,1308
+1991,Z05,Michigan St.,1277
+1991,Z06,New Mexico St.,1308
 1991,Z07,Virginia,1438
 1991,Z08,Georgetown,1207
 1991,Z09,Vanderbilt,1435
@@ -445,7 +445,7 @@ Season,Seed,TeamName,TeamID
 1991,Z12,WI Green Bay,1453
 1991,Z13,South Alabama,1375
 1991,Z14,Pepperdine,1337
-1991,Z15,St Francis PA,1384
+1991,Z15,Saint Francis PA,1384
 1991,Z16,Montana,1285
 1992,W01,Duke,1181
 1992,W02,Kentucky,1246
@@ -456,7 +456,7 @@ Season,Seed,TeamName,TeamID
 1992,W07,Charlotte,1150
 1992,W08,Texas,1400
 1992,W09,Iowa,1234
-1992,W10,Iowa St,1235
+1992,W10,Iowa St.,1235
 1992,W11,Princeton,1343
 1992,W12,West Virginia,1452
 1992,W13,La Salle,1247
@@ -465,7 +465,7 @@ Season,Seed,TeamName,TeamID
 1992,W16,Campbell,1144
 1992,X01,UCLA,1417
 1992,X02,Indiana,1231
-1992,X03,Florida St,1199
+1992,X03,Florida St.,1199
 1992,X04,Oklahoma,1328
 1992,X05,DePaul,1177
 1992,X06,Georgetown,1207
@@ -474,7 +474,7 @@ Season,Seed,TeamName,TeamID
 1992,X09,Wake Forest,1448
 1992,X10,BYU,1140
 1992,X11,South Florida,1378
-1992,X12,New Mexico St,1308
+1992,X12,New Mexico St.,1308
 1992,X13,Louisiana,1418
 1992,X14,Montana,1285
 1992,X15,E Illinois,1183
@@ -483,25 +483,25 @@ Season,Seed,TeamName,TeamID
 1992,Y02,USC,1425
 1992,Y03,Arkansas,1116
 1992,Y04,Cincinnati,1153
-1992,Y05,Michigan St,1277
+1992,Y05,Michigan St.,1277
 1992,Y06,Memphis,1272
 1992,Y07,Georgia Tech,1210
 1992,Y08,Evansville,1191
 1992,Y09,UTEP,1431
 1992,Y10,Houston,1222
 1992,Y11,Pepperdine,1337
-1992,Y12,Missouri St,1283
+1992,Y12,Missouri St.,1283
 1992,Y13,Delaware,1174
-1992,Y14,Murray St,1293
+1992,Y14,Murray St.,1293
 1992,Y15,ULM,1419
 1992,Y16,Howard,1224
-1992,Z01,Ohio St,1326
-1992,Z02,Oklahoma St,1329
+1992,Z01,Ohio St.,1326
+1992,Z02,Oklahoma St.,1329
 1992,Z03,Arizona,1112
 1992,Z04,North Carolina,1314
 1992,Z05,Alabama,1104
 1992,Z06,Michigan,1276
-1992,Z07,St John's,1385
+1992,Z07,St. John's,1385
 1992,Z08,Nebraska,1304
 1992,Z09,Connecticut,1163
 1992,Z10,Tulane,1408
@@ -510,14 +510,14 @@ Season,Seed,TeamName,TeamID
 1992,Z13,Miami OH,1275
 1992,Z14,ETSU,1190
 1992,Z15,Ga Southern,1204
-1992,Z16,MS Valley St,1290
+1992,Z16,MS Valley St.,1290
 1993,W01,North Carolina,1314
 1993,W02,Cincinnati,1153
 1993,W03,Massachusetts,1269
 1993,W04,Arkansas,1116
-1993,W05,St John's,1385
+1993,W05,St. John's,1385
 1993,W06,Virginia,1438
-1993,W07,New Mexico St,1308
+1993,W07,New Mexico St.,1308
 1993,W08,Rhode Island,1348
 1993,W09,Purdue,1345
 1993,W10,Nebraska,1304
@@ -525,13 +525,13 @@ Season,Seed,TeamName,TeamID
 1993,W12,Texas Tech,1403
 1993,W13,Holy Cross,1221
 1993,W14,Penn,1335
-1993,W15,Coppin St,1164
+1993,W15,Coppin St.,1164
 1993,W16,East Carolina,1187
 1993,X01,Indiana,1231
 1993,X02,Kansas,1242
 1993,X03,Duke,1181
 1993,X04,Louisville,1257
-1993,X05,Oklahoma St,1329
+1993,X05,Oklahoma St.,1329
 1993,X06,California,1143
 1993,X07,BYU,1140
 1993,X08,New Orleans,1309
@@ -541,14 +541,14 @@ Season,Seed,TeamName,TeamID
 1993,X12,Marquette,1266
 1993,X13,Delaware,1174
 1993,X14,S Illinois,1356
-1993,X15,Ball St,1123
-1993,X16,Wright St,1460
+1993,X15,Ball St.,1123
+1993,X16,Wright St.,1460
 1993,Y01,Kentucky,1246
 1993,Y02,Seton Hall,1371
-1993,Y03,Florida St,1199
+1993,Y03,Florida St.,1199
 1993,Y04,Iowa,1234
 1993,Y05,Wake Forest,1448
-1993,Y06,Kansas St,1243
+1993,Y06,Kansas St.,1243
 1993,Y07,WKU,1443
 1993,Y08,Utah,1428
 1993,Y09,Pittsburgh,1338
@@ -557,7 +557,7 @@ Season,Seed,TeamName,TeamID
 1993,Y12,Chattanooga,1151
 1993,Y13,ULM,1419
 1993,Y14,Evansville,1191
-1993,Y15,Tennessee St,1398
+1993,Y15,Tennessee St.,1398
 1993,Y16,Rider,1351
 1993,Z01,Michigan,1276
 1993,Z02,Arizona,1112
@@ -566,13 +566,13 @@ Season,Seed,TeamName,TeamID
 1993,Z05,New Mexico,1307
 1993,Z06,Illinois,1228
 1993,Z07,Temple,1396
-1993,Z08,Iowa St,1235
+1993,Z08,Iowa St.,1235
 1993,Z09,UCLA,1417
 1993,Z10,Missouri,1281
-1993,Z11,Long Beach St,1253
+1993,Z11,Long Beach St.,1253
 1993,Z12,G Washington,1203
 1993,Z13,Southern Univ,1380
-1993,Z14,Boise St,1129
+1993,Z14,Boise St.,1129
 1993,Z15,Santa Clara,1365
 1993,Z16,Coastal Car,1157
 1994,W01,North Carolina,1314
@@ -582,7 +582,7 @@ Season,Seed,TeamName,TeamID
 1994,W05,Indiana,1231
 1994,W06,Nebraska,1304
 1994,W07,UAB,1412
-1994,W08,Washington St,1450
+1994,W08,Washington St.,1450
 1994,W09,Boston College,1130
 1994,W10,G Washington,1203
 1994,W11,Penn,1335
@@ -597,31 +597,31 @@ Season,Seed,TeamName,TeamID
 1994,X04,Kansas,1242
 1994,X05,Wake Forest,1448
 1994,X06,Marquette,1266
-1994,X07,Michigan St,1277
+1994,X07,Michigan St.,1277
 1994,X08,Providence,1344
 1994,X09,Alabama,1104
 1994,X10,Seton Hall,1371
 1994,X11,Louisiana,1418
 1994,X12,Col Charleston,1158
 1994,X13,Chattanooga,1151
-1994,X14,Tennessee St,1398
+1994,X14,Tennessee St.,1398
 1994,X15,TX Southern,1411
 1994,X16,UCF,1416
 1994,Y01,Arkansas,1116
 1994,Y02,Massachusetts,1269
 1994,Y03,Michigan,1276
-1994,Y04,Oklahoma St,1329
+1994,Y04,Oklahoma St.,1329
 1994,Y05,UCLA,1417
 1994,Y06,Texas,1400
-1994,Y07,St Louis,1387
+1994,Y07,Saint Louis,1387
 1994,Y08,Illinois,1228
 1994,Y09,Georgetown,1207
 1994,Y10,Maryland,1268
 1994,Y11,WKU,1443
 1994,Y12,Tulsa,1409
-1994,Y13,New Mexico St,1308
+1994,Y13,New Mexico St.,1308
 1994,Y14,Pepperdine,1337
-1994,Y15,Texas St,1402
+1994,Y15,Texas St.,1402
 1994,Y16,NC A&T,1299
 1994,Z01,Missouri,1281
 1994,Z02,Arizona,1112
@@ -636,30 +636,30 @@ Season,Seed,TeamName,TeamID
 1994,Z11,S Illinois,1356
 1994,Z12,WI Green Bay,1453
 1994,Z13,Hawaii,1218
-1994,Z14,Boise St,1129
+1994,Z14,Boise St.,1129
 1994,Z15,Loyola MD,1259
 1994,Z16,Navy,1298
 1995,W01,Wake Forest,1448
 1995,W02,Massachusetts,1269
 1995,W03,Villanova,1437
-1995,W04,Oklahoma St,1329
+1995,W04,Oklahoma St.,1329
 1995,W05,Alabama,1104
 1995,W06,Tulsa,1409
 1995,W07,Charlotte,1150
 1995,W08,Minnesota,1278
-1995,W09,St Louis,1387
+1995,W09,Saint Louis,1387
 1995,W10,Stanford,1390
 1995,W11,Illinois,1228
 1995,W12,Penn,1335
 1995,W13,Drexel,1180
 1995,W14,Old Dominion,1330
-1995,W15,St Peter's,1389
+1995,W15,Saint Peter's,1389
 1995,W16,NC A&T,1299
 1995,X01,UCLA,1417
 1995,X02,Connecticut,1163
 1995,X03,Maryland,1268
 1995,X04,Utah,1428
-1995,X05,Mississippi St,1280
+1995,X05,Mississippi St.,1280
 1995,X06,Oregon,1332
 1995,X07,Cincinnati,1153
 1995,X08,Missouri,1281
@@ -667,7 +667,7 @@ Season,Seed,TeamName,TeamID
 1995,X10,Temple,1396
 1995,X11,Texas,1400
 1995,X12,Santa Clara,1365
-1995,X13,Long Beach St,1253
+1995,X13,Long Beach St.,1253
 1995,X14,Gonzaga,1211
 1995,X15,Chattanooga,1151
 1995,X16,Florida Intl,1198
@@ -683,47 +683,47 @@ Season,Seed,TeamName,TeamID
 1995,Y10,S Illinois,1356
 1995,Y11,Louisville,1257
 1995,Y12,Miami OH,1275
-1995,Y13,Nicholls St,1311
+1995,Y13,Nicholls St.,1311
 1995,Y14,WI Green Bay,1453
 1995,Y15,TX Southern,1411
 1995,Y16,Colgate,1159
 1995,Z01,Kentucky,1246
 1995,Z02,North Carolina,1314
-1995,Z03,Michigan St,1277
+1995,Z03,Michigan St.,1277
 1995,Z04,Oklahoma,1328
-1995,Z05,Arizona St,1113
+1995,Z05,Arizona St.,1113
 1995,Z06,Georgetown,1207
-1995,Z07,Iowa St,1235
+1995,Z07,Iowa St.,1235
 1995,Z08,BYU,1140
 1995,Z09,Tulane,1408
 1995,Z10,Florida,1196
 1995,Z11,Xavier,1462
-1995,Z12,Ball St,1123
+1995,Z12,Ball St.,1123
 1995,Z13,Manhattan,1264
-1995,Z14,Weber St,1451
-1995,Z15,Murray St,1293
-1995,Z16,Mt St Mary's,1291
+1995,Z14,Weber St.,1451
+1995,Z15,Murray St.,1293
+1995,Z16,Mt St. Mary's,1291
 1996,W01,Massachusetts,1269
 1996,W02,Georgetown,1207
 1996,W03,Texas Tech,1403
 1996,W04,Marquette,1266
-1996,W05,Penn St,1336
+1996,W05,Penn St.,1336
 1996,W06,North Carolina,1314
 1996,W07,New Mexico,1307
 1996,W08,Bradley,1133
 1996,W09,Stanford,1390
-1996,W10,Kansas St,1243
+1996,W10,Kansas St.,1243
 1996,W11,New Orleans,1309
 1996,W12,Arkansas,1116
 1996,W13,Monmouth NJ,1284
 1996,W14,N Illinois,1296
-1996,W15,MS Valley St,1290
+1996,W15,MS Valley St.,1290
 1996,W16,UCF,1416
 1996,X01,Kentucky,1246
 1996,X02,Wake Forest,1448
 1996,X03,Villanova,1437
 1996,X04,Utah,1428
-1996,X05,Iowa St,1235
+1996,X05,Iowa St.,1235
 1996,X06,Louisville,1257
 1996,X07,Michigan,1276
 1996,X08,WI Green Bay,1453
@@ -734,12 +734,12 @@ Season,Seed,TeamName,TeamID
 1996,X13,Canisius,1145
 1996,X14,Portland,1339
 1996,X15,ULM,1419
-1996,X16,San Jose St,1363
+1996,X16,San Jose St.,1363
 1996,Y01,Connecticut,1163
 1996,Y02,Cincinnati,1153
 1996,Y03,Georgia Tech,1210
 1996,Y04,UCLA,1417
-1996,Y05,Mississippi St,1280
+1996,Y05,Mississippi St.,1280
 1996,Y06,Indiana,1231
 1996,Y07,Temple,1396
 1996,Y08,Duke,1181
@@ -763,9 +763,9 @@ Season,Seed,TeamName,TeamID
 1996,Z10,Santa Clara,1365
 1996,Z11,G Washington,1203
 1996,Z12,Drexel,1180
-1996,Z13,Montana St,1286
+1996,Z13,Montana St.,1286
 1996,Z14,Valparaiso,1434
-1996,Z15,S Carolina St,1354
+1996,Z15,S Carolina St.,1354
 1996,Z16,W Carolina,1441
 1997,W01,North Carolina,1314
 1997,W02,South Carolina,1376
@@ -781,7 +781,7 @@ Season,Seed,TeamName,TeamID
 1997,W12,Princeton,1343
 1997,W13,LIU Brooklyn,1254
 1997,W14,Old Dominion,1330
-1997,W15,Coppin St,1164
+1997,W15,Coppin St.,1164
 1997,W16,Fairfield,1193
 1997,X01,Kansas,1242
 1997,X02,Duke,1181
@@ -797,28 +797,28 @@ Season,Seed,TeamName,TeamID
 1997,X12,Col Charleston,1158
 1997,X13,South Alabama,1375
 1997,X14,Chattanooga,1151
-1997,X15,Murray St,1293
-1997,X16,Jackson St,1238
+1997,X15,Murray St.,1293
+1997,X16,Jackson St.,1238
 1997,Y01,Minnesota,1278
 1997,Y02,UCLA,1417
 1997,Y03,Cincinnati,1153
 1997,Y04,Clemson,1155
 1997,Y05,Tulsa,1409
-1997,Y06,Iowa St,1235
+1997,Y06,Iowa St.,1235
 1997,Y07,Xavier,1462
 1997,Y08,Mississippi,1279
 1997,Y09,Temple,1396
 1997,Y10,Vanderbilt,1435
-1997,Y11,Illinois St,1229
+1997,Y11,Illinois St.,1229
 1997,Y12,Boston Univ,1131
 1997,Y13,Miami OH,1275
 1997,Y14,Butler,1139
 1997,Y15,Charleston So,1149
-1997,Y16,Texas St,1402
+1997,Y16,Texas St.,1402
 1997,Z01,Kentucky,1246
 1997,Z02,Utah,1428
 1997,Z03,Wake Forest,1448
-1997,Z04,St Joseph's PA,1386
+1997,Z04,Saint Joseph's,1386
 1997,Z05,Boston College,1130
 1997,Z06,Stanford,1390
 1997,Z07,Charlotte,1150
@@ -828,13 +828,13 @@ Season,Seed,TeamName,TeamID
 1997,Z11,Oklahoma,1328
 1997,Z12,Valparaiso,1434
 1997,Z13,Pacific,1334
-1997,Z14,St Mary's CA,1388
+1997,Z14,Saint Mary's,1388
 1997,Z15,Navy,1298
 1997,Z16,Montana,1285
 1998,W01,North Carolina,1314
 1998,W02,Connecticut,1163
 1998,W03,South Carolina,1376
-1998,W04,Michigan St,1277
+1998,W04,Michigan St.,1277
 1998,W05,Princeton,1343
 1998,W06,Xavier,1462
 1998,W07,Indiana,1231
@@ -855,26 +855,26 @@ Season,Seed,TeamName,TeamID
 1998,X06,Arkansas,1116
 1998,X07,Temple,1396
 1998,X08,Tennessee,1397
-1998,X09,Illinois St,1229
+1998,X09,Illinois St.,1229
 1998,X10,West Virginia,1452
 1998,X11,Nebraska,1304
 1998,X12,South Alabama,1375
-1998,X13,Utah St,1429
+1998,X13,Utah St.,1429
 1998,X14,San Francisco,1362
 1998,X15,Northern Arizona,1319
-1998,X16,Nicholls St,1311
+1998,X16,Nicholls St.,1311
 1998,Y01,Kansas,1242
 1998,Y02,Purdue,1345
 1998,Y03,Stanford,1390
 1998,Y04,Mississippi,1279
 1998,Y05,TCU,1395
 1998,Y06,Clemson,1155
-1998,Y07,St John's,1385
+1998,Y07,St. John's,1385
 1998,Y08,Rhode Island,1348
-1998,Y09,Murray St,1293
+1998,Y09,Murray St.,1293
 1998,Y10,Detroit,1178
 1998,Y11,W Michigan,1444
-1998,Y12,Florida St,1199
+1998,Y12,Florida St.,1199
 1998,Y13,Valparaiso,1434
 1998,Y14,Col Charleston,1158
 1998,Y15,Delaware,1174
@@ -886,14 +886,14 @@ Season,Seed,TeamName,TeamID
 1998,Z05,Syracuse,1393
 1998,Z06,UCLA,1417
 1998,Z07,Massachusetts,1269
-1998,Z08,Oklahoma St,1329
+1998,Z08,Oklahoma St.,1329
 1998,Z09,G Washington,1203
-1998,Z10,St Louis,1387
+1998,Z10,Saint Louis,1387
 1998,Z11,Miami FL,1274
 1998,Z12,Iona,1233
 1998,Z13,Butler,1139
 1998,Z14,Davidson,1172
-1998,Z15,S Carolina St,1354
+1998,Z15,S Carolina St.,1354
 1998,Z16,Radford,1347
 1999,W01,Duke,1181
 1999,W02,Miami FL,1274
@@ -906,12 +906,12 @@ Season,Seed,TeamName,TeamID
 1999,W09,Tulsa,1409
 1999,W10,Purdue,1345
 1999,W11,Kent,1245
-1999,W12,Missouri St,1283
+1999,W12,Missouri St.,1283
 1999,W13,Delaware,1174
 1999,W14,George Mason,1206
 1999,W15,Lafayette,1248
 1999,W16,Florida A&M,1197
-1999,X01,Michigan St,1277
+1999,X01,Michigan St.,1277
 1999,X02,Utah,1428
 1999,X03,Kentucky,1246
 1999,X04,Arizona,1112
@@ -924,22 +924,22 @@ Season,Seed,TeamName,TeamID
 1999,X11,Evansville,1191
 1999,X12,Rhode Island,1348
 1999,X13,Oklahoma,1328
-1999,X14,New Mexico St,1308
-1999,X15,Arkansas St,1117
-1999,X16,Mt St Mary's,1291
+1999,X14,New Mexico St.,1308
+1999,X15,Arkansas St.,1117
+1999,X16,Mt St. Mary's,1291
 1999,Y01,Auburn,1120
 1999,Y02,Maryland,1268
-1999,Y03,St John's,1385
-1999,Y04,Ohio St,1326
+1999,Y03,St. John's,1385
+1999,Y04,Ohio St.,1326
 1999,Y05,UCLA,1417
 1999,Y06,Indiana,1231
 1999,Y07,Louisville,1257
 1999,Y08,Syracuse,1393
-1999,Y09,Oklahoma St,1329
+1999,Y09,Oklahoma St.,1329
 1999,Y10,Creighton,1166
 1999,Y11,G Washington,1203
 1999,Y12,Detroit,1178
-1999,Y13,Murray St,1293
+1999,Y13,Murray St.,1293
 1999,Y14,Samford,1359
 1999,Y15,Valparaiso,1434
 1999,Y16,Winthrop,1457
@@ -956,12 +956,12 @@ Season,Seed,TeamName,TeamID
 1999,Z11,Penn,1335
 1999,Z12,UAB,1412
 1999,Z13,Siena,1373
-1999,Z14,Weber St,1451
-1999,Z15,Alcorn St,1108
+1999,Z14,Weber St.,1451
+1999,Z15,Alcorn St.,1108
 1999,Z16,UT San Antonio,1427
 2000,W01,Duke,1181
 2000,W02,Temple,1396
-2000,W03,Oklahoma St,1329
+2000,W03,Oklahoma St.,1329
 2000,W04,Illinois,1228
 2000,W05,Florida,1196
 2000,W06,Indiana,1231
@@ -977,7 +977,7 @@ Season,Seed,TeamName,TeamID
 2000,W16,Lamar,1249
 2000,X01,Stanford,1390
 2000,X02,Cincinnati,1153
-2000,X03,Ohio St,1326
+2000,X03,Ohio St.,1326
 2000,X04,Tennessee,1397
 2000,X05,Connecticut,1163
 2000,X06,Miami FL,1274
@@ -986,70 +986,70 @@ Season,Seed,TeamName,TeamID
 2000,X09,Missouri,1281
 2000,X10,UNLV,1424
 2000,X11,Arkansas,1116
-2000,X12,Utah St,1429
+2000,X12,Utah St.,1429
 2000,X13,Louisiana,1418
-2000,X14,Appalachian St,1111
+2000,X14,Appalachian St.,1111
 2000,X15,UNC Wilmington,1423
-2000,X16,S Carolina St,1354
-2000,Y01,Michigan St,1277
-2000,Y02,Iowa St,1235
+2000,X16,S Carolina St.,1354
+2000,Y01,Michigan St.,1277
+2000,Y02,Iowa St.,1235
 2000,Y03,Maryland,1268
 2000,Y04,Syracuse,1393
 2000,Y05,Kentucky,1246
 2000,Y06,UCLA,1417
 2000,Y07,Auburn,1120
 2000,Y08,Utah,1428
-2000,Y09,St Louis,1387
+2000,Y09,Saint Louis,1387
 2000,Y10,Creighton,1166
-2000,Y11,Ball St,1123
-2000,Y12,St Bonaventure,1382
+2000,Y11,Ball St.,1123
+2000,Y12,St. Bonaventure,1382
 2000,Y13,Samford,1359
 2000,Y14,Iona,1233
 2000,Y15,Central Conn,1148
 2000,Y16,Valparaiso,1434
 2000,Z01,Arizona,1112
-2000,Z02,St John's,1385
+2000,Z02,St. John's,1385
 2000,Z03,Oklahoma,1328
 2000,Z04,LSU,1261
 2000,Z05,Texas,1400
 2000,Z06,Purdue,1345
 2000,Z07,Louisville,1257
 2000,Z08,Wisconsin,1458
-2000,Z09,Fresno St,1201
+2000,Z09,Fresno St.,1201
 2000,Z10,Gonzaga,1211
 2000,Z11,Dayton,1173
-2000,Z12,Indiana St,1232
-2000,Z13,SE Missouri St,1369
+2000,Z12,Indiana St.,1232
+2000,Z13,SE Missouri St.,1369
 2000,Z14,Winthrop,1457
 2000,Z15,Northern Arizona,1319
-2000,Z16,Jackson St,1238
+2000,Z16,Jackson St.,1238
 2001,W01,Duke,1181
 2001,W02,Kentucky,1246
 2001,W03,Boston College,1130
 2001,W04,UCLA,1417
-2001,W05,Ohio St,1326
+2001,W05,Ohio St.,1326
 2001,W06,USC,1425
 2001,W07,Iowa,1234
 2001,W08,Georgia,1208
 2001,W09,Missouri,1281
 2001,W10,Creighton,1166
-2001,W11,Oklahoma St,1329
-2001,W12,Utah St,1429
+2001,W11,Oklahoma St.,1329
+2001,W12,Utah St.,1429
 2001,W13,Hofstra,1220
 2001,W14,Southern Utah,1381
 2001,W15,Holy Cross,1221
 2001,W16,Monmouth NJ,1284
 2001,X01,Stanford,1390
-2001,X02,Iowa St,1235
+2001,X02,Iowa St.,1235
 2001,X03,Maryland,1268
 2001,X04,Indiana,1231
 2001,X05,Cincinnati,1153
 2001,X06,Wisconsin,1458
 2001,X07,Arkansas,1116
 2001,X08,Georgia Tech,1210
-2001,X09,St Joseph's PA,1386
+2001,X09,Saint Joseph's,1386
 2001,X10,Georgetown,1207
-2001,X11,Georgia St,1209
+2001,X11,Georgia St.,1209
 2001,X12,BYU,1140
 2001,X13,Kent,1245
 2001,X14,George Mason,1206
@@ -1072,22 +1072,22 @@ Season,Seed,TeamName,TeamID
 2001,Y15,E Illinois,1183
 2001,Y16a,Northwestern LA,1322
 2001,Y16b,Winthrop,1457
-2001,Z01,Michigan St,1277
+2001,Z01,Michigan St.,1277
 2001,Z02,North Carolina,1314
 2001,Z03,Florida,1196
 2001,Z04,Oklahoma,1328
 2001,Z05,Virginia,1438
 2001,Z06,Texas,1400
-2001,Z07,Penn St,1336
+2001,Z07,Penn St.,1336
 2001,Z08,California,1143
-2001,Z09,Fresno St,1201
+2001,Z09,Fresno St.,1201
 2001,Z10,Providence,1344
 2001,Z11,Temple,1396
 2001,Z12,Gonzaga,1211
-2001,Z13,Indiana St,1232
+2001,Z13,Indiana St.,1232
 2001,Z14,WKU,1443
 2001,Z15,Princeton,1343
-2001,Z16,Alabama St,1106
+2001,Z16,Alabama St.,1106
 2002,W01,Maryland,1268
 2002,W02,Connecticut,1163
 2002,W03,Georgia,1208
@@ -1096,18 +1096,18 @@ Season,Seed,TeamName,TeamID
 2002,W06,Texas Tech,1403
 2002,W07,NC State,1301
 2002,W08,Wisconsin,1458
-2002,W09,St John's,1385
-2002,W10,Michigan St,1277
+2002,W09,St. John's,1385
+2002,W10,Michigan St.,1277
 2002,W11,S Illinois,1356
 2002,W12,Tulsa,1409
 2002,W13,Valparaiso,1434
-2002,W14,Murray St,1293
+2002,W14,Murray St.,1293
 2002,W15,Hampton,1214
-2002,W16a,Alcorn St,1108
+2002,W16a,Alcorn St.,1108
 2002,W16b,Siena,1373
 2002,X01,Kansas,1242
 2002,X02,Oregon,1332
-2002,X03,Mississippi St,1280
+2002,X03,Mississippi St.,1280
 2002,X04,Illinois,1228
 2002,X05,Florida,1196
 2002,X06,Texas,1400
@@ -1117,8 +1117,8 @@ Season,Seed,TeamName,TeamID
 2002,X10,Pepperdine,1337
 2002,X11,Boston College,1130
 2002,X12,Creighton,1166
-2002,X13,San Diego St,1361
-2002,X14,McNeese St,1270
+2002,X13,San Diego St.,1361
+2002,X14,McNeese St.,1270
 2002,X15,Montana,1285
 2002,X16,Holy Cross,1221
 2002,Y01,Duke,1181
@@ -1127,7 +1127,7 @@ Season,Seed,TeamName,TeamID
 2002,Y04,USC,1425
 2002,Y05,Indiana,1231
 2002,Y06,California,1143
-2002,Y07,Oklahoma St,1329
+2002,Y07,Oklahoma St.,1329
 2002,Y08,Notre Dame,1323
 2002,Y09,Charlotte,1150
 2002,Y10,Kent,1245
@@ -1140,7 +1140,7 @@ Season,Seed,TeamName,TeamID
 2002,Z01,Cincinnati,1153
 2002,Z02,Oklahoma,1328
 2002,Z03,Arizona,1112
-2002,Z04,Ohio St,1326
+2002,Z04,Ohio St.,1326
 2002,Z05,Miami FL,1274
 2002,Z06,Gonzaga,1211
 2002,Z07,Xavier,1462
@@ -1157,9 +1157,9 @@ Season,Seed,TeamName,TeamID
 2003,W02,Wake Forest,1448
 2003,W03,Syracuse,1393
 2003,W04,Louisville,1257
-2003,W05,Mississippi St,1280
-2003,W06,Oklahoma St,1329
-2003,W07,St Joseph's PA,1386
+2003,W05,Mississippi St.,1280
+2003,W06,Oklahoma St.,1329
+2003,W07,Saint Joseph's,1386
 2003,W08,California,1143
 2003,W09,NC State,1301
 2003,W10,Auburn,1120
@@ -1168,14 +1168,14 @@ Season,Seed,TeamName,TeamID
 2003,W13,Austin Peay,1122
 2003,W14,Manhattan,1264
 2003,W15,ETSU,1190
-2003,W16,S Carolina St,1354
+2003,W16,S Carolina St.,1354
 2003,X01,Texas,1400
 2003,X02,Florida,1196
 2003,X03,Xavier,1462
 2003,X04,Stanford,1390
 2003,X05,Connecticut,1163
 2003,X06,Maryland,1268
-2003,X07,Michigan St,1277
+2003,X07,Michigan St.,1277
 2003,X08,LSU,1261
 2003,X09,Purdue,1345
 2003,X10,Colorado,1160
@@ -1183,7 +1183,7 @@ Season,Seed,TeamName,TeamID
 2003,X12,BYU,1140
 2003,X13,San Diego,1360
 2003,X14,Troy,1407
-2003,X15,Sam Houston St,1358
+2003,X15,Sam Houston St.,1358
 2003,X16a,TX Southern,1411
 2003,X16b,UNC Asheville,1421
 2003,Y01,Kentucky,1246
@@ -1197,7 +1197,7 @@ Season,Seed,TeamName,TeamID
 2003,Y09,Utah,1428
 2003,Y10,Alabama,1104
 2003,Y11,S Illinois,1356
-2003,Y12,Weber St,1451
+2003,Y12,Weber St.,1451
 2003,Y13,Tulsa,1409
 2003,Y14,Holy Cross,1221
 2003,Y15,Wagner,1447
@@ -1211,15 +1211,15 @@ Season,Seed,TeamName,TeamID
 2003,Z07,Memphis,1272
 2003,Z08,Cincinnati,1153
 2003,Z09,Gonzaga,1211
-2003,Z10,Arizona St,1113
+2003,Z10,Arizona St.,1113
 2003,Z11,C Michigan,1141
 2003,Z12,WI Milwaukee,1454
 2003,Z13,WKU,1443
-2003,Z14,Colorado St,1161
-2003,Z15,Utah St,1429
+2003,Z14,Colorado St.,1161
+2003,Z15,Utah St.,1429
 2003,Z16,Vermont,1436
 2004,W01,Duke,1181
-2004,W02,Mississippi St,1280
+2004,W02,Mississippi St.,1280
 2004,W03,Texas,1400
 2004,W04,Cincinnati,1153
 2004,W05,Illinois,1228
@@ -1229,11 +1229,11 @@ Season,Seed,TeamName,TeamID
 2004,W09,Arizona,1112
 2004,W10,Louisville,1257
 2004,W11,Air Force,1102
-2004,W12,Murray St,1293
+2004,W12,Murray St.,1293
 2004,W13,ETSU,1190
 2004,W14,Princeton,1343
 2004,W15,Monmouth NJ,1284
-2004,W16,Alabama St,1106
+2004,W16,Alabama St.,1106
 2004,X01,Stanford,1390
 2004,X02,Connecticut,1163
 2004,X03,NC State,1301
@@ -1250,8 +1250,8 @@ Season,Seed,TeamName,TeamID
 2004,X14,Louisiana,1418
 2004,X15,Vermont,1436
 2004,X16,UT San Antonio,1427
-2004,Y01,St Joseph's PA,1386
-2004,Y02,Oklahoma St,1329
+2004,Y01,Saint Joseph's,1386
+2004,Y02,Oklahoma St.,1329
 2004,Y03,Pittsburgh,1338
 2004,Y04,Wake Forest,1448
 2004,Y05,Florida,1196
@@ -1272,7 +1272,7 @@ Season,Seed,TeamName,TeamID
 2004,Z04,Kansas,1242
 2004,Z05,Providence,1344
 2004,Z06,Boston College,1130
-2004,Z07,Michigan St,1277
+2004,Z07,Michigan St.,1277
 2004,Z08,Washington,1449
 2004,Z09,UAB,1412
 2004,Z10,Nevada,1305
@@ -1300,7 +1300,7 @@ Season,Seed,TeamName,TeamID
 2005,W15,Chattanooga,1151
 2005,W16,Montana,1285
 2005,X01,Illinois,1228
-2005,X02,Oklahoma St,1329
+2005,X02,Oklahoma St.,1329
 2005,X03,Arizona,1112
 2005,X04,Boston College,1130
 2005,X05,Alabama,1104
@@ -1308,29 +1308,29 @@ Season,Seed,TeamName,TeamID
 2005,X07,S Illinois,1356
 2005,X08,Texas,1400
 2005,X09,Nevada,1305
-2005,X10,St Mary's CA,1388
+2005,X10,Saint Mary's,1388
 2005,X11,UAB,1412
 2005,X12,WI Milwaukee,1454
 2005,X13,Penn,1335
-2005,X14,Utah St,1429
+2005,X14,Utah St.,1429
 2005,X15,SE Louisiana,1368
 2005,X16,F Dickinson,1192
 2005,Y01,Duke,1181
 2005,Y02,Kentucky,1246
 2005,Y03,Oklahoma,1328
 2005,Y04,Syracuse,1393
-2005,Y05,Michigan St,1277
+2005,Y05,Michigan St.,1277
 2005,Y06,Utah,1428
 2005,Y07,Cincinnati,1153
 2005,Y08,Stanford,1390
-2005,Y09,Mississippi St,1280
+2005,Y09,Mississippi St.,1280
 2005,Y10,Iowa,1234
 2005,Y11,UTEP,1431
 2005,Y12,Old Dominion,1330
 2005,Y13,Vermont,1436
 2005,Y14,Niagara,1310
 2005,Y15,E Kentucky,1184
-2005,Y16,Delaware St,1175
+2005,Y16,Delaware St.,1175
 2005,Z01,North Carolina,1314
 2005,Z02,Connecticut,1163
 2005,Z03,Kansas,1242
@@ -1339,7 +1339,7 @@ Season,Seed,TeamName,TeamID
 2005,Z06,Wisconsin,1458
 2005,Z07,Charlotte,1150
 2005,Z08,Minnesota,1278
-2005,Z09,Iowa St,1235
+2005,Z09,Iowa St.,1235
 2005,Z10,NC State,1301
 2005,Z11,Northern Iowa,1320
 2005,Z12,New Mexico,1307
@@ -1374,14 +1374,14 @@ Season,Seed,TeamName,TeamID
 2006,X08,Arkansas,1116
 2006,X09,Bucknell,1137
 2006,X10,Alabama,1104
-2006,X11,San Diego St,1361
+2006,X11,San Diego St.,1361
 2006,X12,Kent,1245
 2006,X13,Bradley,1133
 2006,X14,Xavier,1462
 2006,X15,Belmont,1125
 2006,X16,Oral Roberts,1331
 2006,Y01,Villanova,1437
-2006,Y02,Ohio St,1326
+2006,Y02,Ohio St.,1326
 2006,Y03,Florida,1196
 2006,Y04,Boston College,1130
 2006,Y05,Nevada,1305
@@ -1402,34 +1402,34 @@ Season,Seed,TeamName,TeamID
 2006,Z03,North Carolina,1314
 2006,Z04,Illinois,1228
 2006,Z05,Washington,1449
-2006,Z06,Michigan St,1277
-2006,Z07,Wichita St,1455
+2006,Z06,Michigan St.,1277
+2006,Z07,Wichita St.,1455
 2006,Z08,Kentucky,1246
 2006,Z09,UAB,1412
 2006,Z10,Seton Hall,1371
 2006,Z11,George Mason,1206
-2006,Z12,Utah St,1429
+2006,Z12,Utah St.,1429
 2006,Z13,Air Force,1102
-2006,Z14,Murray St,1293
+2006,Z14,Murray St.,1293
 2006,Z15,Winthrop,1457
 2006,Z16,SUNY Albany,1107
 2007,W01,North Carolina,1314
 2007,W02,Georgetown,1207
-2007,W03,Washington St,1450
+2007,W03,Washington St.,1450
 2007,W04,Texas,1400
 2007,W05,USC,1425
 2007,W06,Vanderbilt,1435
 2007,W07,Boston College,1130
 2007,W08,Marquette,1266
-2007,W09,Michigan St,1277
+2007,W09,Michigan St.,1277
 2007,W10,Texas Tech,1403
 2007,W11,G Washington,1203
 2007,W12,Arkansas,1116
-2007,W13,New Mexico St,1308
+2007,W13,New Mexico St.,1308
 2007,W14,Oral Roberts,1331
 2007,W15,Belmont,1125
 2007,W16,E Kentucky,1184
-2007,X01,Ohio St,1326
+2007,X01,Ohio St.,1326
 2007,X02,Memphis,1272
 2007,X03,Texas A&M,1401
 2007,X04,Virginia,1438
@@ -1440,7 +1440,7 @@ Season,Seed,TeamName,TeamID
 2007,X09,Xavier,1462
 2007,X10,Creighton,1166
 2007,X11,Stanford,1390
-2007,X12,Long Beach St,1253
+2007,X12,Long Beach St.,1253
 2007,X13,SUNY Albany,1107
 2007,X14,Penn,1335
 2007,X15,North Texas,1317
@@ -1460,7 +1460,7 @@ Season,Seed,TeamName,TeamID
 2007,Y13,Davidson,1172
 2007,Y14,Miami OH,1275
 2007,Y15,TAM C. Christi,1394
-2007,Y16,Jackson St,1238
+2007,Y16,Jackson St.,1238
 2007,Z01,Kansas,1242
 2007,Z02,UCLA,1417
 2007,Z03,Pittsburgh,1338
@@ -1474,27 +1474,27 @@ Season,Seed,TeamName,TeamID
 2007,Z11,VCU,1433
 2007,Z12,Illinois,1228
 2007,Z13,Holy Cross,1221
-2007,Z14,Wright St,1460
-2007,Z15,Weber St,1451
+2007,Z14,Wright St.,1460
+2007,Z15,Weber St.,1451
 2007,Z16a,Florida A&M,1197
 2007,Z16b,Niagara,1310
 2008,W01,North Carolina,1314
 2008,W02,Tennessee,1397
 2008,W03,Louisville,1257
-2008,W04,Washington St,1450
+2008,W04,Washington St.,1450
 2008,W05,Notre Dame,1323
 2008,W06,Oklahoma,1328
 2008,W07,Butler,1139
 2008,W08,Indiana,1231
 2008,W09,Arkansas,1116
 2008,W10,South Alabama,1375
-2008,W11,St Joseph's PA,1386
+2008,W11,Saint Joseph's,1386
 2008,W12,George Mason,1206
 2008,W13,Winthrop,1457
-2008,W14,Boise St,1129
+2008,W14,Boise St.,1129
 2008,W15,American Univ,1110
-2008,W16a,Coppin St,1164
-2008,W16b,Mt St Mary's,1291
+2008,W16a,Coppin St.,1164
+2008,W16b,Mt St. Mary's,1291
 2008,X01,Kansas,1242
 2008,X02,Georgetown,1207
 2008,X03,Wisconsin,1458
@@ -1505,22 +1505,22 @@ Season,Seed,TeamName,TeamID
 2008,X08,UNLV,1424
 2008,X09,Kent,1245
 2008,X10,Davidson,1172
-2008,X11,Kansas St,1243
+2008,X11,Kansas St.,1243
 2008,X12,Villanova,1437
 2008,X13,Siena,1373
 2008,X14,CS Fullerton,1168
 2008,X15,UMBC,1420
-2008,X16,Portland St,1340
+2008,X16,Portland St.,1340
 2008,Y01,Memphis,1272
 2008,Y02,Texas,1400
 2008,Y03,Stanford,1390
 2008,Y04,Pittsburgh,1338
-2008,Y05,Michigan St,1277
+2008,Y05,Michigan St.,1277
 2008,Y06,Marquette,1266
 2008,Y07,Miami FL,1274
-2008,Y08,Mississippi St,1280
+2008,Y08,Mississippi St.,1280
 2008,Y09,Oregon,1332
-2008,Y10,St Mary's CA,1388
+2008,Y10,Saint Mary's,1388
 2008,Y11,Kentucky,1246
 2008,Y12,Temple,1396
 2008,Y13,Oral Roberts,1331
@@ -1542,20 +1542,20 @@ Season,Seed,TeamName,TeamID
 2008,Z13,San Diego,1360
 2008,Z14,Georgia,1208
 2008,Z15,Belmont,1125
-2008,Z16,MS Valley St,1290
+2008,Z16,MS Valley St.,1290
 2009,W01,Pittsburgh,1338
 2009,W02,Duke,1181
 2009,W03,Villanova,1437
 2009,W04,Xavier,1462
-2009,W05,Florida St,1199
+2009,W05,Florida St.,1199
 2009,W06,UCLA,1417
 2009,W07,Texas,1400
-2009,W08,Oklahoma St,1329
+2009,W08,Oklahoma St.,1329
 2009,W09,Tennessee,1397
 2009,W10,Minnesota,1278
 2009,W11,VCU,1433
 2009,W12,Wisconsin,1458
-2009,W13,Portland St,1340
+2009,W13,Portland St.,1340
 2009,W14,American Univ,1110
 2009,W15,Binghamton,1127
 2009,W16,ETSU,1190
@@ -1564,7 +1564,7 @@ Season,Seed,TeamName,TeamID
 2009,X03,Syracuse,1393
 2009,X04,Gonzaga,1211
 2009,X05,Illinois,1228
-2009,X06,Arizona St,1113
+2009,X06,Arizona St.,1113
 2009,X07,Clemson,1155
 2009,X08,LSU,1261
 2009,X09,Butler,1139
@@ -1573,25 +1573,25 @@ Season,Seed,TeamName,TeamID
 2009,X12,WKU,1443
 2009,X13,Akron,1103
 2009,X14,SF Austin,1372
-2009,X15,Morgan St,1288
+2009,X15,Morgan St.,1288
 2009,X16,Radford,1347
 2009,Y01,Louisville,1257
-2009,Y02,Michigan St,1277
+2009,Y02,Michigan St.,1277
 2009,Y03,Kansas,1242
 2009,Y04,Wake Forest,1448
 2009,Y05,Utah,1428
 2009,Y06,West Virginia,1452
 2009,Y07,Boston College,1130
-2009,Y08,Ohio St,1326
+2009,Y08,Ohio St.,1326
 2009,Y09,Siena,1373
 2009,Y10,USC,1425
 2009,Y11,Dayton,1173
 2009,Y12,Arizona,1112
-2009,Y13,Cleveland St,1156
-2009,Y14,N Dakota St,1295
+2009,Y13,Cleveland St.,1156
+2009,Y14,N Dakota St.,1295
 2009,Y15,Robert Morris,1352
-2009,Y16a,Alabama St,1106
-2009,Y16b,Morehead St,1287
+2009,Y16a,Alabama St.,1106
+2009,Y16b,Morehead St.,1287
 2009,Z01,Connecticut,1163
 2009,Z02,Memphis,1272
 2009,Z03,Missouri,1281
@@ -1602,9 +1602,9 @@ Season,Seed,TeamName,TeamID
 2009,Z08,BYU,1140
 2009,Z09,Texas A&M,1401
 2009,Z10,Maryland,1268
-2009,Z11,Utah St,1429
+2009,Z11,Utah St.,1429
 2009,Z12,Northern Iowa,1320
-2009,Z13,Mississippi St,1280
+2009,Z13,Mississippi St.,1280
 2009,Z14,Cornell,1165
 2009,Z15,CS Northridge,1169
 2009,Z16,Chattanooga,1151
@@ -1622,7 +1622,7 @@ Season,Seed,TeamName,TeamID
 2010,W12,Cornell,1165
 2010,W13,Wofford,1459
 2010,W14,Montana,1285
-2010,W15,Morgan St,1288
+2010,W15,Morgan St.,1288
 2010,W16,ETSU,1190
 2010,X01,Duke,1181
 2010,X02,Villanova,1437
@@ -1633,47 +1633,47 @@ Season,Seed,TeamName,TeamID
 2010,X07,Richmond,1350
 2010,X08,California,1143
 2010,X09,Louisville,1257
-2010,X10,St Mary's CA,1388
+2010,X10,Saint Mary's,1388
 2010,X11,Old Dominion,1330
-2010,X12,Utah St,1429
+2010,X12,Utah St.,1429
 2010,X13,Siena,1373
-2010,X14,Sam Houston St,1358
+2010,X14,Sam Houston St.,1358
 2010,X15,Robert Morris,1352
 2010,X16a,Ark Pine Bluff,1115
 2010,X16b,Winthrop,1457
 2010,Y01,Kansas,1242
-2010,Y02,Ohio St,1326
+2010,Y02,Ohio St.,1326
 2010,Y03,Georgetown,1207
 2010,Y04,Maryland,1268
-2010,Y05,Michigan St,1277
+2010,Y05,Michigan St.,1277
 2010,Y06,Tennessee,1397
-2010,Y07,Oklahoma St,1329
+2010,Y07,Oklahoma St.,1329
 2010,Y08,UNLV,1424
 2010,Y09,Northern Iowa,1320
 2010,Y10,Georgia Tech,1210
-2010,Y11,San Diego St,1361
-2010,Y12,New Mexico St,1308
+2010,Y11,San Diego St.,1361
+2010,Y12,New Mexico St.,1308
 2010,Y13,Houston,1222
 2010,Y14,Ohio,1325
 2010,Y15,UC Santa Barbara,1364
 2010,Y16,Lehigh,1250
 2010,Z01,Syracuse,1393
-2010,Z02,Kansas St,1243
+2010,Z02,Kansas St.,1243
 2010,Z03,Pittsburgh,1338
 2010,Z04,Vanderbilt,1435
 2010,Z05,Butler,1139
 2010,Z06,Xavier,1462
 2010,Z07,BYU,1140
 2010,Z08,Gonzaga,1211
-2010,Z09,Florida St,1199
+2010,Z09,Florida St.,1199
 2010,Z10,Florida,1196
 2010,Z11,Minnesota,1278
 2010,Z12,UTEP,1431
-2010,Z13,Murray St,1293
+2010,Z13,Murray St.,1293
 2010,Z14,Oakland,1324
 2010,Z15,North Texas,1317
 2010,Z16,Vermont,1436
-2011,W01,Ohio St,1326
+2011,W01,Ohio St.,1326
 2011,W02,North Carolina,1314
 2011,W03,Syracuse,1393
 2011,W04,Kentucky,1246
@@ -1687,12 +1687,12 @@ Season,Seed,TeamName,TeamID
 2011,W12a,Clemson,1155
 2011,W12b,UAB,1412
 2011,W13,Princeton,1343
-2011,W14,Indiana St,1232
+2011,W14,Indiana St.,1232
 2011,W15,LIU Brooklyn,1254
-2011,W16a,Alabama St,1106
+2011,W16a,Alabama St.,1106
 2011,W16b,UT San Antonio,1427
 2011,X01,Duke,1181
-2011,X02,San Diego St,1361
+2011,X02,San Diego St.,1361
 2011,X03,Connecticut,1163
 2011,X04,Texas,1400
 2011,X05,Arizona,1112
@@ -1700,7 +1700,7 @@ Season,Seed,TeamName,TeamID
 2011,X07,Temple,1396
 2011,X08,Michigan,1276
 2011,X09,Tennessee,1397
-2011,X10,Penn St,1336
+2011,X10,Penn St.,1336
 2011,X11,Missouri,1281
 2011,X12,Memphis,1272
 2011,X13,Oakland,1324
@@ -1711,14 +1711,14 @@ Season,Seed,TeamName,TeamID
 2011,Y02,Florida,1196
 2011,Y03,BYU,1140
 2011,Y04,Wisconsin,1458
-2011,Y05,Kansas St,1243
-2011,Y06,St John's,1385
+2011,Y05,Kansas St.,1243
+2011,Y06,St. John's,1385
 2011,Y07,UCLA,1417
 2011,Y08,Butler,1139
 2011,Y09,Old Dominion,1330
-2011,Y10,Michigan St,1277
+2011,Y10,Michigan St.,1277
 2011,Y11,Gonzaga,1211
-2011,Y12,Utah St,1429
+2011,Y12,Utah St.,1429
 2011,Y13,Belmont,1125
 2011,Y14,Wofford,1459
 2011,Y15,UC Santa Barbara,1364
@@ -1733,28 +1733,28 @@ Season,Seed,TeamName,TeamID
 2011,Z07,Texas A&M,1401
 2011,Z08,UNLV,1424
 2011,Z09,Illinois,1228
-2011,Z10,Florida St,1199
+2011,Z10,Florida St.,1199
 2011,Z11a,USC,1425
 2011,Z11b,VCU,1433
 2011,Z12,Richmond,1350
-2011,Z13,Morehead St,1287
-2011,Z14,St Peter's,1389
+2011,Z13,Morehead St.,1287
+2011,Z14,Saint Peter's,1389
 2011,Z15,Akron,1103
 2011,Z16,Boston Univ,1131
 2012,W01,Syracuse,1393
-2012,W02,Ohio St,1326
-2012,W03,Florida St,1199
+2012,W02,Ohio St.,1326
+2012,W03,Florida St.,1199
 2012,W04,Wisconsin,1458
 2012,W05,Vanderbilt,1435
 2012,W06,Cincinnati,1153
 2012,W07,Gonzaga,1211
-2012,W08,Kansas St,1243
+2012,W08,Kansas St.,1243
 2012,W09,Southern Miss,1379
 2012,W10,West Virginia,1452
 2012,W11,Texas,1400
 2012,W12,Harvard,1217
 2012,W13,Montana,1285
-2012,W14,St Bonaventure,1382
+2012,W14,St. Bonaventure,1382
 2012,W15,Loyola MD,1259
 2012,W16,UNC Asheville,1421
 2012,X01,North Carolina,1314
@@ -1762,8 +1762,8 @@ Season,Seed,TeamName,TeamID
 2012,X03,Georgetown,1207
 2012,X04,Michigan,1276
 2012,X05,Temple,1396
-2012,X06,San Diego St,1361
-2012,X07,St Mary's CA,1388
+2012,X06,San Diego St.,1361
+2012,X07,Saint Mary's,1388
 2012,X08,Creighton,1166
 2012,X09,Alabama,1104
 2012,X10,Purdue,1345
@@ -1779,35 +1779,35 @@ Season,Seed,TeamName,TeamID
 2012,Y02,Duke,1181
 2012,Y03,Baylor,1124
 2012,Y04,Indiana,1231
-2012,Y05,Wichita St,1455
+2012,Y05,Wichita St.,1455
 2012,Y06,UNLV,1424
 2012,Y07,Notre Dame,1323
-2012,Y08,Iowa St,1235
+2012,Y08,Iowa St.,1235
 2012,Y09,Connecticut,1163
 2012,Y10,Xavier,1462
 2012,Y11,Colorado,1160
 2012,Y12,VCU,1433
-2012,Y13,New Mexico St,1308
-2012,Y14,S Dakota St,1355
+2012,Y13,New Mexico St.,1308
+2012,Y14,S Dakota St.,1355
 2012,Y15,Lehigh,1250
-2012,Y16a,MS Valley St,1290
+2012,Y16a,MS Valley St.,1290
 2012,Y16b,WKU,1443
-2012,Z01,Michigan St,1277
+2012,Z01,Michigan St.,1277
 2012,Z02,Missouri,1281
 2012,Z03,Marquette,1266
 2012,Z04,Louisville,1257
 2012,Z05,New Mexico,1307
-2012,Z06,Murray St,1293
+2012,Z06,Murray St.,1293
 2012,Z07,Florida,1196
 2012,Z08,Memphis,1272
-2012,Z09,St Louis,1387
+2012,Z09,Saint Louis,1387
 2012,Z10,Virginia,1438
-2012,Z11,Colorado St,1161
-2012,Z12,Long Beach St,1253
+2012,Z11,Colorado St.,1161
+2012,Z12,Long Beach St.,1253
 2012,Z13,Davidson,1172
 2012,Z14a,BYU,1140
 2012,Z14b,Iona,1233
-2012,Z15,Norfolk St,1313
+2012,Z15,Norfolk St.,1313
 2012,Z16,LIU Brooklyn,1254
 2013,W01,Indiana,1231
 2013,W02,Miami FL,1274
@@ -1832,61 +1832,61 @@ Season,Seed,TeamName,TeamID
 2013,X04,Michigan,1276
 2013,X05,VCU,1433
 2013,X06,UCLA,1417
-2013,X07,San Diego St,1361
+2013,X07,San Diego St.,1361
 2013,X08,North Carolina,1314
 2013,X09,Villanova,1437
 2013,X10,Oklahoma,1328
 2013,X11,Minnesota,1278
 2013,X12,Akron,1103
-2013,X13,S Dakota St,1355
+2013,X13,S Dakota St.,1355
 2013,X14,Northwestern LA,1322
 2013,X15,FGCU,1195
 2013,X16,WKU,1443
 2013,Y01,Louisville,1257
 2013,Y02,Duke,1181
-2013,Y03,Michigan St,1277
-2013,Y04,St Louis,1387
-2013,Y05,Oklahoma St,1329
+2013,Y03,Michigan St.,1277
+2013,Y04,Saint Louis,1387
+2013,Y05,Oklahoma St.,1329
 2013,Y06,Memphis,1272
 2013,Y07,Creighton,1166
-2013,Y08,Colorado St,1161
+2013,Y08,Colorado St.,1161
 2013,Y09,Missouri,1281
 2013,Y10,Cincinnati,1153
 2013,Y11a,MTSU,1292
-2013,Y11b,St Mary's CA,1388
+2013,Y11b,Saint Mary's,1388
 2013,Y12,Oregon,1332
-2013,Y13,New Mexico St,1308
+2013,Y13,New Mexico St.,1308
 2013,Y14,Valparaiso,1434
 2013,Y15,SUNY Albany,1107
 2013,Y16a,Liberty,1251
 2013,Y16b,NC A&T,1299
 2013,Z01,Gonzaga,1211
-2013,Z02,Ohio St,1326
+2013,Z02,Ohio St.,1326
 2013,Z03,New Mexico,1307
-2013,Z04,Kansas St,1243
+2013,Z04,Kansas St.,1243
 2013,Z05,Wisconsin,1458
 2013,Z06,Arizona,1112
 2013,Z07,Notre Dame,1323
 2013,Z08,Pittsburgh,1338
-2013,Z09,Wichita St,1455
-2013,Z10,Iowa St,1235
+2013,Z09,Wichita St.,1455
+2013,Z10,Iowa St.,1235
 2013,Z11,Belmont,1125
 2013,Z12,Mississippi,1279
-2013,Z13a,Boise St,1129
+2013,Z13a,Boise St.,1129
 2013,Z13b,La Salle,1247
 2013,Z14,Harvard,1217
 2013,Z15,Iona,1233
 2013,Z16,Southern Univ,1380
 2014,W01,Virginia,1438
 2014,W02,Villanova,1437
-2014,W03,Iowa St,1235
-2014,W04,Michigan St,1277
+2014,W03,Iowa St.,1235
+2014,W04,Michigan St.,1277
 2014,W05,Cincinnati,1153
 2014,W06,North Carolina,1314
 2014,W07,Connecticut,1163
 2014,W08,Memphis,1272
 2014,W09,G Washington,1203
-2014,W10,St Joseph's PA,1386
+2014,W10,Saint Joseph's,1386
 2014,W11,Providence,1344
 2014,W12,Harvard,1217
 2014,W13,Delaware,1174
@@ -1898,7 +1898,7 @@ Season,Seed,TeamName,TeamID
 2014,X03,Syracuse,1393
 2014,X04,UCLA,1417
 2014,X05,VCU,1433
-2014,X06,Ohio St,1326
+2014,X06,Ohio St.,1326
 2014,X07,New Mexico,1307
 2014,X08,Colorado,1160
 2014,X09,Pittsburgh,1338
@@ -1909,17 +1909,17 @@ Season,Seed,TeamName,TeamID
 2014,X14,W Michigan,1444
 2014,X15,E Kentucky,1184
 2014,X16a,SUNY Albany,1107
-2014,X16b,Mt St Mary's,1291
-2014,Y01,Wichita St,1455
+2014,X16b,Mt St. Mary's,1291
+2014,Y01,Wichita St.,1455
 2014,Y02,Michigan,1276
 2014,Y03,Duke,1181
 2014,Y04,Louisville,1257
-2014,Y05,St Louis,1387
+2014,Y05,Saint Louis,1387
 2014,Y06,Massachusetts,1269
 2014,Y07,Texas,1400
 2014,Y08,Kentucky,1246
-2014,Y09,Kansas St,1243
-2014,Y10,Arizona St,1113
+2014,Y09,Kansas St.,1243
+2014,Y10,Arizona St.,1113
 2014,Y11a,Iowa,1234
 2014,Y11b,Tennessee,1397
 2014,Y12a,NC State,1301
@@ -1932,30 +1932,30 @@ Season,Seed,TeamName,TeamID
 2014,Z01,Arizona,1112
 2014,Z02,Wisconsin,1458
 2014,Z03,Creighton,1166
-2014,Z04,San Diego St,1361
+2014,Z04,San Diego St.,1361
 2014,Z05,Oklahoma,1328
 2014,Z06,Baylor,1124
 2014,Z07,Oregon,1332
 2014,Z08,Gonzaga,1211
-2014,Z09,Oklahoma St,1329
+2014,Z09,Oklahoma St.,1329
 2014,Z10,BYU,1140
 2014,Z11,Nebraska,1304
-2014,Z12,N Dakota St,1295
-2014,Z13,New Mexico St,1308
+2014,Z12,N Dakota St.,1295
+2014,Z13,New Mexico St.,1308
 2014,Z14,Louisiana,1418
 2014,Z15,American Univ,1110
-2014,Z16,Weber St,1451
+2014,Z16,Weber St.,1451
 2015,W01,Villanova,1437
 2015,W02,Virginia,1438
 2015,W03,Oklahoma,1328
 2015,W04,Louisville,1257
 2015,W05,Northern Iowa,1320
 2015,W06,Providence,1344
-2015,W07,Michigan St,1277
+2015,W07,Michigan St.,1277
 2015,W08,NC State,1301
 2015,W09,LSU,1261
 2015,W10,Georgia,1208
-2015,W11a,Boise St,1129
+2015,W11a,Boise St.,1129
 2015,W11b,Dayton,1173
 2015,W12,Wyoming,1461
 2015,W13,UC Irvine,1414
@@ -1964,19 +1964,19 @@ Season,Seed,TeamName,TeamID
 2015,W16,Lafayette,1248
 2015,X01,Duke,1181
 2015,X02,Gonzaga,1211
-2015,X03,Iowa St,1235
+2015,X03,Iowa St.,1235
 2015,X04,Georgetown,1207
 2015,X05,Utah,1428
 2015,X06,SMU,1374
 2015,X07,Iowa,1234
-2015,X08,San Diego St,1361
-2015,X09,St John's,1385
+2015,X08,San Diego St.,1361
+2015,X09,St. John's,1385
 2015,X10,Davidson,1172
 2015,X11,UCLA,1417
 2015,X12,SF Austin,1372
 2015,X13,E Washington,1186
 2015,X14,UAB,1412
-2015,X15,N Dakota St,1295
+2015,X15,N Dakota St.,1295
 2015,X16a,North Florida,1316
 2015,X16b,Robert Morris,1352
 2015,Y01,Kentucky,1246
@@ -1985,7 +1985,7 @@ Season,Seed,TeamName,TeamID
 2015,Y04,Maryland,1268
 2015,Y05,West Virginia,1452
 2015,Y06,Butler,1139
-2015,Y07,Wichita St,1455
+2015,Y07,Wichita St.,1455
 2015,Y08,Cincinnati,1153
 2015,Y09,Purdue,1345
 2015,Y10,Indiana,1231
@@ -1993,7 +1993,7 @@ Season,Seed,TeamName,TeamID
 2015,Y12,Buffalo,1138
 2015,Y13,Valparaiso,1434
 2015,Y14,Northeastern,1318
-2015,Y15,New Mexico St,1308
+2015,Y15,New Mexico St.,1308
 2015,Y16a,Hampton,1214
 2015,Y16b,Manhattan,1264
 2015,Z01,Wisconsin,1458
@@ -2004,13 +2004,13 @@ Season,Seed,TeamName,TeamID
 2015,Z06,Xavier,1462
 2015,Z07,VCU,1433
 2015,Z08,Oregon,1332
-2015,Z09,Oklahoma St,1329
-2015,Z10,Ohio St,1326
+2015,Z09,Oklahoma St.,1329
+2015,Z10,Ohio St.,1326
 2015,Z11a,BYU,1140
 2015,Z11b,Mississippi,1279
 2015,Z12,Wofford,1459
 2015,Z13,Harvard,1217
-2015,Z14,Georgia St,1209
+2015,Z14,Georgia St.,1209
 2015,Z15,TX Southern,1411
 2015,Z16,Coastal Car,1157
 2016,W01,North Carolina,1314
@@ -2028,13 +2028,13 @@ Season,Seed,TeamName,TeamID
 2016,W12,Chattanooga,1151
 2016,W13,Stony Brook,1392
 2016,W14,SF Austin,1372
-2016,W15,Weber St,1451
+2016,W15,Weber St.,1451
 2016,W16a,F Dickinson,1192
 2016,W16b,FGCU,1195
 2016,X01,Virginia,1438
-2016,X02,Michigan St,1277
+2016,X02,Michigan St.,1277
 2016,X03,Utah,1428
-2016,X04,Iowa St,1235
+2016,X04,Iowa St.,1235
 2016,X05,Purdue,1345
 2016,X06,Seton Hall,1371
 2016,X07,Dayton,1173
@@ -2044,7 +2044,7 @@ Season,Seed,TeamName,TeamID
 2016,X11,Gonzaga,1211
 2016,X12,Ark Little Rock,1114
 2016,X13,Iona,1233
-2016,X14,Fresno St,1201
+2016,X14,Fresno St.,1201
 2016,X15,MTSU,1292
 2016,X16,Hampton,1214
 2016,Y01,Kansas,1242
@@ -2058,8 +2058,8 @@ Season,Seed,TeamName,TeamID
 2016,Y09,Connecticut,1163
 2016,Y10,Temple,1396
 2016,Y11a,Vanderbilt,1435
-2016,Y11b,Wichita St,1455
-2016,Y12,S Dakota St,1355
+2016,Y11b,Wichita St.,1455
+2016,Y12,S Dakota St.,1355
 2016,Y13,Hawaii,1218
 2016,Y14,Buffalo,1138
 2016,Y15,UNC Asheville,1421
@@ -2070,8 +2070,8 @@ Season,Seed,TeamName,TeamID
 2016,Z04,Duke,1181
 2016,Z05,Baylor,1124
 2016,Z06,Texas,1400
-2016,Z07,Oregon St,1333
-2016,Z08,St Joseph's PA,1386
+2016,Z07,Oregon St.,1333
+2016,Z08,Saint Joseph's,1386
 2016,Z09,Cincinnati,1153
 2016,Z10,VCU,1433
 2016,Z11,Northern Iowa,1320
@@ -2095,17 +2095,17 @@ Season,Seed,TeamName,TeamID
 2017,W11b,USC,1425
 2017,W12,UNC Wilmington,1423
 2017,W13,ETSU,1190
-2017,W14,New Mexico St,1308
+2017,W14,New Mexico St.,1308
 2017,W15,Troy,1407
-2017,W16a,Mt St Mary's,1291
+2017,W16a,Mt St. Mary's,1291
 2017,W16b,New Orleans,1309
 2017,X01,Gonzaga,1211
 2017,X02,Arizona,1112
-2017,X03,Florida St,1199
+2017,X03,Florida St.,1199
 2017,X04,West Virginia,1452
 2017,X05,Notre Dame,1323
 2017,X06,Maryland,1268
-2017,X07,St Mary's CA,1388
+2017,X07,Saint Mary's,1388
 2017,X08,Northwestern,1321
 2017,X09,Vanderbilt,1435
 2017,X10,VCU,1433
@@ -2114,22 +2114,22 @@ Season,Seed,TeamName,TeamID
 2017,X13,Bucknell,1137
 2017,X14,FGCU,1195
 2017,X15,North Dakota,1315
-2017,X16,S Dakota St,1355
+2017,X16,S Dakota St.,1355
 2017,Y01,Kansas,1242
 2017,Y02,Louisville,1257
 2017,Y03,Oregon,1332
 2017,Y04,Purdue,1345
-2017,Y05,Iowa St,1235
+2017,Y05,Iowa St.,1235
 2017,Y06,Creighton,1166
 2017,Y07,Michigan,1276
 2017,Y08,Miami FL,1274
-2017,Y09,Michigan St,1277
-2017,Y10,Oklahoma St,1329
+2017,Y09,Michigan St.,1277
+2017,Y10,Oklahoma St.,1329
 2017,Y11,Rhode Island,1348
 2017,Y12,Nevada,1305
 2017,Y13,Vermont,1436
 2017,Y14,Iona,1233
-2017,Y15,Jacksonville St,1240
+2017,Y15,Jacksonville St.,1240
 2017,Y16a,NC Central,1300
 2017,Y16b,UC Davis,1413
 2017,Z01,North Carolina,1314
@@ -2141,8 +2141,8 @@ Season,Seed,TeamName,TeamID
 2017,Z07,Dayton,1173
 2017,Z08,Arkansas,1116
 2017,Z09,Seton Hall,1371
-2017,Z10,Wichita St,1455
-2017,Z11a,Kansas St,1243
+2017,Z10,Wichita St.,1455
+2017,Z11a,Kansas St.,1243
 2017,Z11b,Wake Forest,1448
 2017,Z12,MTSU,1292
 2017,Z13,Winthrop,1457
@@ -2152,16 +2152,16 @@ Season,Seed,TeamName,TeamID
 2018,W01,Villanova,1437
 2018,W02,Purdue,1345
 2018,W03,Texas Tech,1403
-2018,W04,Wichita St,1455
+2018,W04,Wichita St.,1455
 2018,W05,West Virginia,1452
 2018,W06,Florida,1196
 2018,W07,Arkansas,1116
 2018,W08,Virginia Tech,1439
 2018,W09,Alabama,1104
 2018,W10,Butler,1139
-2018,W11a,St Bonaventure,1382
+2018,W11a,St. Bonaventure,1382
 2018,W11b,UCLA,1417
-2018,W12,Murray St,1293
+2018,W12,Murray St.,1293
 2018,W13,Marshall,1267
 2018,W14,SF Austin,1372
 2018,W15,CS Fullerton,1168
@@ -2169,7 +2169,7 @@ Season,Seed,TeamName,TeamID
 2018,W16b,Radford,1347
 2018,X01,Kansas,1242
 2018,X02,Duke,1181
-2018,X03,Michigan St,1277
+2018,X03,Michigan St.,1277
 2018,X04,Auburn,1120
 2018,X05,Clemson,1155
 2018,X06,TCU,1395
@@ -2177,9 +2177,9 @@ Season,Seed,TeamName,TeamID
 2018,X08,Seton Hall,1371
 2018,X09,NC State,1301
 2018,X10,Oklahoma,1328
-2018,X11a,Arizona St,1113
+2018,X11a,Arizona St.,1113
 2018,X11b,Syracuse,1393
-2018,X12,New Mexico St,1308
+2018,X12,New Mexico St.,1308
 2018,X13,Col Charleston,1158
 2018,X14,Bucknell,1137
 2018,X15,Iona,1233
@@ -2192,36 +2192,36 @@ Season,Seed,TeamName,TeamID
 2018,Y06,Miami FL,1274
 2018,Y07,Nevada,1305
 2018,Y08,Creighton,1166
-2018,Y09,Kansas St,1243
+2018,Y09,Kansas St.,1243
 2018,Y10,Texas,1400
 2018,Y11,Loyola-Chicago,1260
 2018,Y12,Davidson,1172
 2018,Y13,Buffalo,1138
-2018,Y14,Wright St,1460
-2018,Y15,Georgia St,1209
+2018,Y14,Wright St.,1460
+2018,Y15,Georgia St.,1209
 2018,Y16,UMBC,1420
 2018,Z01,Xavier,1462
 2018,Z02,North Carolina,1314
 2018,Z03,Michigan,1276
 2018,Z04,Gonzaga,1211
-2018,Z05,Ohio St,1326
+2018,Z05,Ohio St.,1326
 2018,Z06,Houston,1222
 2018,Z07,Texas A&M,1401
 2018,Z08,Missouri,1281
-2018,Z09,Florida St,1199
+2018,Z09,Florida St.,1199
 2018,Z10,Providence,1344
-2018,Z11,San Diego St,1361
-2018,Z12,S Dakota St,1355
+2018,Z11,San Diego St.,1361
+2018,Z12,S Dakota St.,1355
 2018,Z13,UNC Greensboro,1422
 2018,Z14,Montana,1285
 2018,Z15,Lipscomb,1252
 2018,Z16a,NC Central,1300
 2018,Z16b,TX Southern,1411
 2019,W01,Duke,1181
-2019,W02,Michigan St,1277
+2019,W02,Michigan St.,1277
 2019,W03,LSU,1261
 2019,W04,Virginia Tech,1439
-2019,W05,Mississippi St,1280
+2019,W05,Mississippi St.,1280
 2019,W06,Maryland,1268
 2019,W07,Louisville,1257
 2019,W08,VCU,1433
@@ -2230,24 +2230,24 @@ Season,Seed,TeamName,TeamID
 2019,W11a,Belmont,1125
 2019,W11b,Temple,1396
 2019,W12,Liberty,1251
-2019,W13,St Louis,1387
+2019,W13,Saint Louis,1387
 2019,W14,Yale,1463
 2019,W15,Bradley,1133
-2019,W16a,N Dakota St,1295
+2019,W16a,N Dakota St.,1295
 2019,W16b,NC Central,1300
 2019,X01,Gonzaga,1211
 2019,X02,Michigan,1276
 2019,X03,Texas Tech,1403
-2019,X04,Florida St,1199
+2019,X04,Florida St.,1199
 2019,X05,Marquette,1266
 2019,X06,Buffalo,1138
 2019,X07,Nevada,1305
 2019,X08,Syracuse,1393
 2019,X09,Baylor,1124
 2019,X10,Florida,1196
-2019,X11a,Arizona St,1113
-2019,X11b,St John's,1385
-2019,X12,Murray St,1293
+2019,X11a,Arizona St.,1113
+2019,X11b,St. John's,1385
+2019,X12,Murray St.,1293
 2019,X13,Vermont,1436
 2019,X14,N Kentucky,1297
 2019,X15,Montana,1285
@@ -2258,28 +2258,28 @@ Season,Seed,TeamName,TeamID
 2019,Y03,Houston,1222
 2019,Y04,Kansas,1242
 2019,Y05,Auburn,1120
-2019,Y06,Iowa St,1235
+2019,Y06,Iowa St.,1235
 2019,Y07,Wofford,1459
-2019,Y08,Utah St,1429
+2019,Y08,Utah St.,1429
 2019,Y09,Washington,1449
 2019,Y10,Seton Hall,1371
-2019,Y11,Ohio St,1326
-2019,Y12,New Mexico St,1308
+2019,Y11,Ohio St.,1326
+2019,Y12,New Mexico St.,1308
 2019,Y13,Northeastern,1318
-2019,Y14,Georgia St,1209
+2019,Y14,Georgia St.,1209
 2019,Y15,Abilene Chr,1101
 2019,Y16,Iona,1233
 2019,Z01,Virginia,1438
 2019,Z02,Tennessee,1397
 2019,Z03,Purdue,1345
-2019,Z04,Kansas St,1243
+2019,Z04,Kansas St.,1243
 2019,Z05,Wisconsin,1458
 2019,Z06,Villanova,1437
 2019,Z07,Cincinnati,1153
 2019,Z08,Mississippi,1279
 2019,Z09,Oklahoma,1328
 2019,Z10,Iowa,1234
-2019,Z11,St Mary's CA,1388
+2019,Z11,Saint Mary's,1388
 2019,Z12,Oregon,1332
 2019,Z13,UC Irvine,1414
 2019,Z14,Old Dominion,1330
@@ -2288,20 +2288,20 @@ Season,Seed,TeamName,TeamID
 2021,W01,Michigan,1276
 2021,W02,Alabama,1104
 2021,W03,Texas,1400
-2021,W04,Florida St,1199
+2021,W04,Florida St.,1199
 2021,W05,Colorado,1160
 2021,W06,BYU,1140
 2021,W07,Connecticut,1163
 2021,W08,LSU,1261
-2021,W09,St Bonaventure,1382
+2021,W09,St. Bonaventure,1382
 2021,W10,Maryland,1268
-2021,W11a,Michigan St,1277
+2021,W11a,Michigan St.,1277
 2021,W11b,UCLA,1417
 2021,W12,Georgetown,1207
 2021,W13,UNC Greensboro,1422
 2021,W14,Abilene Chr,1101
 2021,W15,Iona,1233
-2021,W16a,Mt St Mary's,1291
+2021,W16a,Mt St. Mary's,1291
 2021,W16b,TX Southern,1411
 2021,X01,Gonzaga,1211
 2021,X02,Iowa,1234
@@ -2314,31 +2314,31 @@ Season,Seed,TeamName,TeamID
 2021,X09,Missouri,1281
 2021,X10,VCU,1433
 2021,X11a,Drake,1179
-2021,X11b,Wichita St,1455
+2021,X11b,Wichita St.,1455
 2021,X12,UC Santa Barbara,1364
 2021,X13,Ohio,1325
 2021,X14,E Washington,1186
 2021,X15,Grand Canyon,1213
-2021,X16a,Appalachian St,1111
-2021,X16b,Norfolk St,1313
+2021,X16a,Appalachian St.,1111
+2021,X16b,Norfolk St.,1313
 2021,Y01,Illinois,1228
 2021,Y02,Houston,1222
 2021,Y03,West Virginia,1452
-2021,Y04,Oklahoma St,1329
+2021,Y04,Oklahoma St.,1329
 2021,Y05,Tennessee,1397
-2021,Y06,San Diego St,1361
+2021,Y06,San Diego St.,1361
 2021,Y07,Clemson,1155
 2021,Y08,Loyola-Chicago,1260
 2021,Y09,Georgia Tech,1210
 2021,Y10,Rutgers,1353
 2021,Y11,Syracuse,1393
-2021,Y12,Oregon St,1333
+2021,Y12,Oregon St.,1333
 2021,Y13,Liberty,1251
-2021,Y14,Morehead St,1287
-2021,Y15,Cleveland St,1156
+2021,Y14,Morehead St.,1287
+2021,Y15,Cleveland St.,1156
 2021,Y16,Drexel,1180
 2021,Z01,Baylor,1124
-2021,Z02,Ohio St,1326
+2021,Z02,Ohio St.,1326
 2021,Z03,Arkansas,1116
 2021,Z04,Purdue,1345
 2021,Z05,Villanova,1437
@@ -2347,7 +2347,7 @@ Season,Seed,TeamName,TeamID
 2021,Z08,North Carolina,1314
 2021,Z09,Wisconsin,1458
 2021,Z10,Virginia Tech,1439
-2021,Z11,Utah St,1429
+2021,Z11,Utah St.,1429
 2021,Z12,Winthrop,1457
 2021,Z13,North Texas,1317
 2021,Z14,Colgate,1159
@@ -2357,9 +2357,9 @@ Season,Seed,TeamName,TeamID
 2022,W02,Kentucky,1246
 2022,W03,Purdue,1345
 2022,W04,UCLA,1417
-2022,W05,St Mary's CA,1388
+2022,W05,Saint Mary's,1388
 2022,W06,Texas,1400
-2022,W07,Murray St,1293
+2022,W07,Murray St.,1293
 2022,W08,North Carolina,1314
 2022,W09,Marquette,1266
 2022,W10,San Francisco,1362
@@ -2368,25 +2368,25 @@ Season,Seed,TeamName,TeamID
 2022,W12b,Wyoming,1461
 2022,W13,Akron,1103
 2022,W14,Yale,1463
-2022,W15,St Peter's,1389
-2022,W16,Norfolk St,1313
+2022,W15,Saint Peter's,1389
+2022,W16,Norfolk St.,1313
 2022,X01,Gonzaga,1211
 2022,X02,Duke,1181
 2022,X03,Texas Tech,1403
 2022,X04,Arkansas,1116
 2022,X05,Connecticut,1163
 2022,X06,Alabama,1104
-2022,X07,Michigan St,1277
-2022,X08,Boise St,1129
+2022,X07,Michigan St.,1277
+2022,X08,Boise St.,1129
 2022,X09,Memphis,1272
 2022,X10,Davidson,1172
 2022,X11a,Notre Dame,1323
 2022,X11b,Rutgers,1353
-2022,X12,New Mexico St,1308
+2022,X12,New Mexico St.,1308
 2022,X13,Vermont,1436
-2022,X14,Montana St,1286
+2022,X14,Montana St.,1286
 2022,X15,CS Fullerton,1168
-2022,X16,Georgia St,1209
+2022,X16,Georgia St.,1209
 2022,Y01,Kansas,1242
 2022,Y02,Auburn,1120
 2022,Y03,Wisconsin,1458
@@ -2394,14 +2394,14 @@ Season,Seed,TeamName,TeamID
 2022,Y05,Iowa,1234
 2022,Y06,LSU,1261
 2022,Y07,USC,1425
-2022,Y08,San Diego St,1361
+2022,Y08,San Diego St.,1361
 2022,Y09,Creighton,1166
 2022,Y10,Miami FL,1274
-2022,Y11,Iowa St,1235
+2022,Y11,Iowa St.,1235
 2022,Y12,Richmond,1350
-2022,Y13,S Dakota St,1355
+2022,Y13,S Dakota St.,1355
 2022,Y14,Colgate,1159
-2022,Y15,Jacksonville St,1240
+2022,Y15,Jacksonville St.,1240
 2022,Y16a,TAM C. Christi,1394
 2022,Y16b,TX Southern,1411
 2022,Z01,Arizona,1112
@@ -2409,8 +2409,8 @@ Season,Seed,TeamName,TeamID
 2022,Z03,Tennessee,1397
 2022,Z04,Illinois,1228
 2022,Z05,Houston,1222
-2022,Z06,Colorado St,1161
-2022,Z07,Ohio St,1326
+2022,Z06,Colorado St.,1161
+2022,Z07,Ohio St.,1326
 2022,Z08,Seton Hall,1371
 2022,Z09,TCU,1395
 2022,Z10,Loyola-Chicago,1260
@@ -2420,21 +2420,21 @@ Season,Seed,TeamName,TeamID
 2022,Z14,Longwood,1255
 2022,Z15,Delaware,1174
 2022,Z16a,Bryant,1136
-2022,Z16b,Wright St,1460
+2022,Z16b,Wright St.,1460
 2023,W01,Purdue,1345
 2023,W02,Marquette,1266
-2023,W03,Kansas St,1243
+2023,W03,Kansas St.,1243
 2023,W04,Tennessee,1397
 2023,W05,Duke,1181
 2023,W06,Kentucky,1246
-2023,W07,Michigan St,1277
+2023,W07,Michigan St.,1277
 2023,W08,Memphis,1272
 2023,W09,FL Atlantic,1194
 2023,W10,USC,1425
 2023,W11,Providence,1344
 2023,W12,Oral Roberts,1331
 2023,W13,Louisiana,1418
-2023,W14,Montana St,1286
+2023,W14,Montana St.,1286
 2023,W15,Vermont,1436
 2023,W16a,F Dickinson,1192
 2023,W16b,TX Southern,1411
@@ -2442,30 +2442,30 @@ Season,Seed,TeamName,TeamID
 2023,X02,Arizona,1112
 2023,X03,Baylor,1124
 2023,X04,Virginia,1438
-2023,X05,San Diego St,1361
+2023,X05,San Diego St.,1361
 2023,X06,Creighton,1166
 2023,X07,Missouri,1281
 2023,X08,Maryland,1268
 2023,X09,West Virginia,1452
-2023,X10,Utah St,1429
+2023,X10,Utah St.,1429
 2023,X11,NC State,1301
 2023,X12,Col Charleston,1158
 2023,X13,Furman,1202
 2023,X14,UC Santa Barbara,1364
 2023,X15,Princeton,1343
-2023,X16a,SE Missouri St,1369
+2023,X16a,SE Missouri St.,1369
 2023,X16b,TAM C. Christi,1394
 2023,Y01,Houston,1222
 2023,Y02,Texas,1400
 2023,Y03,Xavier,1462
 2023,Y04,Indiana,1231
 2023,Y05,Miami FL,1274
-2023,Y06,Iowa St,1235
+2023,Y06,Iowa St.,1235
 2023,Y07,Texas A&M,1401
 2023,Y08,Iowa,1234
 2023,Y09,Auburn,1120
-2023,Y10,Penn St,1336
-2023,Y11a,Mississippi St,1280
+2023,Y10,Penn St.,1336
+2023,Y11a,Mississippi St.,1280
 2023,Y11b,Pittsburgh,1338
 2023,Y12,Drake,1179
 2023,Y13,Kent,1245
@@ -2476,13 +2476,13 @@ Season,Seed,TeamName,TeamID
 2023,Z02,UCLA,1417
 2023,Z03,Gonzaga,1211
 2023,Z04,Connecticut,1163
-2023,Z05,St Mary's CA,1388
+2023,Z05,Saint Mary's,1388
 2023,Z06,TCU,1395
 2023,Z07,Northwestern,1321
 2023,Z08,Arkansas,1116
 2023,Z09,Illinois,1228
-2023,Z10,Boise St,1129
-2023,Z11a,Arizona St,1113
+2023,Z10,Boise St.,1129
+2023,Z11a,Arizona St.,1113
 2023,Z11b,Nevada,1305
 2023,Z12,VCU,1433
 2023,Z13,Iona,1233
@@ -2490,36 +2490,36 @@ Season,Seed,TeamName,TeamID
 2023,Z15,UNC Asheville,1421
 2023,Z16,Howard,1224
 2024,W01,Connecticut,1163
-2024,W02,Iowa St,1235
+2024,W02,Iowa St.,1235
 2024,W03,Illinois,1228
 2024,W04,Auburn,1120
-2024,W05,San Diego St,1361
+2024,W05,San Diego St.,1361
 2024,W06,BYU,1140
-2024,W07,Washington St,1450
+2024,W07,Washington St.,1450
 2024,W08,FL Atlantic,1194
 2024,W09,Northwestern,1321
 2024,W10,Drake,1179
 2024,W11,Duquesne,1182
 2024,W12,UAB,1412
 2024,W13,Yale,1463
-2024,W14,Morehead St,1287
-2024,W15,S Dakota St,1355
+2024,W14,Morehead St.,1287
+2024,W15,S Dakota St.,1355
 2024,W16,Stetson,1391
 2024,X01,North Carolina,1314
 2024,X02,Arizona,1112
 2024,X03,Baylor,1124
 2024,X04,Alabama,1104
-2024,X05,St Mary's CA,1388
+2024,X05,Saint Mary's,1388
 2024,X06,Clemson,1155
 2024,X07,Dayton,1173
-2024,X08,Mississippi St,1280
-2024,X09,Michigan St,1277
+2024,X08,Mississippi St.,1280
+2024,X09,Michigan St.,1277
 2024,X10,Nevada,1305
 2024,X11,New Mexico,1307
 2024,X12,Grand Canyon,1213
 2024,X13,Col Charleston,1158
 2024,X14,Colgate,1159
-2024,X15,Long Beach St,1253
+2024,X15,Long Beach St.,1253
 2024,X16a,Howard,1224
 2024,X16b,Wagner,1447
 2024,Y01,Purdue,1345
@@ -2529,17 +2529,17 @@ Season,Seed,TeamName,TeamID
 2024,Y05,Gonzaga,1211
 2024,Y06,South Carolina,1376
 2024,Y07,Texas,1400
-2024,Y08,Utah St,1429
+2024,Y08,Utah St.,1429
 2024,Y09,TCU,1395
-2024,Y10a,Colorado St,1161
+2024,Y10a,Colorado St.,1161
 2024,Y10b,Virginia,1438
 2024,Y11,Oregon,1332
-2024,Y12,McNeese St,1270
+2024,Y12,McNeese St.,1270
 2024,Y13,Samford,1359
 2024,Y14,Akron,1103
-2024,Y15,St Peter's,1389
+2024,Y15,Saint Peter's,1389
 2024,Y16a,Grambling,1212
-2024,Y16b,Montana St,1286
+2024,Y16b,Montana St.,1286
 2024,Z01,Houston,1222
 2024,Z02,Marquette,1266
 2024,Z03,Kentucky,1246
@@ -2549,7 +2549,7 @@ Season,Seed,TeamName,TeamID
 2024,Z07,Florida,1196
 2024,Z08,Nebraska,1304
 2024,Z09,Texas A&M,1401
-2024,Z10a,Boise St,1129
+2024,Z10a,Boise St.,1129
 2024,Z10b,Colorado,1160
 2024,Z11,NC State,1301
 2024,Z12,James Madison,1241
@@ -2563,8 +2563,8 @@ Season,Seed,TeamName,TeamID
 2025,W04,Arizona,1112
 2025,W05,Oregon,1332
 2025,W06,BYU,1140
-2025,W07,St Mary's CA,1388
-2025,W08,Mississippi St,1280
+2025,W07,Saint Mary's,1388
+2025,W08,Mississippi St.,1280
 2025,W09,Baylor,1124
 2025,W10,Vanderbilt,1435
 2025,W11,VCU,1433
@@ -2573,7 +2573,7 @@ Season,Seed,TeamName,TeamID
 2025,W14,Montana,1285
 2025,W15,Robert Morris,1352
 2025,W16a,American Univ,1110
-2025,W16b,Mt St Mary's,1291
+2025,W16b,Mt St. Mary's,1291
 2025,X01,Houston,1222
 2025,X02,Tennessee,1397
 2025,X03,Kentucky,1246
@@ -2583,17 +2583,17 @@ Season,Seed,TeamName,TeamID
 2025,X07,UCLA,1417
 2025,X08,Gonzaga,1211
 2025,X09,Georgia,1208
-2025,X10,Utah St,1429
+2025,X10,Utah St.,1429
 2025,X11a,Texas,1400
 2025,X11b,Xavier,1462
-2025,X12,McNeese St,1270
+2025,X12,McNeese St.,1270
 2025,X13,High Point,1219
 2025,X14,Troy,1407
 2025,X15,Wofford,1459
 2025,X16,SIUE,1188
 2025,Y01,Auburn,1120
-2025,Y02,Michigan St,1277
-2025,Y03,Iowa St,1235
+2025,Y02,Michigan St.,1277
+2025,Y03,Iowa St.,1235
 2025,Y04,Texas A&M,1401
 2025,Y05,Michigan,1276
 2025,Y06,Mississippi,1279
@@ -2602,15 +2602,15 @@ Season,Seed,TeamName,TeamID
 2025,Y09,Creighton,1166
 2025,Y10,New Mexico,1307
 2025,Y11a,North Carolina,1314
-2025,Y11b,San Diego St,1361
+2025,Y11b,San Diego St.,1361
 2025,Y12,UC San Diego,1471
 2025,Y13,Yale,1463
 2025,Y14,Lipscomb,1252
 2025,Y15,Bryant,1136
-2025,Y16a,Alabama St,1106
-2025,Y16b,St Francis PA,1384
+2025,Y16a,Alabama St.,1106
+2025,Y16b,Saint Francis PA,1384
 2025,Z01,Florida,1196
-2025,Z02,St John's,1385
+2025,Z02,St. John's,1385
 2025,Z03,Texas Tech,1403
 2025,Z04,Maryland,1268
 2025,Z05,Memphis,1272
@@ -2620,8 +2620,8 @@ Season,Seed,TeamName,TeamID
 2025,Z09,Oklahoma,1328
 2025,Z10,Arkansas,1116
 2025,Z11,Drake,1179
-2025,Z12,Colorado St,1161
+2025,Z12,Colorado St.,1161
 2025,Z13,Grand Canyon,1213
 2025,Z14,UNC Wilmington,1423
 2025,Z15,NE Omaha,1303
-2025,Z16,Norfolk St,1313
+2025,Z16,Norfolk St.,1313
