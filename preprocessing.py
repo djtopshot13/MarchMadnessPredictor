@@ -141,9 +141,7 @@ def clean_tourney_slots():
     tsl_df.drop(columns=["StrongTeamName", "WeakTeamName"], inplace=True)
 
     ts_df = load_data("MarchMadnessData/MNCAATourneySeeds.csv")
-    tsl_df.insert(column="StrongTeamName", loc=2, value=None)
-    tsl_df.insert(column="WeakTeamName", loc=4, value=None)
-
+    
     ts_dict = {}
     for _, row in ts_df.iterrows():
         if row['Season'] not in ts_dict:
@@ -281,6 +279,8 @@ clean_ncaa_tourney_detailed_results()
 
 clean_tourney_seeds()
 # ^^^This function needs some more proofing
+clean_tourney_slots()
+
 
 clean_regular_season_compact_results()
 clean_regular_season_detailed_results()
