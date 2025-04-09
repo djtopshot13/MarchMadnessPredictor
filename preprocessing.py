@@ -144,10 +144,8 @@ def clean_tourney_slots():
 
     tsl_df.drop(columns=["StrongTeamName", "WeakTeamName"], inplace=True)
 
-    ts_df = load_data("MNCAATourneySeeds.csv")
-    tsl_df.insert(column="StrongTeamName", loc=2, value=None)
-    tsl_df.insert(column="WeakTeamName", loc=4, value=None)
-
+    ts_df = load_data("MarchMadnessData/MNCAATourneySeeds.csv")
+    
     ts_dict = {}
     for _, row in ts_df.iterrows():
         if row['Season'] not in ts_dict:
@@ -238,7 +236,7 @@ def add_period_to_st(input_file, output_file):
     # Check if the column containing college names is named 'CollegeName'
     if 'TeamName' in df.columns:
         # Use regex to add a period after 'St' at the end of names
-        df['TeamName'] = df['TeamName'].str.replace(r'\bSt$', 'St.', regex=True)
+        df['TeamName'] = df['TeamName'].str.replace(r'St\b ', 'St. ', regex=True)
 
     write_data(df, output_file)
 
@@ -277,18 +275,19 @@ def clean_team_conferences():
     write_data(t_conf_df, file_name)
 
 
-add_period_to_st(os.path.join(project_root, 'MarchMadnessData', 'MTeams.csv'), 
-               os.path.join(project_root, 'MarchMadnessData', 'MTeams.csv'))
-# clean_tourney_games()
-# clean_game_cities()
-# clean_ncaa_tourney_compact_results()
-# clean_ncaa_tourney_detailed_results()
+add_period_to_st("MarchMadnessData/MTeams.csv", "MarchMadnessData/MTeams.csv")
+clean_tourney_games()
+clean_game_cities()
+clean_ncaa_tourney_compact_results()
+clean_ncaa_tourney_detailed_results()
 
-# clean_tourney_seeds()
+clean_tourney_seeds()
 # ^^^This function needs some more proofing
+clean_tourney_slots()
 
-# clean_regular_season_compact_results()
-# clean_regular_season_detailed_results()
+
+clean_regular_season_compact_results()
+clean_regular_season_detailed_results()
 # clean_seasons()
-# clean_team_coaches()
-# clean_team_conferences()
+clean_team_coaches()
+clean_team_conferences()

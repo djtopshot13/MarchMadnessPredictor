@@ -213,14 +213,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1985,South Florida,1378,sun_belt,Sun Belt Conference
 1985,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1985,Southern Univ,1380,swac,Southwest Athletic Conference
-1985,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1985,St Francis NY,1383,ecacm,Eastern Collegiate Athletic Conference Metro
-1985,St Francis PA,1384,ecacm,Eastern Collegiate Athletic Conference Metro
-1985,St John's,1385,big_east,Big East Conference
-1985,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1985,St Louis,1387,mw_city,Midwestern City Conference
-1985,St Mary's CA,1388,wcc,West Coast Conference
-1985,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1985,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1985,Saint Francis NY,1383,ecacm,Eastern Collegiate Athletic Conference Metro
+1985,Saint Francis PA,1384,ecacm,Eastern Collegiate Athletic Conference Metro
+1985,St. John's,1385,big_east,Big East Conference
+1985,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1985,Saint Louis,1387,mw_city,Midwestern City Conference
+1985,Saint Mary's,1388,wcc,West Coast Conference
+1985,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1985,Stanford,1390,pac_ten,Pacific-10 Conference
 1985,Stetson,1391,ind,Independent
 1985,Syracuse,1393,big_east,Big East Conference
@@ -497,14 +497,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1986,South Florida,1378,sun_belt,Sun Belt Conference
 1986,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1986,Southern Univ,1380,swac,Southwest Athletic Conference
-1986,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1986,St Francis NY,1383,ecacm,Eastern Collegiate Athletic Conference Metro
-1986,St Francis PA,1384,ecacm,Eastern Collegiate Athletic Conference Metro
-1986,St John's,1385,big_east,Big East Conference
-1986,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1986,St Louis,1387,mw_coll,Midwestern Collegiate Conference
-1986,St Mary's CA,1388,wcc,West Coast Conference
-1986,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1986,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1986,Saint Francis NY,1383,ecacm,Eastern Collegiate Athletic Conference Metro
+1986,Saint Francis PA,1384,ecacm,Eastern Collegiate Athletic Conference Metro
+1986,St. John's,1385,big_east,Big East Conference
+1986,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1986,Saint Louis,1387,mw_coll,Midwestern Collegiate Conference
+1986,Saint Mary's,1388,wcc,West Coast Conference
+1986,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1986,Stanford,1390,pac_ten,Pacific-10 Conference
 1986,Stetson,1391,a_sun,Atlantic Sun Conference
 1986,Syracuse,1393,big_east,Big East Conference
@@ -785,14 +785,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1987,South Florida,1378,sun_belt,Sun Belt Conference
 1987,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1987,Southern Univ,1380,swac,Southwest Athletic Conference
-1987,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1987,St Francis NY,1383,ecacm,Eastern Collegiate Athletic Conference Metro
-1987,St Francis PA,1384,ecacm,Eastern Collegiate Athletic Conference Metro
-1987,St John's,1385,big_east,Big East Conference
-1987,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1987,St Louis,1387,mw_coll,Midwestern Collegiate Conference
-1987,St Mary's CA,1388,wcc,West Coast Conference
-1987,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1987,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1987,Saint Francis NY,1383,ecacm,Eastern Collegiate Athletic Conference Metro
+1987,Saint Francis PA,1384,ecacm,Eastern Collegiate Athletic Conference Metro
+1987,St. John's,1385,big_east,Big East Conference
+1987,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1987,Saint Louis,1387,mw_coll,Midwestern Collegiate Conference
+1987,Saint Mary's,1388,wcc,West Coast Conference
+1987,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1987,Stanford,1390,pac_ten,Pacific-10 Conference
 1987,Stetson,1391,a_sun,Atlantic Sun Conference
 1987,Syracuse,1393,big_east,Big East Conference
@@ -1075,14 +1075,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1988,South Florida,1378,sun_belt,Sun Belt Conference
 1988,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1988,Southern Univ,1380,swac,Southwest Athletic Conference
-1988,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1988,St Francis NY,1383,ecacm,Eastern Collegiate Athletic Conference Metro
-1988,St Francis PA,1384,ecacm,Eastern Collegiate Athletic Conference Metro
-1988,St John's,1385,big_east,Big East Conference
-1988,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1988,St Louis,1387,mw_coll,Midwestern Collegiate Conference
-1988,St Mary's CA,1388,wcc,West Coast Conference
-1988,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1988,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1988,Saint Francis NY,1383,ecacm,Eastern Collegiate Athletic Conference Metro
+1988,Saint Francis PA,1384,ecacm,Eastern Collegiate Athletic Conference Metro
+1988,St. John's,1385,big_east,Big East Conference
+1988,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1988,Saint Louis,1387,mw_coll,Midwestern Collegiate Conference
+1988,Saint Mary's,1388,wcc,West Coast Conference
+1988,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1988,Stanford,1390,pac_ten,Pacific-10 Conference
 1988,Stetson,1391,a_sun,Atlantic Sun Conference
 1988,Syracuse,1393,big_east,Big East Conference
@@ -1299,7 +1299,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1989,Morehead St.,1287,ovc,Ohio Valley Conference
 1989,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1989,MS Valley St.,1290,swac,Southwest Athletic Conference
-1989,Mt St Mary's,1291,ind,Independent
+1989,Mt St. Mary's,1291,ind,Independent
 1989,MTSU,1292,ovc,Ohio Valley Conference
 1989,Murray St.,1293,ovc,Ohio Valley Conference
 1989,N Illinois,1296,ind,Independent
@@ -1368,14 +1368,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1989,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1989,Southern Univ,1380,swac,Southwest Athletic Conference
 1989,Southern Utah,1381,ind,Independent
-1989,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1989,St Francis NY,1383,nec,Northeast Conference
-1989,St Francis PA,1384,nec,Northeast Conference
-1989,St John's,1385,big_east,Big East Conference
-1989,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1989,St Louis,1387,mw_coll,Midwestern Collegiate Conference
-1989,St Mary's CA,1388,wcc,West Coast Conference
-1989,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1989,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1989,Saint Francis NY,1383,nec,Northeast Conference
+1989,Saint Francis PA,1384,nec,Northeast Conference
+1989,St. John's,1385,big_east,Big East Conference
+1989,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1989,Saint Louis,1387,mw_coll,Midwestern Collegiate Conference
+1989,Saint Mary's,1388,wcc,West Coast Conference
+1989,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1989,Stanford,1390,pac_ten,Pacific-10 Conference
 1989,Stetson,1391,a_sun,Atlantic Sun Conference
 1989,Syracuse,1393,big_east,Big East Conference
@@ -1592,7 +1592,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1990,Morehead St.,1287,ovc,Ohio Valley Conference
 1990,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1990,MS Valley St.,1290,swac,Southwest Athletic Conference
-1990,Mt St Mary's,1291,nec,Northeast Conference
+1990,Mt St. Mary's,1291,nec,Northeast Conference
 1990,MTSU,1292,ovc,Ohio Valley Conference
 1990,Murray St.,1293,ovc,Ohio Valley Conference
 1990,N Illinois,1296,ind,Independent
@@ -1659,14 +1659,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1990,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1990,Southern Univ,1380,swac,Southwest Athletic Conference
 1990,Southern Utah,1381,ind,Independent
-1990,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1990,St Francis NY,1383,nec,Northeast Conference
-1990,St Francis PA,1384,nec,Northeast Conference
-1990,St John's,1385,big_east,Big East Conference
-1990,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1990,St Louis,1387,mw_coll,Midwestern Collegiate Conference
-1990,St Mary's CA,1388,wcc,West Coast Conference
-1990,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1990,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1990,Saint Francis NY,1383,nec,Northeast Conference
+1990,Saint Francis PA,1384,nec,Northeast Conference
+1990,St. John's,1385,big_east,Big East Conference
+1990,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1990,Saint Louis,1387,mw_coll,Midwestern Collegiate Conference
+1990,Saint Mary's,1388,wcc,West Coast Conference
+1990,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1990,Stanford,1390,pac_ten,Pacific-10 Conference
 1990,Stetson,1391,a_sun,Atlantic Sun Conference
 1990,Syracuse,1393,big_east,Big East Conference
@@ -1884,7 +1884,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1991,Morehead St.,1287,ovc,Ohio Valley Conference
 1991,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1991,MS Valley St.,1290,swac,Southwest Athletic Conference
-1991,Mt St Mary's,1291,nec,Northeast Conference
+1991,Mt St. Mary's,1291,nec,Northeast Conference
 1991,MTSU,1292,ovc,Ohio Valley Conference
 1991,Murray St.,1293,ovc,Ohio Valley Conference
 1991,N Illinois,1296,mid_cont,Mid-Continent Conference
@@ -1953,14 +1953,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1991,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1991,Southern Univ,1380,swac,Southwest Athletic Conference
 1991,Southern Utah,1381,ind,Independent
-1991,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1991,St Francis NY,1383,nec,Northeast Conference
-1991,St Francis PA,1384,nec,Northeast Conference
-1991,St John's,1385,big_east,Big East Conference
-1991,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1991,St Louis,1387,mw_coll,Midwestern Collegiate Conference
-1991,St Mary's CA,1388,wcc,West Coast Conference
-1991,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1991,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1991,Saint Francis NY,1383,nec,Northeast Conference
+1991,Saint Francis PA,1384,nec,Northeast Conference
+1991,St. John's,1385,big_east,Big East Conference
+1991,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1991,Saint Louis,1387,mw_coll,Midwestern Collegiate Conference
+1991,Saint Mary's,1388,wcc,West Coast Conference
+1991,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1991,Stanford,1390,pac_ten,Pacific-10 Conference
 1991,Stetson,1391,a_sun,Atlantic Sun Conference
 1991,Syracuse,1393,big_east,Big East Conference
@@ -2180,7 +2180,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1992,Morehead St.,1287,ovc,Ohio Valley Conference
 1992,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1992,MS Valley St.,1290,swac,Southwest Athletic Conference
-1992,Mt St Mary's,1291,nec,Northeast Conference
+1992,Mt St. Mary's,1291,nec,Northeast Conference
 1992,MTSU,1292,ovc,Ohio Valley Conference
 1992,Murray St.,1293,ovc,Ohio Valley Conference
 1992,N Illinois,1296,mid_cont,Mid-Continent Conference
@@ -2250,14 +2250,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1992,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1992,Southern Univ,1380,swac,Southwest Athletic Conference
 1992,Southern Utah,1381,ind,Independent
-1992,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1992,St Francis NY,1383,nec,Northeast Conference
-1992,St Francis PA,1384,nec,Northeast Conference
-1992,St John's,1385,big_east,Big East Conference
-1992,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1992,St Louis,1387,gmwc,Great Midwest Conference
-1992,St Mary's CA,1388,wcc,West Coast Conference
-1992,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1992,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1992,Saint Francis NY,1383,nec,Northeast Conference
+1992,Saint Francis PA,1384,nec,Northeast Conference
+1992,St. John's,1385,big_east,Big East Conference
+1992,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1992,Saint Louis,1387,gmwc,Great Midwest Conference
+1992,Saint Mary's,1388,wcc,West Coast Conference
+1992,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1992,Stanford,1390,pac_ten,Pacific-10 Conference
 1992,Stetson,1391,a_sun,Atlantic Sun Conference
 1992,Syracuse,1393,big_east,Big East Conference
@@ -2477,7 +2477,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1993,Morehead St.,1287,ovc,Ohio Valley Conference
 1993,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1993,MS Valley St.,1290,swac,Southwest Athletic Conference
-1993,Mt St Mary's,1291,nec,Northeast Conference
+1993,Mt St. Mary's,1291,nec,Northeast Conference
 1993,MTSU,1292,ovc,Ohio Valley Conference
 1993,Murray St.,1293,ovc,Ohio Valley Conference
 1993,N Illinois,1296,mid_cont,Mid-Continent Conference
@@ -2547,14 +2547,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1993,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1993,Southern Univ,1380,swac,Southwest Athletic Conference
 1993,Southern Utah,1381,ind,Independent
-1993,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1993,St Francis NY,1383,nec,Northeast Conference
-1993,St Francis PA,1384,nec,Northeast Conference
-1993,St John's,1385,big_east,Big East Conference
-1993,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1993,St Louis,1387,gmwc,Great Midwest Conference
-1993,St Mary's CA,1388,wcc,West Coast Conference
-1993,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1993,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1993,Saint Francis NY,1383,nec,Northeast Conference
+1993,Saint Francis PA,1384,nec,Northeast Conference
+1993,St. John's,1385,big_east,Big East Conference
+1993,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1993,Saint Louis,1387,gmwc,Great Midwest Conference
+1993,Saint Mary's,1388,wcc,West Coast Conference
+1993,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1993,Stanford,1390,pac_ten,Pacific-10 Conference
 1993,Stetson,1391,a_sun,Atlantic Sun Conference
 1993,Syracuse,1393,big_east,Big East Conference
@@ -2776,7 +2776,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1994,Morehead St.,1287,ovc,Ohio Valley Conference
 1994,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1994,MS Valley St.,1290,swac,Southwest Athletic Conference
-1994,Mt St Mary's,1291,nec,Northeast Conference
+1994,Mt St. Mary's,1291,nec,Northeast Conference
 1994,MTSU,1292,ovc,Ohio Valley Conference
 1994,Murray St.,1293,ovc,Ohio Valley Conference
 1994,N Illinois,1296,mid_cont,Mid-Continent Conference
@@ -2847,14 +2847,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1994,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1994,Southern Univ,1380,swac,Southwest Athletic Conference
 1994,Southern Utah,1381,ind,Independent
-1994,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1994,St Francis NY,1383,nec,Northeast Conference
-1994,St Francis PA,1384,nec,Northeast Conference
-1994,St John's,1385,big_east,Big East Conference
-1994,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1994,St Louis,1387,gmwc,Great Midwest Conference
-1994,St Mary's CA,1388,wcc,West Coast Conference
-1994,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1994,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1994,Saint Francis NY,1383,nec,Northeast Conference
+1994,Saint Francis PA,1384,nec,Northeast Conference
+1994,St. John's,1385,big_east,Big East Conference
+1994,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1994,Saint Louis,1387,gmwc,Great Midwest Conference
+1994,Saint Mary's,1388,wcc,West Coast Conference
+1994,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1994,Stanford,1390,pac_ten,Pacific-10 Conference
 1994,Stetson,1391,a_sun,Atlantic Sun Conference
 1994,Syracuse,1393,big_east,Big East Conference
@@ -3078,7 +3078,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1995,Morehead St.,1287,ovc,Ohio Valley Conference
 1995,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1995,MS Valley St.,1290,swac,Southwest Athletic Conference
-1995,Mt St Mary's,1291,nec,Northeast Conference
+1995,Mt St. Mary's,1291,nec,Northeast Conference
 1995,MTSU,1292,ovc,Ohio Valley Conference
 1995,Murray St.,1293,ovc,Ohio Valley Conference
 1995,N Illinois,1296,mw_coll,Midwestern Collegiate Conference
@@ -3149,14 +3149,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1995,Southern Miss,1379,metro,Metropolitan Collegiate Athletic Conference
 1995,Southern Univ,1380,swac,Southwest Athletic Conference
 1995,Southern Utah,1381,awc,American West Conference
-1995,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1995,St Francis NY,1383,nec,Northeast Conference
-1995,St Francis PA,1384,nec,Northeast Conference
-1995,St John's,1385,big_east,Big East Conference
-1995,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1995,St Louis,1387,gmwc,Great Midwest Conference
-1995,St Mary's CA,1388,wcc,West Coast Conference
-1995,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1995,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1995,Saint Francis NY,1383,nec,Northeast Conference
+1995,Saint Francis PA,1384,nec,Northeast Conference
+1995,St. John's,1385,big_east,Big East Conference
+1995,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1995,Saint Louis,1387,gmwc,Great Midwest Conference
+1995,Saint Mary's,1388,wcc,West Coast Conference
+1995,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1995,Stanford,1390,pac_ten,Pacific-10 Conference
 1995,Stetson,1391,a_sun,Atlantic Sun Conference
 1995,Syracuse,1393,big_east,Big East Conference
@@ -3382,7 +3382,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1996,Morehead St.,1287,ovc,Ohio Valley Conference
 1996,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1996,MS Valley St.,1290,swac,Southwest Athletic Conference
-1996,Mt St Mary's,1291,nec,Northeast Conference
+1996,Mt St. Mary's,1291,nec,Northeast Conference
 1996,MTSU,1292,ovc,Ohio Valley Conference
 1996,Murray St.,1293,ovc,Ohio Valley Conference
 1996,N Illinois,1296,mw_coll,Midwestern Collegiate Conference
@@ -3453,14 +3453,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1996,Southern Miss,1379,cusa,Conference USA
 1996,Southern Univ,1380,swac,Southwest Athletic Conference
 1996,Southern Utah,1381,awc,American West Conference
-1996,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1996,St Francis NY,1383,nec,Northeast Conference
-1996,St Francis PA,1384,nec,Northeast Conference
-1996,St John's,1385,big_east,Big East Conference
-1996,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1996,St Louis,1387,cusa,Conference USA
-1996,St Mary's CA,1388,wcc,West Coast Conference
-1996,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1996,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1996,Saint Francis NY,1383,nec,Northeast Conference
+1996,Saint Francis PA,1384,nec,Northeast Conference
+1996,St. John's,1385,big_east,Big East Conference
+1996,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1996,Saint Louis,1387,cusa,Conference USA
+1996,Saint Mary's,1388,wcc,West Coast Conference
+1996,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1996,Stanford,1390,pac_ten,Pacific-10 Conference
 1996,Stetson,1391,a_sun,Atlantic Sun Conference
 1996,Syracuse,1393,big_east,Big East Conference
@@ -3687,7 +3687,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1997,Morehead St.,1287,ovc,Ohio Valley Conference
 1997,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1997,MS Valley St.,1290,swac,Southwest Athletic Conference
-1997,Mt St Mary's,1291,nec,Northeast Conference
+1997,Mt St. Mary's,1291,nec,Northeast Conference
 1997,MTSU,1292,ovc,Ohio Valley Conference
 1997,Murray St.,1293,ovc,Ohio Valley Conference
 1997,N Illinois,1296,mw_coll,Midwestern Collegiate Conference
@@ -3758,14 +3758,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1997,Southern Miss,1379,cusa,Conference USA
 1997,Southern Univ,1380,swac,Southwest Athletic Conference
 1997,Southern Utah,1381,ind,Independent
-1997,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1997,St Francis NY,1383,nec,Northeast Conference
-1997,St Francis PA,1384,nec,Northeast Conference
-1997,St John's,1385,big_east,Big East Conference
-1997,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1997,St Louis,1387,cusa,Conference USA
-1997,St Mary's CA,1388,wcc,West Coast Conference
-1997,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1997,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1997,Saint Francis NY,1383,nec,Northeast Conference
+1997,Saint Francis PA,1384,nec,Northeast Conference
+1997,St. John's,1385,big_east,Big East Conference
+1997,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1997,Saint Louis,1387,cusa,Conference USA
+1997,Saint Mary's,1388,wcc,West Coast Conference
+1997,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1997,Stanford,1390,pac_ten,Pacific-10 Conference
 1997,Stetson,1391,a_sun,Atlantic Sun Conference
 1997,Syracuse,1393,big_east,Big East Conference
@@ -3992,7 +3992,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1998,Morehead St.,1287,ovc,Ohio Valley Conference
 1998,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1998,MS Valley St.,1290,swac,Southwest Athletic Conference
-1998,Mt St Mary's,1291,nec,Northeast Conference
+1998,Mt St. Mary's,1291,nec,Northeast Conference
 1998,MTSU,1292,ovc,Ohio Valley Conference
 1998,Murray St.,1293,ovc,Ohio Valley Conference
 1998,N Illinois,1296,mac,Mid-American Conference
@@ -4064,14 +4064,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1998,Southern Miss,1379,cusa,Conference USA
 1998,Southern Univ,1380,swac,Southwest Athletic Conference
 1998,Southern Utah,1381,mid_cont,Mid-Continent Conference
-1998,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1998,St Francis NY,1383,nec,Northeast Conference
-1998,St Francis PA,1384,nec,Northeast Conference
-1998,St John's,1385,big_east,Big East Conference
-1998,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1998,St Louis,1387,cusa,Conference USA
-1998,St Mary's CA,1388,wcc,West Coast Conference
-1998,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1998,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1998,Saint Francis NY,1383,nec,Northeast Conference
+1998,Saint Francis PA,1384,nec,Northeast Conference
+1998,St. John's,1385,big_east,Big East Conference
+1998,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1998,Saint Louis,1387,cusa,Conference USA
+1998,Saint Mary's,1388,wcc,West Coast Conference
+1998,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1998,Stanford,1390,pac_ten,Pacific-10 Conference
 1998,Stetson,1391,a_sun,Atlantic Sun Conference
 1998,Syracuse,1393,big_east,Big East Conference
@@ -4301,7 +4301,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1999,Morehead St.,1287,ovc,Ohio Valley Conference
 1999,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1999,MS Valley St.,1290,swac,Southwest Athletic Conference
-1999,Mt St Mary's,1291,nec,Northeast Conference
+1999,Mt St. Mary's,1291,nec,Northeast Conference
 1999,MTSU,1292,ovc,Ohio Valley Conference
 1999,Murray St.,1293,ovc,Ohio Valley Conference
 1999,N Illinois,1296,mac,Mid-American Conference
@@ -4374,14 +4374,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1999,Southern Miss,1379,cusa,Conference USA
 1999,Southern Univ,1380,swac,Southwest Athletic Conference
 1999,Southern Utah,1381,mid_cont,Mid-Continent Conference
-1999,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-1999,St Francis NY,1383,nec,Northeast Conference
-1999,St Francis PA,1384,nec,Northeast Conference
-1999,St John's,1385,big_east,Big East Conference
-1999,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-1999,St Louis,1387,cusa,Conference USA
-1999,St Mary's CA,1388,wcc,West Coast Conference
-1999,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+1999,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+1999,Saint Francis NY,1383,nec,Northeast Conference
+1999,Saint Francis PA,1384,nec,Northeast Conference
+1999,St. John's,1385,big_east,Big East Conference
+1999,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+1999,Saint Louis,1387,cusa,Conference USA
+1999,Saint Mary's,1388,wcc,West Coast Conference
+1999,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 1999,Stanford,1390,pac_ten,Pacific-10 Conference
 1999,Stetson,1391,a_sun,Atlantic Sun Conference
 1999,Syracuse,1393,big_east,Big East Conference
@@ -4616,7 +4616,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2000,Morehead St.,1287,ovc,Ohio Valley Conference
 2000,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2000,MS Valley St.,1290,swac,Southwest Athletic Conference
-2000,Mt St Mary's,1291,nec,Northeast Conference
+2000,Mt St. Mary's,1291,nec,Northeast Conference
 2000,MTSU,1292,ovc,Ohio Valley Conference
 2000,Murray St.,1293,ovc,Ohio Valley Conference
 2000,N Illinois,1296,mac,Mid-American Conference
@@ -4691,14 +4691,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2000,Southern Miss,1379,cusa,Conference USA
 2000,Southern Univ,1380,swac,Southwest Athletic Conference
 2000,Southern Utah,1381,mid_cont,Mid-Continent Conference
-2000,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2000,St Francis NY,1383,nec,Northeast Conference
-2000,St Francis PA,1384,nec,Northeast Conference
-2000,St John's,1385,big_east,Big East Conference
-2000,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2000,St Louis,1387,cusa,Conference USA
-2000,St Mary's CA,1388,wcc,West Coast Conference
-2000,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2000,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2000,Saint Francis NY,1383,nec,Northeast Conference
+2000,Saint Francis PA,1384,nec,Northeast Conference
+2000,St. John's,1385,big_east,Big East Conference
+2000,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2000,Saint Louis,1387,cusa,Conference USA
+2000,Saint Mary's,1388,wcc,West Coast Conference
+2000,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2000,Stanford,1390,pac_ten,Pacific-10 Conference
 2000,Stetson,1391,a_sun,Atlantic Sun Conference
 2000,Stony Brook,1392,ind,Independent
@@ -4934,7 +4934,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2001,Morehead St.,1287,ovc,Ohio Valley Conference
 2001,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2001,MS Valley St.,1290,swac,Southwest Athletic Conference
-2001,Mt St Mary's,1291,nec,Northeast Conference
+2001,Mt St. Mary's,1291,nec,Northeast Conference
 2001,MTSU,1292,sun_belt,Sun Belt Conference
 2001,Murray St.,1293,ovc,Ohio Valley Conference
 2001,N Illinois,1296,mac,Mid-American Conference
@@ -5009,14 +5009,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2001,Southern Miss,1379,cusa,Conference USA
 2001,Southern Univ,1380,swac,Southwest Athletic Conference
 2001,Southern Utah,1381,mid_cont,Mid-Continent Conference
-2001,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2001,St Francis NY,1383,nec,Northeast Conference
-2001,St Francis PA,1384,nec,Northeast Conference
-2001,St John's,1385,big_east,Big East Conference
-2001,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2001,St Louis,1387,cusa,Conference USA
-2001,St Mary's CA,1388,wcc,West Coast Conference
-2001,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2001,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2001,Saint Francis NY,1383,nec,Northeast Conference
+2001,Saint Francis PA,1384,nec,Northeast Conference
+2001,St. John's,1385,big_east,Big East Conference
+2001,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2001,Saint Louis,1387,cusa,Conference USA
+2001,Saint Mary's,1388,wcc,West Coast Conference
+2001,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2001,Stanford,1390,pac_ten,Pacific-10 Conference
 2001,Stetson,1391,a_sun,Atlantic Sun Conference
 2001,Stony Brook,1392,ind,Independent
@@ -5254,7 +5254,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2002,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2002,Morris Brown,1289,ind,Independent
 2002,MS Valley St.,1290,swac,Southwest Athletic Conference
-2002,Mt St Mary's,1291,nec,Northeast Conference
+2002,Mt St. Mary's,1291,nec,Northeast Conference
 2002,MTSU,1292,sun_belt,Sun Belt Conference
 2002,Murray St.,1293,ovc,Ohio Valley Conference
 2002,N Illinois,1296,mac,Mid-American Conference
@@ -5329,14 +5329,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2002,Southern Miss,1379,cusa,Conference USA
 2002,Southern Univ,1380,swac,Southwest Athletic Conference
 2002,Southern Utah,1381,mid_cont,Mid-Continent Conference
-2002,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2002,St Francis NY,1383,nec,Northeast Conference
-2002,St Francis PA,1384,nec,Northeast Conference
-2002,St John's,1385,big_east,Big East Conference
-2002,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2002,St Louis,1387,cusa,Conference USA
-2002,St Mary's CA,1388,wcc,West Coast Conference
-2002,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2002,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2002,Saint Francis NY,1383,nec,Northeast Conference
+2002,Saint Francis PA,1384,nec,Northeast Conference
+2002,St. John's,1385,big_east,Big East Conference
+2002,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2002,Saint Louis,1387,cusa,Conference USA
+2002,Saint Mary's,1388,wcc,West Coast Conference
+2002,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2002,Stanford,1390,pac_ten,Pacific-10 Conference
 2002,Stetson,1391,a_sun,Atlantic Sun Conference
 2002,Stony Brook,1392,aec,America East Conference
@@ -5579,7 +5579,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2003,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2003,Morris Brown,1289,ind,Independent
 2003,MS Valley St.,1290,swac,Southwest Athletic Conference
-2003,Mt St Mary's,1291,nec,Northeast Conference
+2003,Mt St. Mary's,1291,nec,Northeast Conference
 2003,MTSU,1292,sun_belt,Sun Belt Conference
 2003,Murray St.,1293,ovc,Ohio Valley Conference
 2003,N Illinois,1296,mac,Mid-American Conference
@@ -5655,14 +5655,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2003,Southern Miss,1379,cusa,Conference USA
 2003,Southern Univ,1380,swac,Southwest Athletic Conference
 2003,Southern Utah,1381,mid_cont,Mid-Continent Conference
-2003,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2003,St Francis NY,1383,nec,Northeast Conference
-2003,St Francis PA,1384,nec,Northeast Conference
-2003,St John's,1385,big_east,Big East Conference
-2003,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2003,St Louis,1387,cusa,Conference USA
-2003,St Mary's CA,1388,wcc,West Coast Conference
-2003,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2003,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2003,Saint Francis NY,1383,nec,Northeast Conference
+2003,Saint Francis PA,1384,nec,Northeast Conference
+2003,St. John's,1385,big_east,Big East Conference
+2003,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2003,Saint Louis,1387,cusa,Conference USA
+2003,Saint Mary's,1388,wcc,West Coast Conference
+2003,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2003,Stanford,1390,pac_ten,Pacific-10 Conference
 2003,Stetson,1391,a_sun,Atlantic Sun Conference
 2003,Stony Brook,1392,aec,America East Conference
@@ -5905,7 +5905,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2004,Morehead St.,1287,ovc,Ohio Valley Conference
 2004,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2004,MS Valley St.,1290,swac,Southwest Athletic Conference
-2004,Mt St Mary's,1291,nec,Northeast Conference
+2004,Mt St. Mary's,1291,nec,Northeast Conference
 2004,MTSU,1292,sun_belt,Sun Belt Conference
 2004,Murray St.,1293,ovc,Ohio Valley Conference
 2004,N Illinois,1296,mac,Mid-American Conference
@@ -5981,14 +5981,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2004,Southern Miss,1379,cusa,Conference USA
 2004,Southern Univ,1380,swac,Southwest Athletic Conference
 2004,Southern Utah,1381,mid_cont,Mid-Continent Conference
-2004,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2004,St Francis NY,1383,nec,Northeast Conference
-2004,St Francis PA,1384,nec,Northeast Conference
-2004,St John's,1385,big_east,Big East Conference
-2004,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2004,St Louis,1387,cusa,Conference USA
-2004,St Mary's CA,1388,wcc,West Coast Conference
-2004,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2004,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2004,Saint Francis NY,1383,nec,Northeast Conference
+2004,Saint Francis PA,1384,nec,Northeast Conference
+2004,St. John's,1385,big_east,Big East Conference
+2004,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2004,Saint Louis,1387,cusa,Conference USA
+2004,Saint Mary's,1388,wcc,West Coast Conference
+2004,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2004,Stanford,1390,pac_ten,Pacific-10 Conference
 2004,Stetson,1391,a_sun,Atlantic Sun Conference
 2004,Stony Brook,1392,aec,America East Conference
@@ -6232,7 +6232,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2005,Morehead St.,1287,ovc,Ohio Valley Conference
 2005,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2005,MS Valley St.,1290,swac,Southwest Athletic Conference
-2005,Mt St Mary's,1291,nec,Northeast Conference
+2005,Mt St. Mary's,1291,nec,Northeast Conference
 2005,MTSU,1292,sun_belt,Sun Belt Conference
 2005,Murray St.,1293,ovc,Ohio Valley Conference
 2005,N Colorado,1294,ind,Independent
@@ -6309,14 +6309,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2005,Southern Miss,1379,cusa,Conference USA
 2005,Southern Univ,1380,swac,Southwest Athletic Conference
 2005,Southern Utah,1381,mid_cont,Mid-Continent Conference
-2005,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2005,St Francis NY,1383,nec,Northeast Conference
-2005,St Francis PA,1384,nec,Northeast Conference
-2005,St John's,1385,big_east,Big East Conference
-2005,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2005,St Louis,1387,cusa,Conference USA
-2005,St Mary's CA,1388,wcc,West Coast Conference
-2005,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2005,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2005,Saint Francis NY,1383,nec,Northeast Conference
+2005,Saint Francis PA,1384,nec,Northeast Conference
+2005,St. John's,1385,big_east,Big East Conference
+2005,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2005,Saint Louis,1387,cusa,Conference USA
+2005,Saint Mary's,1388,wcc,West Coast Conference
+2005,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2005,Stanford,1390,pac_ten,Pacific-10 Conference
 2005,Stetson,1391,a_sun,Atlantic Sun Conference
 2005,Stony Brook,1392,aec,America East Conference
@@ -6563,7 +6563,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2006,Morehead St.,1287,ovc,Ohio Valley Conference
 2006,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2006,MS Valley St.,1290,swac,Southwest Athletic Conference
-2006,Mt St Mary's,1291,nec,Northeast Conference
+2006,Mt St. Mary's,1291,nec,Northeast Conference
 2006,MTSU,1292,sun_belt,Sun Belt Conference
 2006,Murray St.,1293,ovc,Ohio Valley Conference
 2006,N Colorado,1294,ind,Independent
@@ -6643,14 +6643,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2006,Southern Miss,1379,cusa,Conference USA
 2006,Southern Univ,1380,swac,Southwest Athletic Conference
 2006,Southern Utah,1381,mid_cont,Mid-Continent Conference
-2006,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2006,St Francis NY,1383,nec,Northeast Conference
-2006,St Francis PA,1384,nec,Northeast Conference
-2006,St John's,1385,big_east,Big East Conference
-2006,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2006,St Louis,1387,a_ten,Atlantic 10 Conference
-2006,St Mary's CA,1388,wcc,West Coast Conference
-2006,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2006,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2006,Saint Francis NY,1383,nec,Northeast Conference
+2006,Saint Francis PA,1384,nec,Northeast Conference
+2006,St. John's,1385,big_east,Big East Conference
+2006,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2006,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2006,Saint Mary's,1388,wcc,West Coast Conference
+2006,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2006,Stanford,1390,pac_ten,Pacific-10 Conference
 2006,Stetson,1391,a_sun,Atlantic Sun Conference
 2006,Stony Brook,1392,aec,America East Conference
@@ -6897,7 +6897,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2007,Morehead St.,1287,ovc,Ohio Valley Conference
 2007,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2007,MS Valley St.,1290,swac,Southwest Athletic Conference
-2007,Mt St Mary's,1291,nec,Northeast Conference
+2007,Mt St. Mary's,1291,nec,Northeast Conference
 2007,MTSU,1292,sun_belt,Sun Belt Conference
 2007,Murray St.,1293,ovc,Ohio Valley Conference
 2007,N Colorado,1294,big_sky,Big Sky Conference
@@ -6978,14 +6978,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2007,Southern Miss,1379,cusa,Conference USA
 2007,Southern Univ,1380,swac,Southwest Athletic Conference
 2007,Southern Utah,1381,mid_cont,Mid-Continent Conference
-2007,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2007,St Francis NY,1383,nec,Northeast Conference
-2007,St Francis PA,1384,nec,Northeast Conference
-2007,St John's,1385,big_east,Big East Conference
-2007,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2007,St Louis,1387,a_ten,Atlantic 10 Conference
-2007,St Mary's CA,1388,wcc,West Coast Conference
-2007,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2007,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2007,Saint Francis NY,1383,nec,Northeast Conference
+2007,Saint Francis PA,1384,nec,Northeast Conference
+2007,St. John's,1385,big_east,Big East Conference
+2007,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2007,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2007,Saint Mary's,1388,wcc,West Coast Conference
+2007,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2007,Stanford,1390,pac_ten,Pacific-10 Conference
 2007,Stetson,1391,a_sun,Atlantic Sun Conference
 2007,Stony Brook,1392,aec,America East Conference
@@ -7236,7 +7236,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2008,Morehead St.,1287,ovc,Ohio Valley Conference
 2008,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2008,MS Valley St.,1290,swac,Southwest Athletic Conference
-2008,Mt St Mary's,1291,nec,Northeast Conference
+2008,Mt St. Mary's,1291,nec,Northeast Conference
 2008,MTSU,1292,sun_belt,Sun Belt Conference
 2008,Murray St.,1293,ovc,Ohio Valley Conference
 2008,N Colorado,1294,big_sky,Big Sky Conference
@@ -7320,14 +7320,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2008,Southern Miss,1379,cusa,Conference USA
 2008,Southern Univ,1380,swac,Southwest Athletic Conference
 2008,Southern Utah,1381,summit,Summit League
-2008,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2008,St Francis NY,1383,nec,Northeast Conference
-2008,St Francis PA,1384,nec,Northeast Conference
-2008,St John's,1385,big_east,Big East Conference
-2008,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2008,St Louis,1387,a_ten,Atlantic 10 Conference
-2008,St Mary's CA,1388,wcc,West Coast Conference
-2008,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2008,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2008,Saint Francis NY,1383,nec,Northeast Conference
+2008,Saint Francis PA,1384,nec,Northeast Conference
+2008,St. John's,1385,big_east,Big East Conference
+2008,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2008,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2008,Saint Mary's,1388,wcc,West Coast Conference
+2008,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2008,Stanford,1390,pac_ten,Pacific-10 Conference
 2008,Stetson,1391,a_sun,Atlantic Sun Conference
 2008,Stony Brook,1392,aec,America East Conference
@@ -7580,7 +7580,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2009,Morehead St.,1287,ovc,Ohio Valley Conference
 2009,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2009,MS Valley St.,1290,swac,Southwest Athletic Conference
-2009,Mt St Mary's,1291,nec,Northeast Conference
+2009,Mt St. Mary's,1291,nec,Northeast Conference
 2009,MTSU,1292,sun_belt,Sun Belt Conference
 2009,Murray St.,1293,ovc,Ohio Valley Conference
 2009,N Colorado,1294,big_sky,Big Sky Conference
@@ -7667,14 +7667,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2009,Southern Miss,1379,cusa,Conference USA
 2009,Southern Univ,1380,swac,Southwest Athletic Conference
 2009,Southern Utah,1381,summit,Summit League
-2009,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2009,St Francis NY,1383,nec,Northeast Conference
-2009,St Francis PA,1384,nec,Northeast Conference
-2009,St John's,1385,big_east,Big East Conference
-2009,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2009,St Louis,1387,a_ten,Atlantic 10 Conference
-2009,St Mary's CA,1388,wcc,West Coast Conference
-2009,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2009,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2009,Saint Francis NY,1383,nec,Northeast Conference
+2009,Saint Francis PA,1384,nec,Northeast Conference
+2009,St. John's,1385,big_east,Big East Conference
+2009,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2009,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2009,Saint Mary's,1388,wcc,West Coast Conference
+2009,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2009,Stanford,1390,pac_ten,Pacific-10 Conference
 2009,Stetson,1391,a_sun,Atlantic Sun Conference
 2009,Stony Brook,1392,aec,America East Conference
@@ -7927,7 +7927,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2010,Morehead St.,1287,ovc,Ohio Valley Conference
 2010,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2010,MS Valley St.,1290,swac,Southwest Athletic Conference
-2010,Mt St Mary's,1291,nec,Northeast Conference
+2010,Mt St. Mary's,1291,nec,Northeast Conference
 2010,MTSU,1292,sun_belt,Sun Belt Conference
 2010,Murray St.,1293,ovc,Ohio Valley Conference
 2010,N Colorado,1294,big_sky,Big Sky Conference
@@ -8014,14 +8014,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2010,Southern Miss,1379,cusa,Conference USA
 2010,Southern Univ,1380,swac,Southwest Athletic Conference
 2010,Southern Utah,1381,summit,Summit League
-2010,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2010,St Francis NY,1383,nec,Northeast Conference
-2010,St Francis PA,1384,nec,Northeast Conference
-2010,St John's,1385,big_east,Big East Conference
-2010,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2010,St Louis,1387,a_ten,Atlantic 10 Conference
-2010,St Mary's CA,1388,wcc,West Coast Conference
-2010,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2010,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2010,Saint Francis NY,1383,nec,Northeast Conference
+2010,Saint Francis PA,1384,nec,Northeast Conference
+2010,St. John's,1385,big_east,Big East Conference
+2010,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2010,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2010,Saint Mary's,1388,wcc,West Coast Conference
+2010,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2010,Stanford,1390,pac_ten,Pacific-10 Conference
 2010,Stetson,1391,a_sun,Atlantic Sun Conference
 2010,Stony Brook,1392,aec,America East Conference
@@ -8274,7 +8274,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2011,Morehead St.,1287,ovc,Ohio Valley Conference
 2011,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2011,MS Valley St.,1290,swac,Southwest Athletic Conference
-2011,Mt St Mary's,1291,nec,Northeast Conference
+2011,Mt St. Mary's,1291,nec,Northeast Conference
 2011,MTSU,1292,sun_belt,Sun Belt Conference
 2011,Murray St.,1293,ovc,Ohio Valley Conference
 2011,N Colorado,1294,big_sky,Big Sky Conference
@@ -8360,14 +8360,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2011,Southern Miss,1379,cusa,Conference USA
 2011,Southern Univ,1380,swac,Southwest Athletic Conference
 2011,Southern Utah,1381,summit,Summit League
-2011,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2011,St Francis NY,1383,nec,Northeast Conference
-2011,St Francis PA,1384,nec,Northeast Conference
-2011,St John's,1385,big_east,Big East Conference
-2011,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2011,St Louis,1387,a_ten,Atlantic 10 Conference
-2011,St Mary's CA,1388,wcc,West Coast Conference
-2011,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2011,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2011,Saint Francis NY,1383,nec,Northeast Conference
+2011,Saint Francis PA,1384,nec,Northeast Conference
+2011,St. John's,1385,big_east,Big East Conference
+2011,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2011,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2011,Saint Mary's,1388,wcc,West Coast Conference
+2011,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2011,Stanford,1390,pac_ten,Pacific-10 Conference
 2011,Stetson,1391,a_sun,Atlantic Sun Conference
 2011,Stony Brook,1392,aec,America East Conference
@@ -8618,7 +8618,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2012,Morehead St.,1287,ovc,Ohio Valley Conference
 2012,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2012,MS Valley St.,1290,swac,Southwest Athletic Conference
-2012,Mt St Mary's,1291,nec,Northeast Conference
+2012,Mt St. Mary's,1291,nec,Northeast Conference
 2012,MTSU,1292,sun_belt,Sun Belt Conference
 2012,Murray St.,1293,ovc,Ohio Valley Conference
 2012,N Colorado,1294,big_sky,Big Sky Conference
@@ -8705,14 +8705,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2012,Southern Miss,1379,cusa,Conference USA
 2012,Southern Univ,1380,swac,Southwest Athletic Conference
 2012,Southern Utah,1381,summit,Summit League
-2012,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2012,St Francis NY,1383,nec,Northeast Conference
-2012,St Francis PA,1384,nec,Northeast Conference
-2012,St John's,1385,big_east,Big East Conference
-2012,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2012,St Louis,1387,a_ten,Atlantic 10 Conference
-2012,St Mary's CA,1388,wcc,West Coast Conference
-2012,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2012,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2012,Saint Francis NY,1383,nec,Northeast Conference
+2012,Saint Francis PA,1384,nec,Northeast Conference
+2012,St. John's,1385,big_east,Big East Conference
+2012,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2012,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2012,Saint Mary's,1388,wcc,West Coast Conference
+2012,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2012,Stanford,1390,pac_twelve,Pacific-12 Conference
 2012,Stetson,1391,a_sun,Atlantic Sun Conference
 2012,Stony Brook,1392,aec,America East Conference
@@ -8963,7 +8963,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2013,Morehead St.,1287,ovc,Ohio Valley Conference
 2013,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2013,MS Valley St.,1290,swac,Southwest Athletic Conference
-2013,Mt St Mary's,1291,nec,Northeast Conference
+2013,Mt St. Mary's,1291,nec,Northeast Conference
 2013,MTSU,1292,sun_belt,Sun Belt Conference
 2013,Murray St.,1293,ovc,Ohio Valley Conference
 2013,N Colorado,1294,big_sky,Big Sky Conference
@@ -9052,14 +9052,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2013,Southern Miss,1379,cusa,Conference USA
 2013,Southern Univ,1380,swac,Southwest Athletic Conference
 2013,Southern Utah,1381,big_sky,Big Sky Conference
-2013,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2013,St Francis NY,1383,nec,Northeast Conference
-2013,St Francis PA,1384,nec,Northeast Conference
-2013,St John's,1385,big_east,Big East Conference
-2013,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2013,St Louis,1387,a_ten,Atlantic 10 Conference
-2013,St Mary's CA,1388,wcc,West Coast Conference
-2013,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2013,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2013,Saint Francis NY,1383,nec,Northeast Conference
+2013,Saint Francis PA,1384,nec,Northeast Conference
+2013,St. John's,1385,big_east,Big East Conference
+2013,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2013,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2013,Saint Mary's,1388,wcc,West Coast Conference
+2013,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2013,Stanford,1390,pac_twelve,Pacific-12 Conference
 2013,Stetson,1391,a_sun,Atlantic Sun Conference
 2013,Stony Brook,1392,aec,America East Conference
@@ -9314,7 +9314,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2014,Morehead St.,1287,ovc,Ohio Valley Conference
 2014,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2014,MS Valley St.,1290,swac,Southwest Athletic Conference
-2014,Mt St Mary's,1291,nec,Northeast Conference
+2014,Mt St. Mary's,1291,nec,Northeast Conference
 2014,MTSU,1292,cusa,Conference USA
 2014,Murray St.,1293,ovc,Ohio Valley Conference
 2014,N Colorado,1294,big_sky,Big Sky Conference
@@ -9403,14 +9403,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2014,Southern Miss,1379,cusa,Conference USA
 2014,Southern Univ,1380,swac,Southwest Athletic Conference
 2014,Southern Utah,1381,big_sky,Big Sky Conference
-2014,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2014,St Francis NY,1383,nec,Northeast Conference
-2014,St Francis PA,1384,nec,Northeast Conference
-2014,St John's,1385,big_east,Big East Conference
-2014,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2014,St Louis,1387,a_ten,Atlantic 10 Conference
-2014,St Mary's CA,1388,wcc,West Coast Conference
-2014,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2014,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2014,Saint Francis NY,1383,nec,Northeast Conference
+2014,Saint Francis PA,1384,nec,Northeast Conference
+2014,St. John's,1385,big_east,Big East Conference
+2014,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2014,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2014,Saint Mary's,1388,wcc,West Coast Conference
+2014,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2014,Stanford,1390,pac_twelve,Pacific-12 Conference
 2014,Stetson,1391,a_sun,Atlantic Sun Conference
 2014,Stony Brook,1392,aec,America East Conference
@@ -9665,7 +9665,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2015,Morehead St.,1287,ovc,Ohio Valley Conference
 2015,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2015,MS Valley St.,1290,swac,Southwest Athletic Conference
-2015,Mt St Mary's,1291,nec,Northeast Conference
+2015,Mt St. Mary's,1291,nec,Northeast Conference
 2015,MTSU,1292,cusa,Conference USA
 2015,Murray St.,1293,ovc,Ohio Valley Conference
 2015,N Colorado,1294,big_sky,Big Sky Conference
@@ -9754,14 +9754,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2015,Southern Miss,1379,cusa,Conference USA
 2015,Southern Univ,1380,swac,Southwest Athletic Conference
 2015,Southern Utah,1381,big_sky,Big Sky Conference
-2015,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2015,St Francis NY,1383,nec,Northeast Conference
-2015,St Francis PA,1384,nec,Northeast Conference
-2015,St John's,1385,big_east,Big East Conference
-2015,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2015,St Louis,1387,a_ten,Atlantic 10 Conference
-2015,St Mary's CA,1388,wcc,West Coast Conference
-2015,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2015,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2015,Saint Francis NY,1383,nec,Northeast Conference
+2015,Saint Francis PA,1384,nec,Northeast Conference
+2015,St. John's,1385,big_east,Big East Conference
+2015,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2015,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2015,Saint Mary's,1388,wcc,West Coast Conference
+2015,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2015,Stanford,1390,pac_twelve,Pacific-12 Conference
 2015,Stetson,1391,a_sun,Atlantic Sun Conference
 2015,Stony Brook,1392,aec,America East Conference
@@ -10016,7 +10016,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2016,Morehead St.,1287,ovc,Ohio Valley Conference
 2016,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2016,MS Valley St.,1290,swac,Southwest Athletic Conference
-2016,Mt St Mary's,1291,nec,Northeast Conference
+2016,Mt St. Mary's,1291,nec,Northeast Conference
 2016,MTSU,1292,cusa,Conference USA
 2016,Murray St.,1293,ovc,Ohio Valley Conference
 2016,N Colorado,1294,big_sky,Big Sky Conference
@@ -10105,14 +10105,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2016,Southern Miss,1379,cusa,Conference USA
 2016,Southern Univ,1380,swac,Southwest Athletic Conference
 2016,Southern Utah,1381,big_sky,Big Sky Conference
-2016,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2016,St Francis NY,1383,nec,Northeast Conference
-2016,St Francis PA,1384,nec,Northeast Conference
-2016,St John's,1385,big_east,Big East Conference
-2016,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2016,St Louis,1387,a_ten,Atlantic 10 Conference
-2016,St Mary's CA,1388,wcc,West Coast Conference
-2016,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2016,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2016,Saint Francis NY,1383,nec,Northeast Conference
+2016,Saint Francis PA,1384,nec,Northeast Conference
+2016,St. John's,1385,big_east,Big East Conference
+2016,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2016,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2016,Saint Mary's,1388,wcc,West Coast Conference
+2016,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2016,Stanford,1390,pac_twelve,Pacific-12 Conference
 2016,Stetson,1391,a_sun,Atlantic Sun Conference
 2016,Stony Brook,1392,aec,America East Conference
@@ -10367,7 +10367,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2017,Morehead St.,1287,ovc,Ohio Valley Conference
 2017,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2017,MS Valley St.,1290,swac,Southwest Athletic Conference
-2017,Mt St Mary's,1291,nec,Northeast Conference
+2017,Mt St. Mary's,1291,nec,Northeast Conference
 2017,MTSU,1292,cusa,Conference USA
 2017,Murray St.,1293,ovc,Ohio Valley Conference
 2017,N Colorado,1294,big_sky,Big Sky Conference
@@ -10456,14 +10456,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2017,Southern Miss,1379,cusa,Conference USA
 2017,Southern Univ,1380,swac,Southwest Athletic Conference
 2017,Southern Utah,1381,big_sky,Big Sky Conference
-2017,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2017,St Francis NY,1383,nec,Northeast Conference
-2017,St Francis PA,1384,nec,Northeast Conference
-2017,St John's,1385,big_east,Big East Conference
-2017,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2017,St Louis,1387,a_ten,Atlantic 10 Conference
-2017,St Mary's CA,1388,wcc,West Coast Conference
-2017,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2017,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2017,Saint Francis NY,1383,nec,Northeast Conference
+2017,Saint Francis PA,1384,nec,Northeast Conference
+2017,St. John's,1385,big_east,Big East Conference
+2017,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2017,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2017,Saint Mary's,1388,wcc,West Coast Conference
+2017,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2017,Stanford,1390,pac_twelve,Pacific-12 Conference
 2017,Stetson,1391,a_sun,Atlantic Sun Conference
 2017,Stony Brook,1392,aec,America East Conference
@@ -10718,7 +10718,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2018,Morehead St.,1287,ovc,Ohio Valley Conference
 2018,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2018,MS Valley St.,1290,swac,Southwest Athletic Conference
-2018,Mt St Mary's,1291,nec,Northeast Conference
+2018,Mt St. Mary's,1291,nec,Northeast Conference
 2018,MTSU,1292,cusa,Conference USA
 2018,Murray St.,1293,ovc,Ohio Valley Conference
 2018,N Colorado,1294,big_sky,Big Sky Conference
@@ -10807,14 +10807,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2018,Southern Miss,1379,cusa,Conference USA
 2018,Southern Univ,1380,swac,Southwest Athletic Conference
 2018,Southern Utah,1381,big_sky,Big Sky Conference
-2018,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2018,St Francis NY,1383,nec,Northeast Conference
-2018,St Francis PA,1384,nec,Northeast Conference
-2018,St John's,1385,big_east,Big East Conference
-2018,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2018,St Louis,1387,a_ten,Atlantic 10 Conference
-2018,St Mary's CA,1388,wcc,West Coast Conference
-2018,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2018,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2018,Saint Francis NY,1383,nec,Northeast Conference
+2018,Saint Francis PA,1384,nec,Northeast Conference
+2018,St. John's,1385,big_east,Big East Conference
+2018,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2018,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2018,Saint Mary's,1388,wcc,West Coast Conference
+2018,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2018,Stanford,1390,pac_twelve,Pacific-12 Conference
 2018,Stetson,1391,a_sun,Atlantic Sun Conference
 2018,Stony Brook,1392,aec,America East Conference
@@ -11069,7 +11069,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2019,Morehead St.,1287,ovc,Ohio Valley Conference
 2019,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2019,MS Valley St.,1290,swac,Southwest Athletic Conference
-2019,Mt St Mary's,1291,nec,Northeast Conference
+2019,Mt St. Mary's,1291,nec,Northeast Conference
 2019,MTSU,1292,cusa,Conference USA
 2019,Murray St.,1293,ovc,Ohio Valley Conference
 2019,N Colorado,1294,big_sky,Big Sky Conference
@@ -11158,14 +11158,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2019,Southern Miss,1379,cusa,Conference USA
 2019,Southern Univ,1380,swac,Southwest Athletic Conference
 2019,Southern Utah,1381,big_sky,Big Sky Conference
-2019,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2019,St Francis NY,1383,nec,Northeast Conference
-2019,St Francis PA,1384,nec,Northeast Conference
-2019,St John's,1385,big_east,Big East Conference
-2019,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2019,St Louis,1387,a_ten,Atlantic 10 Conference
-2019,St Mary's CA,1388,wcc,West Coast Conference
-2019,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2019,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2019,Saint Francis NY,1383,nec,Northeast Conference
+2019,Saint Francis PA,1384,nec,Northeast Conference
+2019,St. John's,1385,big_east,Big East Conference
+2019,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2019,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2019,Saint Mary's,1388,wcc,West Coast Conference
+2019,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2019,Stanford,1390,pac_twelve,Pacific-12 Conference
 2019,Stetson,1391,a_sun,Atlantic Sun Conference
 2019,Stony Brook,1392,aec,America East Conference
@@ -11422,7 +11422,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2020,Morehead St.,1287,ovc,Ohio Valley Conference
 2020,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2020,MS Valley St.,1290,swac,Southwest Athletic Conference
-2020,Mt St Mary's,1291,nec,Northeast Conference
+2020,Mt St. Mary's,1291,nec,Northeast Conference
 2020,MTSU,1292,cusa,Conference USA
 2020,Murray St.,1293,ovc,Ohio Valley Conference
 2020,N Colorado,1294,big_sky,Big Sky Conference
@@ -11510,14 +11510,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2020,Southern Miss,1379,cusa,Conference USA
 2020,Southern Univ,1380,swac,Southwest Athletic Conference
 2020,Southern Utah,1381,big_sky,Big Sky Conference
-2020,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2020,St Francis NY,1383,nec,Northeast Conference
-2020,St Francis PA,1384,nec,Northeast Conference
-2020,St John's,1385,big_east,Big East Conference
-2020,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2020,St Louis,1387,a_ten,Atlantic 10 Conference
-2020,St Mary's CA,1388,wcc,West Coast Conference
-2020,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2020,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2020,Saint Francis NY,1383,nec,Northeast Conference
+2020,Saint Francis PA,1384,nec,Northeast Conference
+2020,St. John's,1385,big_east,Big East Conference
+2020,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2020,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2020,Saint Mary's,1388,wcc,West Coast Conference
+2020,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2020,Stanford,1390,pac_twelve,Pacific-12 Conference
 2020,Stetson,1391,a_sun,Atlantic Sun Conference
 2020,Stony Brook,1392,aec,America East Conference
@@ -11768,7 +11768,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2021,Morehead St.,1287,ovc,Ohio Valley Conference
 2021,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2021,MS Valley St.,1290,swac,Southwest Athletic Conference
-2021,Mt St Mary's,1291,nec,Northeast Conference
+2021,Mt St. Mary's,1291,nec,Northeast Conference
 2021,MTSU,1292,cusa,Conference USA
 2021,Murray St.,1293,ovc,Ohio Valley Conference
 2021,N Colorado,1294,big_sky,Big Sky Conference
@@ -11854,14 +11854,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2021,Southern Miss,1379,cusa,Conference USA
 2021,Southern Univ,1380,swac,Southwest Athletic Conference
 2021,Southern Utah,1381,big_sky,Big Sky Conference
-2021,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2021,St Francis NY,1383,nec,Northeast Conference
-2021,St Francis PA,1384,nec,Northeast Conference
-2021,St John's,1385,big_east,Big East Conference
-2021,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2021,St Louis,1387,a_ten,Atlantic 10 Conference
-2021,St Mary's CA,1388,wcc,West Coast Conference
-2021,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2021,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2021,Saint Francis NY,1383,nec,Northeast Conference
+2021,Saint Francis PA,1384,nec,Northeast Conference
+2021,St. John's,1385,big_east,Big East Conference
+2021,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2021,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2021,Saint Mary's,1388,wcc,West Coast Conference
+2021,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2021,Stanford,1390,pac_twelve,Pacific-12 Conference
 2021,Stetson,1391,a_sun,Atlantic Sun Conference
 2021,Stony Brook,1392,aec,America East Conference
@@ -12122,7 +12122,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2022,Morehead St.,1287,ovc,Ohio Valley Conference
 2022,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2022,MS Valley St.,1290,swac,Southwest Athletic Conference
-2022,Mt St Mary's,1291,nec,Northeast Conference
+2022,Mt St. Mary's,1291,nec,Northeast Conference
 2022,MTSU,1292,cusa,Conference USA
 2022,Murray St.,1293,ovc,Ohio Valley Conference
 2022,N Colorado,1294,big_sky,Big Sky Conference
@@ -12210,14 +12210,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2022,Southern Miss,1379,cusa,Conference USA
 2022,Southern Univ,1380,swac,Southwest Athletic Conference
 2022,Southern Utah,1381,big_sky,Big Sky Conference
-2022,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2022,St Francis NY,1383,nec,Northeast Conference
-2022,St Francis PA,1384,nec,Northeast Conference
-2022,St John's,1385,big_east,Big East Conference
-2022,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2022,St Louis,1387,a_ten,Atlantic 10 Conference
-2022,St Mary's CA,1388,wcc,West Coast Conference
-2022,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2022,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2022,Saint Francis NY,1383,nec,Northeast Conference
+2022,Saint Francis PA,1384,nec,Northeast Conference
+2022,St. John's,1385,big_east,Big East Conference
+2022,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2022,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2022,Saint Mary's,1388,wcc,West Coast Conference
+2022,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2022,Stanford,1390,pac_twelve,Pacific-12 Conference
 2022,Stetson,1391,a_sun,Atlantic Sun Conference
 2022,Stony Brook,1392,aec,America East Conference
@@ -12297,7 +12297,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2022,Utah Tech,1469,wac,Western Athletic Conference
 2022,Tarleton St.,1470,wac,Western Athletic Conference
 2022,UC San Diego,1471,big_west,Big West Conference
-2022,St Thomas MN,1472,summit,Summit League
+2022,St. Thomas MN,1472,summit,Summit League
 2023,Abilene Chr,1101,wac,Western Athletic Conference
 2023,Air Force,1102,mwc,Mountain West Conference
 2023,Akron,1103,mac,Mid-American Conference
@@ -12480,7 +12480,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2023,Morehead St.,1287,ovc,Ohio Valley Conference
 2023,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2023,MS Valley St.,1290,swac,Southwest Athletic Conference
-2023,Mt St Mary's,1291,maac,Metro Atlantic Athletic Conference
+2023,Mt St. Mary's,1291,maac,Metro Atlantic Athletic Conference
 2023,MTSU,1292,cusa,Conference USA
 2023,Murray St.,1293,mvc,Missouri Valley Conference
 2023,N Colorado,1294,big_sky,Big Sky Conference
@@ -12568,14 +12568,14 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2023,Southern Miss,1379,sun_belt,Sun Belt Conference
 2023,Southern Univ,1380,swac,Southwest Athletic Conference
 2023,Southern Utah,1381,wac,Western Athletic Conference
-2023,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2023,St Francis NY,1383,nec,Northeast Conference
-2023,St Francis PA,1384,nec,Northeast Conference
-2023,St John's,1385,big_east,Big East Conference
-2023,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2023,St Louis,1387,a_ten,Atlantic 10 Conference
-2023,St Mary's CA,1388,wcc,West Coast Conference
-2023,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2023,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2023,Saint Francis NY,1383,nec,Northeast Conference
+2023,Saint Francis PA,1384,nec,Northeast Conference
+2023,St. John's,1385,big_east,Big East Conference
+2023,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2023,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2023,Saint Mary's,1388,wcc,West Coast Conference
+2023,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2023,Stanford,1390,pac_twelve,Pacific-12 Conference
 2023,Stetson,1391,a_sun,Atlantic Sun Conference
 2023,Stony Brook,1392,caa,Coastal Athletic Association
@@ -12655,7 +12655,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2023,Utah Tech,1469,wac,Western Athletic Conference
 2023,Tarleton St.,1470,wac,Western Athletic Conference
 2023,UC San Diego,1471,big_west,Big West Conference
-2023,St Thomas MN,1472,summit,Summit League
+2023,St. Thomas MN,1472,summit,Summit League
 2023,Lindenwood,1473,ovc,Ohio Valley Conference
 2023,Queens NC,1474,a_sun,Atlantic Sun Conference
 2023,Southern Indiana,1475,ovc,Ohio Valley Conference
@@ -12842,7 +12842,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2024,Morehead St.,1287,ovc,Ohio Valley Conference
 2024,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2024,MS Valley St.,1290,swac,Southwest Athletic Conference
-2024,Mt St Mary's,1291,maac,Metro Atlantic Athletic Conference
+2024,Mt St. Mary's,1291,maac,Metro Atlantic Athletic Conference
 2024,MTSU,1292,cusa,Conference USA
 2024,Murray St.,1293,mvc,Missouri Valley Conference
 2024,N Colorado,1294,big_sky,Big Sky Conference
@@ -12930,13 +12930,13 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2024,Southern Miss,1379,sun_belt,Sun Belt Conference
 2024,Southern Univ,1380,swac,Southwest Athletic Conference
 2024,Southern Utah,1381,wac,Western Athletic Conference
-2024,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2024,St Francis PA,1384,nec,Northeast Conference
-2024,St John's,1385,big_east,Big East Conference
-2024,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2024,St Louis,1387,a_ten,Atlantic 10 Conference
-2024,St Mary's CA,1388,wcc,West Coast Conference
-2024,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2024,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2024,Saint Francis PA,1384,nec,Northeast Conference
+2024,St. John's,1385,big_east,Big East Conference
+2024,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2024,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2024,Saint Mary's,1388,wcc,West Coast Conference
+2024,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2024,Stanford,1390,pac_twelve,Pacific-12 Conference
 2024,Stetson,1391,a_sun,Atlantic Sun Conference
 2024,Stony Brook,1392,caa,Coastal Athletic Association
@@ -13016,7 +13016,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2024,Utah Tech,1469,wac,Western Athletic Conference
 2024,Tarleton St.,1470,wac,Western Athletic Conference
 2024,UC San Diego,1471,big_west,Big West Conference
-2024,St Thomas MN,1472,summit,Summit League
+2024,St. Thomas MN,1472,summit,Summit League
 2024,Lindenwood,1473,ovc,Ohio Valley Conference
 2024,Queens NC,1474,a_sun,Atlantic Sun Conference
 2024,Southern Indiana,1475,ovc,Ohio Valley Conference
@@ -13204,7 +13204,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2025,Morehead St.,1287,ovc,Ohio Valley Conference
 2025,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2025,MS Valley St.,1290,swac,Southwest Athletic Conference
-2025,Mt St Mary's,1291,maac,Metro Atlantic Athletic Conference
+2025,Mt St. Mary's,1291,maac,Metro Atlantic Athletic Conference
 2025,MTSU,1292,cusa,Conference USA
 2025,Murray St.,1293,mvc,Missouri Valley Conference
 2025,N Colorado,1294,big_sky,Big Sky Conference
@@ -13292,13 +13292,13 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2025,Southern Miss,1379,sun_belt,Sun Belt Conference
 2025,Southern Univ,1380,swac,Southwest Athletic Conference
 2025,Southern Utah,1381,wac,Western Athletic Conference
-2025,St Bonaventure,1382,a_ten,Atlantic 10 Conference
-2025,St Francis PA,1384,nec,Northeast Conference
-2025,St John's,1385,big_east,Big East Conference
-2025,St Joseph's PA,1386,a_ten,Atlantic 10 Conference
-2025,St Louis,1387,a_ten,Atlantic 10 Conference
-2025,St Mary's CA,1388,wcc,West Coast Conference
-2025,St Peter's,1389,maac,Metro Atlantic Athletic Conference
+2025,St. Bonaventure,1382,a_ten,Atlantic 10 Conference
+2025,Saint Francis PA,1384,nec,Northeast Conference
+2025,St. John's,1385,big_east,Big East Conference
+2025,Saint Joseph's,1386,a_ten,Atlantic 10 Conference
+2025,Saint Louis,1387,a_ten,Atlantic 10 Conference
+2025,Saint Mary's,1388,wcc,West Coast Conference
+2025,Saint Peter's,1389,maac,Metro Atlantic Athletic Conference
 2025,Stanford,1390,acc,Atlantic Coast Conference
 2025,Stetson,1391,a_sun,Atlantic Sun Conference
 2025,Stony Brook,1392,caa,Coastal Athletic Association
@@ -13378,7 +13378,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2025,Utah Tech,1469,wac,Western Athletic Conference
 2025,Tarleton St.,1470,wac,Western Athletic Conference
 2025,UC San Diego,1471,big_west,Big West Conference
-2025,St Thomas MN,1472,summit,Summit League
+2025,St. Thomas MN,1472,summit,Summit League
 2025,Lindenwood,1473,ovc,Ohio Valley Conference
 2025,Queens NC,1474,a_sun,Atlantic Sun Conference
 2025,Southern Indiana,1475,ovc,Ohio Valley Conference
