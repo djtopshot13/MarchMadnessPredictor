@@ -141,7 +141,7 @@ def clean_tourney_slots():
     tsl_df.drop(columns=["StrongTeamName", "WeakTeamName"], inplace=True)
 
     ts_df = load_data("MarchMadnessData/MNCAATourneySeeds.csv")
-    
+
     ts_dict = {}
     for _, row in ts_df.iterrows():
         if row['Season'] not in ts_dict:
@@ -271,19 +271,19 @@ def clean_team_conferences():
     write_data(t_conf_df, filepath)
 
 
-add_period_to_st("MarchMadnessData/MTeams.csv", "MarchMadnessData/MTeams.csv")
-clean_tourney_games()
-clean_game_cities()
-clean_ncaa_tourney_compact_results()
-clean_ncaa_tourney_detailed_results()
+# add_period_to_st("MarchMadnessData/MTeams.csv", "MarchMadnessData/MTeams.csv")
+# clean_tourney_games()
+# clean_game_cities()
+# clean_ncaa_tourney_compact_results()
+# clean_ncaa_tourney_detailed_results()
 
-clean_tourney_seeds()
-# ^^^This function needs some more proofing
-clean_tourney_slots()
+# clean_tourney_seeds()
+# # ^^^This function needs some more proofing
+# clean_tourney_slots()
 
 
-clean_regular_season_compact_results()
-clean_regular_season_detailed_results()
-# clean_seasons()
-clean_team_coaches()
-clean_team_conferences()
+# clean_regular_season_compact_results()
+# clean_regular_season_detailed_results()
+# # clean_seasons()
+# clean_team_coaches()
+# clean_team_conferences()
