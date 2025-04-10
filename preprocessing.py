@@ -21,21 +21,25 @@
 
 import pandas as pd
 import re
+import os
 
-def load_data(file_path):
-    return pd.read_csv(file_path)
+# Get the project root directory
+project_root = os.path.dirname(os.path.abspath(__file__))
 
-conf_df = load_data("MarchMadnessData/Conferences.csv")
-cities_df = load_data("MarchMadnessData/Cities.csv")
-teams_df = load_data("MarchMadnessData/MTeams.csv")
-cities_df = load_data("MarchMadnessData/Cities.csv")
+def load_data(file_name):
+    return pd.read_csv(os.path.join(project_root, 'MarchMadnessData', file_name))
 
-def write_data(df, filepath):
+conf_df = load_data("Conferences.csv")
+cities_df = load_data("Cities.csv")
+teams_df = load_data("MTeams.csv")
+
+def write_data(df, file_name):
+    filepath = os.path.join(project_root, 'MarchMadnessData', file_name)
     df.to_csv(filepath, index=False)
 
 def clean_tourney_games():
-    filepath = "MarchMadnessData/MConferenceTourneyGames.csv"
-    tg_df = load_data(filepath)
+    file_name = "MConferenceTourneyGames.csv"
+    tg_df = load_data(file_name)
 
     tg_df.drop(columns=["LName", "WName", "ConfName"], inplace=True)
 
@@ -54,15 +58,15 @@ def clean_tourney_games():
     tg_df["LName"] = tg_df["LTeamID"].map(team_dict)    
     tg_df["ConfName"] = tg_df["ConfAbbrev"].map(conf_dict)
     
-    write_data(tg_df, filepath)
+    write_data(tg_df, file_name)
 
 def clean_game_cities():
     """Day number range for regular season games is 7-132
     After that is NCAA or Secondary Tournaments which is 133-154
     """
 
-    filepath = "MarchMadnessData/MGameCities.csv"
-    gc_df = load_data(filepath)
+    file_name = "MGameCities.csv"
+    gc_df = load_data(file_name)
 
     gc_df.drop(columns=["LName", "WName"], inplace=True)
 
@@ -79,11 +83,11 @@ def clean_game_cities():
     gc_df["WName"] = gc_df["WTeamID"].map(team_dict)
     gc_df["LName"] = gc_df["LTeamID"].map(team_dict)
     
-    write_data(gc_df, filepath)
+    write_data(gc_df, file_name)
 
 def clean_ncaa_tourney_compact_results():
-    filepath = "MarchMadnessData/MNCAATourneyCompactResults.csv"
-    ntcr_df = load_data(filepath)
+    file_name = "MNCAATourneyCompactResults.csv"
+    ntcr_df = load_data(file_name)
 
     ntcr_df.drop(columns=["LName", "WName"], inplace=True)
 
@@ -96,12 +100,12 @@ def clean_ncaa_tourney_compact_results():
     ntcr_df["WName"] = ntcr_df["WTeamID"].map(team_dict)
     ntcr_df["LName"] = ntcr_df["LTeamID"].map(team_dict)
 
-    write_data(ntcr_df, filepath)
+    write_data(ntcr_df, file_name)
 
 def clean_ncaa_tourney_detailed_results():
 
-    filepath = "MarchMadnessData/MNCAATourneyDetailedResults.csv"
-    ntdr_df = load_data(filepath)
+    file_name = "MNCAATourneyDetailedResults.csv"
+    ntdr_df = load_data(file_name)
 
     ntdr_df.drop(columns=["LName", "WName"], inplace=True)
 
@@ -114,12 +118,12 @@ def clean_ncaa_tourney_detailed_results():
     ntdr_df["WName"] = ntdr_df["WTeamID"].map(team_dict)
     ntdr_df["LName"] = ntdr_df["LTeamID"].map(team_dict)
 
-    write_data(ntdr_df, filepath)
+    write_data(ntdr_df, file_name)
 
 def clean_tourney_seeds():
-    filepath = "MarchMadnessData/MNCAATourneySeeds.csv"
+    file_name = "MNCAATourneySeeds.csv"
 
-    ts_df = load_data(filepath)
+    ts_df = load_data(file_name)
     ts_df.drop(columns=["TeamName"], inplace=True)
 
     ts_df.insert(column="TeamName", loc=2, value=None)
@@ -127,7 +131,7 @@ def clean_tourney_seeds():
     team_dict = dict(zip(teams_df.TeamID, teams_df.TeamName))
     ts_df["TeamName"] = ts_df["TeamID"].map(team_dict)
 
-    write_data(ts_df, filepath)
+    write_data(ts_df, file_name)
 
 """
 Look at getting the tournament values populated past the first round possibly 
@@ -135,8 +139,8 @@ for modeling the tournament results more easily. Use the NCAATourneyCompactResul
 to find the winning teams and get the proper round mapping for the winning team to be used
 """
 def clean_tourney_slots():
-    filepath = "MarchMadnessData/MNCAATourneySlots.csv"
-    tsl_df = load_data(filepath)
+    file_name = "MNCAATourneySlots.csv"
+    tsl_df = load_data(file_name)
 
     tsl_df.drop(columns=["StrongTeamName", "WeakTeamName"], inplace=True)
 
@@ -152,11 +156,11 @@ def clean_tourney_slots():
     tsl_df['WeakTeamName'] = tsl_df.apply(lambda row: ts_dict.get(row['Season'], {}).get(row['WeakSeed']), axis=1)
 
 
-    write_data(tsl_df, filepath)
+    write_data(tsl_df, file_name)
 
 def clean_regular_season_compact_results():
-    filepath = "MarchMadnessData/MRegularSeasonCompactResults.csv"
-    rsc_df = load_data(filepath)
+    file_name = "MRegularSeasonCompactResults.csv"
+    rsc_df = load_data(file_name)
 
     rsc_df.drop(columns=["LName", "WName"], inplace=True)
 
@@ -169,12 +173,12 @@ def clean_regular_season_compact_results():
     rsc_df["WName"] = rsc_df["WTeamID"].map(team_dict)
     rsc_df["LName"] = rsc_df["LTeamID"].map(team_dict)
 
-    write_data(rsc_df, filepath)
+    write_data(rsc_df, file_name)
 
 def clean_regular_season_detailed_results():
 
-    filepath = "MarchMadnessData/MRegularSeasonDetailedResults.csv"
-    rsd_df = load_data(filepath)
+    file_name = "MRegularSeasonDetailedResults.csv"
+    rsd_df = load_data(file_name)
 
     rsd_df.drop(columns=["LName", "WName"], inplace=True)
 
@@ -187,11 +191,11 @@ def clean_regular_season_detailed_results():
     rsd_df["WName"] = rsd_df["WTeamID"].map(team_dict)
     rsd_df["LName"] = rsd_df["LTeamID"].map(team_dict)
 
-    write_data(rsd_df, filepath)
+    write_data(rsd_df, file_name)
 
 def clean_seasons():
-    filepath = "MarchMadnessData/MSeasons.csv"
-    s_df = load_data(filepath)
+    file_name = "MSeasons.csv"
+    s_df = load_data(file_name)
 
     s_df.drop(columns=["SeasonStart","SeasonEnd"], inplace=True)
 
@@ -203,7 +207,7 @@ def clean_seasons():
 
     s_df.drop(columns=["DayZero"], inplace=True)
     
-    write_data(s_df, filepath)
+    write_data(s_df, file_name)
 
 
 def capitalize_name(name):
@@ -225,21 +229,21 @@ def capitalize_name(name):
     
     return ' '.join(capitalized_parts)
 
-def add_period_to_st(filepath, output_filepath):
+def add_period_to_st(input_file, output_file):
     # Load the data
-    df = pd.read_csv(filepath)
+    df = load_data(input_file)
 
     # Check if the column containing college names is named 'CollegeName'
     if 'TeamName' in df.columns:
         # Use regex to add a period after 'St' at the end of names
         df['TeamName'] = df['TeamName'].str.replace(r'St\b ', 'St. ', regex=True)
 
-    write_data(df, output_filepath)
+    write_data(df, output_file)
 
 
 def clean_team_coaches():
-    filepath = "MarchMadnessData/MTeamCoaches.csv"
-    tc_df = load_data(filepath)
+    file_name = "MTeamCoaches.csv"
+    tc_df = load_data(file_name)
 
     tc_df.drop(columns=["TeamName"], inplace=True)
 
@@ -251,11 +255,11 @@ def clean_team_coaches():
 
     tc_df["CoachName"] = tc_df["CoachName"].apply(capitalize_name)
 
-    write_data(tc_df, filepath)
+    write_data(tc_df, file_name)
 
 def clean_team_conferences():
-    filepath = "MarchMadnessData/MTeamConferences.csv"
-    t_conf_df = load_data(filepath)
+    file_name = "MTeamConferences.csv"
+    t_conf_df = load_data(file_name)
     
     t_conf_df.drop(columns=["TeamName", "ConfName"], inplace=True)
 
@@ -268,7 +272,7 @@ def clean_team_conferences():
     t_conf_df["TeamName"] = t_conf_df["TeamID"].map(team_dict)
     t_conf_df["ConfName"] = t_conf_df["ConfAbbrev"].map(conf_dict)
     
-    write_data(t_conf_df, filepath)
+    write_data(t_conf_df, file_name)
 
 
 # add_period_to_st("MarchMadnessData/MTeams.csv", "MarchMadnessData/MTeams.csv")
