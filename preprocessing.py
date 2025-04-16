@@ -138,156 +138,178 @@ Look at getting the tournament values populated past the first round possibly
 for modeling the tournament results more easily. Use the NCAATourneyCompactResults.csv
 to find the winning teams and get the proper round mapping for the winning team to be used
 """
-def region_order(slot):
-    """Return region precedence: W=0, X=1, Y=2, Z=3, else 99."""
-    for i, region in enumerate(['W', 'X', 'Y', 'Z']):
-        if region in slot:
-            return i
-    return 99
+# def region_order(slot):
+#     """Return region precedence: W=0, X=1, Y=2, Z=3, else 99."""
+#     for i, region in enumerate(['W', 'X', 'Y', 'Z']):
+#         if region in slot:
+#             return i
+#     return 99
 
-def pick_strong_weak(seed1, seed2, slot1, slot2):
-    """Return (strong_seed, weak_seed, strong_slot, weak_slot) with tiebreaker."""
-    try:
-        num1, num2 = int(seed1[1:]), int(seed2[1:])
-    except Exception:
-        # If seed is not standard (e.g., None), just return as is
-        return seed1, seed2, slot1, slot2
-    if num1 < num2:
-        return seed1, seed2, slot1, slot2
-    elif num2 < num1:
-        return seed2, seed1, slot2, slot1
-    else:
-        # Seeds are equal, use region order
-        if region_order(slot1) < region_order(slot2):
-            return seed1, seed2, slot1, slot2
-        else:
-            return seed2, seed1, slot2, slot1
+# def pick_strong_weak(seed1, seed2, slot1, slot2):
+#     """Return (strong_seed, weak_seed, strong_slot, weak_slot) with tiebreaker."""
+#     try:
+#         num1, num2 = int(seed1[1:]), int(seed2[1:])
+#     except Exception:
+#         # If seed is not standard (e.g., None), just return as is
+#         return seed1, seed2, slot1, slot2
+#     if num1 < num2:
+#         return seed1, seed2, slot1, slot2
+#     elif num2 < num1:
+#         return seed2, seed1, slot2, slot1
+#     else:
+#         # Seeds are equal, use region order
+#         if region_order(slot1) < region_order(slot2):
+#             return seed1, seed2, slot1, slot2
+#         else:
+#             return seed2, seed1, slot2, slot1
+
+# def clean_tourney_slots():
+#     file_name = "MNCAATourneySlots.csv"
+#     tsl_df = load_data(file_name)
+
+#     ts_df = load_data("MNCAATourneySeeds.csv")
+#     tcr_df = load_data("MNCAATourneyCompactResults.csv")
+
+#     # Build mapping dictionaries with (Season, ...) keys for multi-season support
+#     seed_to_team = ts_df.set_index(['Season', 'Seed'])['TeamName'].to_dict()
+#     team_to_seed = ts_df.set_index(['Season', 'TeamName'])['Seed'].to_dict()
+#     teamid_to_team = ts_df.set_index(['Season', 'TeamID'])['TeamName'].to_dict()
+#     team_to_teamid = ts_df.set_index(['Season', 'TeamName'])['TeamID'].to_dict()
+
+#     # --- Handle play-in games for 2011+ and DayNum 134/135 ---
+#     playin_winners = {}
+#     for season in tcr_df['Season'].unique():
+#         if season < 2011:
+#             continue
+#         season_games = tcr_df[(tcr_df['Season'] == season) & (tcr_df['DayNum'].isin([134, 135]))]
+#         for _, row in season_games.iterrows():
+#             wteamid = row['WTeamID']
+#             wteam = teamid_to_team.get((season, wteamid))
+#             wseed = team_to_seed.get((season, wteam))
+#             # Only consider seeds ending in 'a' or 'b'
+#             if wseed and wseed[-1] in ['a', 'b']:
+#                 main_seed = wseed[:-1]
+#                 playin_winners[(season, main_seed)] = wteam
+
+#     # --- Update only 2011+ rows in tsl_df for play-in seeds ---
+#     def update_team_name(row, col):
+#         season = row['Season']
+#         seed = row[col]
+#         if season >= 2011:
+#             team = playin_winners.get((season, seed))
+#             if team:
+#                 return team
+#         return row[f"{col.replace('Seed', 'TeamName')}"]
+
+#     # Only update for 2011+ and if a play-in winner exists
+#     mask_2011plus = tsl_df['Season'] >= 2011
+#     tsl_df.loc[mask_2011plus, 'StrongTeamName'] = tsl_df[mask_2011plus].apply(
+#         lambda row: update_team_name(row, 'StrongSeed'), axis=1)
+#     tsl_df.loc[mask_2011plus, 'WeakTeamName'] = tsl_df[mask_2011plus].apply(
+#         lambda row: update_team_name(row, 'WeakSeed'), axis=1)
+
+#     write_data(tsl_df, file_name)
+
+
+#     # --- Fill in first round team names using seeds, accounting for play-ins ---
+#     def get_team_for_seed(row):
+#         season, seed = row['Season'], row['StrongSeed']
+#         # Check if this seed is a play-in winner
+#         team = playin_winners.get((season, seed))
+#         if team:
+#             return team
+#         return seed_to_team.get((season, seed))
+
+#     def get_team_for_weak_seed(row):
+#         season, seed = row['Season'], row['WeakSeed']
+#         team = playin_winners.get((season, seed))
+#         if team:
+#             return team
+#         return seed_to_team.get((season, seed))
+
+#     tsl_df['StrongTeamName'] = tsl_df.apply(get_team_for_seed, axis=1)
+#     tsl_df['WeakTeamName'] = tsl_df.apply(get_team_for_weak_seed, axis=1)
+
+#     # --- Build winner lookup: (Season, TeamID1, TeamID2) -> Winner TeamID ---
+#     game_winners = {}
+#     for _, row in tcr_df.iterrows():
+#         season = row['Season']
+#         wtid, ltid = row['WTeamID'], row['LTeamID']
+#         game_winners[(season, wtid, ltid)] = wtid
+#         game_winners[(season, ltid, wtid)] = wtid
+
+#     slots_filled = tsl_df.copy()
+#     slot_to_winner = {}  # (Season, Slot) -> Winner TeamName
+
+#     all_seasons = tsl_df['Season'].unique()
+
+#     for season in all_seasons:
+#         if season == 2020:
+#             continue  
+#         # First round: use original team names, determine winners
+#         r1_mask = (slots_filled['Season'] == season) & (slots_filled['Slot'].str.startswith('R1'))
+#         for idx, row in slots_filled[r1_mask].iterrows():
+#             strong_team = row['StrongTeamName']
+#             weak_team = row['WeakTeamName']
+#             strong_id = team_to_teamid.get((season, strong_team))
+#             weak_id = team_to_teamid.get((season, weak_team))
+#             winner_id = game_winners.get((season, strong_id, weak_id))
+#             winner_name = teamid_to_team.get((season, winner_id))
+#             slot_to_winner[(season, row['Slot'])] = winner_name
+
+#         # Subsequent rounds
+#         for round_num in range(2, 7):  # R2 to R6
+#             round_prefix = f'R{round_num}'
+#             r_mask = (slots_filled['Season'] == season) & (slots_filled['Slot'].str.startswith(round_prefix))
+#             for idx, row in slots_filled[r_mask].iterrows():
+#                 strong_prev = row['StrongSeed']
+#                 weak_prev = row['WeakSeed']
+#                 strong_team = slot_to_winner.get((season, strong_prev))
+#                 weak_team = slot_to_winner.get((season, weak_prev))
+#                 # Get seeds for tiebreaker
+#                 strong_seed = team_to_seed.get((season, strong_team))
+#                 weak_seed = team_to_seed.get((season, weak_team))
+#                 # Use slot names for tiebreaker
+#                 strong_slot = strong_prev
+#                 weak_slot = weak_prev
+#                 # Pick strong/weak using tiebreaker
+#                 if strong_seed and weak_seed:
+#                     s_seed, w_seed, s_slot, w_slot = pick_strong_weak(strong_seed, weak_seed, strong_slot, weak_slot)
+#                     s_team = slot_to_winner.get((season, s_slot))
+#                     w_team = slot_to_winner.get((season, w_slot))
+#                     slots_filled.at[idx, 'StrongTeamName'] = s_team
+#                     slots_filled.at[idx, 'WeakTeamName'] = w_team
+#                     # Get winner
+#                     if s_team and w_team:
+#                         s_id = team_to_teamid.get((season, s_team))
+#                         w_id = team_to_teamid.get((season, w_team))
+#                         winner_id = game_winners.get((season, s_id, w_id))
+#                         winner_name = teamid_to_team.get((season, winner_id))
+#                         slot_to_winner[(season, row['Slot'])] = winner_name
+
+#     write_data(slots_filled, file_name)
 
 def clean_tourney_slots():
     file_name = "MNCAATourneySlots.csv"
     tsl_df = load_data(file_name)
-
     ts_df = load_data("MNCAATourneySeeds.csv")
-    tcr_df = load_data("MNCAATourneyCompactResults.csv")
+    team_seed_dict = ts_df.set_index(['Season', 'TeamName'])['Seed'].to_dict()
+    tsl_df['StrongTeamSeed'] = None
+    tsl_df['WeakTeamSeed'] = None   
 
-    # Build mapping dictionaries with (Season, ...) keys for multi-season support
-    seed_to_team = ts_df.set_index(['Season', 'Seed'])['TeamName'].to_dict()
-    team_to_seed = ts_df.set_index(['Season', 'TeamName'])['Seed'].to_dict()
-    teamid_to_team = ts_df.set_index(['Season', 'TeamID'])['TeamName'].to_dict()
-    team_to_teamid = ts_df.set_index(['Season', 'TeamName'])['TeamID'].to_dict()
-
-    # --- Handle play-in games for 2011+ and DayNum 134/135 ---
-    playin_winners = {}
-    for season in tcr_df['Season'].unique():
-        if season < 2011:
-            continue
-        season_games = tcr_df[(tcr_df['Season'] == season) & (tcr_df['DayNum'].isin([134, 135]))]
-        for _, row in season_games.iterrows():
-            wteamid = row['WTeamID']
-            wteam = teamid_to_team.get((season, wteamid))
-            wseed = team_to_seed.get((season, wteam))
-            # Only consider seeds ending in 'a' or 'b'
-            if wseed and wseed[-1] in ['a', 'b']:
-                main_seed = wseed[:-1]
-                playin_winners[(season, main_seed)] = wteam
-
-    # --- Update only 2011+ rows in tsl_df for play-in seeds ---
-    def update_team_name(row, col):
+    for idx, row in tsl_df.iterrows():
         season = row['Season']
-        seed = row[col]
-        if season >= 2011:
-            team = playin_winners.get((season, seed))
-            if team:
-                return team
-        return row[f"{col.replace('Seed', 'TeamName')}"]
-
-    # Only update for 2011+ and if a play-in winner exists
-    mask_2011plus = tsl_df['Season'] >= 2011
-    tsl_df.loc[mask_2011plus, 'StrongTeamName'] = tsl_df[mask_2011plus].apply(
-        lambda row: update_team_name(row, 'StrongSeed'), axis=1)
-    tsl_df.loc[mask_2011plus, 'WeakTeamName'] = tsl_df[mask_2011plus].apply(
-        lambda row: update_team_name(row, 'WeakSeed'), axis=1)
+        strong_team = row['StrongTeamName']
+        weak_team = row['WeakTeamName']
+        strong_seed = team_seed_dict.get((season, strong_team))
+        weak_seed = team_seed_dict.get((season, weak_team))
+        tsl_df.at[idx, 'StrongTeamSeed'] = strong_seed
+        tsl_df.at[idx, 'WeakTeamSeed'] = weak_seed
 
     write_data(tsl_df, file_name)
 
 
-    # --- Fill in first round team names using seeds, accounting for play-ins ---
-    def get_team_for_seed(row):
-        season, seed = row['Season'], row['StrongSeed']
-        # Check if this seed is a play-in winner
-        team = playin_winners.get((season, seed))
-        if team:
-            return team
-        return seed_to_team.get((season, seed))
 
-    def get_team_for_weak_seed(row):
-        season, seed = row['Season'], row['WeakSeed']
-        team = playin_winners.get((season, seed))
-        if team:
-            return team
-        return seed_to_team.get((season, seed))
-
-    tsl_df['StrongTeamName'] = tsl_df.apply(get_team_for_seed, axis=1)
-    tsl_df['WeakTeamName'] = tsl_df.apply(get_team_for_weak_seed, axis=1)
-
-    # --- Build winner lookup: (Season, TeamID1, TeamID2) -> Winner TeamID ---
-    game_winners = {}
-    for _, row in tcr_df.iterrows():
-        season = row['Season']
-        wtid, ltid = row['WTeamID'], row['LTeamID']
-        game_winners[(season, wtid, ltid)] = wtid
-        game_winners[(season, ltid, wtid)] = wtid
-
-    slots_filled = tsl_df.copy()
-    slot_to_winner = {}  # (Season, Slot) -> Winner TeamName
-
-    all_seasons = tsl_df['Season'].unique()
-
-    for season in all_seasons:
-        if season == 2020:
-            continue  
-        # First round: use original team names, determine winners
-        r1_mask = (slots_filled['Season'] == season) & (slots_filled['Slot'].str.startswith('R1'))
-        for idx, row in slots_filled[r1_mask].iterrows():
-            strong_team = row['StrongTeamName']
-            weak_team = row['WeakTeamName']
-            strong_id = team_to_teamid.get((season, strong_team))
-            weak_id = team_to_teamid.get((season, weak_team))
-            winner_id = game_winners.get((season, strong_id, weak_id))
-            winner_name = teamid_to_team.get((season, winner_id))
-            slot_to_winner[(season, row['Slot'])] = winner_name
-
-        # Subsequent rounds
-        for round_num in range(2, 7):  # R2 to R6
-            round_prefix = f'R{round_num}'
-            r_mask = (slots_filled['Season'] == season) & (slots_filled['Slot'].str.startswith(round_prefix))
-            for idx, row in slots_filled[r_mask].iterrows():
-                strong_prev = row['StrongSeed']
-                weak_prev = row['WeakSeed']
-                strong_team = slot_to_winner.get((season, strong_prev))
-                weak_team = slot_to_winner.get((season, weak_prev))
-                # Get seeds for tiebreaker
-                strong_seed = team_to_seed.get((season, strong_team))
-                weak_seed = team_to_seed.get((season, weak_team))
-                # Use slot names for tiebreaker
-                strong_slot = strong_prev
-                weak_slot = weak_prev
-                # Pick strong/weak using tiebreaker
-                if strong_seed and weak_seed:
-                    s_seed, w_seed, s_slot, w_slot = pick_strong_weak(strong_seed, weak_seed, strong_slot, weak_slot)
-                    s_team = slot_to_winner.get((season, s_slot))
-                    w_team = slot_to_winner.get((season, w_slot))
-                    slots_filled.at[idx, 'StrongTeamName'] = s_team
-                    slots_filled.at[idx, 'WeakTeamName'] = w_team
-                    # Get winner
-                    if s_team and w_team:
-                        s_id = team_to_teamid.get((season, s_team))
-                        w_id = team_to_teamid.get((season, w_team))
-                        winner_id = game_winners.get((season, s_id, w_id))
-                        winner_name = teamid_to_team.get((season, winner_id))
-                        slot_to_winner[(season, row['Slot'])] = winner_name
-
-    write_data(slots_filled, file_name)
 
 
 
