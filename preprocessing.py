@@ -289,25 +289,6 @@ to find the winning teams and get the proper round mapping for the winning team 
 
 #     write_data(slots_filled, file_name)
 
-def clean_tourney_slots():
-    file_name = "MNCAATourneySlots.csv"
-    tsl_df = load_data(file_name)
-    ts_df = load_data("MNCAATourneySeeds.csv")
-    team_seed_dict = ts_df.set_index(['Season', 'TeamName'])['Seed'].to_dict()
-    tsl_df['StrongTeamSeed'] = None
-    tsl_df['WeakTeamSeed'] = None   
-
-    for idx, row in tsl_df.iterrows():
-        season = row['Season']
-        strong_team = row['StrongTeamName']
-        weak_team = row['WeakTeamName']
-        strong_seed = team_seed_dict.get((season, strong_team))
-        weak_seed = team_seed_dict.get((season, weak_team))
-        tsl_df.at[idx, 'StrongTeamSeed'] = strong_seed
-        tsl_df.at[idx, 'WeakTeamSeed'] = weak_seed
-
-    write_data(tsl_df, file_name)
-
 
 
 
@@ -438,7 +419,7 @@ def clean_team_conferences():
 
 # clean_tourney_seeds()
 
-clean_tourney_slots()
+# clean_tourney_slots()
 # # ^^^This function needs some more proofing
 
 
