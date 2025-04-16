@@ -138,25 +138,106 @@ Look at getting the tournament values populated past the first round possibly
 for modeling the tournament results more easily. Use the NCAATourneyCompactResults.csv
 to find the winning teams and get the proper round mapping for the winning team to be used
 """
+def region_order(slot):
+    """Return region precedence: W=0, X=1, Y=2, Z=3, else 99."""
+    for i, region in enumerate(['W', 'X', 'Y', 'Z']):
+        if region in slot:
+            return i
+    return 99
+
+def pick_strong_weak(seed1, seed2, slot1, slot2):
+    """Return (strong_seed, weak_seed, strong_slot, weak_slot) with tiebreaker."""
+    num1, num2 = int(seed1[1:]), int(seed2[1:])
+    if num1 < num2:
+        return seed1, seed2, slot1, slot2
+    elif num2 < num1:
+        return seed2, seed1, slot2, slot1
+    else:
+        # Seeds are equal, use region order
+        if region_order(slot1) < region_order(slot2):
+            return seed1, seed2, slot1, slot2
+        else:
+            return seed2, seed1, slot2, slot1
+
 def clean_tourney_slots():
     file_name = "MNCAATourneySlots.csv"
     tsl_df = load_data(file_name)
-
     tsl_df.drop(columns=["StrongTeamName", "WeakTeamName"], inplace=True)
 
-    ts_df = load_data("MarchMadnessData/MNCAATourneySeeds.csv")
+    ts_df = load_data("MNCAATourneySeeds.csv")
+    tcr_df = load_data("MNCAATourneyCompactResults.csv")
 
-    ts_dict = {}
-    for _, row in ts_df.iterrows():
-        if row['Season'] not in ts_dict:
-            ts_dict[row['Season']] = {}
-        ts_dict[row['Season']][row['Seed']] = row['TeamName']
+    # Build mapping dictionaries with (Season, ...) keys for multi-season support
+    seed_to_team = ts_df.set_index(['Season', 'Seed'])['TeamName'].to_dict()
+    team_to_seed = ts_df.set_index(['Season', 'TeamName'])['Seed'].to_dict()
+    teamid_to_team = ts_df.set_index(['Season', 'TeamID'])['TeamName'].to_dict()
+    team_to_teamid = ts_df.set_index(['Season', 'TeamName'])['TeamID'].to_dict()
 
-    tsl_df['StrongTeamName'] = tsl_df.apply(lambda row: ts_dict.get(row['Season'], {}).get(row['StrongSeed']), axis=1)
-    tsl_df['WeakTeamName'] = tsl_df.apply(lambda row: ts_dict.get(row['Season'], {}).get(row['WeakSeed']), axis=1)
+    # Fill in first round team names using seeds
+    tsl_df['StrongTeamName'] = tsl_df.apply(
+        lambda row: seed_to_team.get((row['Season'], row['StrongSeed'])), axis=1)
+    tsl_df['WeakTeamName'] = tsl_df.apply(
+        lambda row: seed_to_team.get((row['Season'], row['WeakSeed'])), axis=1)
 
+    # Build winner lookup: (Season, TeamID1, TeamID2) -> Winner TeamID
+    game_winners = {}
+    for _, row in tcr_df.iterrows():
+        season = row['Season']
+        wtid, ltid = row['WTeamID'], row['LTeamID']
+        game_winners[(season, wtid, ltid)] = wtid
+        game_winners[(season, ltid, wtid)] = wtid
 
-    write_data(tsl_df, file_name)
+    slots_filled = tsl_df.copy()
+    slot_to_winner = {}  # (Season, Slot) -> Winner TeamName
+
+    all_seasons = tsl_df['Season'].unique()
+
+    for season in all_seasons:
+        if season == 2020:
+            continue
+        # First round: use original team names, determine winners
+        r1_mask = (slots_filled['Season'] == season) & (slots_filled['Slot'].str.startswith('R1'))
+        for idx, row in slots_filled[r1_mask].iterrows():
+            strong_team = row['StrongTeamName']
+            weak_team = row['WeakTeamName']
+            strong_id = team_to_teamid.get((season, strong_team))
+            weak_id = team_to_teamid.get((season, weak_team))
+            winner_id = game_winners.get((season, strong_id, weak_id))
+            winner_name = teamid_to_team.get((season, winner_id))
+            slot_to_winner[(season, row['Slot'])] = winner_name
+
+        # Subsequent rounds
+        for round_num in range(2, 7):  # R2 to R6
+            round_prefix = f'R{round_num}'
+            r_mask = (slots_filled['Season'] == season) & (slots_filled['Slot'].str.startswith(round_prefix))
+            for idx, row in slots_filled[r_mask].iterrows():
+                strong_prev = row['StrongSeed']
+                weak_prev = row['WeakSeed']
+                strong_team = slot_to_winner.get((season, strong_prev))
+                weak_team = slot_to_winner.get((season, weak_prev))
+                # Get seeds for tiebreaker
+                strong_seed = team_to_seed.get((season, strong_team))
+                weak_seed = team_to_seed.get((season, weak_team))
+                # Use slot names for tiebreaker
+                strong_slot = strong_prev
+                weak_slot = weak_prev
+                # Pick strong/weak using tiebreaker
+                if strong_seed and weak_seed:
+                    s_seed, w_seed, s_slot, w_slot = pick_strong_weak(strong_seed, weak_seed, strong_slot, weak_slot)
+                    s_team = slot_to_winner.get((season, s_slot))
+                    w_team = slot_to_winner.get((season, w_slot))
+                    slots_filled.at[idx, 'StrongTeamName'] = s_team
+                    slots_filled.at[idx, 'WeakTeamName'] = w_team
+                    # Get winner
+                    if s_team and w_team:
+                        s_id = team_to_teamid.get((season, s_team))
+                        w_id = team_to_teamid.get((season, w_team))
+                        winner_id = game_winners.get((season, s_id, w_id))
+                        winner_name = teamid_to_team.get((season, winner_id))
+                        slot_to_winner[(season, row['Slot'])] = winner_name
+
+    write_data(slots_filled, file_name)
+
 
 def clean_regular_season_compact_results():
     file_name = "MRegularSeasonCompactResults.csv"
@@ -282,8 +363,9 @@ def clean_team_conferences():
 # clean_ncaa_tourney_detailed_results()
 
 # clean_tourney_seeds()
+
+clean_tourney_slots()
 # # ^^^This function needs some more proofing
-# clean_tourney_slots()
 
 
 # clean_regular_season_compact_results()

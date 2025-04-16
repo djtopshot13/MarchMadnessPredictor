@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 plot_df = pd.read_csv("SeasonData/Seed Results.csv")
 
 plt.figure(figsize=(8, 16))
+# plt.suptitle("Games Won By Seed Over Last 16 Tournaments")
 
 plt.subplot(3, 2, 1)
 plt.bar(plot_df["SEED"], plot_df["R32"], label="Round of 64 Wins", color="blue")
@@ -45,7 +46,7 @@ plt.subplot(3, 2, 6)
 plt.bar(plot_df["SEED"], plot_df["CHAMP"], label="Final 2 Wins", color="blue")
 plt.xlabel("Seed")
 plt.ylabel("Games Won")
-plt.title("Final 2 Games Won By Seed")
+plt.title("Championship Games Won By Seed")
 plt.legend()
 
 # plt.subplot(4, 2, 7)
