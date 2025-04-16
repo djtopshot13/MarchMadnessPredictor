@@ -224,6 +224,7 @@ class Bracket:
         self.rounds = {}
         self.current_round = current_round
         self.team_names = pd.read_csv(os.path.join(project_root, 'MarchMadnessData', 'MTeams.csv'))
+        self.seed_data = pd.read_csv(os.path.join(project_root, 'MarchMadnessData', 'SeedPerformanceReport.csv'))
     
     def simulate_matchup(self, team1_id, team2_id):
         team1_feat = get_team_features(self.season, team1_id)
@@ -238,9 +239,23 @@ class Bracket:
                 'Team1_AvgPoints': team1_feat['AvgPoints'],
                 'Team1_AvgOppPoints': team1_feat['AvgOppPoints'],
                 'Team1_SeedNum': team1_feat['SeedNum'],
+                'Team1_SeedWin%': self.seed_data.loc[team1_feat['SeedNum'], 'Win%'],
+                'Team1_SeedR64%': self.seed_data.loc[team1_feat['SeedNum'], 'R64%'],
+                'Team1_SeedR32%': self.seed_data.loc[team1_feat['SeedNum'], 'R32%'],
+                'Team1_SeedS16%': self.seed_data.loc[team1_feat['SeedNum'], 'S16%'],
+                'Team1_SeedE8%': self.seed_data.loc[team1_feat['SeedNum'], 'E8%'],
+                'Team1_SeedF4%': self.seed_data.loc[team1_feat['SeedNum'], 'F4%'],
+                'Team1_SeedF2%': self.seed_data.loc[team1_feat['SeedNum'], 'F2%'],
                 'Team2_AvgPoints': team2_feat['AvgPoints'],
                 'Team2_AvgOppPoints': team2_feat['AvgOppPoints'],
-                'Team2_SeedNum': team2_feat['SeedNum']
+                'Team2_SeedNum': team2_feat['SeedNum'],
+                'Team2_SeedWin%': self.seed_data.loc[team2_feat['SeedNum'], 'Win%'],
+                'Team2_SeedR64%': self.seed_data.loc[team2_feat['SeedNum'], 'R64%'],
+                'Team2_SeedR32%': self.seed_data.loc[team2_feat['SeedNum'], 'R32%'],
+                'Team2_SeedS16%': self.seed_data.loc[team2_feat['SeedNum'], 'S16%'],
+                'Team2_SeedE8%': self.seed_data.loc[team2_feat['SeedNum'], 'E8%'],
+                'Team2_SeedF4%': self.seed_data.loc[team2_feat['SeedNum'], 'F4%'],
+                'Team2_SeedF2%': self.seed_data.loc[team2_feat['SeedNum'], 'F2%'],
             }
         ])
         
@@ -286,11 +301,9 @@ class BracketSimulation:
         
         # Create initial matchups based on seeding
         matchups = []
-        n = len(teams)
-        for i in range(0, n, 2):
-            if i + 1 < n:
-                team1, team2 = teams[i], teams[i+1]
-                matchups.append((team1, team2))
+        for i in range(1, 9):
+            team1, team2 = teams[i], teams[17-i]
+            matchups.append((team1, team2))
         
         # Run simulations for each matchup
         for team1, team2 in matchups:

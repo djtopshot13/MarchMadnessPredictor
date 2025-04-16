@@ -434,41 +434,6 @@ def win_percentage_by_round():
     write_data(df, file_name)
 
 
-def add_round_win_percentages():
-    df = load_data("SeedPerformanceReport.csv")
-
-    # Define the round columns in order
-    round_cols = ['R64', 'R32', 'S16', 'E8', 'F4', 'F2', 'CHAMP']
-    # Copy for output column order
-    base_cols = ['SEED', 'GAMES', 'W', 'L', 'WIN%']
-    out_cols = base_cols.copy()
-
-    # Calculate and insert each round % column after its round column
-    for index, round_col in enumerate(round_cols):
-        out_cols.append(round_col)
-        pct_col = round_col + '%'
-        # Avoid division by zero
-        if df[round_col].eq(0).any():
-            df[pct_col] = 0.0
-            # Calculate the percentage and round to 1 decimal place
-            # Use the next round column for the denominator
-        if index + 1 < len(round_cols):
-            df[pct_col] = (df[round_cols[index+1]] / df[round_col] * 100).round(1).fillna(0)
-
-        out_cols.append(pct_col)
-
-    # Reorder columns as desired
-    df = df[out_cols]
-    df.drop(columns=["CHAMP%"], inplace=True)
-
-    # Save to CSV
-    write_data(df, "SeedPerformanceReport.csv")
-    print("Saved SeedPerformanceReport.csv with round win percentages.")
-
-add_round_win_percentages()
-
-
-
 # add_period_to_st("MarchMadnessData/MTeams.csv", "MarchMadnessData/MTeams.csv")
 # clean_tourney_games()
 # clean_game_cities()
