@@ -1647,7 +1647,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2010,R5YZ,R4Y1,R4Z1,Michigan St.,Butler
 2010,R6CH,R5WX,R5YZ,Duke,Butler
 2010,X16,X16a,X16b,Ark Pine Bluff,Winthrop
-2011,R1W1,W01,W16,Ohio St.,
+2011,R1W1,W01,W16,Ohio St.,UT San Antonio
 2011,R1W2,W02,W15,North Carolina,LIU Brooklyn
 2011,R1W3,W03,W14,Syracuse,Indiana St.
 2011,R1W4,W04,W13,Kentucky,Princeton
@@ -1676,10 +1676,10 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2011,R1Z3,Z03,Z14,Purdue,Saint Peter's
 2011,R1Z4,Z04,Z13,Louisville,Morehead St.
 2011,R1Z5,Z05,Z12,Vanderbilt,Richmond
-2011,R1Z6,Z06,Z11,Georgetown,
+2011,R1Z6,Z06,Z11,Georgetown,VCU
 2011,R1Z7,Z07,Z10,Texas A&M,Florida St.
 2011,R1Z8,Z08,Z09,UNLV,Illinois
-2011,R2W1,R1W1,R1W8,,
+2011,R2W1,R1W1,R1W8,Ohio St.,George Mason
 2011,R2W2,R1W2,R1W7,North Carolina,Washington
 2011,R2W3,R1W3,R1W6,Syracuse,Marquette
 2011,R2W4,R1W4,R1W5,Kentucky,West Virginia
@@ -1693,23 +1693,23 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2011,R2Y4,R1Y4,R1Y5,Wisconsin,Kansas St.
 2011,R2Z1,R1Z1,R1Z8,Kansas,Illinois
 2011,R2Z2,R1Z2,R1Z7,Notre Dame,Florida St.
-2011,R2Z3,R1Z3,R1Z6,,
+2011,R2Z3,R1Z3,R1Z6,Purdue,VCU
 2011,R2Z4,R1Z4,R1Z5,Richmond,Morehead St.
-2011,R3W1,R2W1,R2W4,,
+2011,R3W1,R2W1,R2W4,Ohio St.,Kentucky
 2011,R3W2,R2W2,R2W3,North Carolina,Marquette
 2011,R3X1,R2X1,R2X4,Duke,Arizona
 2011,R3X2,R2X2,R2X3,San Diego St.,Connecticut
 2011,R3Y1,R2Y1,R2Y4,Wisconsin,Butler
 2011,R3Y2,R2Y2,R2Y3,Florida,BYU
 2011,R3Z1,R2Z1,R2Z4,Kansas,Richmond
-2011,R3Z2,R2Z2,R2Z3,,
-2011,R4W1,R3W1,R3W2,,
+2011,R3Z2,R2Z2,R2Z3,Florida St.,VCU
+2011,R4W1,R3W1,R3W2,North Carolina,Kentucky
 2011,R4X1,R3X1,R3X2,Connecticut,Arizona
 2011,R4Y1,R3Y1,R3Y2,Florida,Butler
-2011,R4Z1,R3Z1,R3Z2,,
-2011,R5WX,R4W1,R4X1,,
-2011,R5YZ,R4Y1,R4Z1,,
-2011,R6CH,R5WX,R5YZ,,
+2011,R4Z1,R3Z1,R3Z2,Kansas,VCU
+2011,R5WX,R4W1,R4X1,Connecticut,Kentucky
+2011,R5YZ,R4Y1,R4Z1,Butler,VCU
+2011,R6CH,R5WX,R5YZ,Connecticut,Butler
 2011,W12,W12a,W12b,Clemson,UAB
 2011,W16,W16a,W16b,Alabama St.,UT San Antonio
 2011,Y16,Y16a,Y16b,Ark Little Rock,UNC Asheville
@@ -1722,11 +1722,11 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2012,R1W6,W06,W11,Cincinnati,Texas
 2012,R1W7,W07,W10,Gonzaga,West Virginia
 2012,R1W8,W08,W09,Kansas St.,Southern Miss
-2012,R1X1,X01,X16,North Carolina,
+2012,R1X1,X01,X16,North Carolina,Vermont
 2012,R1X2,X02,X15,Kansas,Detroit
 2012,R1X3,X03,X14,Georgetown,Belmont
 2012,R1X4,X04,X13,Michigan,Ohio
-2012,R1X5,X05,X12,Temple,
+2012,R1X5,X05,X12,Temple,South Florida
 2012,R1X6,X06,X11,San Diego St.,NC State
 2012,R1X7,X07,X10,Saint Mary's,Purdue
 2012,R1X8,X08,X09,Creighton,Alabama
@@ -1750,10 +1750,10 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2012,R2W2,R1W2,R1W7,Ohio St.,Gonzaga
 2012,R2W3,R1W3,R1W6,Florida St.,Cincinnati
 2012,R2W4,R1W4,R1W5,Wisconsin,Vanderbilt
-2012,R2X1,R1X1,R1X8,,
+2012,R2X1,R1X1,R1X8,North Carolina,Creighton
 2012,R2X2,R1X2,R1X7,Kansas,Purdue
 2012,R2X3,R1X3,R1X6,Georgetown,NC State
-2012,R2X4,R1X4,R1X5,,
+2012,R2X4,R1X4,R1X5,Ohio,South Florida
 2012,R2Y1,R1Y1,R1Y8,Kentucky,Iowa St.
 2012,R2Y2,R1Y2,R1Y7,Xavier,Lehigh
 2012,R2Y3,R1Y3,R1Y6,Baylor,Colorado
@@ -1764,24 +1764,24 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2012,R2Z4,R1Z4,R1Z5,Louisville,New Mexico
 2012,R3W1,R2W1,R2W4,Syracuse,Wisconsin
 2012,R3W2,R2W2,R2W3,Ohio St.,Cincinnati
-2012,R3X1,R2X1,R2X4,,
+2012,R3X1,R2X1,R2X4,North Carolina,Ohio
 2012,R3X2,R2X2,R2X3,Kansas,NC State
 2012,R3Y1,R2Y1,R2Y4,Kentucky,Indiana
 2012,R3Y2,R2Y2,R2Y3,Baylor,Xavier
 2012,R3Z1,R2Z1,R2Z4,Michigan St.,Louisville
 2012,R3Z2,R2Z2,R2Z3,Marquette,Florida
 2012,R4W1,R3W1,R3W2,Syracuse,Ohio St.
-2012,R4X1,R3X1,R3X2,,
+2012,R4X1,R3X1,R3X2,North Carolina,Kansas
 2012,R4Y1,R3Y1,R3Y2,Kentucky,Baylor
 2012,R4Z1,R3Z1,R3Z2,Louisville,Florida
-2012,R5WX,R4W1,R4X1,,
+2012,R5WX,R4W1,R4X1,Ohio St.,Kansas
 2012,R5YZ,R4Y1,R4Z1,Kentucky,Louisville
-2012,R6CH,R5WX,R5YZ,,
+2012,R6CH,R5WX,R5YZ,Kentucky,Kansas
 2012,X12,X12a,X12b,California,South Florida
 2012,X16,X16a,X16b,Lamar,Vermont
 2012,Y16,Y16a,Y16b,MS Valley St.,WKU
 2012,Z14,Z14a,Z14b,BYU,Iona
-2013,R1W1,W01,W16,Indiana,
+2013,R1W1,W01,W16,Indiana,James Madison
 2013,R1W2,W02,W15,Miami FL,Pacific
 2013,R1W3,W03,W14,Marquette,Davidson
 2013,R1W4,W04,W13,Syracuse,Montana
@@ -1808,12 +1808,12 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2013,R1Z1,Z01,Z16,Gonzaga,Southern Univ
 2013,R1Z2,Z02,Z15,Ohio St.,Iona
 2013,R1Z3,Z03,Z14,New Mexico,Harvard
-2013,R1Z4,Z04,Z13,Kansas St.,
+2013,R1Z4,Z04,Z13,Kansas St.,La Salle
 2013,R1Z5,Z05,Z12,Wisconsin,Mississippi
 2013,R1Z6,Z06,Z11,Arizona,Belmont
 2013,R1Z7,Z07,Z10,Notre Dame,Iowa St.
 2013,R1Z8,Z08,Z09,Pittsburgh,Wichita St.
-2013,R2W1,R1W1,R1W8,,
+2013,R2W1,R1W1,R1W8,Indiana,Temple
 2013,R2W2,R1W2,R1W7,Miami FL,Illinois
 2013,R2W3,R1W3,R1W6,Marquette,Butler
 2013,R2W4,R1W4,R1W5,Syracuse,California
@@ -1828,22 +1828,22 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2013,R2Z1,R1Z1,R1Z8,Gonzaga,Wichita St.
 2013,R2Z2,R1Z2,R1Z7,Ohio St.,Iowa St.
 2013,R2Z3,R1Z3,R1Z6,Arizona,Harvard
-2013,R2Z4,R1Z4,R1Z5,,
-2013,R3W1,R2W1,R2W4,,
+2013,R2Z4,R1Z4,R1Z5,La Salle,Mississippi
+2013,R3W1,R2W1,R2W4,Indiana,Syracuse
 2013,R3W2,R2W2,R2W3,Miami FL,Marquette
 2013,R3X1,R2X1,R2X4,Kansas,Michigan
 2013,R3X2,R2X2,R2X3,Florida,FGCU
 2013,R3Y1,R2Y1,R2Y4,Louisville,Oregon
 2013,R3Y2,R2Y2,R2Y3,Duke,Michigan St.
-2013,R3Z1,R2Z1,R2Z4,,
+2013,R3Z1,R2Z1,R2Z4,Wichita St.,La Salle
 2013,R3Z2,R2Z2,R2Z3,Ohio St.,Arizona
-2013,R4W1,R3W1,R3W2,,
+2013,R4W1,R3W1,R3W2,Marquette,Syracuse
 2013,R4X1,R3X1,R3X2,Florida,Michigan
 2013,R4Y1,R3Y1,R3Y2,Louisville,Duke
-2013,R4Z1,R3Z1,R3Z2,,
-2013,R5WX,R4W1,R4X1,,
-2013,R5YZ,R4Y1,R4Z1,,
-2013,R6CH,R5WX,R5YZ,,
+2013,R4Z1,R3Z1,R3Z2,Ohio St.,Wichita St.
+2013,R5WX,R4W1,R4X1,Syracuse,Michigan
+2013,R5YZ,R4Y1,R4Z1,Louisville,Wichita St.
+2013,R6CH,R5WX,R5YZ,Louisville,Michigan
 2013,W16,W16a,W16b,James Madison,LIU Brooklyn
 2013,Y11,Y11a,Y11b,MTSU,Saint Mary's
 2013,Y16,Y16a,Y16b,Liberty,NC A&T
@@ -1864,12 +1864,12 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2014,R1X6,X06,X11,Ohio St.,Dayton
 2014,R1X7,X07,X10,New Mexico,Stanford
 2014,R1X8,X08,X09,Colorado,Pittsburgh
-2014,R1Y1,Y01,Y16,Wichita St.,
+2014,R1Y1,Y01,Y16,Wichita St.,Cal Poly
 2014,R1Y2,Y02,Y15,Michigan,Wofford
 2014,R1Y3,Y03,Y14,Duke,Mercer
 2014,R1Y4,Y04,Y13,Louisville,Manhattan
 2014,R1Y5,Y05,Y12,Saint Louis,NC State
-2014,R1Y6,Y06,Y11,Massachusetts,
+2014,R1Y6,Y06,Y11,Massachusetts,Tennessee
 2014,R1Y7,Y07,Y10,Texas,Arizona St.
 2014,R1Y8,Y08,Y09,Kentucky,Kansas St.
 2014,R1Z1,Z01,Z16,Arizona,Weber St.
@@ -1888,9 +1888,9 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2014,R2X2,R1X2,R1X7,Kansas,Stanford
 2014,R2X3,R1X3,R1X6,Syracuse,Dayton
 2014,R2X4,R1X4,R1X5,UCLA,SF Austin
-2014,R2Y1,R1Y1,R1Y8,,
+2014,R2Y1,R1Y1,R1Y8,Wichita St.,Kentucky
 2014,R2Y2,R1Y2,R1Y7,Michigan,Texas
-2014,R2Y3,R1Y3,R1Y6,,
+2014,R2Y3,R1Y3,R1Y6,Mercer,Tennessee
 2014,R2Y4,R1Y4,R1Y5,Louisville,Saint Louis
 2014,R2Z1,R1Z1,R1Z8,Arizona,Gonzaga
 2014,R2Z2,R1Z2,R1Z7,Wisconsin,Oregon
@@ -1900,17 +1900,17 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2014,R3W2,R2W2,R2W3,Iowa St.,Connecticut
 2014,R3X1,R2X1,R2X4,Florida,UCLA
 2014,R3X2,R2X2,R2X3,Stanford,Dayton
-2014,R3Y1,R2Y1,R2Y4,,
-2014,R3Y2,R2Y2,R2Y3,,
+2014,R3Y1,R2Y1,R2Y4,Louisville,Kentucky
+2014,R3Y2,R2Y2,R2Y3,Michigan,Tennessee
 2014,R3Z1,R2Z1,R2Z4,Arizona,San Diego St.
 2014,R3Z2,R2Z2,R2Z3,Wisconsin,Baylor
 2014,R4W1,R3W1,R3W2,Michigan St.,Connecticut
 2014,R4X1,R3X1,R3X2,Florida,Dayton
-2014,R4Y1,R3Y1,R3Y2,,
+2014,R4Y1,R3Y1,R3Y2,Michigan,Kentucky
 2014,R4Z1,R3Z1,R3Z2,Arizona,Wisconsin
 2014,R5WX,R4W1,R4X1,Florida,Connecticut
-2014,R5YZ,R4Y1,R4Z1,,
-2014,R6CH,R5WX,R5YZ,,
+2014,R5YZ,R4Y1,R4Z1,Wisconsin,Kentucky
+2014,R6CH,R5WX,R5YZ,Connecticut,Kentucky
 2014,X16,X16a,X16b,SUNY Albany,Mt St. Mary's
 2014,Y11,Y11a,Y11b,Iowa,Tennessee
 2014,Y12,Y12a,Y12b,NC State,Xavier
@@ -1920,10 +1920,10 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2015,R1W3,W03,W14,Oklahoma,SUNY Albany
 2015,R1W4,W04,W13,Louisville,UC Irvine
 2015,R1W5,W05,W12,Northern Iowa,Wyoming
-2015,R1W6,W06,W11,Providence,
+2015,R1W6,W06,W11,Providence,Dayton
 2015,R1W7,W07,W10,Michigan St.,Georgia
 2015,R1W8,W08,W09,NC State,LSU
-2015,R1X1,X01,X16,Duke,
+2015,R1X1,X01,X16,Duke,Robert Morris
 2015,R1X2,X02,X15,Gonzaga,N Dakota St.
 2015,R1X3,X03,X14,Iowa St.,UAB
 2015,R1X4,X04,X13,Georgetown,E Washington
@@ -1949,9 +1949,9 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2015,R1Z8,Z08,Z09,Oregon,Oklahoma St.
 2015,R2W1,R1W1,R1W8,Villanova,NC State
 2015,R2W2,R1W2,R1W7,Virginia,Michigan St.
-2015,R2W3,R1W3,R1W6,,
+2015,R2W3,R1W3,R1W6,Oklahoma,Dayton
 2015,R2W4,R1W4,R1W5,Louisville,Northern Iowa
-2015,R2X1,R1X1,R1X8,,
+2015,R2X1,R1X1,R1X8,Duke,San Diego St.
 2015,R2X2,R1X2,R1X7,Gonzaga,Iowa
 2015,R2X3,R1X3,R1X6,UCLA,UAB
 2015,R2X4,R1X4,R1X5,Georgetown,Utah
@@ -1964,20 +1964,20 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2015,R2Z3,R1Z3,R1Z6,Xavier,Georgia St.
 2015,R2Z4,R1Z4,R1Z5,North Carolina,Arkansas
 2015,R3W1,R2W1,R2W4,Louisville,NC State
-2015,R3W2,R2W2,R2W3,,
-2015,R3X1,R2X1,R2X4,,
+2015,R3W2,R2W2,R2W3,Oklahoma,Michigan St.
+2015,R3X1,R2X1,R2X4,Duke,Utah
 2015,R3X2,R2X2,R2X3,Gonzaga,UCLA
 2015,R3Y1,R2Y1,R2Y4,Kentucky,West Virginia
 2015,R3Y2,R2Y2,R2Y3,Notre Dame,Wichita St.
 2015,R3Z1,R2Z1,R2Z4,Wisconsin,North Carolina
 2015,R3Z2,R2Z2,R2Z3,Arizona,Xavier
-2015,R4W1,R3W1,R3W2,,
-2015,R4X1,R3X1,R3X2,,
+2015,R4W1,R3W1,R3W2,Louisville,Michigan St.
+2015,R4X1,R3X1,R3X2,Duke,Gonzaga
 2015,R4Y1,R3Y1,R3Y2,Kentucky,Notre Dame
 2015,R4Z1,R3Z1,R3Z2,Wisconsin,Arizona
-2015,R5WX,R4W1,R4X1,,
+2015,R5WX,R4W1,R4X1,Duke,Michigan St.
 2015,R5YZ,R4Y1,R4Z1,Kentucky,Wisconsin
-2015,R6CH,R5WX,R5YZ,,
+2015,R6CH,R5WX,R5YZ,Duke,Wisconsin
 2015,W11,W11a,W11b,Boise St.,Dayton
 2015,X16,X16a,X16b,North Florida,Robert Morris
 2015,Y16,Y16a,Y16b,Hampton,Manhattan
@@ -1987,7 +1987,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2016,R1W3,W03,W14,West Virginia,SF Austin
 2016,R1W4,W04,W13,Kentucky,Stony Brook
 2016,R1W5,W05,W12,Indiana,Chattanooga
-2016,R1W6,W06,W11,Notre Dame,
+2016,R1W6,W06,W11,Notre Dame,Michigan
 2016,R1W7,W07,W10,Wisconsin,Pittsburgh
 2016,R1W8,W08,W09,USC,Providence
 2016,R1X1,X01,X16,Virginia,Hampton
@@ -2006,7 +2006,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2016,R1Y6,Y06,Y11,Arizona,Wichita St.
 2016,R1Y7,Y07,Y10,Iowa,Temple
 2016,R1Y8,Y08,Y09,Colorado,Connecticut
-2016,R1Z1,Z01,Z16,Oregon,
+2016,R1Z1,Z01,Z16,Oregon,Holy Cross
 2016,R1Z2,Z02,Z15,Oklahoma,CS Bakersfield
 2016,R1Z3,Z03,Z14,Texas A&M,WI Green Bay
 2016,R1Z4,Z04,Z13,Duke,UNC Wilmington
@@ -2016,7 +2016,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2016,R1Z8,Z08,Z09,Saint Joseph's,Cincinnati
 2016,R2W1,R1W1,R1W8,North Carolina,Providence
 2016,R2W2,R1W2,R1W7,Xavier,Wisconsin
-2016,R2W3,R1W3,R1W6,,
+2016,R2W3,R1W3,R1W6,Notre Dame,SF Austin
 2016,R2W4,R1W4,R1W5,Kentucky,Indiana
 2016,R2X1,R1X1,R1X8,Virginia,Butler
 2016,R2X2,R1X2,R1X7,Syracuse,MTSU
@@ -2026,25 +2026,25 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2016,R2Y2,R1Y2,R1Y7,Villanova,Iowa
 2016,R2Y3,R1Y3,R1Y6,Miami FL,Wichita St.
 2016,R2Y4,R1Y4,R1Y5,Maryland,Hawaii
-2016,R2Z1,R1Z1,R1Z8,,
+2016,R2Z1,R1Z1,R1Z8,Oregon,Saint Joseph's
 2016,R2Z2,R1Z2,R1Z7,Oklahoma,VCU
 2016,R2Z3,R1Z3,R1Z6,Texas A&M,Northern Iowa
 2016,R2Z4,R1Z4,R1Z5,Duke,Yale
 2016,R3W1,R2W1,R2W4,North Carolina,Indiana
-2016,R3W2,R2W2,R2W3,,
+2016,R3W2,R2W2,R2W3,Notre Dame,Wisconsin
 2016,R3X1,R2X1,R2X4,Virginia,Iowa St.
 2016,R3X2,R2X2,R2X3,Syracuse,Gonzaga
 2016,R3Y1,R2Y1,R2Y4,Kansas,Maryland
 2016,R3Y2,R2Y2,R2Y3,Villanova,Miami FL
-2016,R3Z1,R2Z1,R2Z4,,
+2016,R3Z1,R2Z1,R2Z4,Oregon,Duke
 2016,R3Z2,R2Z2,R2Z3,Oklahoma,Texas A&M
-2016,R4W1,R3W1,R3W2,,
+2016,R4W1,R3W1,R3W2,North Carolina,Notre Dame
 2016,R4X1,R3X1,R3X2,Virginia,Syracuse
 2016,R4Y1,R3Y1,R3Y2,Kansas,Villanova
-2016,R4Z1,R3Z1,R3Z2,,
-2016,R5WX,R4W1,R4X1,,
-2016,R5YZ,R4Y1,R4Z1,,
-2016,R6CH,R5WX,R5YZ,,
+2016,R4Z1,R3Z1,R3Z2,Oregon,Oklahoma
+2016,R5WX,R4W1,R4X1,North Carolina,Syracuse
+2016,R5YZ,R4Y1,R4Z1,Villanova,Oklahoma
+2016,R6CH,R5WX,R5YZ,North Carolina,Villanova
 2016,W11,W11a,W11b,Michigan,Tulsa
 2016,W16,W16a,W16b,F Dickinson,FGCU
 2016,Y11,Y11a,Y11b,Vanderbilt,Wichita St.
@@ -2054,7 +2054,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2017,R1W3,W03,W14,Baylor,New Mexico St.
 2017,R1W4,W04,W13,Florida,ETSU
 2017,R1W5,W05,W12,Virginia,UNC Wilmington
-2017,R1W6,W06,W11,SMU,
+2017,R1W6,W06,W11,SMU,USC
 2017,R1W7,W07,W10,South Carolina,Marquette
 2017,R1W8,W08,W09,Wisconsin,Virginia Tech
 2017,R1X1,X01,X16,Gonzaga,S Dakota St.
@@ -2065,7 +2065,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2017,R1X6,X06,X11,Maryland,Xavier
 2017,R1X7,X07,X10,Saint Mary's,VCU
 2017,R1X8,X08,X09,Northwestern,Vanderbilt
-2017,R1Y1,Y01,Y16,Kansas,
+2017,R1Y1,Y01,Y16,Kansas,UC Davis
 2017,R1Y2,Y02,Y15,Louisville,Jacksonville St.
 2017,R1Y3,Y03,Y14,Oregon,Iona
 2017,R1Y4,Y04,Y13,Purdue,Vermont
@@ -2083,13 +2083,13 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2017,R1Z8,Z08,Z09,Arkansas,Seton Hall
 2017,R2W1,R1W1,R1W8,Villanova,Wisconsin
 2017,R2W2,R1W2,R1W7,Duke,South Carolina
-2017,R2W3,R1W3,R1W6,,
+2017,R2W3,R1W3,R1W6,Baylor,USC
 2017,R2W4,R1W4,R1W5,Florida,Virginia
 2017,R2X1,R1X1,R1X8,Gonzaga,Northwestern
 2017,R2X2,R1X2,R1X7,Arizona,Saint Mary's
 2017,R2X3,R1X3,R1X6,Florida St.,Xavier
 2017,R2X4,R1X4,R1X5,West Virginia,Notre Dame
-2017,R2Y1,R1Y1,R1Y8,,
+2017,R2Y1,R1Y1,R1Y8,Kansas,Michigan St.
 2017,R2Y2,R1Y2,R1Y7,Louisville,Michigan
 2017,R2Y3,R1Y3,R1Y6,Oregon,Rhode Island
 2017,R2Y4,R1Y4,R1Y5,Purdue,Iowa St.
@@ -2098,20 +2098,20 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2017,R2Z3,R1Z3,R1Z6,UCLA,Cincinnati
 2017,R2Z4,R1Z4,R1Z5,Butler,MTSU
 2017,R3W1,R2W1,R2W4,Florida,Wisconsin
-2017,R3W2,R2W2,R2W3,,
+2017,R3W2,R2W2,R2W3,Baylor,South Carolina
 2017,R3X1,R2X1,R2X4,Gonzaga,West Virginia
 2017,R3X2,R2X2,R2X3,Arizona,Xavier
-2017,R3Y1,R2Y1,R2Y4,,
+2017,R3Y1,R2Y1,R2Y4,Kansas,Purdue
 2017,R3Y2,R2Y2,R2Y3,Oregon,Michigan
 2017,R3Z1,R2Z1,R2Z4,North Carolina,Butler
 2017,R3Z2,R2Z2,R2Z3,Kentucky,UCLA
-2017,R4W1,R3W1,R3W2,,
+2017,R4W1,R3W1,R3W2,Florida,South Carolina
 2017,R4X1,R3X1,R3X2,Gonzaga,Xavier
-2017,R4Y1,R3Y1,R3Y2,,
+2017,R4Y1,R3Y1,R3Y2,Kansas,Oregon
 2017,R4Z1,R3Z1,R3Z2,North Carolina,Kentucky
-2017,R5WX,R4W1,R4X1,,
-2017,R5YZ,R4Y1,R4Z1,,
-2017,R6CH,R5WX,R5YZ,,
+2017,R5WX,R4W1,R4X1,Gonzaga,South Carolina
+2017,R5YZ,R4Y1,R4Z1,North Carolina,Oregon
+2017,R6CH,R5WX,R5YZ,Gonzaga,North Carolina
 2017,W11,W11a,W11b,Providence,USC
 2017,W16,W16a,W16b,Mt St. Mary's,New Orleans
 2017,Y16,Y16a,Y16b,NC Central,UC Davis
@@ -2129,7 +2129,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2018,R1X3,X03,X14,Michigan St.,Bucknell
 2018,R1X4,X04,X13,Auburn,Col Charleston
 2018,R1X5,X05,X12,Clemson,New Mexico St.
-2018,R1X6,X06,X11,TCU,
+2018,R1X6,X06,X11,TCU,Syracuse
 2018,R1X7,X07,X10,Rhode Island,Oklahoma
 2018,R1X8,X08,X09,Seton Hall,NC State
 2018,R1Y1,Y01,Y16,Virginia,UMBC
@@ -2140,7 +2140,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2018,R1Y6,Y06,Y11,Miami FL,Loyola-Chicago
 2018,R1Y7,Y07,Y10,Nevada,Texas
 2018,R1Y8,Y08,Y09,Creighton,Kansas St.
-2018,R1Z1,Z01,Z16,Xavier,
+2018,R1Z1,Z01,Z16,Xavier,TX Southern
 2018,R1Z2,Z02,Z15,North Carolina,Lipscomb
 2018,R1Z3,Z03,Z14,Michigan,Montana
 2018,R1Z4,Z04,Z13,Gonzaga,UNC Greensboro
@@ -2154,36 +2154,36 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2018,R2W4,R1W4,R1W5,West Virginia,Marshall
 2018,R2X1,R1X1,R1X8,Kansas,Seton Hall
 2018,R2X2,R1X2,R1X7,Duke,Rhode Island
-2018,R2X3,R1X3,R1X6,,
+2018,R2X3,R1X3,R1X6,Michigan St.,Syracuse
 2018,R2X4,R1X4,R1X5,Auburn,Clemson
 2018,R2Y1,R1Y1,R1Y8,Kansas St.,UMBC
 2018,R2Y2,R1Y2,R1Y7,Cincinnati,Nevada
 2018,R2Y3,R1Y3,R1Y6,Tennessee,Loyola-Chicago
 2018,R2Y4,R1Y4,R1Y5,Kentucky,Buffalo
-2018,R2Z1,R1Z1,R1Z8,,
+2018,R2Z1,R1Z1,R1Z8,Xavier,Florida St.
 2018,R2Z2,R1Z2,R1Z7,North Carolina,Texas A&M
 2018,R2Z3,R1Z3,R1Z6,Michigan,Houston
 2018,R2Z4,R1Z4,R1Z5,Gonzaga,Ohio St.
 2018,R3W1,R2W1,R2W4,Villanova,West Virginia
 2018,R3W2,R2W2,R2W3,Purdue,Texas Tech
 2018,R3X1,R2X1,R2X4,Kansas,Clemson
-2018,R3X2,R2X2,R2X3,,
+2018,R3X2,R2X2,R2X3,Duke,Syracuse
 2018,R3Y1,R2Y1,R2Y4,Kentucky,Kansas St.
 2018,R3Y2,R2Y2,R2Y3,Nevada,Loyola-Chicago
-2018,R3Z1,R2Z1,R2Z4,,
+2018,R3Z1,R2Z1,R2Z4,Gonzaga,Florida St.
 2018,R3Z2,R2Z2,R2Z3,Michigan,Texas A&M
 2018,R4W1,R3W1,R3W2,Villanova,Texas Tech
-2018,R4X1,R3X1,R3X2,,
+2018,R4X1,R3X1,R3X2,Kansas,Duke
 2018,R4Y1,R3Y1,R3Y2,Kansas St.,Loyola-Chicago
-2018,R4Z1,R3Z1,R3Z2,,
-2018,R5WX,R4W1,R4X1,,
-2018,R5YZ,R4Y1,R4Z1,,
-2018,R6CH,R5WX,R5YZ,,
+2018,R4Z1,R3Z1,R3Z2,Michigan,Florida St.
+2018,R5WX,R4W1,R4X1,Villanova,Kansas
+2018,R5YZ,R4Y1,R4Z1,Michigan,Loyola-Chicago
+2018,R6CH,R5WX,R5YZ,Villanova,Michigan
 2018,W11,W11a,W11b,St. Bonaventure,UCLA
 2018,W16,W16a,W16b,LIU Brooklyn,Radford
 2018,X11,X11a,X11b,Arizona St.,Syracuse
 2018,Z16,Z16a,Z16b,NC Central,TX Southern
-2019,R1W1,W01,W16,Duke,
+2019,R1W1,W01,W16,Duke,N Dakota St.
 2019,R1W2,W02,W15,Michigan St.,Bradley
 2019,R1W3,W03,W14,LSU,Yale
 2019,R1W4,W04,W13,Virginia Tech,Saint Louis
@@ -2196,7 +2196,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2019,R1X3,X03,X14,Texas Tech,N Kentucky
 2019,R1X4,X04,X13,Florida St.,Vermont
 2019,R1X5,X05,X12,Marquette,Murray St.
-2019,R1X6,X06,X11,Buffalo,
+2019,R1X6,X06,X11,Buffalo,Arizona St.
 2019,R1X7,X07,X10,Nevada,Florida
 2019,R1X8,X08,X09,Syracuse,Baylor
 2019,R1Y1,Y01,Y16,North Carolina,Iona
@@ -2215,13 +2215,13 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2019,R1Z6,Z06,Z11,Villanova,Saint Mary's
 2019,R1Z7,Z07,Z10,Cincinnati,Iowa
 2019,R1Z8,Z08,Z09,Mississippi,Oklahoma
-2019,R2W1,R1W1,R1W8,,
+2019,R2W1,R1W1,R1W8,Duke,UCF
 2019,R2W2,R1W2,R1W7,Michigan St.,Minnesota
 2019,R2W3,R1W3,R1W6,LSU,Maryland
 2019,R2W4,R1W4,R1W5,Virginia Tech,Liberty
 2019,R2X1,R1X1,R1X8,Gonzaga,Baylor
 2019,R2X2,R1X2,R1X7,Michigan,Florida
-2019,R2X3,R1X3,R1X6,,
+2019,R2X3,R1X3,R1X6,Texas Tech,Buffalo
 2019,R2X4,R1X4,R1X5,Florida St.,Murray St.
 2019,R2Y1,R1Y1,R1Y8,North Carolina,Washington
 2019,R2Y2,R1Y2,R1Y7,Kentucky,Wofford
@@ -2231,39 +2231,39 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2019,R2Z2,R1Z2,R1Z7,Tennessee,Iowa
 2019,R2Z3,R1Z3,R1Z6,Purdue,Villanova
 2019,R2Z4,R1Z4,R1Z5,Oregon,UC Irvine
-2019,R3W1,R2W1,R2W4,,
+2019,R3W1,R2W1,R2W4,Duke,Virginia Tech
 2019,R3W2,R2W2,R2W3,Michigan St.,LSU
 2019,R3X1,R2X1,R2X4,Gonzaga,Florida St.
-2019,R3X2,R2X2,R2X3,,
+2019,R3X2,R2X2,R2X3,Michigan,Texas Tech
 2019,R3Y1,R2Y1,R2Y4,North Carolina,Auburn
 2019,R3Y2,R2Y2,R2Y3,Kentucky,Houston
 2019,R3Z1,R2Z1,R2Z4,Virginia,Oregon
 2019,R3Z2,R2Z2,R2Z3,Tennessee,Purdue
-2019,R4W1,R3W1,R3W2,,
-2019,R4X1,R3X1,R3X2,,
+2019,R4W1,R3W1,R3W2,Duke,Michigan St.
+2019,R4X1,R3X1,R3X2,Gonzaga,Texas Tech
 2019,R4Y1,R3Y1,R3Y2,Kentucky,Auburn
 2019,R4Z1,R3Z1,R3Z2,Virginia,Purdue
-2019,R5WX,R4W1,R4X1,,
+2019,R5WX,R4W1,R4X1,Michigan St.,Texas Tech
 2019,R5YZ,R4Y1,R4Z1,Virginia,Auburn
-2019,R6CH,R5WX,R5YZ,,
+2019,R6CH,R5WX,R5YZ,Virginia,Texas Tech
 2019,W11,W11a,W11b,Belmont,Temple
 2019,W16,W16a,W16b,N Dakota St.,NC Central
 2019,X11,X11a,X11b,Arizona St.,St. John's
 2019,X16,X16a,X16b,F Dickinson,Prairie View
-2021,R1W1,W01,W16,Michigan,
+2021,R1W1,W01,W16,Michigan,TX Southern
 2021,R1W2,W02,W15,Alabama,Iona
 2021,R1W3,W03,W14,Texas,Abilene Chr
 2021,R1W4,W04,W13,Florida St.,UNC Greensboro
 2021,R1W5,W05,W12,Colorado,Georgetown
-2021,R1W6,W06,W11,BYU,
+2021,R1W6,W06,W11,BYU,UCLA
 2021,R1W7,W07,W10,Connecticut,Maryland
 2021,R1W8,W08,W09,LSU,St. Bonaventure
-2021,R1X1,X01,X16,Gonzaga,
+2021,R1X1,X01,X16,Gonzaga,Norfolk St.
 2021,R1X2,X02,X15,Iowa,Grand Canyon
 2021,R1X3,X03,X14,Kansas,E Washington
 2021,R1X4,X04,X13,Virginia,Ohio
 2021,R1X5,X05,X12,Creighton,UC Santa Barbara
-2021,R1X6,X06,X11,USC,
+2021,R1X6,X06,X11,USC,Drake
 2021,R1X7,X07,X10,Oregon,VCU
 2021,R1X8,X08,X09,Oklahoma,Missouri
 2021,R1Y1,Y01,Y16,Illinois,Drexel
@@ -2282,13 +2282,13 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2021,R1Z6,Z06,Z11,Texas Tech,Utah St.
 2021,R1Z7,Z07,Z10,Florida,Virginia Tech
 2021,R1Z8,Z08,Z09,North Carolina,Wisconsin
-2021,R2W1,R1W1,R1W8,,
+2021,R2W1,R1W1,R1W8,Michigan,LSU
 2021,R2W2,R1W2,R1W7,Alabama,Maryland
-2021,R2W3,R1W3,R1W6,,
+2021,R2W3,R1W3,R1W6,Abilene Chr,UCLA
 2021,R2W4,R1W4,R1W5,Florida St.,Colorado
-2021,R2X1,R1X1,R1X8,,
-2021,R2X2,R1X2,R1X7,,
-2021,R2X3,R1X3,R1X6,,
+2021,R2X1,R1X1,R1X8,Gonzaga,Oklahoma
+2021,R2X2,R1X2,R1X7,Iowa,Oregon
+2021,R2X3,R1X3,R1X6,Kansas,USC
 2021,R2X4,R1X4,R1X5,Creighton,Ohio
 2021,R2Y1,R1Y1,R1Y8,Illinois,Loyola-Chicago
 2021,R2Y2,R1Y2,R1Y7,Houston,Rutgers
@@ -2298,21 +2298,21 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2021,R2Z2,R1Z2,R1Z7,Florida,Oral Roberts
 2021,R2Z3,R1Z3,R1Z6,Arkansas,Texas Tech
 2021,R2Z4,R1Z4,R1Z5,Villanova,North Texas
-2021,R3W1,R2W1,R2W4,,
-2021,R3W2,R2W2,R2W3,,
-2021,R3X1,R2X1,R2X4,,
-2021,R3X2,R2X2,R2X3,,
+2021,R3W1,R2W1,R2W4,Michigan,Florida St.
+2021,R3W2,R2W2,R2W3,Alabama,UCLA
+2021,R3X1,R2X1,R2X4,Gonzaga,Creighton
+2021,R3X2,R2X2,R2X3,Oregon,USC
 2021,R3Y1,R2Y1,R2Y4,Loyola-Chicago,Oregon St.
 2021,R3Y2,R2Y2,R2Y3,Houston,Syracuse
 2021,R3Z1,R2Z1,R2Z4,Baylor,Villanova
 2021,R3Z2,R2Z2,R2Z3,Arkansas,Oral Roberts
-2021,R4W1,R3W1,R3W2,,
-2021,R4X1,R3X1,R3X2,,
+2021,R4W1,R3W1,R3W2,Michigan,UCLA
+2021,R4X1,R3X1,R3X2,Gonzaga,USC
 2021,R4Y1,R3Y1,R3Y2,Houston,Oregon St.
 2021,R4Z1,R3Z1,R3Z2,Baylor,Arkansas
-2021,R5WX,R4W1,R4X1,,
+2021,R5WX,R4W1,R4X1,UCLA,Gonzaga
 2021,R5YZ,R4Y1,R4Z1,Baylor,Houston
-2021,R6CH,R5WX,R5YZ,,
+2021,R6CH,R5WX,R5YZ,Gonzaga,Baylor
 2021,W11,W11a,W11b,Michigan St.,UCLA
 2021,W16,W16a,W16b,Mt St. Mary's,TX Southern
 2021,X11,X11a,X11b,Drake,Wichita St.
@@ -2330,7 +2330,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2022,R1X3,X03,X14,Texas Tech,Montana St.
 2022,R1X4,X04,X13,Arkansas,Vermont
 2022,R1X5,X05,X12,Connecticut,New Mexico St.
-2022,R1X6,X06,X11,Alabama,
+2022,R1X6,X06,X11,Alabama,Notre Dame
 2022,R1X7,X07,X10,Michigan St.,Davidson
 2022,R1X8,X08,X09,Boise St.,Memphis
 2022,R1Y1,Y01,Y16,Kansas,TX Southern
@@ -2341,7 +2341,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2022,R1Y6,Y06,Y11,LSU,Iowa St.
 2022,R1Y7,Y07,Y10,USC,Miami FL
 2022,R1Y8,Y08,Y09,San Diego St.,Creighton
-2022,R1Z1,Z01,Z16,Arizona,
+2022,R1Z1,Z01,Z16,Arizona,Wright St.
 2022,R1Z2,Z02,Z15,Villanova,Delaware
 2022,R1Z3,Z03,Z14,Tennessee,Longwood
 2022,R1Z4,Z04,Z13,Illinois,Chattanooga
@@ -2355,36 +2355,36 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2022,R2W4,R1W4,R1W5,UCLA,Saint Mary's
 2022,R2X1,R1X1,R1X8,Gonzaga,Memphis
 2022,R2X2,R1X2,R1X7,Duke,Michigan St.
-2022,R2X3,R1X3,R1X6,,
+2022,R2X3,R1X3,R1X6,Texas Tech,Notre Dame
 2022,R2X4,R1X4,R1X5,Arkansas,New Mexico St.
 2022,R2Y1,R1Y1,R1Y8,Kansas,Creighton
 2022,R2Y2,R1Y2,R1Y7,Auburn,Miami FL
 2022,R2Y3,R1Y3,R1Y6,Wisconsin,Iowa St.
 2022,R2Y4,R1Y4,R1Y5,Providence,Richmond
-2022,R2Z1,R1Z1,R1Z8,,
+2022,R2Z1,R1Z1,R1Z8,Arizona,TCU
 2022,R2Z2,R1Z2,R1Z7,Villanova,Ohio St.
 2022,R2Z3,R1Z3,R1Z6,Tennessee,Michigan
 2022,R2Z4,R1Z4,R1Z5,Illinois,Houston
 2022,R3W1,R2W1,R2W4,UCLA,North Carolina
 2022,R3W2,R2W2,R2W3,Purdue,Saint Peter's
 2022,R3X1,R2X1,R2X4,Gonzaga,Arkansas
-2022,R3X2,R2X2,R2X3,,
+2022,R3X2,R2X2,R2X3,Duke,Texas Tech
 2022,R3Y1,R2Y1,R2Y4,Kansas,Providence
 2022,R3Y2,R2Y2,R2Y3,Miami FL,Iowa St.
-2022,R3Z1,R2Z1,R2Z4,,
+2022,R3Z1,R2Z1,R2Z4,Arizona,Houston
 2022,R3Z2,R2Z2,R2Z3,Villanova,Michigan
 2022,R4W1,R3W1,R3W2,North Carolina,Saint Peter's
-2022,R4X1,R3X1,R3X2,,
+2022,R4X1,R3X1,R3X2,Duke,Arkansas
 2022,R4Y1,R3Y1,R3Y2,Kansas,Miami FL
-2022,R4Z1,R3Z1,R3Z2,,
-2022,R5WX,R4W1,R4X1,,
-2022,R5YZ,R4Y1,R4Z1,,
-2022,R6CH,R5WX,R5YZ,,
+2022,R4Z1,R3Z1,R3Z2,Villanova,Houston
+2022,R5WX,R4W1,R4X1,Duke,North Carolina
+2022,R5YZ,R4Y1,R4Z1,Kansas,Villanova
+2022,R6CH,R5WX,R5YZ,Kansas,North Carolina
 2022,W12,W12a,W12b,Indiana,Wyoming
 2022,X11,X11a,X11b,Notre Dame,Rutgers
 2022,Y16,Y16a,Y16b,TAM C. Christi,TX Southern
 2022,Z16,Z16a,Z16b,Bryant,Wright St.
-2023,R1W1,W01,W16,Purdue,
+2023,R1W1,W01,W16,Purdue,F Dickinson
 2023,R1W2,W02,W15,Marquette,Vermont
 2023,R1W3,W03,W14,Kansas St.,Montana St.
 2023,R1W4,W04,W13,Tennessee,Louisiana
@@ -2413,10 +2413,10 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2023,R1Z3,Z03,Z14,Gonzaga,Grand Canyon
 2023,R1Z4,Z04,Z13,Connecticut,Iona
 2023,R1Z5,Z05,Z12,Saint Mary's,VCU
-2023,R1Z6,Z06,Z11,TCU,
+2023,R1Z6,Z06,Z11,TCU,Arizona St.
 2023,R1Z7,Z07,Z10,Northwestern,Boise St.
 2023,R1Z8,Z08,Z09,Arkansas,Illinois
-2023,R2W1,R1W1,R1W8,,
+2023,R2W1,R1W1,R1W8,F Dickinson,FL Atlantic
 2023,R2W2,R1W2,R1W7,Marquette,Michigan St.
 2023,R2W3,R1W3,R1W6,Kansas St.,Kentucky
 2023,R2W4,R1W4,R1W5,Tennessee,Duke
@@ -2430,23 +2430,23 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2023,R2Y4,R1Y4,R1Y5,Indiana,Miami FL
 2023,R2Z1,R1Z1,R1Z8,Kansas,Arkansas
 2023,R2Z2,R1Z2,R1Z7,UCLA,Northwestern
-2023,R2Z3,R1Z3,R1Z6,,
+2023,R2Z3,R1Z3,R1Z6,Gonzaga,TCU
 2023,R2Z4,R1Z4,R1Z5,Connecticut,Saint Mary's
-2023,R3W1,R2W1,R2W4,,
+2023,R3W1,R2W1,R2W4,Tennessee,FL Atlantic
 2023,R3W2,R2W2,R2W3,Kansas St.,Michigan St.
 2023,R3X1,R2X1,R2X4,Alabama,San Diego St.
 2023,R3X2,R2X2,R2X3,Creighton,Princeton
 2023,R3Y1,R2Y1,R2Y4,Houston,Miami FL
 2023,R3Y2,R2Y2,R2Y3,Texas,Xavier
 2023,R3Z1,R2Z1,R2Z4,Connecticut,Arkansas
-2023,R3Z2,R2Z2,R2Z3,,
-2023,R4W1,R3W1,R3W2,,
+2023,R3Z2,R2Z2,R2Z3,UCLA,Gonzaga
+2023,R4W1,R3W1,R3W2,Kansas St.,FL Atlantic
 2023,R4X1,R3X1,R3X2,San Diego St.,Creighton
 2023,R4Y1,R3Y1,R3Y2,Texas,Miami FL
-2023,R4Z1,R3Z1,R3Z2,,
-2023,R5WX,R4W1,R4X1,,
-2023,R5YZ,R4Y1,R4Z1,,
-2023,R6CH,R5WX,R5YZ,,
+2023,R4Z1,R3Z1,R3Z2,Gonzaga,Connecticut
+2023,R5WX,R4W1,R4X1,San Diego St.,FL Atlantic
+2023,R5YZ,R4Y1,R4Z1,Connecticut,Miami FL
+2023,R6CH,R5WX,R5YZ,Connecticut,San Diego St.
 2023,W16,W16a,W16b,F Dickinson,TX Southern
 2023,X16,X16a,X16b,SE Missouri St.,TAM C. Christi
 2023,Y11,Y11a,Y11b,Mississippi St.,Pittsburgh
@@ -2467,7 +2467,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2024,R1X6,X06,X11,Clemson,New Mexico
 2024,R1X7,X07,X10,Dayton,Nevada
 2024,R1X8,X08,X09,Mississippi St.,Michigan St.
-2024,R1Y1,Y01,Y16,Purdue,
+2024,R1Y1,Y01,Y16,Purdue,Grambling
 2024,R1Y2,Y02,Y15,Tennessee,Saint Peter's
 2024,R1Y3,Y03,Y14,Creighton,Akron
 2024,R1Y4,Y04,Y13,Kansas,Samford
@@ -2481,7 +2481,7 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2024,R1Z4,Z04,Z13,Duke,Vermont
 2024,R1Z5,Z05,Z12,Wisconsin,James Madison
 2024,R1Z6,Z06,Z11,Texas Tech,NC State
-2024,R1Z7,Z07,Z10,Florida,
+2024,R1Z7,Z07,Z10,Florida,Colorado
 2024,R1Z8,Z08,Z09,Nebraska,Texas A&M
 2024,R2W1,R1W1,R1W8,Connecticut,Northwestern
 2024,R2W2,R1W2,R1W7,Iowa St.,Washington St.
@@ -2491,34 +2491,34 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2024,R2X2,R1X2,R1X7,Arizona,Dayton
 2024,R2X3,R1X3,R1X6,Baylor,Clemson
 2024,R2X4,R1X4,R1X5,Alabama,Grand Canyon
-2024,R2Y1,R1Y1,R1Y8,,
+2024,R2Y1,R1Y1,R1Y8,Purdue,Utah St.
 2024,R2Y2,R1Y2,R1Y7,Tennessee,Texas
 2024,R2Y3,R1Y3,R1Y6,Creighton,Oregon
 2024,R2Y4,R1Y4,R1Y5,Kansas,Gonzaga
 2024,R2Z1,R1Z1,R1Z8,Houston,Texas A&M
-2024,R2Z2,R1Z2,R1Z7,,
+2024,R2Z2,R1Z2,R1Z7,Marquette,Colorado
 2024,R2Z3,R1Z3,R1Z6,NC State,Oakland
 2024,R2Z4,R1Z4,R1Z5,Duke,James Madison
 2024,R3W1,R2W1,R2W4,Connecticut,San Diego St.
 2024,R3W2,R2W2,R2W3,Iowa St.,Illinois
 2024,R3X1,R2X1,R2X4,North Carolina,Alabama
 2024,R3X2,R2X2,R2X3,Arizona,Clemson
-2024,R3Y1,R2Y1,R2Y4,,
+2024,R3Y1,R2Y1,R2Y4,Purdue,Gonzaga
 2024,R3Y2,R2Y2,R2Y3,Tennessee,Creighton
 2024,R3Z1,R2Z1,R2Z4,Houston,Duke
-2024,R3Z2,R2Z2,R2Z3,,
+2024,R3Z2,R2Z2,R2Z3,Marquette,NC State
 2024,R4W1,R3W1,R3W2,Connecticut,Illinois
 2024,R4X1,R3X1,R3X2,Alabama,Clemson
-2024,R4Y1,R3Y1,R3Y2,,
-2024,R4Z1,R3Z1,R3Z2,,
+2024,R4Y1,R3Y1,R3Y2,Purdue,Tennessee
+2024,R4Z1,R3Z1,R3Z2,Duke,NC State
 2024,R5WX,R4W1,R4X1,Connecticut,Alabama
-2024,R5YZ,R4Y1,R4Z1,,
-2024,R6CH,R5WX,R5YZ,,
+2024,R5YZ,R4Y1,R4Z1,Purdue,NC State
+2024,R6CH,R5WX,R5YZ,Connecticut,Purdue
 2024,X16,X16a,X16b,Howard,Wagner
 2024,Y10,Y10a,Y10b,Colorado St.,Virginia
 2024,Y16,Y16a,Y16b,Grambling,Montana St.
 2024,Z10,Z10a,Z10b,Boise St.,Colorado
-2025,R1W1,W01,W16,Duke,
+2025,R1W1,W01,W16,Duke,Mt. St. Mary's
 2025,R1W2,W02,W15,Alabama,Robert Morris
 2025,R1W3,W03,W14,Wisconsin,Montana
 2025,R1W4,W04,W13,Arizona,Akron
@@ -2531,15 +2531,15 @@ Season,Slot,StrongSeed,WeakSeed,StrongTeamName,WeakTeamName
 2025,R1X3,X03,X14,Kentucky,Troy
 2025,R1X4,X04,X13,Purdue,High Point
 2025,R1X5,X05,X12,Clemson,McNeese St.
-2025,R1X6,X06,X11,Illinois,
+2025,R1X6,X06,X11,Illinois,Xavier
 2025,R1X7,X07,X10,UCLA,Utah St.
 2025,R1X8,X08,X09,Gonzaga,Georgia
-2025,R1Y1,Y01,Y16,Auburn,
+2025,R1Y1,Y01,Y16,Auburn,Alabama St.
 2025,R1Y2,Y02,Y15,Michigan St.,Bryant
 2025,R1Y3,Y03,Y14,Iowa St.,Lipscomb
 2025,R1Y4,Y04,Y13,Texas A&M,Yale
 2025,R1Y5,Y05,Y12,Michigan,UC San Diego
-2025,R1Y6,Y06,Y11,Mississippi,
+2025,R1Y6,Y06,Y11,Mississippi,North Carolina
 2025,R1Y7,Y07,Y10,Marquette,New Mexico
 2025,R1Y8,Y08,Y09,Louisville,Creighton
 2025,R1Z1,Z01,Z16,Florida,Norfolk St.

@@ -166,7 +166,6 @@ def pick_strong_weak(seed1, seed2, slot1, slot2):
 def clean_tourney_slots():
     file_name = "MNCAATourneySlots.csv"
     tsl_df = load_data(file_name)
-    tsl_df.drop(columns=["StrongTeamName", "WeakTeamName"], inplace=True)
 
     ts_df = load_data("MNCAATourneySeeds.csv")
     tcr_df = load_data("MNCAATourneyCompactResults.csv")
@@ -177,24 +176,40 @@ def clean_tourney_slots():
     teamid_to_team = ts_df.set_index(['Season', 'TeamID'])['TeamName'].to_dict()
     team_to_teamid = ts_df.set_index(['Season', 'TeamName'])['TeamID'].to_dict()
 
-    # --- Handle play-in games ---
-    # Find play-in games (DayNum == 134)
-    playin_games = tcr_df[tcr_df['DayNum'] == 134]
+    # --- Handle play-in games for 2011+ and DayNum 134/135 ---
     playin_winners = {}
-    for _, row in playin_games.iterrows():
+    for season in tcr_df['Season'].unique():
+        if season < 2011:
+            continue
+        season_games = tcr_df[(tcr_df['Season'] == season) & (tcr_df['DayNum'].isin([134, 135]))]
+        for _, row in season_games.iterrows():
+            wteamid = row['WTeamID']
+            wteam = teamid_to_team.get((season, wteamid))
+            wseed = team_to_seed.get((season, wteam))
+            # Only consider seeds ending in 'a' or 'b'
+            if wseed and wseed[-1] in ['a', 'b']:
+                main_seed = wseed[:-1]
+                playin_winners[(season, main_seed)] = wteam
+
+    # --- Update only 2011+ rows in tsl_df for play-in seeds ---
+    def update_team_name(row, col):
         season = row['Season']
-        wteamid = row['WTeamID']
-        lteamid = row['LTeamID']
-        wteam = teamid_to_team.get((season, wteamid))
-        lteam = teamid_to_team.get((season, lteamid))
-        wseed = team_to_seed.get((season, wteam))
-        lseed = team_to_seed.get((season, lteam))
-        # The main seed is the seed without the 'a' or 'b' (e.g., W16a -> W16)
-        if wseed and wseed[-1] in ['a', 'b']:
-            main_seed = wseed[:-1]
-        else:
-            main_seed = wseed
-        playin_winners[(season, main_seed)] = wteam
+        seed = row[col]
+        if season >= 2011:
+            team = playin_winners.get((season, seed))
+            if team:
+                return team
+        return row[f"{col.replace('Seed', 'TeamName')}"]
+
+    # Only update for 2011+ and if a play-in winner exists
+    mask_2011plus = tsl_df['Season'] >= 2011
+    tsl_df.loc[mask_2011plus, 'StrongTeamName'] = tsl_df[mask_2011plus].apply(
+        lambda row: update_team_name(row, 'StrongSeed'), axis=1)
+    tsl_df.loc[mask_2011plus, 'WeakTeamName'] = tsl_df[mask_2011plus].apply(
+        lambda row: update_team_name(row, 'WeakSeed'), axis=1)
+
+    write_data(tsl_df, file_name)
+
 
     # --- Fill in first round team names using seeds, accounting for play-ins ---
     def get_team_for_seed(row):
@@ -230,8 +245,7 @@ def clean_tourney_slots():
 
     for season in all_seasons:
         if season == 2020:
-            continue  # Skip 2020 due to COVID
-
+            continue  
         # First round: use original team names, determine winners
         r1_mask = (slots_filled['Season'] == season) & (slots_filled['Slot'].str.startswith('R1'))
         for idx, row in slots_filled[r1_mask].iterrows():
