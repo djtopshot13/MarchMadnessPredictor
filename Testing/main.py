@@ -176,7 +176,7 @@ def evaluate_models(models, X_train, X_test, y_train, y_test, round_name):
     accuracies = []
     model_names = []
     
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(12, 12))
     
     for name, model in models.items():
         # Train and evaluate
@@ -228,49 +228,48 @@ early_model = evaluate_models(early_models, X_train_scaled, X_test_scaled,
                             y_train, y_test, "Early Round")
 
 for index, row in X_train.iterrows():
-    X_train.at[index, 'Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "S16%"]
-    X_train.at[index, 'Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "E8%"]
-    X_train.at[index, 'Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "S16%"]
-    X_train.at[index, 'Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "E8%"]
+    row['Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "S16%"]
+    row['Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "E8%"]
+    row['Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "S16%"]
+    row['Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "E8%"]
 
-# X_train_scaled['Team1_R1%'] = seed_results.loc[X_train_scaled['Team1_SeedNum'].astype(int), "S16%"]
-# X_train_scaled['Team1_R2%'] = seed_results.loc[X_train_scaled['Team1_SeedNum'].astype(int), "E8%"]
-# X_train_scaled['Team2_R1%'] = seed_results.loc[X_train_scaled['Team2_SeedNum'].astype(int), "S16%"]
-# X_train_scaled['Team2_R2%'] = seed_results.loc[X_train_scaled['Team2_SeedNum'].astype(int), "E8%"]
+# X_train['Team1_R1%'] = seed_results.loc[X_train['Team1_SeedNum'].astype(int), "S16%"]
+# X_train['Team1_R2%'] = seed_results.loc[X_train['Team1_SeedNum'].astype(int), "E8%"]
+# X_train['Team2_R1%'] = seed_results.loc[X_train['Team2_SeedNum'].astype(int), "S16%"]
+# X_train['Team2_R2%'] = seed_results.loc[X_train['Team2_SeedNum'].astype(int), "E8%"]
 
 for index, row in X_test.iterrows():
-    X_test.at[index, 'Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "S16%"]
-    X_test.at[index, 'Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "E8%"]
-    X_test.at[index, 'Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "S16%"]
-    X_test.at[index, 'Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "E8%"]
+    row['Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "S16%"]
+    row['Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "E8%"]
+    row['Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "S16%"]
+    row['Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "E8%"]
 
-
-# X_test_scaled['Team1_R1%'] = seed_results.loc[X_test_scaled['Team1_SeedNum'].astype(int), "S16%"]
-# X_test_scaled['Team1_R2%'] = seed_results.loc[X_test_scaled['Team1_SeedNum'].astype(int), "E8%"]
-# X_test_scaled['Team2_R1%'] = seed_results.loc[X_test_scaled['Team2_SeedNum'].astype(int), "S16%"]
-# X_test_scaled['Team2_R2%'] = seed_results.loc[X_test_scaled['Team2_SeedNum'].astype(int), "E8%"]
+# X_test['Team1_R1%'] = seed_results.loc[X_test['Team1_SeedNum'].astype(int), "S16%"]
+# X_test['Team1_R2%'] = seed_results.loc[X_test['Team1_SeedNum'].astype(int), "E8%"]
+# X_test['Team2_R1%'] = seed_results.loc[X_test['Team2_SeedNum'].astype(int), "S16%"]
+# X_test['Team2_R2%'] = seed_results.loc[X_test['Team2_SeedNum'].astype(int), "E8%"]
 
 # Evaluate middle round models (using all features)
 middle_model = evaluate_models(middle_models, X_train_scaled, X_test_scaled, 
                               y_train, y_test, "Middle Round")
 
-for index, row in X_train.iterrows():
-    X_train.at[index, 'Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F4%"]
-    X_train.at[index, 'Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F2%"]
-    X_train.at[index, 'Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F4%"]
-    X_train.at[index, 'Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F2%"]
-
+for _, row in X_train.iterrows():
+    row['Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F4%"]
+    row['Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F2%"]
+    row['Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F4%"]
+    row['Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F2%"]
+        
 
 # X_train['Team1_R1%'] = seed_results.loc[X_train['Team1_SeedNum'].astype(int), "F4%"]
 # X_train['Team1_R2%'] = seed_results.loc[X_train['Team1_SeedNum'].astype(int), "F2%"]
 # X_train['Team2_R1%'] = seed_results.loc[X_train['Team2_SeedNum'].astype(int), "F4%"]
 # X_train['Team2_R2%'] = seed_results.loc[X_train['Team2_SeedNum'].astype(int), "F2%"]
 
-for index, row in X_test.iterrows():
-    X_test.at[index, 'Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F4%"]
-    X_test.at[index, 'Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F2%"]
-    X_test.at[index, 'Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F4%"]
-    X_test.at[index, 'Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F2%"]
+for _, row in X_test.iterrows():
+    row['Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F4%"]
+    row['Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F2%"]
+    row['Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F4%"]
+    row['Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F2%"]
 
 # X_test['Team1_R1%'] = seed_results.loc[X_test['Team1_SeedNum'].astype(int), "F4%"]
 # X_test['Team1_R2%'] = seed_results.loc[X_test['Team1_SeedNum'].astype(int), "F2%"]
@@ -293,7 +292,9 @@ class Bracket:
         self.rounds = {}
         self.current_round = current_round
         self.team_names = pd.read_csv(os.path.join(project_root, 'MarchMadnessData', 'MTeams.csv'))
-        self.seed_data = pd.read_csv(os.path.join(project_root, 'MarchMadnessData', 'SeedPerformanceReport.csv'), index_col="SEED")
+        self.seed_data = pd.read_csv(os.path.join(project_root, 'MarchMadnessData', 'SeedPerformanceReport.csv'))
+        self.seed_data = self.seed_data.set_index("SEED")
+        
     
     def simulate_matchup(self, team1_id, team2_id):
         team1_feat = get_team_features(self.season, team1_id)
@@ -308,15 +309,15 @@ class Bracket:
                 'Team1_AvgPoints': team1_feat['AvgPoints'],
                 'Team1_AvgOppPoints': team1_feat['AvgOppPoints'],
                 'Team1_SeedNum': team1_feat['SeedNum'],
-                'Team1_SeedWin%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'WIN%'],
-                'Team1_SeedR1%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'R64%'],
-                'Team1_SeedR2%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'R32%'],
+                'Team1_SeedWin%': self.seed_data.at[team1_feat['SeedNum'].astype(int), 'WIN%'],
+                'Team1_SeedR1%': self.seed_data.at[team1_feat['SeedNum'].astype(int), 'R64%'],
+                'Team1_SeedR2%': self.seed_data.at[team1_feat['SeedNum'].astype(int), 'R32%'],
                 'Team2_AvgPoints': team2_feat['AvgPoints'],
                 'Team2_AvgOppPoints': team2_feat['AvgOppPoints'],
                 'Team2_SeedNum': team2_feat['SeedNum'],
-                'Team2_SeedWin%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'WIN%'],
-                'Team2_SeedR1%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'R64%'],
-                'Team2_SeedR2%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'R32%']
+                'Team2_SeedWin%': self.seed_data.at[team2_feat['SeedNum'].astype(int), 'WIN%'],
+                'Team2_SeedR1%': self.seed_data.at[team2_feat['SeedNum'].astype(int), 'R64%'],
+                'Team2_SeedR2%': self.seed_data.at[team2_feat['SeedNum'].astype(int), 'R32%']
             }
         ])
         
@@ -363,7 +364,7 @@ class BracketSimulation:
         # Create initial matchups based on seeding
         matchups = []
         for i in range(1, 9):
-            team1, team2 = teams[i], teams[17-i]
+            team1, team2 = teams[i-1], teams[16-i]
             matchups.append((team1, team2))
         
         # Run simulations for each matchup
@@ -414,7 +415,7 @@ class BracketSimulation:
             end_idx = min(start_idx + 8, len(matchup_items))
             current_matchups = matchup_items[start_idx:end_idx]
             
-            plt.figure(figsize=(12, 10))
+            plt.figure(figsize=(12, 12))
             
             for i, (matchup, stats) in enumerate(current_matchups):
                 team1, team2 = matchup
@@ -472,7 +473,7 @@ class BracketSimulation:
             plt.close()
     
     def _visualize_tournament_bracket(self):
-        plt.figure(figsize=(20, 12))
+        plt.figure(figsize=(8, 12))
         
         # Define the number of rounds and teams per round
         rounds = ['First Round', 'Second Round', 'Sweet 16', 'Elite 8', 'Final 4', 'Championship']
@@ -559,10 +560,10 @@ class TournamentPredictor:
         print(classification_report(y_test, early_preds))
 
         for index, row in X_train.iterrows():
-            X_train.at[index, 'Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "S16%"]
-            X_train.at[index, 'Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "E8%"]
-            X_train.at[index, 'Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "S16%"]
-            X_train.at[index, 'Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "E8%"]
+            row['Team1_SeedR1%'] = seed_results.at[training_df.loc[index, 'Team1_SeedNum'].astype(int), "S16%"]
+            row['Team1_SeedR2%'] = seed_results.at[training_df.loc[index, 'Team1_SeedNum'].astype(int), "E8%"]
+            row['Team2_SeedR1%'] = seed_results.at[training_df.loc[index, 'Team2_SeedNum'].astype(int), "S16%"]
+            row['Team2_SeedR2%'] = seed_results.at[training_df.loc[index, 'Team2_SeedNum'].astype(int), "E8%"]
 
         # X_train['Team1_R1%'] = seed_results.loc[X_train['Team1_SeedNum'].astype(int), "S16%"]
         # X_train['Team1_R2%'] = seed_results.loc[X_train['Team1_SeedNum'].astype(int), "E8%"]
@@ -570,10 +571,10 @@ class TournamentPredictor:
         # X_train['Team2_R2%'] = seed_results.loc[X_train['Team2_SeedNum'].astype(int), "E8%"]
 
         for index, row in X_test.iterrows():
-            X_test.at[index, 'Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "S16%"]
-            X_test.at[index, 'Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "E8%"]
-            X_test.at[index, 'Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "S16%"]
-            X_test.at[index, 'Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "E8%"]
+            row['Team1_SeedR1%'] = seed_results.at[training_df.loc[index, 'Team1_SeedNum'].astype(int), "S16%"]
+            row['Team1_SeedR2%'] = seed_results.at[training_df.loc[index, 'Team1_SeedNum'].astype(int), "E8%"]
+            row['Team2_SeedR1%'] = seed_results.at[training_df.loc[index, 'Team2_SeedNum'].astype(int), "S16%"]
+            row['Team2_SeedR2%'] = seed_results.at[training_df.loc[index, 'Team2_SeedNum'].astype(int), "E8%"]
         
         # X_test['Team1_R1%'] = seed_results.loc[X_test['Team1_SeedNum'].astype(int), "S16%"]
         # X_test['Team1_R2%'] = seed_results.loc[X_test['Team1_SeedNum'].astype(int), "E8%"]
@@ -587,10 +588,10 @@ class TournamentPredictor:
         print(classification_report(y_test, middle_preds))
 
         for index, row in X_train.iterrows():
-            X_train.at[index, 'Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F4%"]
-            X_train.at[index, 'Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F2%"]
-            X_train.at[index, 'Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F4%"]
-            X_train.at[index, 'Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F2%"]
+            row['Team1_SeedR1%'] = seed_results.at[training_df.loc[index, 'Team1_SeedNum'].astype(int), "F4%"]
+            row['Team1_SeedR2%'] = seed_results.at[training_df.loc[index, 'Team1_SeedNum'].astype(int), "F2%"]
+            row['Team2_SeedR1%'] = seed_results.at[training_df.loc[index, 'Team2_SeedNum'].astype(int), "F4%"]
+            row['Team2_SeedR2%'] = seed_results.at[training_df.loc[index, 'Team2_SeedNum'].astype(int), "F2%"]
         
 
         # X_train['Team1_R1%'] = seed_results.loc[X_train['Team1_SeedNum'].astype(int), "F4%"]
@@ -599,10 +600,10 @@ class TournamentPredictor:
         # X_train['Team2_R2%'] = seed_results.loc[X_train['Team2_SeedNum'].astype(int), "F2%"]
 
         for index, row in X_test.iterrows():
-            X_test.at[index, 'Team1_SeedR1%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F4%"]
-            X_test.at[index, 'Team1_SeedR2%'] = seed_results.at[row['Team1_SeedNum'].astype(int), "F2%"]
-            X_test.at[index, 'Team2_SeedR1%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F4%"]
-            X_test.at[index, 'Team2_SeedR2%'] = seed_results.at[row['Team2_SeedNum'].astype(int), "F2%"]
+            row['Team1_SeedR1%'] = seed_results.at[training_df.loc[index, 'Team1_SeedNum'].astype(int), "F4%"]
+            row['Team1_SeedR2%'] = seed_results.at[training_df.loc[index, 'Team1_SeedNum'].astype(int), "F2%"]
+            row['Team2_SeedR1%'] = seed_results.at[training_df.loc[index, 'Team2_SeedNum'].astype(int), "F4%"]
+            row['Team2_SeedR2%'] = seed_results.at[training_df.loc[index, 'Team2_SeedNum'].astype(int), "F2%"]
 
         # X_test['Team1_R1%'] = seed_results.loc[X_test['Team1_SeedNum'].astype(int), "F4%"]
         # X_test['Team1_R2%'] = seed_results.loc[X_test['Team1_SeedNum'].astype(int), "F2%"]
@@ -617,9 +618,8 @@ class TournamentPredictor:
     
     def predict_proba(self, features, round_num):
         if round_num <= 2:
-            # Early rounds: use seed-based model
-            seed_features = features[['Team1_SeedNum', 'Team2_SeedNum']]
-            return {'early': self.early_model.predict_proba(seed_features)}
+            # Early rounds: use features
+            return {'early': self.early_model.predict_proba(features)}
         elif round_num <= 4:
             # Middle rounds: use balanced model
             return {'middle': self.middle_model.predict_proba(features)}
