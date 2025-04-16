@@ -41,6 +41,8 @@ tourney_seeds = pd.read_csv(f'{data_dir}/MNCAATourneySeeds.csv')
 team_conferences = pd.read_csv(f'{data_dir}/MTeamConferences.csv')
 reg_results = pd.read_csv(f'{data_dir}/MRegularSeasonDetailedResults.csv')
 tourney_results = pd.read_csv(f'{data_dir}/MNCAATourneyCompactResults.csv')
+seed_results = pd.read_csv(f'{data_dir}/SeedPerformanceReport.csv')
+seed_results = seed_results.set_index("SEED")
 
 # ----------------------------
 # Process Regular Season Data
@@ -96,9 +98,23 @@ for idx, row in tourney_results.iterrows():
             'Team1_AvgPoints': winner_feat['AvgPoints'],
             'Team1_AvgOppPoints': winner_feat['AvgOppPoints'],
             'Team1_SeedNum': winner_feat['SeedNum'],
+            'Team1_SeedWin%': seed_results.loc[winner_feat['SeedNum'].astype(int), "WIN%"],
+            'Team1_SeedR64%': seed_results.loc[winner_feat['SeedNum'].astype(int), "R64%"],
+            'Team1_SeedR32%': seed_results.loc[winner_feat['SeedNum'].astype(int), "R32%"],
+            'Team1_SeedS16%': seed_results.loc[winner_feat['SeedNum'].astype(int), "S16%"],
+            'Team1_SeedE8%': seed_results.loc[winner_feat['SeedNum'].astype(int), "E8%"],
+            'Team1_SeedF4%': seed_results.loc[winner_feat['SeedNum'].astype(int), "F4%"],
+            'Team1_SeedF2%': seed_results.loc[winner_feat['SeedNum'].astype(int), "F2%"],
             'Team2_AvgPoints': loser_feat['AvgPoints'],
             'Team2_AvgOppPoints': loser_feat['AvgOppPoints'],
             'Team2_SeedNum': loser_feat['SeedNum'],
+            'Team2_SeedWin%': seed_results.loc[loser_feat['SeedNum'].astype(int), "WIN%"],
+            'Team2_SeedR64%': seed_results.loc[loser_feat['SeedNum'].astype(int), "R64%"],
+            'Team2_SeedR32%': seed_results.loc[loser_feat['SeedNum'].astype(int), "R32%"],
+            'Team2_SeedS16%': seed_results.loc[loser_feat['SeedNum'].astype(int), "S16%"],
+            'Team2_SeedE8%': seed_results.loc[loser_feat['SeedNum'].astype(int), "E8%"],
+            'Team2_SeedF4%': seed_results.loc[loser_feat['SeedNum'].astype(int), "F4%"],
+            'Team2_SeedF2%': seed_results.loc[loser_feat['SeedNum'].astype(int), "F2%"],
             'Target': 1
         })
         
@@ -108,9 +124,23 @@ for idx, row in tourney_results.iterrows():
             'Team1_AvgPoints': loser_feat['AvgPoints'],
             'Team1_AvgOppPoints': loser_feat['AvgOppPoints'],
             'Team1_SeedNum': loser_feat['SeedNum'],
+            'Team1_SeedWin%': seed_results.loc[loser_feat['SeedNum'].astype(int), "WIN%"],
+            'Team1_SeedR64%': seed_results.loc[loser_feat['SeedNum'].astype(int), "R64%"],
+            'Team1_SeedR32%': seed_results.loc[loser_feat['SeedNum'].astype(int), "R32%"],
+            'Team1_SeedS16%': seed_results.loc[loser_feat['SeedNum'].astype(int), "S16%"],
+            'Team1_SeedE8%': seed_results.loc[loser_feat['SeedNum'].astype(int), "E8%"],
+            'Team1_SeedF4%': seed_results.loc[loser_feat['SeedNum'].astype(int), "F4%"],
+            'Team1_SeedF2%': seed_results.loc[loser_feat['SeedNum'].astype(int), "F2%"],
             'Team2_AvgPoints': winner_feat['AvgPoints'],
             'Team2_AvgOppPoints': winner_feat['AvgOppPoints'],
             'Team2_SeedNum': winner_feat['SeedNum'],
+            'Team2_SeedWin%': seed_results.loc[winner_feat['SeedNum'].astype(int), "WIN%"],
+            'Team2_SeedR64%': seed_results.loc[winner_feat['SeedNum'].astype(int), "R64%"],
+            'Team2_SeedR32%': seed_results.loc[winner_feat['SeedNum'].astype(int), "R32%"],
+            'Team2_SeedS16%': seed_results.loc[winner_feat['SeedNum'].astype(int), "S16%"],
+            'Team2_SeedE8%': seed_results.loc[winner_feat['SeedNum'].astype(int), "E8%"],
+            'Team2_SeedF4%': seed_results.loc[winner_feat['SeedNum'].astype(int), "F4%"],
+            'Team2_SeedF2%': seed_results.loc[winner_feat['SeedNum'].astype(int), "F2%"],
             'Target': 0
         })
 
@@ -123,15 +153,53 @@ print(training_df.head())
 # =============================================================================
 
 # Split features and target
-feature_cols = ['Team1_AvgPoints', 'Team1_AvgOppPoints', 'Team1_SeedNum',
-                'Team2_AvgPoints', 'Team2_AvgOppPoints', 'Team2_SeedNum']
-features = training_df[feature_cols]
-labels = training_df['Target']
+e_training_df = training_df.copy()
+e_training_df.drop(columns=["Team1_SeedS16%", "Team1_SeedE8%", "Team1_SeedF4%", "Team1_SeedF2%",
+                            "Team2_SeedS16%", "Team2_SeedE8%", "Team2_SeedF4%", "Team2_SeedF2%"])
 
-X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
+early_feature_cols = ['Team1_AvgPoints', 'Team1_AvgOppPoints', 'Team1_SeedNum',
+                'Team1_SeedWin%', 'Team1_SeedR64%', 'Team1_SeedR32%', 'Team2_AvgPoints',
+                'Team2_AvgOppPoints', 'Team2_SeedNum', 'Team2_SeedWin%', 
+                'Team2_SeedR64%', 'Team2_SeedR32%']
+early_features = e_training_df[early_feature_cols]
+e_labels = e_training_df['Target']
+
+e_X_train, e_X_test, e_y_train, e_y_test = train_test_split(early_features, e_labels, test_size=0.2, random_state=42)
 scaler = StandardScaler()
-X_train_scaled = pd.DataFrame(scaler.fit_transform(X_train), columns=X_train.columns)
-X_test_scaled = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns)
+e_X_train_scaled = pd.DataFrame(scaler.fit_transform(e_X_train), columns=e_X_train.columns)
+e_X_test_scaled = pd.DataFrame(scaler.transform(e_X_test), columns=e_X_test.columns)
+
+m_training_df = training_df.copy()
+m_training_df.drop(columns=["Team1_SeedR64%", "Team1_SeedR32%", "Team1_SeedF4%", "Team1_SeedF2%",
+                            "Team2_SeedR64%", "Team2_SeedR32%", "Team2_SeedF4%", "Team2_SeedF2%"])
+
+middle_feature_cols = ['Team1_AvgPoints', 'Team1_AvgOppPoints', 'Team1_SeedNum',
+                'Team1_SeedWin%', 'Team1_SeedS16%', 'Team1_SeedE8%', 'Team2_AvgPoints',
+                'Team2_AvgOppPoints', 'Team2_SeedNum', 'Team2_SeedWin%',  'Team2_SeedS16%',
+                'Team2_SeedE8%']
+middle_features = m_training_df[middle_feature_cols]
+m_labels = m_training_df['Target']
+
+m_X_train, m_X_test, m_y_train, m_y_test = train_test_split(middle_features, m_labels, test_size=0.2, random_state=42)
+scaler = StandardScaler()
+m_X_train_scaled = pd.DataFrame(scaler.fit_transform(m_X_train), columns=m_X_train.columns)
+m_X_test_scaled = pd.DataFrame(scaler.transform(m_X_test), columns=m_X_test.columns)
+
+f_training_df = training_df.copy()
+f_training_df.drop(columns=["Team1_SeedR64%", "Team1_SeedR32%", "Team1_SeedS16%", "Team1_SeedE8%",
+                            "Team2_SeedR64%", "Team2_SeedR32%", "Team2_SeedS16%", "Team2_SeedE8%"])
+
+final_feature_cols = ['Team1_AvgPoints', 'Team1_AvgOppPoints', 'Team1_SeedNum',
+                'Team1_SeedWin%', 'Team1_SeedF4%', 'Team1_SeedF2%', 'Team2_AvgPoints',
+                'Team2_AvgOppPoints', 'Team2_SeedNum', 'Team2_SeedWin%',  'Team2_SeedF4%',
+                'Team2_SeedF2%']
+final_features = f_training_df[final_feature_cols]
+f_labels = f_training_df['Target']
+
+f_X_train, f_X_test, f_y_train, f_y_test = train_test_split(final_features, f_labels, test_size=0.2, random_state=42)
+scaler = StandardScaler()
+f_X_train_scaled = pd.DataFrame(scaler.fit_transform(f_X_train), columns=f_X_train.columns)
+f_X_test_scaled = pd.DataFrame(scaler.transform(f_X_test), columns=f_X_test.columns)
 
 # Define model candidates for each round
 early_models = {
@@ -199,18 +267,16 @@ def evaluate_models(models, X_train, X_test, y_train, y_test, round_name):
     return best_model
 
 # Evaluate early round models (using only seed features)
-early_features = X_train_scaled[['Team1_SeedNum', 'Team2_SeedNum']]
-early_features_test = X_test_scaled[['Team1_SeedNum', 'Team2_SeedNum']]
-early_model = evaluate_models(early_models, early_features, early_features_test, 
-                            y_train, y_test, "Early Round")
+early_model = evaluate_models(early_models, e_X_train_scaled, e_X_test_scaled, 
+                            e_y_train, e_y_test, "Early Round")
 
 # Evaluate middle round models (using all features)
-middle_model = evaluate_models(middle_models, X_train_scaled, X_test_scaled, 
-                              y_train, y_test, "Middle Round")
+middle_model = evaluate_models(middle_models, m_X_train_scaled, m_X_test_scaled, 
+                              m_y_train, m_y_test, "Middle Round")
 
 # Evaluate final round models (using all features)
-final_model = evaluate_models(final_models, X_train_scaled, X_test_scaled, 
-                             y_train, y_test, "Final Round")
+final_model = evaluate_models(final_models, f_X_train_scaled, f_X_test_scaled, 
+                             f_y_train, f_y_test, "Final Round")
 
 # =============================================================================
 # 4. Simulation and Bracket Prediction
@@ -224,7 +290,7 @@ class Bracket:
         self.rounds = {}
         self.current_round = current_round
         self.team_names = pd.read_csv(os.path.join(project_root, 'MarchMadnessData', 'MTeams.csv'))
-        self.seed_data = pd.read_csv(os.path.join(project_root, 'MarchMadnessData', 'SeedPerformanceReport.csv'))
+        self.seed_data = pd.read_csv(os.path.join(project_root, 'MarchMadnessData', 'SeedPerformanceReport.csv'), index_col="SEED")
     
     def simulate_matchup(self, team1_id, team2_id):
         team1_feat = get_team_features(self.season, team1_id)
@@ -239,23 +305,23 @@ class Bracket:
                 'Team1_AvgPoints': team1_feat['AvgPoints'],
                 'Team1_AvgOppPoints': team1_feat['AvgOppPoints'],
                 'Team1_SeedNum': team1_feat['SeedNum'],
-                'Team1_SeedWin%': self.seed_data.loc[team1_feat['SeedNum'], 'Win%'],
-                'Team1_SeedR64%': self.seed_data.loc[team1_feat['SeedNum'], 'R64%'],
-                'Team1_SeedR32%': self.seed_data.loc[team1_feat['SeedNum'], 'R32%'],
-                'Team1_SeedS16%': self.seed_data.loc[team1_feat['SeedNum'], 'S16%'],
-                'Team1_SeedE8%': self.seed_data.loc[team1_feat['SeedNum'], 'E8%'],
-                'Team1_SeedF4%': self.seed_data.loc[team1_feat['SeedNum'], 'F4%'],
-                'Team1_SeedF2%': self.seed_data.loc[team1_feat['SeedNum'], 'F2%'],
+                'Team1_SeedWin%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'WIN%'],
+                'Team1_SeedR64%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'R64%'],
+                'Team1_SeedR32%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'R32%'],
+                'Team1_SeedS16%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'S16%'],
+                'Team1_SeedE8%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'E8%'],
+                'Team1_SeedF4%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'F4%'],
+                'Team1_SeedF2%': self.seed_data.loc[team1_feat['SeedNum'].astype(int), 'F2%'],
                 'Team2_AvgPoints': team2_feat['AvgPoints'],
                 'Team2_AvgOppPoints': team2_feat['AvgOppPoints'],
                 'Team2_SeedNum': team2_feat['SeedNum'],
-                'Team2_SeedWin%': self.seed_data.loc[team2_feat['SeedNum'], 'Win%'],
-                'Team2_SeedR64%': self.seed_data.loc[team2_feat['SeedNum'], 'R64%'],
-                'Team2_SeedR32%': self.seed_data.loc[team2_feat['SeedNum'], 'R32%'],
-                'Team2_SeedS16%': self.seed_data.loc[team2_feat['SeedNum'], 'S16%'],
-                'Team2_SeedE8%': self.seed_data.loc[team2_feat['SeedNum'], 'E8%'],
-                'Team2_SeedF4%': self.seed_data.loc[team2_feat['SeedNum'], 'F4%'],
-                'Team2_SeedF2%': self.seed_data.loc[team2_feat['SeedNum'], 'F2%'],
+                'Team2_SeedWin%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'WIN%'],
+                'Team2_SeedR64%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'R64%'],
+                'Team2_SeedR32%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'R32%'],
+                'Team2_SeedS16%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'S16%'],
+                'Team2_SeedE8%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'E8%'],
+                'Team2_SeedF4%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'F4%'],
+                'Team2_SeedF2%': self.seed_data.loc[team2_feat['SeedNum'].astype(int), 'F2%'],
             }
         ])
         
