@@ -412,7 +412,8 @@ class BracketSimulation:
     
     def simulate_brackets(self):
         # Get tournament teams for the season
-        season_seeds = tourney_seeds[tourney_seeds['Season'] == self.season]
+        tourney_slots = pd.read_csv(os.path.join(project_root, 'MarchMadnessData', 'MNCAATourneySlots.csv'))
+        season_seeds = tourney_slots[tourney_slots['Season'] == self.season]
         
         # Initialize regions and bracket state
         self.regions = {'W': [], 'X': [], 'Y': [], 'Z': []}
@@ -430,15 +431,33 @@ class BracketSimulation:
         
         # Group teams by region
         for _, row in season_seeds.iterrows():
-            region_code = row['Seed'][0]  # Extract W, X, Y, Z
+            strong_region_code = row['StrongSeed'][0]  # Extract W, X, Y, Z
             # Handle non-standard seed formats like '16a' by using regex to extract just the numeric part
             import re
-            seed_match = re.search(r'\d+', row['Seed'][1:])
-            seed_num = int(seed_match.group()) if seed_match else 16  # Default to 16 if no number found
-            team_id = row['TeamID']
+            strong_seed_match = re.search(r'^\d+$', row['StrongSeed'][1:])
+            print(strong_seed_match)
+            
+            if strong_seed_match:
+                strong_seed_num = int(strong_seed_match.group())
+            else:
+                print(f"Invalid StrongSeed format: {row['StrongSeed']}")
+                strong_seed_num = False
+            strong_team_id = row['StrongID']
             # Store as (team_id, seed_num) tuples in each region
-            if region_code in self.regions:
-                self.regions[region_code].append((team_id, seed_num))
+            if strong_region_code in self.regions and strong_seed_num:
+                self.regions[strong_region_code].append((strong_team_id, strong_seed_num))
+
+            weak_region_code = row['WeakSeed'][0]  # Extract W, X, Y, Z
+            weak_seed_match = re.search(r'^\d+$', row['WeakSeed'][1:])
+
+            if weak_seed_match:
+                weak_seed_num = int(weak_seed_match.group())
+            else:
+                print(f"Invalid WeakSeed format: {row['WeakSeed']}")
+                weak_seed_num = False
+            weak_team_id = row['WeakID']
+            if weak_region_code in self.regions and weak_seed_num:
+                self.regions[weak_region_code].append((weak_team_id, weak_seed_num))
         
         # Sort teams by seed number within each region
         for region in self.regions:
@@ -693,96 +712,146 @@ class BracketSimulation:
         # Set a professional style
         plt.style.use('seaborn-v0_8-whitegrid')
         
+        
+        
+        # Split matchups into groups of 8 for better visualization
+        matchup_items = list(self.matchup_stats.items())
+        print(f"Total matchups: {len(matchup_items)}")
+        region1_r1 = matchup_items[0:8]
+        region1_r2 = matchup_items[8:12]
+        region1_r3 = matchup_items[12:14]
+        region1_r4 = matchup_items[14]
+        region2_r1 = matchup_items[15:23]
+        region2_r2 = matchup_items[23:27]
+        region2_r3 = matchup_items[27:29]
+        region2_r4 = matchup_items[29]
+        region3_r1 = matchup_items[30:38]
+        region3_r2 = matchup_items[38:42]
+        region3_r3 = matchup_items[42:44]
+        region3_r4 = matchup_items[44]
+        region4_r1 = matchup_items[45:53]
+        region4_r2 = matchup_items[53:57]
+        region4_r3 = matchup_items[57:59]
+        region4_r4 = matchup_items[59]
+        final_four = matchup_items[60:62]
+        championship = matchup_items[62]
+
+        r1_items = [region1_r1, region2_r1, region3_r1,  region4_r1]
+        r2_items = [region1_r2, region2_r2, region3_r2, region4_r2]
+        r3_items = [region1_r3, region2_r3, region3_r3, region4_r3]
+        r4_items = [region1_r4, region2_r4, region3_r4, region4_r4]
+        ff_items = final_four
+        championship_items = championship
+            
+        # num_groups = (len(matchup_items) + 7) // 8
+        
+        # for group in range(num_groups):
+        #     start_idx = group * 8
+        #     end_idx = min(start_idx + 8, len(matchup_items))
+        #     current_matchups = matchup_items[start_idx:end_idx]
+            
+            # Set up figure with better aesthetics
+        regions = ['W', 'X', 'Y', 'Z']
+        for idx, r1_item in enumerate(r1_items):
+            self.matchup_visualization(r1_item, regions[idx], round_num=1)
+
+        for idx, r2_item in enumerate(r2_items):
+            self.matchup_visualization(r2_item, regions[idx], round_num=2)
+        
+        for idx, r3_item in enumerate(r3_items):
+            self.matchup_visualization(r3_item, regions[idx], round_num=3)
+        
+        for idx, r4_item in enumerate(r4_items):
+            self.matchup_visualization(r4_item, regions[idx], round_num=4)
+        
+        for idx, ff_item in enumerate(ff_items):
+            self.matchup_visualization(ff_item, "Final Four")
+
+        for idx, champ_item in enumerate(championship_items):
+            self.matchup_visualization(champ_item, "Championship")
+            
+
+    def matchup_visualization(self, matchup_items, region, round_num=""):
+        plt.figure(figsize=(14, 14), facecolor='white')
+        plt.subplots_adjust(hspace=0.5)
+
         # Define a better color palette
         team1_color = '#1e88e5'  # Blue
         team2_color = '#d81b60'  # Red
         
-        # Split matchups into groups of 8 for better visualization
-        matchup_items = list(self.matchup_stats.items())
-        num_groups = (len(matchup_items) + 7) // 8
+        for i, (matchup, stats) in enumerate(matchup_items):
+            team1, team2 = matchup
+            team1_name = self.brackets[0].get_team_name(team1)
+            team2_name = self.brackets[0].get_team_name(team2)
+            
+            total = sum(stats.values())
+            team1_pct = (stats[team1] / total) * 100
+            team2_pct = (stats[team2] / total) * 100
+            
+            # Create a subplot for each matchup
+            ax = plt.subplot(len(matchup_items), 1, i+1)
+            
+            # Add background shading for better visual separation
+            ax.axhspan(-0.25, 0.25, color='#f5f5f5', zorder=0)
+            
+            # Create the horizontal bars with enhanced styling
+            bars1 = plt.barh([0], [team1_pct], label=team1_name, color=team1_color, 
+                                height=0.5, alpha=0.85, edgecolor='white', linewidth=1)
+            bars2 = plt.barh([0], [team2_pct], left=[team1_pct], label=team2_name, 
+                                color=team2_color, height=0.5, alpha=0.85, edgecolor='white', linewidth=1)
+            
+            # Add percentage labels with improved styling
+            if team1_pct > 8:  # Only show label if bar is wide enough
+                plt.text(team1_pct/2, 0, f'{team1_pct:.1f}%', 
+                        ha='center', va='center', color='white', fontweight='bold', fontsize=11)
+            if team2_pct > 8:
+                plt.text(team1_pct + team2_pct/2, 0, f'{team2_pct:.1f}%', 
+                        ha='center', va='center', color='white', fontweight='bold', fontsize=11)
+            
+            # Customize the subplot
+            plt.yticks([])
+            plt.xlim(0, 100)
+            ax.spines['top'].set_visible(False)
+            ax.spines['right'].set_visible(False)
+            ax.spines['left'].set_visible(False)
+            ax.spines['bottom'].set_color('#dddddd')
+            
+            # Add small tick marks at 25%, 50%, 75%
+            plt.xticks([25, 50, 75], ['25%', '50%', '75%'], color='#777777', fontsize=9)
+            
+            # Get seeds for both teams
+            team1_seed = tourney_seeds[
+                (tourney_seeds['Season'] == self.season) & 
+                (tourney_seeds['TeamID'] == team1)
+            ]['SeedNum'].iloc[0] if not tourney_seeds.empty else '?'
+            
+            team2_seed = tourney_seeds[
+                (tourney_seeds['Season'] == self.season) & 
+                (tourney_seeds['TeamID'] == team2)
+            ]['SeedNum'].iloc[0] if not tourney_seeds.empty else '?'
+            
+            # Add a title that shows seeds with improved formatting
+            plt.title(f'({team1_seed}) {team1_name} vs ({team2_seed}) {team2_name}', 
+                        loc='left', pad=5, fontsize=12, fontweight='bold', color='#333333')
+            
+            # Add enhanced legend with team seeds
+            if i == 0:  # Only show legend for the first subplot
+                legend = plt.legend([f'({team1_seed}) {team1_name}', f'({team2_seed}) {team2_name}'],
+                                    bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=10,
+                                    frameon=True, framealpha=0.9, edgecolor='#dddddd')
         
-        for group in range(num_groups):
-            start_idx = group * 8
-            end_idx = min(start_idx + 8, len(matchup_items))
-            current_matchups = matchup_items[start_idx:end_idx]
-            
-            # Set up figure with better aesthetics
-            plt.figure(figsize=(14, 14), facecolor='white')
-            plt.subplots_adjust(hspace=0.5)
-            
-            for i, (matchup, stats) in enumerate(current_matchups):
-                team1, team2 = matchup
-                team1_name = self.brackets[0].get_team_name(team1)
-                team2_name = self.brackets[0].get_team_name(team2)
-                
-                total = sum(stats.values())
-                team1_pct = (stats[team1] / total) * 100
-                team2_pct = (stats[team2] / total) * 100
-                
-                # Create a subplot for each matchup
-                ax = plt.subplot(len(current_matchups), 1, i+1)
-                
-                # Add background shading for better visual separation
-                ax.axhspan(-0.25, 0.25, color='#f5f5f5', zorder=0)
-                
-                # Create the horizontal bars with enhanced styling
-                bars1 = plt.barh([0], [team1_pct], label=team1_name, color=team1_color, 
-                                 height=0.5, alpha=0.85, edgecolor='white', linewidth=1)
-                bars2 = plt.barh([0], [team2_pct], left=[team1_pct], label=team2_name, 
-                                 color=team2_color, height=0.5, alpha=0.85, edgecolor='white', linewidth=1)
-                
-                # Add percentage labels with improved styling
-                if team1_pct > 8:  # Only show label if bar is wide enough
-                    plt.text(team1_pct/2, 0, f'{team1_pct:.1f}%', 
-                            ha='center', va='center', color='white', fontweight='bold', fontsize=11)
-                if team2_pct > 8:
-                    plt.text(team1_pct + team2_pct/2, 0, f'{team2_pct:.1f}%', 
-                            ha='center', va='center', color='white', fontweight='bold', fontsize=11)
-                
-                # Customize the subplot
-                plt.yticks([])
-                plt.xlim(0, 100)
-                ax.spines['top'].set_visible(False)
-                ax.spines['right'].set_visible(False)
-                ax.spines['left'].set_visible(False)
-                ax.spines['bottom'].set_color('#dddddd')
-                
-                # Add small tick marks at 25%, 50%, 75%
-                plt.xticks([25, 50, 75], ['25%', '50%', '75%'], color='#777777', fontsize=9)
-                
-                # Get seeds for both teams
-                team1_seed = tourney_seeds[
-                    (tourney_seeds['Season'] == self.season) & 
-                    (tourney_seeds['TeamID'] == team1)
-                ]['SeedNum'].iloc[0] if not tourney_seeds.empty else '?'
-                
-                team2_seed = tourney_seeds[
-                    (tourney_seeds['Season'] == self.season) & 
-                    (tourney_seeds['TeamID'] == team2)
-                ]['SeedNum'].iloc[0] if not tourney_seeds.empty else '?'
-                
-                # Add a title that shows seeds with improved formatting
-                plt.title(f'({team1_seed}) {team1_name} vs ({team2_seed}) {team2_name}', 
-                          loc='left', pad=5, fontsize=12, fontweight='bold', color='#333333')
-                
-                # Add enhanced legend with team seeds
-                if i == 0:  # Only show legend for the first subplot
-                    legend = plt.legend([f'({team1_seed}) {team1_name}', f'({team2_seed}) {team2_name}'],
-                                        bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=10,
-                                        frameon=True, framealpha=0.9, edgecolor='#dddddd')
-            
-            # Add a more stylish title
-            plt.suptitle(f'Tournament Matchup Win Probabilities - Group {group + 1}', 
-                         fontsize=16, y=0.98, fontweight='bold', color='#333333')
-            
-            # Add a subtle footer with simulation info
-            plt.figtext(0.5, 0.01, f'Based on {self.num_simulations} simulations', 
-                        ha='center', fontsize=9, fontstyle='italic', color='#666666')
-            
-            plt.tight_layout()
-            plt.savefig(f'matchup_predictions_group_{group+1}.png', dpi=300, bbox_inches='tight')
-            plt.close()
-    
+        # Add a more stylish title
+        plt.suptitle(f'Tournament Matchup Win Probabilities - {region} {round_num}', 
+                        fontsize=16, y=0.98, fontweight='bold', color='#333333')
+        
+        # Add a subtle footer with simulation info
+        plt.figtext(0.5, 0.01, f'Based on {self.num_simulations} simulations', 
+                    ha='center', fontsize=9, fontstyle='italic', color='#666666')
+        
+        plt.tight_layout()
+        plt.savefig(f'matchup_predictions_group{str(round_num) + "_" + region}.png', dpi=300, bbox_inches='tight')
+        plt.close()
+
     def _visualize_tournament_bracket(self):
         # Set a clean, professional aesthetic
         plt.style.use('seaborn-v0_8-whitegrid')
