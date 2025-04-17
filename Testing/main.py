@@ -3,6 +3,7 @@ import numpy as np
 import re
 import matplotlib.pyplot as plt
 import seaborn as sns
+import time
 
 from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV
 from sklearn.preprocessing import StandardScaler
@@ -10,7 +11,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.model_selection import cross_validate
 
 import xgboost as xgb
@@ -150,77 +151,114 @@ X_train_scaled = pd.DataFrame(scaler.fit_transform(X_train), columns=X_train.col
 X_test_scaled = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns)
 
 # Define model candidates for each round
+# Create early round models
 early_models = {
-    'logistic': LogisticRegression(max_iter=1000, random_state=42),
-    'random_forest': RandomForestClassifier(n_estimators=100, random_state=42),
-    'svm': SVC(probability=True, random_state=42)
+    'logistic': LogisticRegression(C=1.0, max_iter=1000, random_state=42),
+    'random_forest': RandomForestClassifier(n_estimators=200, max_depth=20, random_state=42),
+    'xgboost': xgb.XGBClassifier(n_estimators=200, max_depth=6, learning_rate=0.1, random_state=42)
 }
 
+# Create middle round models - slightly different parameters than early round models
 middle_models = {
-    'gradient_boost': GradientBoostingClassifier(random_state=42),
-    'random_forest': RandomForestClassifier(n_estimators=150, random_state=42),
-    'neural_net': MLPClassifier(hidden_layer_sizes=(50, 25), max_iter=1000, random_state=42)
+    'logistic': LogisticRegression(C=10.0, max_iter=1500, random_state=42),
+    'random_forest': RandomForestClassifier(n_estimators=250, max_depth=25, random_state=42),
+    'xgboost': xgb.XGBClassifier(n_estimators=250, max_depth=6, learning_rate=0.08, subsample=0.9, random_state=42)
 }
 
+# Create final round models - optimized parameters for championship prediction
 final_models = {
-    'xgboost': xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss', random_state=42),
-    'gradient_boost': GradientBoostingClassifier(n_estimators=200, random_state=42),
-    'neural_net': MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=1000, random_state=42)
+    'logistic': LogisticRegression(C=50.0, max_iter=2000, random_state=42),
+    'random_forest': RandomForestClassifier(n_estimators=400, max_depth=30, min_samples_split=4, random_state=42),
+    'xgboost': xgb.XGBClassifier(n_estimators=300, max_depth=8, learning_rate=0.05, subsample=0.9, colsample_bytree=0.8, random_state=42)
 }
 
 # Function to evaluate models
 def evaluate_models(models, X_train, X_test, y_train, y_test, round_name):
-    print(f"\nEvaluating {round_name} models:")
+    print(f"\nEvaluating {round_name} models...")
+    results = {}
     best_score = 0
     best_model = None
-    accuracies = []
-    model_names = []
-    
-    plt.figure(figsize=(12, 12))
+    feature_importances = {}
     
     for name, model in models.items():
-        # Train and evaluate
+        start_time = time.time()
+        # Train and evaluate the model
         model.fit(X_train, y_train)
+        
+        # Make predictions and calculate accuracy
         y_pred = model.predict(X_test)
-        score = accuracy_score(y_test, y_pred)
+        accuracy = accuracy_score(y_test, y_pred)
+        results[name] = accuracy
         
-        accuracies.append(score)
-        model_names.append(name.upper())
-        
-        print(f"\n{name.upper()} Results:")
-        print(f"Accuracy: {score:.4f}")
-        print(classification_report(y_test, y_pred))
-        
-        if score > best_score:
-            best_score = score
+        # Update best model if this one is better
+        if accuracy > best_score:
+            best_score = accuracy
             best_model = model
+        
+        # Calculate feature importances if available
+        if hasattr(model, 'feature_importances_'):
+            feature_importances[name] = model.feature_importances_
+            
+        training_time = time.time() - start_time
+        print(f"\n{name.upper()} Model Performance:")
+        print(f"Accuracy: {accuracy:.4f}")
+        print(f"Training Time: {training_time:.2f} seconds")
+        print(f"\nConfusion Matrix:")
+        print(confusion_matrix(y_test, y_pred))
+        print("\nClassification Report:")
+        print(classification_report(y_test, y_pred))
     
-    # Set a more professional style
+    # Show feature importances for tree-based models
+    for name, importances in feature_importances.items():
+        print(f"\nFeature importances for {name}:")
+        feature_names = X_train.columns
+        indices = np.argsort(importances)[::-1]
+        for i in range(min(10, len(feature_names))):
+            print(f"{feature_names[indices[i]]}: {importances[indices[i]]:.4f}")
+    
+    # Create an enhanced visualization of model performance
+    plt.figure(figsize=(12, 8))
     plt.style.use('seaborn-v0_8-darkgrid')
     
-    # Create enhanced bar plot of accuracies with custom colors
+    # Get model names and accuracies
+    model_names = list(results.keys())
+    accuracies = [results[name] for name in model_names]
+    model_names = [name.upper() for name in model_names]  # Uppercase for display
+    
+    # Create enhanced bar plot
     colors = plt.cm.viridis(np.linspace(0.1, 0.9, len(accuracies)))
     bars = plt.bar(model_names, accuracies, color=colors, width=0.6, edgecolor='gray', linewidth=1)
     
-    # Add a light horizontal grid for readability
+    # Add grid, title and labels
     plt.grid(axis='y', linestyle='--', alpha=0.7)
-    
-    # Improve title and labels with better fonts
     plt.title(f'Model Accuracies for {round_name}', fontsize=14, fontweight='bold', pad=15)
     plt.xlabel('Models', fontsize=12, labelpad=10)
     plt.ylabel('Accuracy', fontsize=12, labelpad=10)
-    plt.ylim(0.5, 0.8)  # Set y-axis range for better visualization
     
-    # Add value labels on top of each bar with better formatting
-    for i, v in enumerate(accuracies):
-        plt.text(i, v + 0.01, f'{v:.3f}', ha='center', va='bottom', fontweight='bold', color='#444444')
+    # Add text for exact values on top of bars
+    for bar, accuracy in zip(bars, accuracies):
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2., height + 0.01,
+                f'{accuracy:.4f}', ha='center', va='bottom', fontsize=11, fontweight='bold')
     
-    # Improve tick labels
-    plt.xticks(fontsize=10, rotation=30, ha='right')
+    # Add a title showing best model
+    plt.annotate(f'Best Model: {model_names[accuracies.index(max(accuracies))]} ({max(accuracies):.4f})',
+                xy=(0.5, 0.95), xycoords='axes fraction', fontsize=12,
+                ha='center', va='top', bbox=dict(boxstyle='round,pad=0.5', facecolor='white', alpha=0.8))
+    
+    # Set y-axis to start at an appropriate value
+    plt.ylim(min(accuracies) * 0.95, max(accuracies) * 1.05)
+    
+    # Rotate x-axis labels slightly for better readability if needed
+    plt.xticks(rotation=0, fontsize=10, fontweight='bold')
     plt.yticks(fontsize=10)
     
+    # Add a subtle outer frame
+    plt.box(True)
+    
+    # Save the bar chart
     plt.tight_layout()
-    plt.savefig(os.path.join(project_root, f'{round_name.lower().replace(" ", "_")}_accuracies.png'), dpi=300)
+    plt.savefig(f'{round_name.lower().replace(" ", "_")}_model_comparison.png', dpi=300, bbox_inches='tight')
     plt.close()
     
     print(f"\nBest {round_name} model: {type(best_model).__name__}")
@@ -352,8 +390,11 @@ class Bracket:
         else:
             model_probs = probs['final']
         
-        # Return winner based on probability
-        return team1_id if model_probs[0][1] > 0.5 else team2_id
+        # Return winner and both teams' probabilities
+        team1_prob = model_probs[0][1]
+        team2_prob = model_probs[0][0]
+        winner_id = team1_id if team1_prob > team2_prob else team2_id
+        return winner_id, team1_prob, team2_prob
     
     def get_team_name(self, team_id):
         team = self.team_names[self.team_names['TeamID'] == team_id]
@@ -467,24 +508,12 @@ class BracketSimulation:
                 team1_id, team1_seed = matchup[0]
                 team2_id, team2_seed = matchup[1]
                 
-                # Create matchup stat entry if it doesn't exist
-                if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
-                    self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
-                
-                # Simulate this matchup multiple times
-                for _ in range(self.num_simulations):
-                    bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
-                    winner = bracket.simulate_matchup(team1_id, team2_id)
-                    if winner:
-                        self.matchup_stats[(team1_id, team2_id)][winner] += 1
-                
-                # Determine the winner and add to next round
-                winner_id = team1_id
-                winner_seed = team1_seed
-                if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
-                    winner_id = team2_id
-                    winner_seed = team2_seed
-                    
+                # Simulate this matchup once and store probabilities
+                bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+                winner, team1_prob, team2_prob = bracket.simulate_matchup(team1_id, team2_id)
+                self.matchup_stats[(team1_id, team2_id)] = {team1_id: team1_prob, team2_id: team2_prob}
+                winner_id = team1_id if team1_prob > team2_prob else team2_id
+                winner_seed = team1_seed if team1_prob > team2_prob else team2_seed
                 round1_winners.append((winner_id, winner_seed))
                 region_results[1].append(((team1_id, team1_seed), (team2_id, team2_seed), winner_id))
                 self.bracket_results[1].append(((region_code, team1_id, team1_seed), (region_code, team2_id, team2_seed), (region_code, winner_id)))
@@ -507,24 +536,12 @@ class BracketSimulation:
                 team1_id, team1_seed = matchup[0]
                 team2_id, team2_seed = matchup[1]
                 
-                # Create matchup stat entry if it doesn't exist
-                if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
-                    self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
-                
-                # Simulate this matchup multiple times
-                for _ in range(self.num_simulations):
-                    bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
-                    winner = bracket.simulate_matchup(team1_id, team2_id)
-                    if winner:
-                        self.matchup_stats[(team1_id, team2_id)][winner] += 1
-                
-                # Determine the winner and add to next round
-                winner_id = team1_id
-                winner_seed = team1_seed
-                if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
-                    winner_id = team2_id
-                    winner_seed = team2_seed
-                    
+                # Simulate this matchup once and store probabilities
+                bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+                winner, team1_prob, team2_prob = bracket.simulate_matchup(team1_id, team2_id)
+                self.matchup_stats[(team1_id, team2_id)] = {team1_id: team1_prob, team2_id: team2_prob}
+                winner_id = team1_id if team1_prob > team2_prob else team2_id
+                winner_seed = team1_seed if team1_prob > team2_prob else team2_seed
                 round2_winners.append((winner_id, winner_seed))
                 region_results[2].append(((team1_id, team1_seed), (team2_id, team2_seed), winner_id))
                 self.bracket_results[2].append(((region_code, team1_id, team1_seed), (region_code, team2_id, team2_seed), (region_code, winner_id)))
@@ -541,24 +558,12 @@ class BracketSimulation:
                 team1_id, team1_seed = matchup[0]
                 team2_id, team2_seed = matchup[1]
                 
-                # Create matchup stat entry if it doesn't exist
-                if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
-                    self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
-                
-                # Simulate this matchup multiple times
-                for _ in range(self.num_simulations):
-                    bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
-                    winner = bracket.simulate_matchup(team1_id, team2_id)
-                    if winner:
-                        self.matchup_stats[(team1_id, team2_id)][winner] += 1
-                
-                # Determine the winner and add to next round
-                winner_id = team1_id
-                winner_seed = team1_seed
-                if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
-                    winner_id = team2_id
-                    winner_seed = team2_seed
-                    
+                # Simulate this matchup once and store probabilities
+                bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+                winner, team1_prob, team2_prob = bracket.simulate_matchup(team1_id, team2_id)
+                self.matchup_stats[(team1_id, team2_id)] = {team1_id: team1_prob, team2_id: team2_prob}
+                winner_id = team1_id if team1_prob > team2_prob else team2_id
+                winner_seed = team1_seed if team1_prob > team2_prob else team2_seed
                 round3_winners.append((winner_id, winner_seed))
                 region_results[3].append(((team1_id, team1_seed), (team2_id, team2_seed), winner_id))
                 self.bracket_results[3].append(((region_code, team1_id, team1_seed), (region_code, team2_id, team2_seed), (region_code, winner_id)))
@@ -568,28 +573,14 @@ class BracketSimulation:
             team1_id, team1_seed = round3_winners[0]
             team2_id, team2_seed = round3_winners[1]
             
-            # Create matchup stat entry if it doesn't exist
-            if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
-                self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
-            
-            # Simulate this matchup multiple times
-            for _ in range(self.num_simulations):
-                bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
-                winner = bracket.simulate_matchup(team1_id, team2_id)
-                if winner:
-                    self.matchup_stats[(team1_id, team2_id)][winner] += 1
-            
-            # Determine the regional winner
-            winner_id = team1_id
-            winner_seed = team1_seed
-            if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
-                winner_id = team2_id
-                winner_seed = team2_seed
-                
+            # Simulate this matchup once and store probabilities
+            bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+            winner, team1_prob, team2_prob = bracket.simulate_matchup(team1_id, team2_id)
+            self.matchup_stats[(team1_id, team2_id)] = {team1_id: team1_prob, team2_id: team2_prob}
+            winner_id = team1_id if team1_prob > team2_prob else team2_id
+            winner_seed = team1_seed if team1_prob > team2_prob else team2_seed
             region_results[4].append(((team1_id, team1_seed), (team2_id, team2_seed), winner_id))
             self.bracket_results[4].append(((region_code, team1_id, team1_seed), (region_code, team2_id, team2_seed), (region_code, winner_id)))
-            
-            # Store the regional winner
             self.region_winners[region_code] = (winner_id, winner_seed)
             
             print(f"{region_code} Region Winner: {self.brackets[0].get_team_name(winner_id)} (Seed: {winner_seed})")
@@ -610,23 +601,13 @@ class BracketSimulation:
         team1_id, team1_seed = semifinal1[0]
         team2_id, team2_seed = semifinal1[1]
         
-        if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
-            self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
-        
-        for _ in range(self.num_simulations):
-            bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
-            winner = bracket.simulate_matchup(team1_id, team2_id)
-            if winner:
-                self.matchup_stats[(team1_id, team2_id)][winner] += 1
-        
-        # Determine first finalist
-        finalist1_id = team1_id
-        finalist1_seed = team1_seed
-        finalist1_region = 'W'
-        if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
-            finalist1_id = team2_id
-            finalist1_seed = team2_seed
-            finalist1_region = 'Y'
+        # Simulate this matchup once and store probabilities
+        bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+        winner, team1_prob, team2_prob = bracket.simulate_matchup(team1_id, team2_id)
+        self.matchup_stats[(team1_id, team2_id)] = {team1_id: team1_prob, team2_id: team2_prob}
+        finalist1_id = team1_id if team1_prob > team2_prob else team2_id
+        finalist1_seed = team1_seed if team1_prob > team2_prob else team2_seed
+        finalist1_region = 'W' if team1_prob > team2_prob else 'Y'
         
         self.bracket_results[5].append((("W", team1_id, team1_seed), ("Y", team2_id, team2_seed), (finalist1_region, finalist1_id)))
         
@@ -637,20 +618,13 @@ class BracketSimulation:
         if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
             self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
         
-        for _ in range(self.num_simulations):
-            bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
-            winner = bracket.simulate_matchup(team1_id, team2_id)
-            if winner:
-                self.matchup_stats[(team1_id, team2_id)][winner] += 1
-        
-        # Determine second finalist
-        finalist2_id = team1_id
-        finalist2_seed = team1_seed
-        finalist2_region = 'X'
-        if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
-            finalist2_id = team2_id
-            finalist2_seed = team2_seed
-            finalist2_region = 'Z'
+        # Simulate this matchup once and store probabilities
+        bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+        winner, team1_prob, team2_prob = bracket.simulate_matchup(team1_id, team2_id)
+        self.matchup_stats[(team1_id, team2_id)] = {team1_id: team1_prob, team2_id: team2_prob}
+        finalist2_id = team1_id if team1_prob > team2_prob else team2_id
+        finalist2_seed = team1_seed if team1_prob > team2_prob else team2_seed
+        finalist2_region = 'X' if team1_prob > team2_prob else 'Z'
         
         self.bracket_results[5].append((("X", team1_id, team1_seed), ("Z", team2_id, team2_seed), (finalist2_region, finalist2_id)))
         
@@ -673,20 +647,13 @@ class BracketSimulation:
         if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
             self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
         
-        for _ in range(self.num_simulations):
-            bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
-            winner = bracket.simulate_matchup(team1_id, team2_id)
-            if winner:
-                self.matchup_stats[(team1_id, team2_id)][winner] += 1
-        
-        # Determine the champion
-        champion_id = team1_id
-        champion_seed = team1_seed
-        champion_region = team1_region
-        if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
-            champion_id = team2_id
-            champion_seed = team2_seed
-            champion_region = team2_region
+        # Simulate this matchup once and store probabilities
+        bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+        winner, team1_prob, team2_prob = bracket.simulate_matchup(team1_id, team2_id)
+        self.matchup_stats[(team1_id, team2_id)] = {team1_id: team1_prob, team2_id: team2_prob}
+        champion_id = team1_id if team1_prob > team2_prob else team2_id
+        champion_seed = team1_seed if team1_prob > team2_prob else team2_seed
+        champion_region = team1_region if team1_prob > team2_prob else team2_region
         
         self.bracket_results[6].append(((team1_region, team1_id, team1_seed), (team2_region, team2_id, team2_seed), (champion_region, champion_id)))
         
