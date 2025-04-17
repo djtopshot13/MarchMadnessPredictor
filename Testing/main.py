@@ -501,9 +501,9 @@ class BracketSimulation:
             for seed1, seed2 in matchup_pairs:
                 # Find teams with these seeds
                 team1 = next((t for t in teams if t[1] == seed1), None)
-                print(f"Team1: {team1}")
+                # print(f"Team1: {team1}")
                 team2 = next((t for t in teams if t[1] == seed2), None)
-                print(f"Team2: {team2}")
+                # print(f"Team2: {team2}")
                 
                 if team1 and team2:  # Ensure both teams exist
                     round1_matchups.append(((team1[0], team1[1]), (team2[0], team2[1])))
