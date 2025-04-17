@@ -524,11 +524,18 @@ class BracketSimulation:
             
             # Simulate Round 2 (Second Round)
             self.current_round = 2
+
+            # Sorting lower seed as team 1 and higher seed as team 2
+            r2_match1 = (round1_winners[0], round1_winners[1]) if round1_winners[0][1] <= round1_winners[1][1] else (round1_winners[0], round1_winners[1])
+            r2_match2 = (round1_winners[2], round1_winners[3]) if round1_winners[2][1] <= round1_winners[3][1] else (round1_winners[3], round1_winners[2])
+            r2_match3 = (round1_winners[4], round1_winners[5]) if round1_winners[4][1] <= round1_winners[5][1] else (round1_winners[5], round1_winners[4])
+            r2_match4 = (round1_winners[6], round1_winners[7]) if round1_winners[6][1] <= round1_winners[7][1] else (round1_winners[7], round1_winners[6])
+
             round2_matchups = [
-                (round1_winners[0], round1_winners[1]),  # Winners of 1v16 and 8v9
-                (round1_winners[2], round1_winners[3]),  # Winners of 5v12 and 4v13
-                (round1_winners[4], round1_winners[5]),  # Winners of 6v11 and 3v14
-                (round1_winners[6], round1_winners[7])   # Winners of 7v10 and 2v15
+                r2_match1, # Winners of 1v16 and 8v9
+                r2_match2,  # Winners of 5v12 and 4v13
+                r2_match3,  # Winners of 6v11 and 3v14
+                r2_match4   # Winners of 7v10 and 2v15
             ]
             
             round2_winners = []
@@ -548,9 +555,13 @@ class BracketSimulation:
             
             # Simulate Round 3 (Sweet 16)
             self.current_round = 3
+
+            # Sorting lower seed as team 1 and higher seed as team 2
+            r3_match1 = (round1_winners[0], round1_winners[1]) if round1_winners[0][1] <= round1_winners[1][1] else (round1_winners[0], round1_winners[1])
+            r3_match2 = (round1_winners[2], round1_winners[3]) if round1_winners[2][1] <= round1_winners[3][1] else (round1_winners[3], round1_winners[2])
             round3_matchups = [
-                (round2_winners[0], round2_winners[1]),  # Winners from top half of bracket
-                (round2_winners[2], round2_winners[3])   # Winners from bottom half of bracket
+                r3_match1,  # Winners from top half of bracket
+                r3_match2   # Winners from bottom half of bracket
             ]
             
             round3_winners = []
@@ -570,9 +581,10 @@ class BracketSimulation:
             
             # Simulate Round 4 (Elite 8 - Regional Final)
             self.current_round = 4
-            team1_id, team1_seed = round3_winners[0]
-            team2_id, team2_seed = round3_winners[1]
-            
+            r4_match = (round3_winners[0], round3_winners[1]) if round3_winners[0][1] <= round3_winners[1][1] else (round3_winners[1], round3_winners[0])
+            team1_id, team1_seed = r4_match[0]
+            team2_id, team2_seed = r4_match[1]
+
             # Simulate this matchup once and store probabilities
             bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
             winner, team1_prob, team2_prob = bracket.simulate_matchup(team1_id, team2_id)
@@ -590,16 +602,17 @@ class BracketSimulation:
         print("\nSimulating Final Four...")
         self.current_round = 5
         
-        # Traditional Final Four matchups: W vs Y, X vs Z
+        # Traditional Final Four matchups: W vs X, Y vs Z
         # These pairings can be adjusted based on actual tournament structure
-        semifinal1 = ((self.region_winners['W'][0], self.region_winners['W'][1]), 
-                     (self.region_winners['Y'][0], self.region_winners['Y'][1]))
-        semifinal2 = ((self.region_winners['X'][0], self.region_winners['X'][1]), 
-                     (self.region_winners['Z'][0], self.region_winners['Z'][1]))
+        semifinal1 = ((self.region_winners['W'][0], self.region_winners['W'][1], 'W'), 
+                     (self.region_winners['X'][0], self.region_winners['X'][1], 'X'))
+        semifinal2 = ((self.region_winners['Y'][0], self.region_winners['Y'][1], 'Y'), 
+                     (self.region_winners['Z'][0], self.region_winners['Z'][1], 'Z'))
         
         # Simulate first semifinal
-        team1_id, team1_seed = semifinal1[0]
-        team2_id, team2_seed = semifinal1[1]
+        r5_match1 = (semifinal1[0], semifinal1[1]) if semifinal1[0][1] <= semifinal1[1][1] else (semifinal1[1], semifinal1[0])
+        team1_id, team1_seed, team1_region = r5_match1[0]
+        team2_id, team2_seed, team2_region = r5_match1[1]
         
         # Simulate this matchup once and store probabilities
         bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
@@ -607,13 +620,14 @@ class BracketSimulation:
         self.matchup_stats[(team1_id, team2_id)] = {team1_id: team1_prob, team2_id: team2_prob}
         finalist1_id = team1_id if team1_prob > team2_prob else team2_id
         finalist1_seed = team1_seed if team1_prob > team2_prob else team2_seed
-        finalist1_region = 'W' if team1_prob > team2_prob else 'Y'
+        finalist1_region = team1_region if team1_prob > team2_prob else team2_region
         
-        self.bracket_results[5].append((("W", team1_id, team1_seed), ("Y", team2_id, team2_seed), (finalist1_region, finalist1_id)))
+        self.bracket_results[5].append(((team1_region, team1_id, team1_seed), (team2_region, team2_id, team2_seed), (finalist1_region, finalist1_id)))
         
         # Simulate second semifinal
-        team1_id, team1_seed = semifinal2[0]
-        team2_id, team2_seed = semifinal2[1]
+        r5_match2 = (semifinal2[0], semifinal2[1]) if semifinal2[0][1] <= semifinal2[1][1] else (semifinal2[1], semifinal2[0])
+        team1_id, team1_seed, team1_region = r5_match2[0]
+        team2_id, team2_seed, team2_region = r5_match2[1]
         
         if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
             self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
@@ -624,9 +638,9 @@ class BracketSimulation:
         self.matchup_stats[(team1_id, team2_id)] = {team1_id: team1_prob, team2_id: team2_prob}
         finalist2_id = team1_id if team1_prob > team2_prob else team2_id
         finalist2_seed = team1_seed if team1_prob > team2_prob else team2_seed
-        finalist2_region = 'X' if team1_prob > team2_prob else 'Z'
+        finalist2_region = team1_region if team1_prob > team2_prob else team2_region
         
-        self.bracket_results[5].append((("X", team1_id, team1_seed), ("Z", team2_id, team2_seed), (finalist2_region, finalist2_id)))
+        self.bracket_results[5].append(((team1_region, team1_id, team1_seed), (team2_region, team2_id, team2_seed), (finalist2_region, finalist2_id)))
         
         # Store championship matchup
         self.championship_matchup = ((finalist1_id, finalist1_seed, finalist1_region), 
@@ -641,8 +655,9 @@ class BracketSimulation:
         self.current_round = 6
         
         # Get championship matchup
-        team1_id, team1_seed, team1_region = self.championship_matchup[0]
-        team2_id, team2_seed, team2_region = self.championship_matchup[1]
+        r6_matchup = (self.championship_matchup[0], self.championship_matchup[1]) if self.championship_matchup[0][1] <= self.championship_matchup[1][1] else (self.championship_matchup[1], self.championship_matchup[0])
+        team1_id, team1_seed, team1_region = r6_matchup[0]
+        team2_id, team2_seed, team2_region = r6_matchup[1]
         
         if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
             self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
