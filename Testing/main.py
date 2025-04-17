@@ -29,11 +29,11 @@ from preprocessing import clean_ncaa_tourney_compact_results, clean_ncaa_tourney
     clean_regular_season_detailed_results, clean_tourney_seeds, clean_team_conferences
 
 # Run preprocessing steps
-clean_ncaa_tourney_compact_results()
-clean_ncaa_tourney_detailed_results()
-clean_regular_season_detailed_results()
-clean_tourney_seeds()
-clean_team_conferences()
+# clean_ncaa_tourney_compact_results()
+# clean_ncaa_tourney_detailed_results()
+# clean_regular_season_detailed_results()
+# clean_tourney_seeds()
+# clean_team_conferences()
 
 # Load preprocessed NCAA datasets
 data_dir = os.path.join(project_root, 'MarchMadnessData')
@@ -501,7 +501,9 @@ class BracketSimulation:
             for seed1, seed2 in matchup_pairs:
                 # Find teams with these seeds
                 team1 = next((t for t in teams if t[1] == seed1), None)
+                print(f"Team1: {team1}")
                 team2 = next((t for t in teams if t[1] == seed2), None)
+                print(f"Team2: {team2}")
                 
                 if team1 and team2:  # Ensure both teams exist
                     round1_matchups.append(((team1[0], team1[1]), (team2[0], team2[1])))
@@ -558,6 +560,11 @@ class BracketSimulation:
             for matchup in round2_matchups:
                 team1_id, team1_seed = matchup[0]
                 team2_id, team2_seed = matchup[1]
+
+                if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+                    self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+                else:
+                    print(f"Round {self.current_round} Matchup already simulated: {team1_id} vs {team2_id}")
                 
                 # Simulate this matchup once and store probabilities
                 bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
@@ -573,8 +580,8 @@ class BracketSimulation:
             self.current_round = 3
 
             # Sorting lower seed as team 1 and higher seed as team 2
-            r3_match1 = (round1_winners[0], round1_winners[1]) if round1_winners[0][1] <= round1_winners[1][1] else (round1_winners[1], round1_winners[0])
-            r3_match2 = (round1_winners[2], round1_winners[3]) if round1_winners[2][1] <= round1_winners[3][1] else (round1_winners[3], round1_winners[2])
+            r3_match1 = (round2_winners[0], round2_winners[1]) if round2_winners[0][1] <= round2_winners[1][1] else (round2_winners[1], round2_winners[0])
+            r3_match2 = (round2_winners[2], round2_winners[3]) if round2_winners[2][1] <= round2_winners[3][1] else (round2_winners[3], round2_winners[2])
             round3_matchups = [
                 r3_match1,  # Winners from top half of bracket
                 r3_match2   # Winners from bottom half of bracket
@@ -584,6 +591,11 @@ class BracketSimulation:
             for matchup in round3_matchups:
                 team1_id, team1_seed = matchup[0]
                 team2_id, team2_seed = matchup[1]
+
+                if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+                    self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+                else:
+                    print(f"Round {self.current_round} Matchup already simulated: {team1_id} vs {team2_id}")
                 
                 # Simulate this matchup once and store probabilities
                 bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
@@ -600,6 +612,11 @@ class BracketSimulation:
             r4_match = (round3_winners[0], round3_winners[1]) if round3_winners[0][1] <= round3_winners[1][1] else (round3_winners[1], round3_winners[0])
             team1_id, team1_seed = r4_match[0]
             team2_id, team2_seed = r4_match[1]
+
+            if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+                self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+            else:
+                print(f"Round {self.current_round} Matchup already simulated: {team1_id} vs {team2_id}")
 
             # Simulate this matchup once and store probabilities
             bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
@@ -629,6 +646,11 @@ class BracketSimulation:
         r5_match1 = (semifinal1[0], semifinal1[1]) if semifinal1[0][1] <= semifinal1[1][1] else (semifinal1[1], semifinal1[0])
         team1_id, team1_seed, team1_region = r5_match1[0]
         team2_id, team2_seed, team2_region = r5_match1[1]
+
+        if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+            self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+        else:
+            print(f"Round {self.current_round} Matchup already simulated: {team1_id} vs {team2_id}")
         
         # Simulate this matchup once and store probabilities
         bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
@@ -645,8 +667,10 @@ class BracketSimulation:
         team1_id, team1_seed, team1_region = r5_match2[0]
         team2_id, team2_seed, team2_region = r5_match2[1]
         
-        # if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
-        self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+        if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+            self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+        else:
+            print(f"Round {self.current_round} Matchup already simulated: {team1_id} vs {team2_id}")
         
         # Simulate this matchup once and store probabilities
         bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
@@ -675,8 +699,10 @@ class BracketSimulation:
         team1_id, team1_seed, team1_region = r6_matchup[0]
         team2_id, team2_seed, team2_region = r6_matchup[1]
         
-        # if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
-        self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+        if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+            self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+        else: 
+            print(f"Round {self.current_round} Matchup already simulated: {team1_id} vs {team2_id}")
         
         # Simulate this matchup once and store probabilities
         bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
