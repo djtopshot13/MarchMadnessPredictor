@@ -258,7 +258,7 @@ def evaluate_models(models, X_train, X_test, y_train, y_test, round_name):
     
     # Save the bar chart
     plt.tight_layout()
-    plt.savefig(f'{round_name.lower().replace(" ", "_")}_model_comparison.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'Modeling/{round_name.lower().replace(" ", "_")}_model_comparison.png', dpi=300, bbox_inches='tight')
     plt.close()
     
     print(f"\nBest {round_name} model: {type(best_model).__name__}")
@@ -846,7 +846,7 @@ class BracketSimulation:
                     ha='center', fontsize=9, fontstyle='italic', color='#666666')
         
         plt.tight_layout()
-        plt.savefig(f'matchup_predictions_group{str(round_num) + "_" + region}.png', dpi=300, bbox_inches='tight')
+        plt.savefig(f'MatchupResults/matchup_predictions_group{str(round_num) + "_" + region}.png', dpi=300, bbox_inches='tight')
         plt.close()
 
     # def _visualize_tournament_bracket(self):
