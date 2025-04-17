@@ -195,19 +195,32 @@ def evaluate_models(models, X_train, X_test, y_train, y_test, round_name):
             best_score = score
             best_model = model
     
-    # Create bar plot of accuracies
-    plt.bar(model_names, accuracies)
-    plt.title(f'Model Accuracies for {round_name}')
-    plt.xlabel('Models')
-    plt.ylabel('Accuracy')
+    # Set a more professional style
+    plt.style.use('seaborn-v0_8-darkgrid')
+    
+    # Create enhanced bar plot of accuracies with custom colors
+    colors = plt.cm.viridis(np.linspace(0.1, 0.9, len(accuracies)))
+    bars = plt.bar(model_names, accuracies, color=colors, width=0.6, edgecolor='gray', linewidth=1)
+    
+    # Add a light horizontal grid for readability
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    
+    # Improve title and labels with better fonts
+    plt.title(f'Model Accuracies for {round_name}', fontsize=14, fontweight='bold', pad=15)
+    plt.xlabel('Models', fontsize=12, labelpad=10)
+    plt.ylabel('Accuracy', fontsize=12, labelpad=10)
     plt.ylim(0.5, 0.8)  # Set y-axis range for better visualization
     
-    # Add value labels on top of each bar
+    # Add value labels on top of each bar with better formatting
     for i, v in enumerate(accuracies):
-        plt.text(i, v + 0.01, f'{v:.3f}', ha='center')
+        plt.text(i, v + 0.01, f'{v:.3f}', ha='center', va='bottom', fontweight='bold', color='#444444')
+    
+    # Improve tick labels
+    plt.xticks(fontsize=10, rotation=30, ha='right')
+    plt.yticks(fontsize=10)
     
     plt.tight_layout()
-    plt.savefig(os.path.join(project_root, f'{round_name.lower().replace(" ", "_")}_accuracies.png'))
+    plt.savefig(os.path.join(project_root, f'{round_name.lower().replace(" ", "_")}_accuracies.png'), dpi=300)
     plt.close()
     
     print(f"\nBest {round_name} model: {type(best_model).__name__}")
@@ -359,39 +372,328 @@ class BracketSimulation:
     def simulate_brackets(self):
         # Get tournament teams for the season
         season_seeds = tourney_seeds[tourney_seeds['Season'] == self.season]
-        teams = season_seeds['TeamID'].tolist()
         
-        # Create initial matchups based on seeding
-        matchups = []
-        for i in range(1, 9):
-            team1, team2 = teams[i-1], teams[16-i]
-            matchups.append((team1, team2))
+        # Initialize regions and bracket state
+        self.regions = {'W': [], 'X': [], 'Y': [], 'Z': []}
+        self.region_winners = {}
+        self.championship_matchup = None
+        self.champion = None
+        self.bracket_results = {
+            1: [],  # First Round results (64 teams, 32 matchups)
+            2: [],  # Second Round results (32 teams, 16 matchups)
+            3: [],  # Sweet 16 results (16 teams, 8 matchups)
+            4: [],  # Elite 8 results (8 teams, 4 matchups)
+            5: [],  # Final Four results (4 teams, 2 matchups)
+            6: []   # Championship result (2 teams, 1 matchup)
+        }
         
-        # Run simulations for each matchup
-        for team1, team2 in matchups:
-            if (team1, team2) not in self.matchup_stats and (team2, team1) not in self.matchup_stats:
-                self.matchup_stats[(team1, team2)] = {team1: 0, team2: 0}
+        # Group teams by region
+        for _, row in season_seeds.iterrows():
+            region_code = row['Seed'][0]  # Extract W, X, Y, Z
+            # Handle non-standard seed formats like '16a' by using regex to extract just the numeric part
+            import re
+            seed_match = re.search(r'\d+', row['Seed'][1:])
+            seed_num = int(seed_match.group()) if seed_match else 16  # Default to 16 if no number found
+            team_id = row['TeamID']
+            # Store as (team_id, seed_num) tuples in each region
+            if region_code in self.regions:
+                self.regions[region_code].append((team_id, seed_num))
+        
+        # Sort teams by seed number within each region
+        for region in self.regions:
+            self.regions[region] = sorted(self.regions[region], key=lambda x: x[1])
+            # Print count of teams in each region
+            print(f"{region} region: {len(self.regions[region])} teams")
+        
+        # Simulate regional brackets (Rounds 1-4)
+        self.simulate_regional_brackets()
+        
+        # Simulate Final Four (Round 5)
+        self.simulate_final_four()
+        
+        # Simulate Championship (Round 6)
+        self.simulate_championship()
+    
+    def simulate_regional_brackets(self):
+        # Simulate rounds 1-4 within each region
+        for region_code, teams in self.regions.items():
+            print(f"Simulating {region_code} region...")
+            
+            # Ensure we have all 16 seeds for this region
+            if len(teams) < 16:
+                print(f"Warning: {region_code} region has fewer than 16 teams ({len(teams)} teams)")
+                # If needed, could add placeholder teams here
+            
+            # Sort teams by seed to ensure proper ordering
+            teams.sort(key=lambda x: x[1])  # Sort by seed number
+            
+            # Create play-in games for 16, 11 seeds if necessary (not implemented here)
+            # For simplicity, we'll use the regular 1-16 seeding matchups
+            
+            # Round 1: Create all first round matchups (1 vs 16, 8 vs 9, etc.)
+            round1_matchups = []
+            # Standard NCAA tournament first round matchups:
+            matchup_pairs = [
+                (1, 16), (8, 9),    # Top quarter of bracket
+                (5, 12), (4, 13),   # Second quarter of bracket
+                (6, 11), (3, 14),   # Third quarter of bracket
+                (7, 10), (2, 15)    # Bottom quarter of bracket
+            ]
+            
+            # Create matchups based on seed numbers
+            for seed1, seed2 in matchup_pairs:
+                # Find teams with these seeds
+                team1 = next((t for t in teams if t[1] == seed1), None)
+                team2 = next((t for t in teams if t[1] == seed2), None)
+                
+                if team1 and team2:  # Ensure both teams exist
+                    round1_matchups.append(((team1[0], team1[1]), (team2[0], team2[1])))
+                else:
+                    print(f"Warning: Could not find teams for matchup {seed1} vs {seed2} in {region_code} region")
+                    # In a real implementation, we might handle this better
+            
+            # Store all matchups for this region with region code
+            region_results = {
+                1: [],  # First round results
+                2: [],  # Second round results
+                3: [],  # Sweet 16 results
+                4: []   # Elite 8 results
+            }
+            
+            # Simulate Round 1
+            self.current_round = 1
+            round1_winners = []
+            for matchup in round1_matchups:
+                team1_id, team1_seed = matchup[0]
+                team2_id, team2_seed = matchup[1]
+                
+                # Create matchup stat entry if it doesn't exist
+                if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+                    self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
                 
                 # Simulate this matchup multiple times
                 for _ in range(self.num_simulations):
                     bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
-                    winner = bracket.simulate_matchup(team1, team2)
+                    winner = bracket.simulate_matchup(team1_id, team2_id)
                     if winner:
-                        self.matchup_stats[(team1, team2)][winner] += 1
+                        self.matchup_stats[(team1_id, team2_id)][winner] += 1
                 
+                # Determine the winner and add to next round
+                winner_id = team1_id
+                winner_seed = team1_seed
+                if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
+                    winner_id = team2_id
+                    winner_seed = team2_seed
+                    
+                round1_winners.append((winner_id, winner_seed))
+                region_results[1].append(((team1_id, team1_seed), (team2_id, team2_seed), winner_id))
+                self.bracket_results[1].append(((region_code, team1_id, team1_seed), (region_code, team2_id, team2_seed), (region_code, winner_id)))
+            
+            # Add one bracket instance
+            if not self.brackets:
                 self.brackets.append(bracket)
+            
+            # Simulate Round 2 (Second Round)
+            self.current_round = 2
+            round2_matchups = [
+                (round1_winners[0], round1_winners[1]),  # Winners of 1v16 and 8v9
+                (round1_winners[2], round1_winners[3]),  # Winners of 5v12 and 4v13
+                (round1_winners[4], round1_winners[5]),  # Winners of 6v11 and 3v14
+                (round1_winners[6], round1_winners[7])   # Winners of 7v10 and 2v15
+            ]
+            
+            round2_winners = []
+            for matchup in round2_matchups:
+                team1_id, team1_seed = matchup[0]
+                team2_id, team2_seed = matchup[1]
                 
-                # Update round number for next set of matchups
-                if len(self.matchup_stats) % 32 == 0:  # First round complete
-                    self.current_round = 2
-                elif len(self.matchup_stats) % 16 == 0:  # Second round complete
-                    self.current_round = 3
-                elif len(self.matchup_stats) % 8 == 0:  # Sweet 16 complete
-                    self.current_round = 4
-                elif len(self.matchup_stats) % 4 == 0:  # Elite 8 complete
-                    self.current_round = 5
-                elif len(self.matchup_stats) % 2 == 0:  # Final Four complete
-                    self.current_round = 6
+                # Create matchup stat entry if it doesn't exist
+                if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+                    self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+                
+                # Simulate this matchup multiple times
+                for _ in range(self.num_simulations):
+                    bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+                    winner = bracket.simulate_matchup(team1_id, team2_id)
+                    if winner:
+                        self.matchup_stats[(team1_id, team2_id)][winner] += 1
+                
+                # Determine the winner and add to next round
+                winner_id = team1_id
+                winner_seed = team1_seed
+                if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
+                    winner_id = team2_id
+                    winner_seed = team2_seed
+                    
+                round2_winners.append((winner_id, winner_seed))
+                region_results[2].append(((team1_id, team1_seed), (team2_id, team2_seed), winner_id))
+                self.bracket_results[2].append(((region_code, team1_id, team1_seed), (region_code, team2_id, team2_seed), (region_code, winner_id)))
+            
+            # Simulate Round 3 (Sweet 16)
+            self.current_round = 3
+            round3_matchups = [
+                (round2_winners[0], round2_winners[1]),  # Winners from top half of bracket
+                (round2_winners[2], round2_winners[3])   # Winners from bottom half of bracket
+            ]
+            
+            round3_winners = []
+            for matchup in round3_matchups:
+                team1_id, team1_seed = matchup[0]
+                team2_id, team2_seed = matchup[1]
+                
+                # Create matchup stat entry if it doesn't exist
+                if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+                    self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+                
+                # Simulate this matchup multiple times
+                for _ in range(self.num_simulations):
+                    bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+                    winner = bracket.simulate_matchup(team1_id, team2_id)
+                    if winner:
+                        self.matchup_stats[(team1_id, team2_id)][winner] += 1
+                
+                # Determine the winner and add to next round
+                winner_id = team1_id
+                winner_seed = team1_seed
+                if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
+                    winner_id = team2_id
+                    winner_seed = team2_seed
+                    
+                round3_winners.append((winner_id, winner_seed))
+                region_results[3].append(((team1_id, team1_seed), (team2_id, team2_seed), winner_id))
+                self.bracket_results[3].append(((region_code, team1_id, team1_seed), (region_code, team2_id, team2_seed), (region_code, winner_id)))
+            
+            # Simulate Round 4 (Elite 8 - Regional Final)
+            self.current_round = 4
+            team1_id, team1_seed = round3_winners[0]
+            team2_id, team2_seed = round3_winners[1]
+            
+            # Create matchup stat entry if it doesn't exist
+            if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+                self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+            
+            # Simulate this matchup multiple times
+            for _ in range(self.num_simulations):
+                bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+                winner = bracket.simulate_matchup(team1_id, team2_id)
+                if winner:
+                    self.matchup_stats[(team1_id, team2_id)][winner] += 1
+            
+            # Determine the regional winner
+            winner_id = team1_id
+            winner_seed = team1_seed
+            if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
+                winner_id = team2_id
+                winner_seed = team2_seed
+                
+            region_results[4].append(((team1_id, team1_seed), (team2_id, team2_seed), winner_id))
+            self.bracket_results[4].append(((region_code, team1_id, team1_seed), (region_code, team2_id, team2_seed), (region_code, winner_id)))
+            
+            # Store the regional winner
+            self.region_winners[region_code] = (winner_id, winner_seed)
+            
+            print(f"{region_code} Region Winner: {self.brackets[0].get_team_name(winner_id)} (Seed: {winner_seed})")
+        
+    def simulate_final_four(self):
+        # Simulate Round 5 (Final Four)
+        print("\nSimulating Final Four...")
+        self.current_round = 5
+        
+        # Traditional Final Four matchups: W vs Y, X vs Z
+        # These pairings can be adjusted based on actual tournament structure
+        semifinal1 = ((self.region_winners['W'][0], self.region_winners['W'][1]), 
+                     (self.region_winners['Y'][0], self.region_winners['Y'][1]))
+        semifinal2 = ((self.region_winners['X'][0], self.region_winners['X'][1]), 
+                     (self.region_winners['Z'][0], self.region_winners['Z'][1]))
+        
+        # Simulate first semifinal
+        team1_id, team1_seed = semifinal1[0]
+        team2_id, team2_seed = semifinal1[1]
+        
+        if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+            self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+        
+        for _ in range(self.num_simulations):
+            bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+            winner = bracket.simulate_matchup(team1_id, team2_id)
+            if winner:
+                self.matchup_stats[(team1_id, team2_id)][winner] += 1
+        
+        # Determine first finalist
+        finalist1_id = team1_id
+        finalist1_seed = team1_seed
+        finalist1_region = 'W'
+        if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
+            finalist1_id = team2_id
+            finalist1_seed = team2_seed
+            finalist1_region = 'Y'
+        
+        self.bracket_results[5].append((("W", team1_id, team1_seed), ("Y", team2_id, team2_seed), (finalist1_region, finalist1_id)))
+        
+        # Simulate second semifinal
+        team1_id, team1_seed = semifinal2[0]
+        team2_id, team2_seed = semifinal2[1]
+        
+        if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+            self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+        
+        for _ in range(self.num_simulations):
+            bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+            winner = bracket.simulate_matchup(team1_id, team2_id)
+            if winner:
+                self.matchup_stats[(team1_id, team2_id)][winner] += 1
+        
+        # Determine second finalist
+        finalist2_id = team1_id
+        finalist2_seed = team1_seed
+        finalist2_region = 'X'
+        if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
+            finalist2_id = team2_id
+            finalist2_seed = team2_seed
+            finalist2_region = 'Z'
+        
+        self.bracket_results[5].append((("X", team1_id, team1_seed), ("Z", team2_id, team2_seed), (finalist2_region, finalist2_id)))
+        
+        # Store championship matchup
+        self.championship_matchup = ((finalist1_id, finalist1_seed, finalist1_region), 
+                                    (finalist2_id, finalist2_seed, finalist2_region))
+        
+        print(f"First Finalist: {self.brackets[0].get_team_name(finalist1_id)} ({finalist1_region} Region, Seed: {finalist1_seed})")
+        print(f"Second Finalist: {self.brackets[0].get_team_name(finalist2_id)} ({finalist2_region} Region, Seed: {finalist2_seed})")
+    
+    def simulate_championship(self):
+        # Simulate Round 6 (Championship)
+        print("\nSimulating Championship...")
+        self.current_round = 6
+        
+        # Get championship matchup
+        team1_id, team1_seed, team1_region = self.championship_matchup[0]
+        team2_id, team2_seed, team2_region = self.championship_matchup[1]
+        
+        if (team1_id, team2_id) not in self.matchup_stats and (team2_id, team1_id) not in self.matchup_stats:
+            self.matchup_stats[(team1_id, team2_id)] = {team1_id: 0, team2_id: 0}
+        
+        for _ in range(self.num_simulations):
+            bracket = Bracket(self.season, self.model, self.scaler, current_round=self.current_round)
+            winner = bracket.simulate_matchup(team1_id, team2_id)
+            if winner:
+                self.matchup_stats[(team1_id, team2_id)][winner] += 1
+        
+        # Determine the champion
+        champion_id = team1_id
+        champion_seed = team1_seed
+        champion_region = team1_region
+        if self.matchup_stats[(team1_id, team2_id)][team2_id] > self.matchup_stats[(team1_id, team2_id)][team1_id]:
+            champion_id = team2_id
+            champion_seed = team2_seed
+            champion_region = team2_region
+        
+        self.bracket_results[6].append(((team1_region, team1_id, team1_seed), (team2_region, team2_id, team2_seed), (champion_region, champion_id)))
+        
+        # Store the champion
+        self.champion = (champion_id, champion_seed, champion_region)
+        
+        print(f"Champion: {self.brackets[0].get_team_name(champion_id)} ({champion_region} Region, Seed: {champion_seed})")
     
     def visualize_matchup_stats(self):
         # Get a sample bracket to use for team name lookups
@@ -406,6 +708,13 @@ class BracketSimulation:
         self._visualize_tournament_bracket()
     
     def _visualize_matchup_bars(self):
+        # Set a professional style
+        plt.style.use('seaborn-v0_8-whitegrid')
+        
+        # Define a better color palette
+        team1_color = '#1e88e5'  # Blue
+        team2_color = '#d81b60'  # Red
+        
         # Split matchups into groups of 8 for better visualization
         matchup_items = list(self.matchup_stats.items())
         num_groups = (len(matchup_items) + 7) // 8
@@ -415,7 +724,9 @@ class BracketSimulation:
             end_idx = min(start_idx + 8, len(matchup_items))
             current_matchups = matchup_items[start_idx:end_idx]
             
-            plt.figure(figsize=(12, 12))
+            # Set up figure with better aesthetics
+            plt.figure(figsize=(14, 14), facecolor='white')
+            plt.subplots_adjust(hspace=0.5)
             
             for i, (matchup, stats) in enumerate(current_matchups):
                 team1, team2 = matchup
@@ -429,17 +740,22 @@ class BracketSimulation:
                 # Create a subplot for each matchup
                 ax = plt.subplot(len(current_matchups), 1, i+1)
                 
-                # Create the horizontal bars
-                bars1 = plt.barh([0], [team1_pct], label=team1_name, color='#3498db', height=0.5)
-                bars2 = plt.barh([0], [team2_pct], left=[team1_pct], label=team2_name, color='#e74c3c', height=0.5)
+                # Add background shading for better visual separation
+                ax.axhspan(-0.25, 0.25, color='#f5f5f5', zorder=0)
                 
-                # Add percentage labels
-                if team1_pct > 5:  # Only show label if bar is wide enough
+                # Create the horizontal bars with enhanced styling
+                bars1 = plt.barh([0], [team1_pct], label=team1_name, color=team1_color, 
+                                 height=0.5, alpha=0.85, edgecolor='white', linewidth=1)
+                bars2 = plt.barh([0], [team2_pct], left=[team1_pct], label=team2_name, 
+                                 color=team2_color, height=0.5, alpha=0.85, edgecolor='white', linewidth=1)
+                
+                # Add percentage labels with improved styling
+                if team1_pct > 8:  # Only show label if bar is wide enough
                     plt.text(team1_pct/2, 0, f'{team1_pct:.1f}%', 
-                            ha='center', va='center', color='white', fontweight='bold')
-                if team2_pct > 5:
+                            ha='center', va='center', color='white', fontweight='bold', fontsize=11)
+                if team2_pct > 8:
                     plt.text(team1_pct + team2_pct/2, 0, f'{team2_pct:.1f}%', 
-                            ha='center', va='center', color='white', fontweight='bold')
+                            ha='center', va='center', color='white', fontweight='bold', fontsize=11)
                 
                 # Customize the subplot
                 plt.yticks([])
@@ -447,8 +763,12 @@ class BracketSimulation:
                 ax.spines['top'].set_visible(False)
                 ax.spines['right'].set_visible(False)
                 ax.spines['left'].set_visible(False)
+                ax.spines['bottom'].set_color('#dddddd')
                 
-                # Add a title that shows seeds if available
+                # Add small tick marks at 25%, 50%, 75%
+                plt.xticks([25, 50, 75], ['25%', '50%', '75%'], color='#777777', fontsize=9)
+                
+                # Get seeds for both teams
                 team1_seed = tourney_seeds[
                     (tourney_seeds['Season'] == self.season) & 
                     (tourney_seeds['TeamID'] == team1)
@@ -459,85 +779,424 @@ class BracketSimulation:
                     (tourney_seeds['TeamID'] == team2)
                 ]['SeedNum'].iloc[0] if not tourney_seeds.empty else '?'
                 
+                # Add a title that shows seeds with improved formatting
                 plt.title(f'({team1_seed}) {team1_name} vs ({team2_seed}) {team2_name}', 
-                          loc='left', pad=5, fontsize=10)
+                          loc='left', pad=5, fontsize=12, fontweight='bold', color='#333333')
                 
-                # Add legend
+                # Add enhanced legend with team seeds
                 if i == 0:  # Only show legend for the first subplot
-                    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+                    legend = plt.legend([f'({team1_seed}) {team1_name}', f'({team2_seed}) {team2_name}'],
+                                        bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=10,
+                                        frameon=True, framealpha=0.9, edgecolor='#dddddd')
             
-            plt.suptitle(f'Tournament Matchup Predictions - Group {group + 1}', 
-                         fontsize=14, y=0.95)
+            # Add a more stylish title
+            plt.suptitle(f'Tournament Matchup Win Probabilities - Group {group + 1}', 
+                         fontsize=16, y=0.98, fontweight='bold', color='#333333')
+            
+            # Add a subtle footer with simulation info
+            plt.figtext(0.5, 0.01, f'Based on {self.num_simulations} simulations', 
+                        ha='center', fontsize=9, fontstyle='italic', color='#666666')
+            
             plt.tight_layout()
             plt.savefig(f'matchup_predictions_group_{group+1}.png', dpi=300, bbox_inches='tight')
             plt.close()
     
     def _visualize_tournament_bracket(self):
-        plt.figure(figsize=(8, 12))
+        # Set a clean, professional aesthetic
+        plt.style.use('seaborn-v0_8-whitegrid')
         
-        # Define the number of rounds and teams per round
+        # Create a figure with appropriate dimensions and white background
+        plt.figure(figsize=(24, 30), facecolor='white')
+        
+        # Define the number of rounds and teams per round - updated for full 64-team tournament
         rounds = ['First Round', 'Second Round', 'Sweet 16', 'Elite 8', 'Final 4', 'Championship']
-        teams_per_round = [32, 16, 8, 4, 2, 1]
+        teams_per_region_round = [16, 8, 4, 2, 1, 0]  # Teams per region in each round (total: 64, 32, 16, 8, 4, 2)
         
-        # Calculate positions for each team in each round
-        spacing = 1
+        # Define colors for regions and teams - using a more harmonious color palette
+        region_colors = {
+            'W': '#2980b9',  # West - Belize Hole Blue
+            'X': '#27ae60',  # East - Nephritis Green
+            'Y': '#c0392b',  # South - Pomegranate Red
+            'Z': '#8e44ad'   # Midwest - Wisteria Purple
+        }
+        bg_color = '#ffffff'     # Pure white background
+        line_color = '#e0e0e0'   # Very light gray for grid lines
+        text_color = '#2c3e50'   # Midnight Blue for text
+        champion_color = '#f39c12'  # Orange for champion
+        
+        # Add a subtle background
+        plt.gca().patch.set_facecolor(bg_color)
+        
+        # Add title with season and simulation count info
+        plt.suptitle(f"NCAA Tournament {self.season} - Bracket Predictions\n(Based on {self.num_simulations} simulations)", 
+                  fontsize=20, fontweight='bold', y=0.98, color=text_color)
+        
+        # Improve spacing between regions
+        region_spacing = 0.18  # Reduced spacing between regions (as fraction of figure height)
+        region_height = (1.0 - 3*region_spacing) / 4  # Height of each region
+        
+        # Define better positions for each region - more evenly distributed
         round_positions = {}
-        for round_idx, num_teams in enumerate(teams_per_round):
-            y_positions = np.linspace(0, len(teams_per_round) * spacing, num_teams)
-            round_positions[round_idx] = y_positions
+        region_y_positions = {
+            'W': 0.85,                                       # West at top
+            'X': 0.85 - (region_height + region_spacing),     # East below West
+            'Y': 0.85 - 2*(region_height + region_spacing),   # South below East
+            'Z': 0.85 - 3*(region_height + region_spacing)    # Midwest at bottom
+        }
         
-        # Draw connecting lines and team names
-        matchup_idx = 0
-        matchup_items = list(self.matchup_stats.items())
-        
-        for round_idx, num_teams in enumerate(teams_per_round[:-1]):
-            x_start = round_idx * 3  # Horizontal spacing between rounds
-            x_end = x_start + 3
+        # For each region, calculate team positions in each round with proper spacing for 16 teams
+        for region_code, region_top in region_y_positions.items():
+            round_positions[region_code] = {}
             
-            for i in range(0, num_teams, 2):
-                if matchup_idx >= len(matchup_items):
-                    break
+            # Calculate regional rounds positions (rounds 1-4) to fit all teams
+            for round_idx in range(4):  # Regional rounds only
+                # Number of teams in each round per region (16, 8, 4, 2)
+                num_teams = teams_per_region_round[round_idx]
+                
+                # Adjust spacing to fit all teams properly
+                # First round needs to fit 16 teams per region
+                spacing = (region_height * 0.9) / (num_teams - 1) if num_teams > 1 else 0
+                y_positions = [region_top - i*spacing for i in range(num_teams)]
+                round_positions[region_code][round_idx] = y_positions
+                
+            # Print the number of team positions in the first round for this region
+            print(f"{region_code} region first round positions: {len(round_positions[region_code][0])}")
+        
+        # Improve positioning for Final Four and Championship (centered)
+        final_four_y = 0.40
+        championship_y = 0.25
+        final_positions = {
+            4: [final_four_y, final_four_y - 0.10],  # Final Four - better spacing
+            5: [championship_y]                      # Championship
+        }
+        
+        # Draw regional markers
+        for region_code, region_top in region_y_positions.items():
+            region_name = {
+                'W': 'WEST',
+                'X': 'EAST',
+                'Y': 'SOUTH',
+                'Z': 'MIDWEST'
+            }[region_code]
+            plt.text(0.02, region_top + 0.02, region_name, 
+                    fontsize=16, fontweight='bold', color=region_colors[region_code])
+        
+        # Draw grid lines to separate rounds
+        for round_idx in range(6):
+            x_pos = 0.05 + round_idx * 0.15  # Horizontal position of round
+            plt.axvline(x_pos, color=line_color, linestyle='-', alpha=0.3, zorder=0)
+            # Add round labels at top
+            plt.text(x_pos + 0.075, 0.97, rounds[round_idx], 
+                    fontsize=12, ha='center', va='center', fontweight='bold')
+        
+        # Draw regional brackets (Rounds 1-4)
+        for region_code in ['W', 'X', 'Y', 'Z']:
+            # Process each round within the region
+            for round_idx in range(4):  # Regional rounds 1-4
+                x_start = 0.05 + round_idx * 0.15  # Start position of current round
+                x_end = x_start + 0.15             # End position (next round)
+                
+                # Get matchups for this region and round
+                round_matchups = [m for m in self.bracket_results[round_idx+1] 
+                                if m[0][0] == region_code]  # Filter by region
+                
+                # Draw each matchup
+                for i, matchup in enumerate(round_matchups):
+                    team1_info, team2_info, winner_info = matchup
+                    _, team1_id, team1_seed = team1_info
+                    _, team2_id, team2_seed = team2_info
+                    _, winner_id = winner_info
                     
-                y1 = round_positions[round_idx][i]
-                y2 = round_positions[round_idx][i + 1]
-                y_next = round_positions[round_idx + 1][i // 2]
+                    # Get y-coordinates
+                    if round_idx < 4:  # Regional rounds
+                        y_positions = round_positions[region_code][round_idx]
+                        idx1 = i * 2
+                        idx2 = i * 2 + 1
+                        y1 = y_positions[idx1] if idx1 < len(y_positions) else 0
+                        y2 = y_positions[idx2] if idx2 < len(y_positions) else 0
+                        
+                        # Position in next round
+                        if round_idx < 3:  # Not Elite 8
+                            next_y_positions = round_positions[region_code][round_idx+1]
+                            y_next = next_y_positions[i] if i < len(next_y_positions) else 0
+                        else:  # Elite 8 to Final Four transition
+                            # Find which semifinal this region feeds into
+                            semifinal_idx = 0 if region_code in ['W', 'Y'] else 1
+                            y_next = final_positions[4][semifinal_idx]
+                    
+                    # Get team names
+                    team1_name = self.brackets[0].get_team_name(team1_id)
+                    team2_name = self.brackets[0].get_team_name(team2_id)
+                    
+                    # Truncate long team names
+                    if len(team1_name) > 14:
+                        team1_name = team1_name[:12] + '...'
+                    if len(team2_name) > 14:
+                        team2_name = team2_name[:12] + '...'
+                    
+                    # Get matchup stats for win percentages
+                    if (team1_id, team2_id) in self.matchup_stats:
+                        stats = self.matchup_stats[(team1_id, team2_id)]
+                    elif (team2_id, team1_id) in self.matchup_stats:
+                        stats = self.matchup_stats[(team2_id, team1_id)]
+                    else:
+                        stats = {team1_id: 50, team2_id: 50}  # Default if not found
+                    
+                    total = sum(stats.values())
+                    team1_pct = (stats[team1_id] / total) * 100
+                    team2_pct = (stats[team2_id] / total) * 100
+                    
+                    # Draw connector to next round
+                    if round_idx < 4:  # Only for rounds leading to another round
+                        plt.plot([x_end-0.03, x_end], [y_next, y_next], 
+                                color='#aaaaaa', linestyle='-', linewidth=1.2, alpha=0.7, zorder=1)
+                    
+                    # Draw connecting lines with thickness based on win probability
+                    team1_color = region_colors[region_code]
+                    team2_color = region_colors[region_code]
+                    winner_color = region_colors[region_code]
+                    
+                    # Draw team connecting lines
+                    if round_idx < 4:  # Only for rounds leading to another round
+                        # Team 1 line
+                        plt.plot([x_start, x_end-0.03], [y1, y_next], 
+                                color=team1_color, alpha=0.2+0.8*team1_pct/100, 
+                                linewidth=1.0+2.0*team1_pct/100, solid_capstyle='round', zorder=2)
+                        
+                        # Team 2 line
+                        plt.plot([x_start, x_end-0.03], [y2, y_next], 
+                                color=team2_color, alpha=0.2+0.8*team2_pct/100, 
+                                linewidth=1.0+2.0*team2_pct/100, solid_capstyle='round', zorder=2)
+                    
+                    # Team boxes
+                    team1_box = dict(boxstyle='round,pad=0.3', facecolor='white', 
+                                   alpha=0.9, edgecolor=team1_color, linewidth=1.5)
+                    team2_box = dict(boxstyle='round,pad=0.3', facecolor='white', 
+                                   alpha=0.9, edgecolor=team2_color, linewidth=1.5)
+                    
+                    # Highlight winner
+                    winner_box = team1_box if winner_id == team1_id else team2_box
+                    winner_box['edgecolor'] = winner_color
+                    winner_box['linewidth'] = 2.0
+                    
+                    # Add team names with seeds
                 
-                # Get teams for this matchup
-                matchup, stats = matchup_items[matchup_idx]
-                team1, team2 = matchup
-                team1_name = self.brackets[0].get_team_name(team1)
-                team2_name = self.brackets[0].get_team_name(team2)
+                # Get team names
+                team1_name = self.brackets[0].get_team_name(team1_id)
+                team2_name = self.brackets[0].get_team_name(team2_id)
                 
-                # Get win percentages
+                # Truncate long team names
+                if len(team1_name) > 14:
+                    team1_name = team1_name[:12] + '...'
+                if len(team2_name) > 14:
+                    team2_name = team2_name[:12] + '...'
+                
+                # Get matchup stats for win percentages
+                if (team1_id, team2_id) in self.matchup_stats:
+                    stats = self.matchup_stats[(team1_id, team2_id)]
+                elif (team2_id, team1_id) in self.matchup_stats:
+                    stats = self.matchup_stats[(team2_id, team1_id)]
+                else:
+                    stats = {team1_id: 50, team2_id: 50}  # Default if not found
+                
                 total = sum(stats.values())
-                team1_pct = (stats[team1] / total) * 100
-                team2_pct = (stats[team2] / total) * 100
+                team1_pct = (stats[team1_id] / total) * 100
+                team2_pct = (stats[team2_id] / total) * 100
                 
-                # Draw lines with thickness based on win probability
-                plt.plot([x_start, x_end], [y1, y_next], 'b-', 
-                         alpha=team1_pct/100, linewidth=2*team1_pct/100)
-                plt.plot([x_start, x_end], [y2, y_next], 'r-', 
-                         alpha=team2_pct/100, linewidth=2*team2_pct/100)
+                # Draw connector to next round with improved styling
+                if round_idx < 4:  # Only for rounds leading to another round
+                    plt.plot([x_end-0.03, x_end], [y_next, y_next], 
+                            color='#cccccc', linestyle='-', linewidth=1.0, alpha=0.6, zorder=1)
                 
-                # Add team names and win percentages
-                plt.text(x_start - 0.2, y1, f'{team1_name}\n({team1_pct:.1f}%)', 
-                         ha='right', va='center', fontsize=8)
-                plt.text(x_start - 0.2, y2, f'{team2_name}\n({team2_pct:.1f}%)', 
-                         ha='right', va='center', fontsize=8)
+                # Use consistent colors with improved opacity handling
+                team1_color = region_colors[region_code]
+                team2_color = region_colors[region_code]
+                winner_color = region_colors[region_code]
                 
-                matchup_idx += 1
+                # Draw team connecting lines with better styling
+                if round_idx < 4:  # Only for rounds leading to another round
+                    # Team 1 line - more subtle gradient based on win probability
+                    plt.plot([x_start, x_end-0.03], [y1, y_next], 
+                            color=team1_color, alpha=0.3+0.6*team1_pct/100, 
+                            linewidth=0.8+1.5*team1_pct/100, solid_capstyle='round', zorder=2)
+                    
+                    # Team 2 line - more subtle gradient based on win probability
+                    plt.plot([x_start, x_end-0.03], [y2, y_next], 
+                            color=team2_color, alpha=0.3+0.6*team2_pct/100, 
+                            linewidth=0.8+1.5*team2_pct/100, solid_capstyle='round', zorder=2)
+                
+                # Improved team boxes with cleaner styling
+                team1_box = dict(boxstyle='round,pad=0.3', facecolor='white', 
+                               alpha=0.95, edgecolor=team1_color, linewidth=1.0)
+                team2_box = dict(boxstyle='round,pad=0.3', facecolor='white', 
+                               alpha=0.95, edgecolor=team2_color, linewidth=1.0)
+                
+                # Highlight winner with bolder style
+                winner_box = team1_box if winner_id == team1_id else team2_box
+                winner_box['edgecolor'] = winner_color
+                winner_box['linewidth'] = 1.8
+                winner_box['boxstyle'] = 'round,pad=0.3'
+                
+                # Add team names with seeds and cleaner fonts
+                plt.text(x_start - 0.04, y1, f"({team1_seed}) {team1_name}", 
+                       fontsize=9 if round_idx <= 1 else 10, ha='right', va='center', bbox=team1_box,
+                       fontweight='normal' if winner_id != team1_id else 'bold')
+                
+                plt.text(x_start - 0.04, y2, f"({team2_seed}) {team2_name}", 
+                       fontsize=9 if round_idx <= 1 else 10, ha='right', va='center', bbox=team2_box,
+                       fontweight='normal' if winner_id != team2_id else 'bold')
         
-        # Add round labels
-        for round_idx, round_name in enumerate(rounds):
-            plt.text(round_idx * 3, len(teams_per_round) * spacing + 0.5, 
-                     round_name, ha='center', va='bottom', fontsize=12)
+        # Draw Final Four (Round 5)
+        if len(self.bracket_results[5]) == 2:  # Make sure we have Final Four results
+            x_start = 0.05 + 4 * 0.15  # Final Four x position
+            x_end = x_start + 0.15      # Championship x position
+            
+            # First semifinal
+            semifinal1 = self.bracket_results[5][0]
+            team1_region, team1_id, team1_seed = semifinal1[0]
+            team2_region, team2_id, team2_seed = semifinal1[1]
+            winner_region, winner_id = semifinal1[2]
+            
+            # Get y positions
+            y1 = final_positions[4][0]  # First finalist position
+            y_next = final_positions[5][0]  # Championship position
+            
+            # Get team names
+            team1_name = self.brackets[0].get_team_name(team1_id)
+            team2_name = self.brackets[0].get_team_name(team2_id)
+            
+            # Truncate long team names
+            if len(team1_name) > 14:
+                team1_name = team1_name[:12] + '...'
+            if len(team2_name) > 14:
+                team2_name = team2_name[:12] + '...'
+            
+            # Get matchup stats
+            if (team1_id, team2_id) in self.matchup_stats:
+                stats = self.matchup_stats[(team1_id, team2_id)]
+            elif (team2_id, team1_id) in self.matchup_stats:
+                stats = self.matchup_stats[(team2_id, team1_id)]
+            else:
+                stats = {team1_id: 50, team2_id: 50}
+                
+            total = sum(stats.values())
+            team1_pct = (stats[team1_id] / total) * 100
+            team2_pct = (stats[team2_id] / total) * 100
+            
+            # Draw connector to championship
+            plt.plot([x_end-0.03, x_end], [y_next, y_next], 
+                    color='#aaaaaa', linestyle='-', linewidth=1.2, alpha=0.7, zorder=1)
+            
+            # Draw team connecting lines
+            team1_color = region_colors[team1_region]
+            team2_color = region_colors[team2_region]
+            
+            # Team 1 line
+            plt.plot([x_start, x_end-0.03], [y1, y_next], 
+                    color=team1_color, alpha=0.2+0.8*team1_pct/100, 
+                    linewidth=1.0+2.0*team1_pct/100, solid_capstyle='round', zorder=2)
+            
+            # Create team boxes
+            team1_box = dict(boxstyle='round,pad=0.3', facecolor='white', 
+                           alpha=0.9, edgecolor=team1_color, linewidth=1.5)
+            
+            # Highlight winner
+            if winner_id == team1_id:
+                team1_box['edgecolor'] = team1_color
+                team1_box['linewidth'] = 2.0
+            
+            # Add team name with seed and region
+            plt.text(x_start - 0.04, y1, f"({team1_seed}) {team1_name} [{team1_region}]", 
+                   fontsize=9, ha='right', va='center', bbox=team1_box)
+            
+            # Second semifinal
+            semifinal2 = self.bracket_results[5][1]
+            team1_region, team1_id, team1_seed = semifinal2[0]
+            team2_region, team2_id, team2_seed = semifinal2[1]
+            winner_region, winner_id = semifinal2[2]
+            
+            # Get y positions
+            y2 = final_positions[4][1]  # Second finalist position
+            
+            # Get team names
+            team1_name = self.brackets[0].get_team_name(team1_id)
+            team2_name = self.brackets[0].get_team_name(team2_id)
+            
+            # Truncate long team names
+            if len(team1_name) > 14:
+                team1_name = team1_name[:12] + '...'
+            if len(team2_name) > 14:
+                team2_name = team2_name[:12] + '...'
+            
+            # Get matchup stats
+            if (team1_id, team2_id) in self.matchup_stats:
+                stats = self.matchup_stats[(team1_id, team2_id)]
+            elif (team2_id, team1_id) in self.matchup_stats:
+                stats = self.matchup_stats[(team2_id, team1_id)]
+            else:
+                stats = {team1_id: 50, team2_id: 50}
+                
+            total = sum(stats.values())
+            team1_pct = (stats[team1_id] / total) * 100
+            team2_pct = (stats[team2_id] / total) * 100
+            
+            # Draw team connecting lines
+            team1_color = region_colors[team1_region]
+            team2_color = region_colors[team2_region]
+            
+            # Team 2 line
+            plt.plot([x_start, x_end-0.03], [y2, y_next], 
+                    color=team2_color, alpha=0.2+0.8*team2_pct/100, 
+                    linewidth=1.0+2.0*team2_pct/100, solid_capstyle='round', zorder=2)
+            
+            # Create team boxes
+            team2_box = dict(boxstyle='round,pad=0.3', facecolor='white', 
+                           alpha=0.9, edgecolor=team2_color, linewidth=1.5)
+            
+            # Highlight winner
+            if winner_id == team2_id:
+                team2_box['edgecolor'] = team2_color
+                team2_box['linewidth'] = 2.0
+            
+            # Add team name with seed and region
+            plt.text(x_start - 0.04, y2, f"({team2_seed}) {team2_name} [{team2_region}]", 
+                   fontsize=9, ha='right', va='center', bbox=team2_box)
         
-        # Customize the plot
-        plt.title('NCAA Tournament Bracket Simulation Results', fontsize=14, pad=20)
+        # Draw Championship (Round 6)
+        if len(self.bracket_results[6]) == 1:  # Make sure we have Championship results
+            champ_matchup = self.bracket_results[6][0]
+            team1_region, team1_id, team1_seed = champ_matchup[0]
+            team2_region, team2_id, team2_seed = champ_matchup[1]
+            champion_region, champion_id = champ_matchup[2]
+            
+            # Get champion name
+            champion_name = self.brackets[0].get_team_name(champion_id)
+            
+            # Create champion box
+            champion_box = dict(boxstyle='round,pad=0.5', facecolor='#fffde7', 
+                             alpha=0.95, edgecolor=champion_color, linewidth=2.5)
+            
+            # Add champion with larger font
+            plt.text(0.05 + 5 * 0.15 + 0.075, championship_y - 0.05, 
+                   f"CHAMPION:\n({self.champion[1]}) {champion_name}\n[{champion_region} Region]", 
+                   fontsize=14, fontweight='bold', ha='center', va='center', 
+                   bbox=champion_box, color='#333333')
+        
+        # Round labels are already added at the top of the visualization
+        
+        # The plot limits are handled by tight_layout
+        
+        # Title is already added as suptitle at the beginning
+        # The tournament info is already included in the title
+        
+        # Hide the axes
         plt.axis('off')
-        plt.tight_layout()
         
-        # Save the plot
+        # Add NCAA March Madness logo placeholder
+        plt.figtext(0.5, 0.01, 'NCAA March Madness', ha='center', fontsize=14, 
+                    fontweight='bold', color='#FF8800')
+        
+        # Save the plot with higher resolution
         plt.savefig('tournament_bracket.png', dpi=300, bbox_inches='tight')
         plt.close()
 
