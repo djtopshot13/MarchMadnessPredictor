@@ -634,7 +634,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 1995,136,Cincinnati,1153,77,Temple,1396,71,0
 1995,136,Connecticut,1163,100,Chattanooga,1151,71,0
 1995,136,Kansas,1242,82,Colgate,1159,68,0
-1995,136,Kentucky,1246,113,Mt St. Mary's,1291,67,0
+1995,136,Kentucky,1246,113,Mt St Mary's,1291,67,0
 1995,136,Manhattan,1264,77,Oklahoma,1328,67,0
 1995,136,Maryland,1268,87,Gonzaga,1211,63,0
 1995,136,Miami OH,1275,71,Arizona,1112,62,0
@@ -904,7 +904,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 1999,137,Kentucky,1246,82,New Mexico St.,1308,60,0
 1999,137,Miami FL,1274,75,Lafayette,1248,54,0
 1999,137,Miami OH,1275,59,Washington,1449,58,0
-1999,137,Michigan St.,1277,76,Mt St. Mary's,1291,53,0
+1999,137,Michigan St.,1277,76,Mt St Mary's,1291,53,0
 1999,137,Mississippi,1279,72,Villanova,1437,70,0
 1999,137,Missouri St.,1283,43,Wisconsin,1458,32,0
 1999,137,Oklahoma,1328,61,Arizona,1112,60,0
@@ -1455,7 +1455,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 2007,152,Florida,1196,76,UCLA,1417,66,0
 2007,152,Ohio St.,1326,67,Georgetown,1207,60,0
 2007,154,Florida,1196,84,Ohio St.,1326,75,0
-2008,134,Mt St. Mary's,1291,69,Coppin St.,1164,60,0
+2008,134,Mt St Mary's,1291,69,Coppin St.,1164,60,0
 2008,136,Duke,1181,71,Belmont,1125,70,0
 2008,136,Kansas,1242,85,Portland St.,1340,61,0
 2008,136,Kansas St.,1243,80,USC,1425,67,0
@@ -1480,7 +1480,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 2008,137,Memphis,1272,87,UT Arlington,1426,63,0
 2008,137,Miami FL,1274,78,Saint Mary's,1388,64,0
 2008,137,Mississippi St.,1280,76,Oregon,1332,69,0
-2008,137,North Carolina,1314,113,Mt St. Mary's,1291,74,0
+2008,137,North Carolina,1314,113,Mt St Mary's,1291,74,0
 2008,137,Oklahoma,1328,72,Saint Joseph's,1386,64,0
 2008,137,San Diego,1360,70,Connecticut,1163,69,1
 2008,137,Siena,1373,83,Vanderbilt,1435,62,0
@@ -1848,7 +1848,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 2013,152,Louisville,1257,72,Wichita St.,1455,68,0
 2013,152,Michigan,1276,61,Syracuse,1393,56,0
 2013,154,Louisville,1257,82,Michigan,1276,76,0
-2014,134,SUNY Albany,1107,71,Mt St. Mary's,1291,64,0
+2014,134,SUNY Albany,1107,71,Mt St Mary's,1291,64,0
 2014,134,NC State,1301,74,Xavier,1462,59,0
 2014,135,Cal Poly,1142,81,TX Southern,1411,69,0
 2014,135,Tennessee,1397,78,Iowa,1234,65,1
@@ -2050,7 +2050,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 2016,152,Villanova,1437,95,Oklahoma,1328,51,0
 2016,154,Villanova,1437,77,North Carolina,1314,74,0
 2017,134,Kansas St.,1243,95,Wake Forest,1448,88,0
-2017,134,Mt St. Mary's,1291,67,New Orleans,1309,66,0
+2017,134,Mt St Mary's,1291,67,New Orleans,1309,66,0
 2017,135,UC Davis,1413,67,NC Central,1300,63,0
 2017,135,USC,1425,75,Providence,1344,71,0
 2017,136,Arizona,1112,100,North Dakota,1315,82,0
@@ -2064,7 +2064,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 2017,136,Notre Dame,1323,60,Princeton,1343,58,0
 2017,136,Purdue,1345,80,Vermont,1436,70,0
 2017,136,Saint Mary's,1388,85,VCU,1433,77,0
-2017,136,Villanova,1437,76,Mt St. Mary's,1291,56,0
+2017,136,Villanova,1437,76,Mt St Mary's,1291,56,0
 2017,136,Virginia,1438,76,UNC Wilmington,1423,71,0
 2017,136,West Virginia,1452,86,Bucknell,1137,80,0
 2017,136,Wisconsin,1458,84,Virginia Tech,1439,74,0
@@ -2252,7 +2252,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 2019,154,Virginia,1438,85,Texas Tech,1403,77,1
 2021,136,Drake,1179,53,Wichita St.,1455,52,0
 2021,136,Norfolk St.,1313,54,Appalachian St.,1111,53,0
-2021,136,TX Southern,1411,60,Mt St. Mary's,1291,52,0
+2021,136,TX Southern,1411,60,Mt St Mary's,1291,52,0
 2021,136,UCLA,1417,86,Michigan St.,1277,80,1
 2021,137,Arkansas,1116,85,Colgate,1159,68,0
 2021,137,Baylor,1124,79,Hartford,1216,55,0
@@ -2519,7 +2519,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 2024,154,Connecticut,1163,75,Purdue,1345,60,0
 2025,134,Alabama St.,1106,70,Saint Francis PA,1384,68,0
 2025,134,North Carolina,1314,95,San Diego St.,1361,68,0
-2025,135,Mt St. Mary's,1291,83,American Univ,1110,72,0
+2025,135,Mt St Mary's,1291,83,American Univ,1110,72,0
 2025,135,Xavier,1462,86,Texas,1400,80,0
 2025,136,Arkansas,1116,79,Kansas,1242,72,0
 2025,136,Auburn,1120,83,Alabama St.,1106,63,0
@@ -2541,7 +2541,7 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 2025,137,Arizona,1112,93,Akron,1103,65,0
 2025,137,Baylor,1124,75,Mississippi St.,1280,72,0
 2025,137,Colorado St.,1161,78,Memphis,1272,70,0
-2025,137,Duke,1181,93,Mt St. Mary's,1291,49,0
+2025,137,Duke,1181,93,Mt St Mary's,1291,49,0
 2025,137,Florida,1196,95,Norfolk St.,1313,69,0
 2025,137,Illinois,1228,86,Xavier,1462,73,0
 2025,137,Iowa St.,1235,82,Lipscomb,1252,55,0

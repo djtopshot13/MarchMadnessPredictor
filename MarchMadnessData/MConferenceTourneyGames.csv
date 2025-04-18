@@ -914,7 +914,7 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2004,mwc,Mountain West Conference,131,Utah,1428,UNLV,1424
 2004,nec,Northeast Conference,124,Central Conn,1148,Saint Francis NY,1383
 2004,nec,Northeast Conference,124,F Dickinson,1192,Wagner,1447
-2004,nec,Northeast Conference,124,Monmouth NJ,1284,Mt St. Mary's,1291
+2004,nec,Northeast Conference,124,Monmouth NJ,1284,Mt St Mary's,1291
 2004,nec,Northeast Conference,124,Robert Morris,1352,Saint Francis PA,1384
 2004,nec,Northeast Conference,125,Central Conn,1148,F Dickinson,1192
 2004,nec,Northeast Conference,125,Monmouth NJ,1284,Robert Morris,1352
@@ -1433,7 +1433,7 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2006,nec,Northeast Conference,122,Central Conn,1148,Sacred Heart,1357
 2006,nec,Northeast Conference,122,F Dickinson,1192,Quinnipiac,1346
 2006,nec,Northeast Conference,122,Monmouth NJ,1284,LIU Brooklyn,1254
-2006,nec,Northeast Conference,122,Robert Morris,1352,Mt St. Mary's,1291
+2006,nec,Northeast Conference,122,Robert Morris,1352,Mt St Mary's,1291
 2006,nec,Northeast Conference,125,F Dickinson,1192,Robert Morris,1352
 2006,nec,Northeast Conference,125,Monmouth NJ,1284,Central Conn,1148
 2006,nec,Northeast Conference,128,Monmouth NJ,1284,F Dickinson,1192
@@ -1692,10 +1692,10 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2007,mwc,Mountain West Conference,130,UNLV,1424,Colorado St.,1161
 2007,mwc,Mountain West Conference,131,UNLV,1424,BYU,1140
 2007,nec,Northeast Conference,122,Central Conn,1148,Saint Francis NY,1383
-2007,nec,Northeast Conference,122,Mt St. Mary's,1291,Robert Morris,1352
+2007,nec,Northeast Conference,122,Mt St Mary's,1291,Robert Morris,1352
 2007,nec,Northeast Conference,122,Quinnipiac,1346,F Dickinson,1192
 2007,nec,Northeast Conference,122,Sacred Heart,1357,Wagner,1447
-2007,nec,Northeast Conference,125,Central Conn,1148,Mt St. Mary's,1291
+2007,nec,Northeast Conference,125,Central Conn,1148,Mt St Mary's,1291
 2007,nec,Northeast Conference,125,Sacred Heart,1357,Quinnipiac,1346
 2007,nec,Northeast Conference,128,Central Conn,1148,Sacred Heart,1357
 2007,ovc,Ohio Valley Conference,120,Austin Peay,1122,Tennessee St.,1398
@@ -1949,13 +1949,13 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2008,mwc,Mountain West Conference,130,BYU,1140,San Diego St.,1361
 2008,mwc,Mountain West Conference,130,UNLV,1424,Utah,1428
 2008,mwc,Mountain West Conference,131,UNLV,1424,BYU,1140
-2008,nec,Northeast Conference,122,Mt St. Mary's,1291,Quinnipiac,1346
+2008,nec,Northeast Conference,122,Mt St Mary's,1291,Quinnipiac,1346
 2008,nec,Northeast Conference,122,Robert Morris,1352,Monmouth NJ,1284
 2008,nec,Northeast Conference,122,Sacred Heart,1357,Central Conn,1148
 2008,nec,Northeast Conference,122,Wagner,1447,LIU Brooklyn,1254
-2008,nec,Northeast Conference,125,Mt St. Mary's,1291,Robert Morris,1352
+2008,nec,Northeast Conference,125,Mt St Mary's,1291,Robert Morris,1352
 2008,nec,Northeast Conference,125,Sacred Heart,1357,Wagner,1447
-2008,nec,Northeast Conference,128,Mt St. Mary's,1291,Sacred Heart,1357
+2008,nec,Northeast Conference,128,Mt St Mary's,1291,Sacred Heart,1357
 2008,ovc,Ohio Valley Conference,120,Austin Peay,1122,E Kentucky,1184
 2008,ovc,Ohio Valley Conference,120,Murray St.,1293,Tennessee Tech,1399
 2008,ovc,Ohio Valley Conference,120,Tennessee St.,1398,Morehead St.,1287
@@ -2217,13 +2217,13 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2009,mwc,Mountain West Conference,130,San Diego St.,1361,BYU,1140
 2009,mwc,Mountain West Conference,130,Utah,1428,Wyoming,1461
 2009,mwc,Mountain West Conference,131,Utah,1428,San Diego St.,1361
-2009,nec,Northeast Conference,122,Mt St. Mary's,1291,Wagner,1447
+2009,nec,Northeast Conference,122,Mt St Mary's,1291,Wagner,1447
 2009,nec,Northeast Conference,122,Quinnipiac,1346,LIU Brooklyn,1254
 2009,nec,Northeast Conference,122,Robert Morris,1352,Saint Francis NY,1383
 2009,nec,Northeast Conference,122,Sacred Heart,1357,Central Conn,1148
-2009,nec,Northeast Conference,125,Mt St. Mary's,1291,Sacred Heart,1357
+2009,nec,Northeast Conference,125,Mt St Mary's,1291,Sacred Heart,1357
 2009,nec,Northeast Conference,125,Robert Morris,1352,Quinnipiac,1346
-2009,nec,Northeast Conference,128,Robert Morris,1352,Mt St. Mary's,1291
+2009,nec,Northeast Conference,128,Robert Morris,1352,Mt St Mary's,1291
 2009,ovc,Ohio Valley Conference,120,Austin Peay,1122,E Illinois,1183
 2009,ovc,Ohio Valley Conference,120,Morehead St.,1287,E Kentucky,1184
 2009,ovc,Ohio Valley Conference,120,Murray St.,1293,Tennessee St.,1398
@@ -2493,11 +2493,11 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2010,mwc,Mountain West Conference,130,UNLV,1424,BYU,1140
 2010,mwc,Mountain West Conference,131,San Diego St.,1361,UNLV,1424
 2010,nec,Northeast Conference,122,LIU Brooklyn,1254,F Dickinson,1192
-2010,nec,Northeast Conference,122,Mt St. Mary's,1291,Saint Francis PA,1384
+2010,nec,Northeast Conference,122,Mt St Mary's,1291,Saint Francis PA,1384
 2010,nec,Northeast Conference,122,Quinnipiac,1346,Monmouth NJ,1284
 2010,nec,Northeast Conference,122,Robert Morris,1352,Central Conn,1148
 2010,nec,Northeast Conference,125,Quinnipiac,1346,LIU Brooklyn,1254
-2010,nec,Northeast Conference,125,Robert Morris,1352,Mt St. Mary's,1291
+2010,nec,Northeast Conference,125,Robert Morris,1352,Mt St Mary's,1291
 2010,nec,Northeast Conference,128,Robert Morris,1352,Quinnipiac,1346
 2010,ovc,Ohio Valley Conference,120,E Illinois,1183,E Kentucky,1184
 2010,ovc,Ohio Valley Conference,120,Morehead St.,1287,Jacksonville St.,1240
@@ -2768,7 +2768,7 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2011,mwc,Mountain West Conference,131,San Diego St.,1361,BYU,1140
 2011,nec,Northeast Conference,122,Central Conn,1148,Saint Francis NY,1383
 2011,nec,Northeast Conference,122,LIU Brooklyn,1254,Saint Francis PA,1384
-2011,nec,Northeast Conference,122,Quinnipiac,1346,Mt St. Mary's,1291
+2011,nec,Northeast Conference,122,Quinnipiac,1346,Mt St Mary's,1291
 2011,nec,Northeast Conference,122,Robert Morris,1352,Wagner,1447
 2011,nec,Northeast Conference,125,LIU Brooklyn,1254,Central Conn,1148
 2011,nec,Northeast Conference,125,Robert Morris,1352,Quinnipiac,1346
@@ -3310,12 +3310,12 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2013,mwc,Mountain West Conference,130,UNLV,1424,Colorado St.,1161
 2013,mwc,Mountain West Conference,131,New Mexico,1307,UNLV,1424
 2013,nec,Northeast Conference,121,LIU Brooklyn,1254,Quinnipiac,1346
-2013,nec,Northeast Conference,121,Mt St. Mary's,1291,Bryant,1136
+2013,nec,Northeast Conference,121,Mt St Mary's,1291,Bryant,1136
 2013,nec,Northeast Conference,121,Robert Morris,1352,Saint Francis NY,1383
 2013,nec,Northeast Conference,121,Wagner,1447,Central Conn,1148
 2013,nec,Northeast Conference,124,LIU Brooklyn,1254,Wagner,1447
-2013,nec,Northeast Conference,124,Mt St. Mary's,1291,Robert Morris,1352
-2013,nec,Northeast Conference,127,LIU Brooklyn,1254,Mt St. Mary's,1291
+2013,nec,Northeast Conference,124,Mt St Mary's,1291,Robert Morris,1352
+2013,nec,Northeast Conference,127,LIU Brooklyn,1254,Mt St Mary's,1291
 2013,ovc,Ohio Valley Conference,121,Morehead St.,1287,TN Martin,1404
 2013,ovc,Ohio Valley Conference,121,SE Missouri St.,1369,E Illinois,1183
 2013,ovc,Ohio Valley Conference,122,E Kentucky,1184,SE Missouri St.,1369
@@ -3596,13 +3596,13 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2014,mwc,Mountain West Conference,130,New Mexico,1307,Boise St.,1129
 2014,mwc,Mountain West Conference,130,San Diego St.,1361,UNLV,1424
 2014,mwc,Mountain West Conference,131,New Mexico,1307,San Diego St.,1361
-2014,nec,Northeast Conference,121,Mt St. Mary's,1291,Saint Francis NY,1383
+2014,nec,Northeast Conference,121,Mt St Mary's,1291,Saint Francis NY,1383
 2014,nec,Northeast Conference,121,Robert Morris,1352,F Dickinson,1192
 2014,nec,Northeast Conference,121,Saint Francis PA,1384,Bryant,1136
 2014,nec,Northeast Conference,121,Wagner,1447,Central Conn,1148
-2014,nec,Northeast Conference,124,Mt St. Mary's,1291,Wagner,1447
+2014,nec,Northeast Conference,124,Mt St Mary's,1291,Wagner,1447
 2014,nec,Northeast Conference,124,Robert Morris,1352,Saint Francis PA,1384
-2014,nec,Northeast Conference,127,Mt St. Mary's,1291,Robert Morris,1352
+2014,nec,Northeast Conference,127,Mt St Mary's,1291,Robert Morris,1352
 2014,ovc,Ohio Valley Conference,121,SE Missouri St.,1369,E Illinois,1183
 2014,ovc,Ohio Valley Conference,121,Tennessee Tech,1399,SIUE,1188
 2014,ovc,Ohio Valley Conference,122,E Kentucky,1184,SE Missouri St.,1369
@@ -3883,7 +3883,7 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2015,nec,Northeast Conference,121,Bryant,1136,Sacred Heart,1357
 2015,nec,Northeast Conference,121,Robert Morris,1352,Wagner,1447
 2015,nec,Northeast Conference,121,Saint Francis NY,1383,LIU Brooklyn,1254
-2015,nec,Northeast Conference,121,Saint Francis PA,1384,Mt St. Mary's,1291
+2015,nec,Northeast Conference,121,Saint Francis PA,1384,Mt St Mary's,1291
 2015,nec,Northeast Conference,124,Robert Morris,1352,Bryant,1136
 2015,nec,Northeast Conference,124,Saint Francis NY,1383,Saint Francis PA,1384
 2015,nec,Northeast Conference,127,Robert Morris,1352,Saint Francis NY,1383
@@ -4171,9 +4171,9 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2016,mwc,Mountain West Conference,131,Fresno St.,1201,San Diego St.,1361
 2016,nec,Northeast Conference,121,F Dickinson,1192,Saint Francis PA,1384
 2016,nec,Northeast Conference,121,LIU Brooklyn,1254,Sacred Heart,1357
-2016,nec,Northeast Conference,121,Mt St. Mary's,1291,Saint Francis NY,1383
+2016,nec,Northeast Conference,121,Mt St Mary's,1291,Saint Francis NY,1383
 2016,nec,Northeast Conference,121,Wagner,1447,Robert Morris,1352
-2016,nec,Northeast Conference,124,F Dickinson,1192,Mt St. Mary's,1291
+2016,nec,Northeast Conference,124,F Dickinson,1192,Mt St Mary's,1291
 2016,nec,Northeast Conference,124,Wagner,1447,LIU Brooklyn,1254
 2016,nec,Northeast Conference,127,F Dickinson,1192,Wagner,1447
 2016,ovc,Ohio Valley Conference,121,Austin Peay,1122,Tennessee Tech,1399
@@ -4459,13 +4459,13 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2017,mwc,Mountain West Conference,130,Colorado St.,1161,San Diego St.,1361
 2017,mwc,Mountain West Conference,130,Nevada,1305,Fresno St.,1201
 2017,mwc,Mountain West Conference,131,Nevada,1305,Colorado St.,1161
-2017,nec,Northeast Conference,121,Mt St. Mary's,1291,Sacred Heart,1357
+2017,nec,Northeast Conference,121,Mt St Mary's,1291,Sacred Heart,1357
 2017,nec,Northeast Conference,121,Robert Morris,1352,LIU Brooklyn,1254
 2017,nec,Northeast Conference,121,Saint Francis PA,1384,Bryant,1136
 2017,nec,Northeast Conference,121,Wagner,1447,F Dickinson,1192
-2017,nec,Northeast Conference,124,Mt St. Mary's,1291,Robert Morris,1352
+2017,nec,Northeast Conference,124,Mt St Mary's,1291,Robert Morris,1352
 2017,nec,Northeast Conference,124,Saint Francis PA,1384,Wagner,1447
-2017,nec,Northeast Conference,127,Mt St. Mary's,1291,Saint Francis PA,1384
+2017,nec,Northeast Conference,127,Mt St Mary's,1291,Saint Francis PA,1384
 2017,ovc,Ohio Valley Conference,121,Murray St.,1293,Tennessee Tech,1399
 2017,ovc,Ohio Valley Conference,121,SE Missouri St.,1369,Tennessee St.,1398
 2017,ovc,Ohio Valley Conference,122,Jacksonville St.,1240,SE Missouri St.,1369
@@ -4758,7 +4758,7 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2018,mwc,Mountain West Conference,131,San Diego St.,1361,New Mexico,1307
 2018,nec,Northeast Conference,121,F Dickinson,1192,Saint Francis PA,1384
 2018,nec,Northeast Conference,121,LIU Brooklyn,1254,Saint Francis NY,1383
-2018,nec,Northeast Conference,121,Robert Morris,1352,Mt St. Mary's,1291
+2018,nec,Northeast Conference,121,Robert Morris,1352,Mt St Mary's,1291
 2018,nec,Northeast Conference,121,Wagner,1447,Central Conn,1148
 2018,nec,Northeast Conference,124,LIU Brooklyn,1254,F Dickinson,1192
 2018,nec,Northeast Conference,124,Wagner,1447,Robert Morris,1352
@@ -5243,7 +5243,7 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2020,mwc,Mountain West Conference,124,Utah St.,1429,San Diego St.,1361
 2020,nec,Northeast Conference,121,LIU Brooklyn,1254,F Dickinson,1192
 2020,nec,Northeast Conference,121,Robert Morris,1352,Saint Francis NY,1383
-2020,nec,Northeast Conference,121,Sacred Heart,1357,Mt St. Mary's,1291
+2020,nec,Northeast Conference,121,Sacred Heart,1357,Mt St Mary's,1291
 2020,nec,Northeast Conference,121,Saint Francis PA,1384,Bryant,1136
 2020,nec,Northeast Conference,124,Robert Morris,1352,LIU Brooklyn,1254
 2020,nec,Northeast Conference,124,Saint Francis PA,1384,Sacred Heart,1357
@@ -5488,8 +5488,8 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2021,mwc,Mountain West Conference,130,Utah St.,1429,Colorado St.,1161
 2021,mwc,Mountain West Conference,131,San Diego St.,1361,Utah St.,1429
 2021,nec,Northeast Conference,124,Bryant,1136,Sacred Heart,1357
-2021,nec,Northeast Conference,124,Mt St. Mary's,1291,Wagner,1447
-2021,nec,Northeast Conference,127,Mt St. Mary's,1291,Bryant,1136
+2021,nec,Northeast Conference,124,Mt St Mary's,1291,Wagner,1447
+2021,nec,Northeast Conference,127,Mt St Mary's,1291,Bryant,1136
 2021,ovc,Ohio Valley Conference,121,Belmont,1125,SIUE,1188
 2021,ovc,Ohio Valley Conference,121,Morehead St.,1287,SE Missouri St.,1369
 2021,ovc,Ohio Valley Conference,122,E Kentucky,1184,Austin Peay,1122
@@ -5781,9 +5781,9 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2022,nec,Northeast Conference,119,Central Conn,1148,F Dickinson,1192
 2022,nec,Northeast Conference,121,Bryant,1136,Central Conn,1148
 2022,nec,Northeast Conference,121,LIU Brooklyn,1254,Sacred Heart,1357
-2022,nec,Northeast Conference,121,Mt St. Mary's,1291,Saint Francis NY,1383
+2022,nec,Northeast Conference,121,Mt St Mary's,1291,Saint Francis NY,1383
 2022,nec,Northeast Conference,121,Wagner,1447,Saint Francis PA,1384
-2022,nec,Northeast Conference,124,Bryant,1136,Mt St. Mary's,1291
+2022,nec,Northeast Conference,124,Bryant,1136,Mt St Mary's,1291
 2022,nec,Northeast Conference,124,Wagner,1447,LIU Brooklyn,1254
 2022,nec,Northeast Conference,127,Bryant,1136,Wagner,1447
 2022,ovc,Ohio Valley Conference,121,Tennessee St.,1398,SIUE,1188
@@ -6034,9 +6034,9 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2023,ivy,Ivy League,131,Yale,1463,Cornell,1165
 2023,ivy,Ivy League,132,Princeton,1343,Yale,1463
 2023,maac,Metro Atlantic Athletic Conference,127,Marist,1265,Manhattan,1264
-2023,maac,Metro Atlantic Athletic Conference,127,Mt St. Mary's,1291,Canisius,1145
+2023,maac,Metro Atlantic Athletic Conference,127,Mt St Mary's,1291,Canisius,1145
 2023,maac,Metro Atlantic Athletic Conference,127,Saint Peter's,1389,Fairfield,1193
-2023,maac,Metro Atlantic Athletic Conference,128,Iona,1233,Mt St. Mary's,1291
+2023,maac,Metro Atlantic Athletic Conference,128,Iona,1233,Mt St Mary's,1291
 2023,maac,Metro Atlantic Athletic Conference,128,Saint Peter's,1389,Rider,1351
 2023,maac,Metro Atlantic Athletic Conference,129,Marist,1265,Quinnipiac,1346
 2023,maac,Metro Atlantic Athletic Conference,129,Niagara,1310,Siena,1373
@@ -6341,7 +6341,7 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2024,ivy,Ivy League,131,Brown,1135,Princeton,1343
 2024,ivy,Ivy League,131,Yale,1463,Cornell,1165
 2024,ivy,Ivy League,132,Yale,1463,Brown,1135
-2024,maac,Metro Atlantic Athletic Conference,127,Canisius,1145,Mt St. Mary's,1291
+2024,maac,Metro Atlantic Athletic Conference,127,Canisius,1145,Mt St Mary's,1291
 2024,maac,Metro Atlantic Athletic Conference,127,Iona,1233,Manhattan,1264
 2024,maac,Metro Atlantic Athletic Conference,127,Niagara,1310,Siena,1373
 2024,maac,Metro Atlantic Athletic Conference,128,Fairfield,1193,Iona,1233
@@ -6651,10 +6651,10 @@ Season,ConfAbbrev,ConfName,DayNum,WName,WTeamID,LName,LTeamID
 2025,maac,Metro Atlantic Athletic Conference,128,Quinnipiac,1346,Rider,1351
 2025,maac,Metro Atlantic Athletic Conference,128,Merrimack,1467,Sacred Heart,1357
 2025,maac,Metro Atlantic Athletic Conference,129,Iona,1233,Manhattan,1264
-2025,maac,Metro Atlantic Athletic Conference,129,Mt St. Mary's,1291,Marist,1265
+2025,maac,Metro Atlantic Athletic Conference,129,Mt St Mary's,1291,Marist,1265
 2025,maac,Metro Atlantic Athletic Conference,130,Iona,1233,Quinnipiac,1346
-2025,maac,Metro Atlantic Athletic Conference,130,Mt St. Mary's,1291,Merrimack,1467
-2025,maac,Metro Atlantic Athletic Conference,131,Mt St. Mary's,1291,Iona,1233
+2025,maac,Metro Atlantic Athletic Conference,130,Mt St Mary's,1291,Merrimack,1467
+2025,maac,Metro Atlantic Athletic Conference,131,Mt St Mary's,1291,Iona,1233
 2025,mac,Mid-American Conference,129,Akron,1103,Bowling Green,1132
 2025,mac,Mid-American Conference,129,Kent,1245,W Michigan,1444
 2025,mac,Mid-American Conference,129,Miami OH,1275,E Michigan,1185
