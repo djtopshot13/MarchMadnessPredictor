@@ -311,10 +311,12 @@ class Bracket:
     def simulate_matchup(self, team1_id, team2_id):
         team1_feat = get_team_features(self.season, team1_id)
         team2_feat = get_team_features(self.season, team2_id)
+        
         if team1_feat is None or team2_feat is None:
             print(f"Missing features for team {team1_id} or {team2_id} in season {self.season}")
-            return None
-        
+            # Return default values when features are missing
+            return team1_id, 0.5, 0.5  # Default to 50/50 probability when features are missing
+            
         # Create feature array with all stats
         features = pd.DataFrame([
             {
@@ -395,7 +397,7 @@ class BracketSimulation:
             strong_region_code = row['StrongSeed'][0]  # Extract W, X, Y, Z
             # Handle non-standard seed formats like '16a' by using regex to extract just the numeric part
             import re
-            strong_seed_match = re.search(r'^\d+$', row['StrongSeed'][1:])
+            strong_seed_match = re.search(r'(\d+)', row['StrongSeed'][1:])
             
             if strong_seed_match:
                 strong_seed_num = int(strong_seed_match.group())
@@ -755,6 +757,9 @@ class BracketSimulation:
             
 
     def matchup_visualization(self, matchup_items, region, round_num):
+        if not matchup_items:  # Skip if no matchups
+            return
+            
         region_name = {
                 'W': 'WEST',
                 'X': 'EAST',
@@ -773,13 +778,19 @@ class BracketSimulation:
         team2_color = '#d81b60'  # Red
         
         for i, (matchup, stats) in enumerate(matchup_items):
+            if not isinstance(matchup, tuple) or len(matchup) != 2:
+                continue  # Skip invalid matchups
+                
             team1, team2 = matchup
-            team1_name = self.brackets[0].get_team_name(team1)
-            team2_name = self.brackets[0].get_team_name(team2)
             
+            # Get team names with error handling
+            team1_name = self.brackets[0].get_team_name(team1) if not pd.isna(team1) else "Unknown Team"
+            team2_name = self.brackets[0].get_team_name(team2) if not pd.isna(team2) else "Unknown Team"
+            
+            # Calculate percentages
             total = sum(stats.values())
-            team1_pct = (stats[team1] / total) * 100
-            team2_pct = (stats[team2] / total) * 100
+            team1_pct = (stats[team1] / total) * 100 if team1 in stats else 0
+            team2_pct = (stats[team2] / total) * 100 if team2 in stats else 0
             
             # Create a subplot for each matchup
             ax = plt.subplot(len(matchup_items), 1, i+1)
@@ -812,16 +823,20 @@ class BracketSimulation:
             # Add small tick marks at 25%, 50%, 75%
             plt.xticks([25, 50, 75], ['25%', '50%', '75%'], color='#777777', fontsize=9)
             
-            # Get seeds for both teams
-            team1_seed = tourney_seeds[
-                (tourney_seeds['Season'] == self.season) & 
-                (tourney_seeds['TeamID'] == team1)
-            ]['SeedNum'].iloc[0] if not tourney_seeds.empty else '?'
-            
-            team2_seed = tourney_seeds[
-                (tourney_seeds['Season'] == self.season) & 
-                (tourney_seeds['TeamID'] == team2)
-            ]['SeedNum'].iloc[0] if not tourney_seeds.empty else '?'
+            # Get seeds with error handling
+            try:
+                team1_seed = tourney_seeds[
+                    (tourney_seeds['Season'] == self.season) & 
+                    (tourney_seeds['TeamID'] == team1)
+                ]['SeedNum'].iloc[0] if not pd.isna(team1) else '?'
+                
+                team2_seed = tourney_seeds[
+                    (tourney_seeds['Season'] == self.season) & 
+                    (tourney_seeds['TeamID'] == team2)
+                ]['SeedNum'].iloc[0] if not pd.isna(team2) else '?'
+            except IndexError:
+                team1_seed = '?' if not pd.isna(team1) else 'NaN'
+                team2_seed = '?' if not pd.isna(team2) else 'NaN'
             
             # Add a title that shows seeds with improved formatting
             plt.title(f'({team1_seed}) {team1_name} vs ({team2_seed}) {team2_name}', 
@@ -844,6 +859,7 @@ class BracketSimulation:
         plt.tight_layout()
         plt.savefig(f'MatchupResults{"/" + sub_dir[round_num-1] if sub_dir[round_num-1] else ""}/{region_name[region]} Predictions.png', dpi=300, bbox_inches='tight')
         plt.close()
+    
 
 class TournamentPredictor:
     def __init__(self, season, early_model=None, middle_model=None, final_model=None):
@@ -866,7 +882,7 @@ class TournamentPredictor:
             return {'final': self.final_model.predict_proba(features)}
     
 
-season_to_simulate = 2024  # Current season
+season_to_simulate = 2025  # Current season
 
 
 # Create and train the tournament predictor with PyCaret models
