@@ -28,7 +28,7 @@ sys.path.append(project_root)
 
 # Load preprocessed NCAA datasets
 data_dir = os.path.join(project_root, 'MarchMadnessData')
-# team_spellings = pd.read_csv(f'{data_dir}/MTeamSpellings.csv')
+team_spellings = pd.read_csv(f'{data_dir}/MTeamSpellings.csv')
 tourney_seeds = pd.read_csv(f'{data_dir}/MNCAATourneySeeds.csv')
 team_conferences = pd.read_csv(f'{data_dir}/MTeamConferences.csv')
 reg_results = pd.read_csv(f'{data_dir}/MRegularSeasonDetailedResults.csv')
@@ -58,8 +58,12 @@ def extract_seed(seed_str):
     return int(match.group(1)) if match else np.nan
 
 tourney_seeds['SeedNum'] = tourney_seeds['Seed'].apply(extract_seed)
+tourney_seeds = tourney_seeds.dropna(subset=['SeedNum'])
+# After dropping NaN values, safely convert to integers
+tourney_seeds['SeedNum'] = tourney_seeds['SeedNum'].astype(int)
 
-tourney_seeds = tourney_seeds[tourney_seeds['SeedNum'].notna()]
+
+# tourney_seeds = tourney_seeds[tourney_seeds['SeedNum'].notna()]
 
 # =============================================================================
 # 2. Build the Matchup Training Dataset from Tournament Results
@@ -73,6 +77,8 @@ team_features = pd.merge(team_stats, seeds, on=['Season', 'TeamID'], how='left')
 
 def get_team_features(season, team_id):
     feat = team_features[(team_features['Season'] == season) & (team_features['TeamID'] == team_id)]
+    feat = feat.dropna(subset=["SeedNum"])
+    feat['SeedNum'] = feat['SeedNum'].astype(int)
     return feat.iloc[0] if not feat.empty else None
 
 training_rows = []
@@ -92,15 +98,15 @@ for idx, row in tourney_results.iterrows():
             'Team1_AvgPoints': winner_feat['AvgPoints'],
             'Team1_AvgOppPoints': winner_feat['AvgOppPoints'],
             'Team1_SeedNum': winner_feat['SeedNum'],
-            'Team1_SeedWin%': seed_results.loc[winner_feat['SeedNum'].astype(int), "WIN%"],
-            'Team1_SeedR1%': seed_results.loc[winner_feat['SeedNum'].astype(int), "R64%"],
-            'Team1_SeedR2%': seed_results.loc[winner_feat['SeedNum'].astype(int), "R32%"],
+            'Team1_SeedWin%': seed_results.loc[winner_feat['SeedNum'], "WIN%"],
+            'Team1_SeedR1%': seed_results.loc[winner_feat['SeedNum'], "R64%"],
+            'Team1_SeedR2%': seed_results.loc[winner_feat['SeedNum'], "R32%"],
             'Team2_AvgPoints': loser_feat['AvgPoints'],
             'Team2_AvgOppPoints': loser_feat['AvgOppPoints'],
             'Team2_SeedNum': loser_feat['SeedNum'],
-            'Team2_SeedWin%': seed_results.loc[loser_feat['SeedNum'].astype(int), "WIN%"],
-            'Team2_SeedR1%': seed_results.loc[loser_feat['SeedNum'].astype(int), "R64%"],
-            'Team2_SeedR2%': seed_results.loc[loser_feat['SeedNum'].astype(int), "R32%"],
+            'Team2_SeedWin%': seed_results.loc[loser_feat['SeedNum'], "WIN%"],
+            'Team2_SeedR1%': seed_results.loc[loser_feat['SeedNum'], "R64%"],
+            'Team2_SeedR2%': seed_results.loc[loser_feat['SeedNum'], "R32%"],
             'Target': 1
         })
         

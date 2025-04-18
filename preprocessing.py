@@ -460,39 +460,39 @@ def win_percentage_by_round():
 
     write_data(df, file_name)
 
-# def clean_tourney_seeds():
+def clean_tourney_seeds():
 #     """
 #     Cleans tournament seeds data and creates new rows based on specific conditions.
 #     """
-#     file_name = "MNCAATourneySeeds.csv"
-#     ts_df = load_data(file_name)
-#     tsl_df = load_data("MNCAATourneySlots.csv")
+    file_name = "MNCAATourneySeeds.csv"
+    ts_df = load_data(file_name)
+    tsl_df = load_data("MNCAATourneySlots.csv")
 
-#     new_rows = []
-#     missing_seeds = {}
-#     for unique_season in tsl_df["Season"].unique():
-#         missing_seeds.update({unique_season: []})
+    new_rows = []
+    missing_seeds = {}
+    for unique_season in tsl_df["Season"].unique():
+        missing_seeds.update({unique_season: []})
 
-#     for index, row in tsl_df.iterrows():
-#         if not row['Slot'].startswith('R') and isinstance(row['WeakSeed'], str):
-#             missing_seeds[row['Season']].append(row['Slot'])
+    for index, row in tsl_df.iterrows():
+        if not row['Slot'].startswith('R') and isinstance(row['WeakSeed'], str):
+            missing_seeds[row['Season']].append(row['Slot'])
 
-#     print(missing_seeds)
+    print(missing_seeds)
 
-#     for index, row in tsl_df.iterrows():
-#         weak_seed = row['WeakSeed']
-#         for missing_seed in missing_seeds[row['Season']]:
-#             if weak_seed == missing_seed:
-#                 if type(row['WeakID']) != int:
-#                     weak_id = float("NaN")
-#                 else:
-#                     weak_id = row['WeakID'].astype(int)
-#                 new_row = {
-#                 'Season': row["Season"],
-#                 'Seed': weak_seed,
-#                 'TeamName': row['WeakTeamName'],
-#                 'TeamID': weak_id
-#             }
+    for index, row in tsl_df.iterrows():
+        weak_seed = row['WeakSeed']
+        for missing_seed in missing_seeds[row['Season']]:
+            if weak_seed == missing_seed:
+                if type(row['WeakID']) != int:
+                    weak_id = float("NaN")
+                else:
+                    weak_id = row['WeakID'].astype(int)
+                new_row = {
+                'Season': row["Season"],
+                'Seed': weak_seed,
+                'TeamName': row['WeakTeamName'],
+                'TeamID': weak_id
+            }
 #                 new_rows.append(new_row)
                 # seed_number = re.search(r'(\d+)', weak_seed)  # Extract digits from the seed
                 # if seed_number:
@@ -514,39 +514,39 @@ def win_percentage_by_round():
                 #                 'TeamID': team_id
                 #             }
                 #             new_rows.append(new_row)
-#             else:
-#                 continue
+            else:
+                continue
 
-#     # Create a DataFrame from the list of new rows
-#     new_rows_df = pd.DataFrame(new_rows)
-#     return new_rows_df
+    # Create a DataFrame from the list of new rows
+    new_rows_df = pd.DataFrame(new_rows)
+    return new_rows_df
 
-# def append_and_sort_csv(new_rows_df, file_name="MNCAATourneySeeds.csv"):
-#     """
-#     Appends new rows to a CSV file, sorts the data by 'Season' and 'Seed',
-#     and saves the sorted data back to the CSV.
-#     """
-#     data_dir = os.path.join(os.getcwd(), 'MarchMadnessData')  # Assuming data is in a folder
-#     file_path = os.path.join(data_dir, file_name)
+def append_and_sort_csv(new_rows_df, file_name="MNCAATourneySeeds.csv"):
+    """
+    Appends new rows to a CSV file, sorts the data by 'Season' and 'Seed',
+    and saves the sorted data back to the CSV.
+    """
+    data_dir = os.path.join(os.getcwd(), 'MarchMadnessData')  # Assuming data is in a folder
+    file_path = os.path.join(data_dir, file_name)
 
-#     # Append to CSV
-#     if not new_rows_df.empty:
-#         new_rows_df.to_csv(file_path, mode='a', header=False, index=False)
+    # Append to CSV
+    if not new_rows_df.empty:
+        new_rows_df.to_csv(file_path, mode='a', header=False, index=False)
 
-#         # Load the entire CSV
-#         df = pd.read_csv(file_path)
+        # Load the entire CSV
+        df = pd.read_csv(file_path)
 
-#         # Sort by 'Season' and 'Seed'
-#         df_sorted = df.sort_values(by=['Season', 'Seed'])
+        # Sort by 'Season' and 'Seed'
+        df_sorted = df.sort_values(by=['Season', 'Seed'])
 
-#         # Save the sorted DataFrame back to the CSV (overwriting)
-#         df_sorted.to_csv(file_path, index=False)
+        # Save the sorted DataFrame back to the CSV (overwriting)
+        df_sorted.to_csv(file_path, index=False)
 
-# # Get new data
-# new_data = clean_tourney_seeds()
+# Get new data
+new_data = clean_tourney_seeds()
 
-# # Append to the original file and then sort
-# append_and_sort_csv(new_data)
+# Append to the original file and then sort
+append_and_sort_csv(new_data)
 
 # Example usage:
 

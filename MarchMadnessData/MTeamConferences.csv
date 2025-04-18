@@ -1299,7 +1299,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1989,Morehead St.,1287,ovc,Ohio Valley Conference
 1989,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1989,MS Valley St.,1290,swac,Southwest Athletic Conference
-1989,Mt St. Mary's,1291,ind,Independent
+1989,Mt St Mary's,1291,ind,Independent
 1989,MTSU,1292,ovc,Ohio Valley Conference
 1989,Murray St.,1293,ovc,Ohio Valley Conference
 1989,N Illinois,1296,ind,Independent
@@ -1592,7 +1592,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1990,Morehead St.,1287,ovc,Ohio Valley Conference
 1990,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1990,MS Valley St.,1290,swac,Southwest Athletic Conference
-1990,Mt St. Mary's,1291,nec,Northeast Conference
+1990,Mt St Mary's,1291,nec,Northeast Conference
 1990,MTSU,1292,ovc,Ohio Valley Conference
 1990,Murray St.,1293,ovc,Ohio Valley Conference
 1990,N Illinois,1296,ind,Independent
@@ -1884,7 +1884,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1991,Morehead St.,1287,ovc,Ohio Valley Conference
 1991,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1991,MS Valley St.,1290,swac,Southwest Athletic Conference
-1991,Mt St. Mary's,1291,nec,Northeast Conference
+1991,Mt St Mary's,1291,nec,Northeast Conference
 1991,MTSU,1292,ovc,Ohio Valley Conference
 1991,Murray St.,1293,ovc,Ohio Valley Conference
 1991,N Illinois,1296,mid_cont,Mid-Continent Conference
@@ -2180,7 +2180,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1992,Morehead St.,1287,ovc,Ohio Valley Conference
 1992,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1992,MS Valley St.,1290,swac,Southwest Athletic Conference
-1992,Mt St. Mary's,1291,nec,Northeast Conference
+1992,Mt St Mary's,1291,nec,Northeast Conference
 1992,MTSU,1292,ovc,Ohio Valley Conference
 1992,Murray St.,1293,ovc,Ohio Valley Conference
 1992,N Illinois,1296,mid_cont,Mid-Continent Conference
@@ -2477,7 +2477,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1993,Morehead St.,1287,ovc,Ohio Valley Conference
 1993,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1993,MS Valley St.,1290,swac,Southwest Athletic Conference
-1993,Mt St. Mary's,1291,nec,Northeast Conference
+1993,Mt St Mary's,1291,nec,Northeast Conference
 1993,MTSU,1292,ovc,Ohio Valley Conference
 1993,Murray St.,1293,ovc,Ohio Valley Conference
 1993,N Illinois,1296,mid_cont,Mid-Continent Conference
@@ -2776,7 +2776,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1994,Morehead St.,1287,ovc,Ohio Valley Conference
 1994,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1994,MS Valley St.,1290,swac,Southwest Athletic Conference
-1994,Mt St. Mary's,1291,nec,Northeast Conference
+1994,Mt St Mary's,1291,nec,Northeast Conference
 1994,MTSU,1292,ovc,Ohio Valley Conference
 1994,Murray St.,1293,ovc,Ohio Valley Conference
 1994,N Illinois,1296,mid_cont,Mid-Continent Conference
@@ -3078,7 +3078,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1995,Morehead St.,1287,ovc,Ohio Valley Conference
 1995,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1995,MS Valley St.,1290,swac,Southwest Athletic Conference
-1995,Mt St. Mary's,1291,nec,Northeast Conference
+1995,Mt St Mary's,1291,nec,Northeast Conference
 1995,MTSU,1292,ovc,Ohio Valley Conference
 1995,Murray St.,1293,ovc,Ohio Valley Conference
 1995,N Illinois,1296,mw_coll,Midwestern Collegiate Conference
@@ -3382,7 +3382,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1996,Morehead St.,1287,ovc,Ohio Valley Conference
 1996,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1996,MS Valley St.,1290,swac,Southwest Athletic Conference
-1996,Mt St. Mary's,1291,nec,Northeast Conference
+1996,Mt St Mary's,1291,nec,Northeast Conference
 1996,MTSU,1292,ovc,Ohio Valley Conference
 1996,Murray St.,1293,ovc,Ohio Valley Conference
 1996,N Illinois,1296,mw_coll,Midwestern Collegiate Conference
@@ -3687,7 +3687,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1997,Morehead St.,1287,ovc,Ohio Valley Conference
 1997,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1997,MS Valley St.,1290,swac,Southwest Athletic Conference
-1997,Mt St. Mary's,1291,nec,Northeast Conference
+1997,Mt St Mary's,1291,nec,Northeast Conference
 1997,MTSU,1292,ovc,Ohio Valley Conference
 1997,Murray St.,1293,ovc,Ohio Valley Conference
 1997,N Illinois,1296,mw_coll,Midwestern Collegiate Conference
@@ -3992,7 +3992,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1998,Morehead St.,1287,ovc,Ohio Valley Conference
 1998,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1998,MS Valley St.,1290,swac,Southwest Athletic Conference
-1998,Mt St. Mary's,1291,nec,Northeast Conference
+1998,Mt St Mary's,1291,nec,Northeast Conference
 1998,MTSU,1292,ovc,Ohio Valley Conference
 1998,Murray St.,1293,ovc,Ohio Valley Conference
 1998,N Illinois,1296,mac,Mid-American Conference
@@ -4301,7 +4301,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 1999,Morehead St.,1287,ovc,Ohio Valley Conference
 1999,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 1999,MS Valley St.,1290,swac,Southwest Athletic Conference
-1999,Mt St. Mary's,1291,nec,Northeast Conference
+1999,Mt St Mary's,1291,nec,Northeast Conference
 1999,MTSU,1292,ovc,Ohio Valley Conference
 1999,Murray St.,1293,ovc,Ohio Valley Conference
 1999,N Illinois,1296,mac,Mid-American Conference
@@ -4616,7 +4616,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2000,Morehead St.,1287,ovc,Ohio Valley Conference
 2000,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2000,MS Valley St.,1290,swac,Southwest Athletic Conference
-2000,Mt St. Mary's,1291,nec,Northeast Conference
+2000,Mt St Mary's,1291,nec,Northeast Conference
 2000,MTSU,1292,ovc,Ohio Valley Conference
 2000,Murray St.,1293,ovc,Ohio Valley Conference
 2000,N Illinois,1296,mac,Mid-American Conference
@@ -4934,7 +4934,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2001,Morehead St.,1287,ovc,Ohio Valley Conference
 2001,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2001,MS Valley St.,1290,swac,Southwest Athletic Conference
-2001,Mt St. Mary's,1291,nec,Northeast Conference
+2001,Mt St Mary's,1291,nec,Northeast Conference
 2001,MTSU,1292,sun_belt,Sun Belt Conference
 2001,Murray St.,1293,ovc,Ohio Valley Conference
 2001,N Illinois,1296,mac,Mid-American Conference
@@ -5254,7 +5254,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2002,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2002,Morris Brown,1289,ind,Independent
 2002,MS Valley St.,1290,swac,Southwest Athletic Conference
-2002,Mt St. Mary's,1291,nec,Northeast Conference
+2002,Mt St Mary's,1291,nec,Northeast Conference
 2002,MTSU,1292,sun_belt,Sun Belt Conference
 2002,Murray St.,1293,ovc,Ohio Valley Conference
 2002,N Illinois,1296,mac,Mid-American Conference
@@ -5579,7 +5579,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2003,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2003,Morris Brown,1289,ind,Independent
 2003,MS Valley St.,1290,swac,Southwest Athletic Conference
-2003,Mt St. Mary's,1291,nec,Northeast Conference
+2003,Mt St Mary's,1291,nec,Northeast Conference
 2003,MTSU,1292,sun_belt,Sun Belt Conference
 2003,Murray St.,1293,ovc,Ohio Valley Conference
 2003,N Illinois,1296,mac,Mid-American Conference
@@ -5905,7 +5905,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2004,Morehead St.,1287,ovc,Ohio Valley Conference
 2004,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2004,MS Valley St.,1290,swac,Southwest Athletic Conference
-2004,Mt St. Mary's,1291,nec,Northeast Conference
+2004,Mt St Mary's,1291,nec,Northeast Conference
 2004,MTSU,1292,sun_belt,Sun Belt Conference
 2004,Murray St.,1293,ovc,Ohio Valley Conference
 2004,N Illinois,1296,mac,Mid-American Conference
@@ -6232,7 +6232,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2005,Morehead St.,1287,ovc,Ohio Valley Conference
 2005,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2005,MS Valley St.,1290,swac,Southwest Athletic Conference
-2005,Mt St. Mary's,1291,nec,Northeast Conference
+2005,Mt St Mary's,1291,nec,Northeast Conference
 2005,MTSU,1292,sun_belt,Sun Belt Conference
 2005,Murray St.,1293,ovc,Ohio Valley Conference
 2005,N Colorado,1294,ind,Independent
@@ -6563,7 +6563,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2006,Morehead St.,1287,ovc,Ohio Valley Conference
 2006,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2006,MS Valley St.,1290,swac,Southwest Athletic Conference
-2006,Mt St. Mary's,1291,nec,Northeast Conference
+2006,Mt St Mary's,1291,nec,Northeast Conference
 2006,MTSU,1292,sun_belt,Sun Belt Conference
 2006,Murray St.,1293,ovc,Ohio Valley Conference
 2006,N Colorado,1294,ind,Independent
@@ -6897,7 +6897,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2007,Morehead St.,1287,ovc,Ohio Valley Conference
 2007,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2007,MS Valley St.,1290,swac,Southwest Athletic Conference
-2007,Mt St. Mary's,1291,nec,Northeast Conference
+2007,Mt St Mary's,1291,nec,Northeast Conference
 2007,MTSU,1292,sun_belt,Sun Belt Conference
 2007,Murray St.,1293,ovc,Ohio Valley Conference
 2007,N Colorado,1294,big_sky,Big Sky Conference
@@ -7236,7 +7236,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2008,Morehead St.,1287,ovc,Ohio Valley Conference
 2008,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2008,MS Valley St.,1290,swac,Southwest Athletic Conference
-2008,Mt St. Mary's,1291,nec,Northeast Conference
+2008,Mt St Mary's,1291,nec,Northeast Conference
 2008,MTSU,1292,sun_belt,Sun Belt Conference
 2008,Murray St.,1293,ovc,Ohio Valley Conference
 2008,N Colorado,1294,big_sky,Big Sky Conference
@@ -7580,7 +7580,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2009,Morehead St.,1287,ovc,Ohio Valley Conference
 2009,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2009,MS Valley St.,1290,swac,Southwest Athletic Conference
-2009,Mt St. Mary's,1291,nec,Northeast Conference
+2009,Mt St Mary's,1291,nec,Northeast Conference
 2009,MTSU,1292,sun_belt,Sun Belt Conference
 2009,Murray St.,1293,ovc,Ohio Valley Conference
 2009,N Colorado,1294,big_sky,Big Sky Conference
@@ -7927,7 +7927,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2010,Morehead St.,1287,ovc,Ohio Valley Conference
 2010,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2010,MS Valley St.,1290,swac,Southwest Athletic Conference
-2010,Mt St. Mary's,1291,nec,Northeast Conference
+2010,Mt St Mary's,1291,nec,Northeast Conference
 2010,MTSU,1292,sun_belt,Sun Belt Conference
 2010,Murray St.,1293,ovc,Ohio Valley Conference
 2010,N Colorado,1294,big_sky,Big Sky Conference
@@ -8274,7 +8274,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2011,Morehead St.,1287,ovc,Ohio Valley Conference
 2011,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2011,MS Valley St.,1290,swac,Southwest Athletic Conference
-2011,Mt St. Mary's,1291,nec,Northeast Conference
+2011,Mt St Mary's,1291,nec,Northeast Conference
 2011,MTSU,1292,sun_belt,Sun Belt Conference
 2011,Murray St.,1293,ovc,Ohio Valley Conference
 2011,N Colorado,1294,big_sky,Big Sky Conference
@@ -8618,7 +8618,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2012,Morehead St.,1287,ovc,Ohio Valley Conference
 2012,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2012,MS Valley St.,1290,swac,Southwest Athletic Conference
-2012,Mt St. Mary's,1291,nec,Northeast Conference
+2012,Mt St Mary's,1291,nec,Northeast Conference
 2012,MTSU,1292,sun_belt,Sun Belt Conference
 2012,Murray St.,1293,ovc,Ohio Valley Conference
 2012,N Colorado,1294,big_sky,Big Sky Conference
@@ -8963,7 +8963,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2013,Morehead St.,1287,ovc,Ohio Valley Conference
 2013,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2013,MS Valley St.,1290,swac,Southwest Athletic Conference
-2013,Mt St. Mary's,1291,nec,Northeast Conference
+2013,Mt St Mary's,1291,nec,Northeast Conference
 2013,MTSU,1292,sun_belt,Sun Belt Conference
 2013,Murray St.,1293,ovc,Ohio Valley Conference
 2013,N Colorado,1294,big_sky,Big Sky Conference
@@ -9314,7 +9314,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2014,Morehead St.,1287,ovc,Ohio Valley Conference
 2014,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2014,MS Valley St.,1290,swac,Southwest Athletic Conference
-2014,Mt St. Mary's,1291,nec,Northeast Conference
+2014,Mt St Mary's,1291,nec,Northeast Conference
 2014,MTSU,1292,cusa,Conference USA
 2014,Murray St.,1293,ovc,Ohio Valley Conference
 2014,N Colorado,1294,big_sky,Big Sky Conference
@@ -9665,7 +9665,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2015,Morehead St.,1287,ovc,Ohio Valley Conference
 2015,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2015,MS Valley St.,1290,swac,Southwest Athletic Conference
-2015,Mt St. Mary's,1291,nec,Northeast Conference
+2015,Mt St Mary's,1291,nec,Northeast Conference
 2015,MTSU,1292,cusa,Conference USA
 2015,Murray St.,1293,ovc,Ohio Valley Conference
 2015,N Colorado,1294,big_sky,Big Sky Conference
@@ -10016,7 +10016,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2016,Morehead St.,1287,ovc,Ohio Valley Conference
 2016,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2016,MS Valley St.,1290,swac,Southwest Athletic Conference
-2016,Mt St. Mary's,1291,nec,Northeast Conference
+2016,Mt St Mary's,1291,nec,Northeast Conference
 2016,MTSU,1292,cusa,Conference USA
 2016,Murray St.,1293,ovc,Ohio Valley Conference
 2016,N Colorado,1294,big_sky,Big Sky Conference
@@ -10367,7 +10367,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2017,Morehead St.,1287,ovc,Ohio Valley Conference
 2017,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2017,MS Valley St.,1290,swac,Southwest Athletic Conference
-2017,Mt St. Mary's,1291,nec,Northeast Conference
+2017,Mt St Mary's,1291,nec,Northeast Conference
 2017,MTSU,1292,cusa,Conference USA
 2017,Murray St.,1293,ovc,Ohio Valley Conference
 2017,N Colorado,1294,big_sky,Big Sky Conference
@@ -10718,7 +10718,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2018,Morehead St.,1287,ovc,Ohio Valley Conference
 2018,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2018,MS Valley St.,1290,swac,Southwest Athletic Conference
-2018,Mt St. Mary's,1291,nec,Northeast Conference
+2018,Mt St Mary's,1291,nec,Northeast Conference
 2018,MTSU,1292,cusa,Conference USA
 2018,Murray St.,1293,ovc,Ohio Valley Conference
 2018,N Colorado,1294,big_sky,Big Sky Conference
@@ -11069,7 +11069,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2019,Morehead St.,1287,ovc,Ohio Valley Conference
 2019,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2019,MS Valley St.,1290,swac,Southwest Athletic Conference
-2019,Mt St. Mary's,1291,nec,Northeast Conference
+2019,Mt St Mary's,1291,nec,Northeast Conference
 2019,MTSU,1292,cusa,Conference USA
 2019,Murray St.,1293,ovc,Ohio Valley Conference
 2019,N Colorado,1294,big_sky,Big Sky Conference
@@ -11422,7 +11422,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2020,Morehead St.,1287,ovc,Ohio Valley Conference
 2020,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2020,MS Valley St.,1290,swac,Southwest Athletic Conference
-2020,Mt St. Mary's,1291,nec,Northeast Conference
+2020,Mt St Mary's,1291,nec,Northeast Conference
 2020,MTSU,1292,cusa,Conference USA
 2020,Murray St.,1293,ovc,Ohio Valley Conference
 2020,N Colorado,1294,big_sky,Big Sky Conference
@@ -11768,7 +11768,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2021,Morehead St.,1287,ovc,Ohio Valley Conference
 2021,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2021,MS Valley St.,1290,swac,Southwest Athletic Conference
-2021,Mt St. Mary's,1291,nec,Northeast Conference
+2021,Mt St Mary's,1291,nec,Northeast Conference
 2021,MTSU,1292,cusa,Conference USA
 2021,Murray St.,1293,ovc,Ohio Valley Conference
 2021,N Colorado,1294,big_sky,Big Sky Conference
@@ -12122,7 +12122,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2022,Morehead St.,1287,ovc,Ohio Valley Conference
 2022,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2022,MS Valley St.,1290,swac,Southwest Athletic Conference
-2022,Mt St. Mary's,1291,nec,Northeast Conference
+2022,Mt St Mary's,1291,nec,Northeast Conference
 2022,MTSU,1292,cusa,Conference USA
 2022,Murray St.,1293,ovc,Ohio Valley Conference
 2022,N Colorado,1294,big_sky,Big Sky Conference
@@ -12480,7 +12480,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2023,Morehead St.,1287,ovc,Ohio Valley Conference
 2023,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2023,MS Valley St.,1290,swac,Southwest Athletic Conference
-2023,Mt St. Mary's,1291,maac,Metro Atlantic Athletic Conference
+2023,Mt St Mary's,1291,maac,Metro Atlantic Athletic Conference
 2023,MTSU,1292,cusa,Conference USA
 2023,Murray St.,1293,mvc,Missouri Valley Conference
 2023,N Colorado,1294,big_sky,Big Sky Conference
@@ -12842,7 +12842,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2024,Morehead St.,1287,ovc,Ohio Valley Conference
 2024,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2024,MS Valley St.,1290,swac,Southwest Athletic Conference
-2024,Mt St. Mary's,1291,maac,Metro Atlantic Athletic Conference
+2024,Mt St Mary's,1291,maac,Metro Atlantic Athletic Conference
 2024,MTSU,1292,cusa,Conference USA
 2024,Murray St.,1293,mvc,Missouri Valley Conference
 2024,N Colorado,1294,big_sky,Big Sky Conference
@@ -13204,7 +13204,7 @@ Season,TeamName,TeamID,ConfAbbrev,ConfName
 2025,Morehead St.,1287,ovc,Ohio Valley Conference
 2025,Morgan St.,1288,meac,Mid-Eastern Athletic Conference
 2025,MS Valley St.,1290,swac,Southwest Athletic Conference
-2025,Mt St. Mary's,1291,maac,Metro Atlantic Athletic Conference
+2025,Mt St Mary's,1291,maac,Metro Atlantic Athletic Conference
 2025,MTSU,1292,cusa,Conference USA
 2025,Murray St.,1293,mvc,Missouri Valley Conference
 2025,N Colorado,1294,big_sky,Big Sky Conference
