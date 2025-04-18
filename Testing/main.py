@@ -54,13 +54,12 @@ team_stats['AvgMargin'] = team_stats['AvgPoints'] - team_stats['AvgOppPoints']
 # ----------------------------
 # Extract numeric seed values (e.g., "W01" becomes 1)
 def extract_seed(seed_str):
-    match = re.search(r'(\d+)', seed_str)
+    match = re.search(r'[W-Z](\d+)$', seed_str)
     return int(match.group(1)) if match else np.nan
 
 tourney_seeds['SeedNum'] = tourney_seeds['Seed'].apply(extract_seed)
 
-print(tourney_seeds[tourney_seeds['Season'] == 2025].to_string())
-
+tourney_seeds = tourney_seeds[tourney_seeds['SeedNum'].notna()]
 
 # =============================================================================
 # 2. Build the Matchup Training Dataset from Tournament Results

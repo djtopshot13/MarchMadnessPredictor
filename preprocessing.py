@@ -483,11 +483,15 @@ def win_percentage_by_round():
 #         weak_seed = row['WeakSeed']
 #         for missing_seed in missing_seeds[row['Season']]:
 #             if weak_seed == missing_seed:
+#                 if type(row['WeakID']) != int:
+#                     weak_id = float("NaN")
+#                 else:
+#                     weak_id = row['WeakID'].astype(int)
 #                 new_row = {
 #                 'Season': row["Season"],
 #                 'Seed': weak_seed,
 #                 'TeamName': row['WeakTeamName'],
-#                 'TeamID': row['WeakID']
+#                 'TeamID': weak_id
 #             }
 #                 new_rows.append(new_row)
                 # seed_number = re.search(r'(\d+)', weak_seed)  # Extract digits from the seed
