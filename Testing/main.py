@@ -739,23 +739,23 @@ class BracketSimulation:
         
         # Split matchups into groups of 8 for better visualization
         matchup_items = list(self.matchup_stats.items())
-        print(f"Total matchups: {len(matchup_items)}")
+        # print(f"Total matchups: {len(matchup_items)}")
         region1_r1 = matchup_items[0:8]
         region1_r2 = matchup_items[8:12]
         region1_r3 = matchup_items[12:14]
-        region1_r4 = matchup_items[14]
+        region1_r4 = [matchup_items[14]]
         region2_r1 = matchup_items[15:23]
         region2_r2 = matchup_items[23:27]
         region2_r3 = matchup_items[27:29]
-        region2_r4 = matchup_items[29]
+        region2_r4 = [matchup_items[29]]
         region3_r1 = matchup_items[30:38]
         region3_r2 = matchup_items[38:42]
         region3_r3 = matchup_items[42:44]
-        region3_r4 = matchup_items[44]
+        region3_r4 = [matchup_items[44]]
         region4_r1 = matchup_items[45:53]
         region4_r2 = matchup_items[53:57]
         region4_r3 = matchup_items[57:59]
-        region4_r4 = matchup_items[59]
+        region4_r4 = [matchup_items[59]]
         final_four = matchup_items[60:62]
         championship = matchup_items[62]
 
@@ -763,8 +763,8 @@ class BracketSimulation:
         r2_items = [region1_r2, region2_r2, region3_r2, region4_r2]
         r3_items = [region1_r3, region2_r3, region3_r3, region4_r3]
         r4_items = [region1_r4, region2_r4, region3_r4, region4_r4]
-        ff_items = final_four
-        championship_items = championship
+        ff_items = [final_four]
+        championship_items = [[championship]]
             
         # num_groups = (len(matchup_items) + 7) // 8
         
@@ -782,9 +782,11 @@ class BracketSimulation:
             self.matchup_visualization(r2_item, regions[idx], round_num=2)
         
         for idx, r3_item in enumerate(r3_items):
+            # print(f"R3 Item: {r3_item}")
             self.matchup_visualization(r3_item, regions[idx], round_num=3)
         
         for idx, r4_item in enumerate(r4_items):
+            # print(f"R4 Item: {r4_item}")
             self.matchup_visualization(r4_item, regions[idx], round_num=4)
         
         for idx, ff_item in enumerate(ff_items):
