@@ -2517,38 +2517,70 @@ Season,DayNum,WName,WTeamID,WScore,LName,LTeamID,LScore,NumOT
 2024,152,Connecticut,1163,86,Alabama,1104,72,0
 2024,152,Purdue,1345,63,NC State,1301,50,0
 2024,154,Connecticut,1163,75,Purdue,1345,60,0
-2025,134,Auburn,1120,83,Alabama St.,1106,63,0
-2025,134,Creighton,1166,89,Louisville,1257,75,0
-2025,134,Michigan,1276,68,UC San Diego,1471,65,0
-2025,134,Texas A&M,1401,80,Yale,1463,71,0
-2025,134,Mississippi,1279,71,North Carolina,1314,64,0
-2025,134,Iowa St.,1235,82,Lipscomb,1252,55,0
-2025,134,New Mexico,1307,75,Marquette,1266,66,0
-2025,134,Michigan St.,1277,87,Bryant,1136,62,0
-2025,134,Duke,1181,93,Mount St. Mary's,1188,49,0
-2025,134,Baylor,1124,75,Mississippi St.,1280,72,0
-2025,134,Oregon,1332,81,Liberty,1251,52,0
-2025,134,Arizona,1112,93,Akron,1103,65,0
-2025,134,BYU,1140,80,VCU,1433,71,0
-2025,134,Wisconsin,1458,85,Montana,1285,66,0
-2025,134,Saint Mary's,1388,59,Vanderbilt,1435,56,0
-2025,134,Alabama,1104,90,Robert Morris,1352,81,0
-2025,134,UCLA,1417,72,Utah St.,1429,47,0
-2025,134,Tennessee,1397,77,Wofford,1459,62,0
-2025,134,Florida,1196,95,Norfolk St.,1313,69,0
-2025,134,UConn,1163,67,Oklahoma,1328,59,0
-2025,134,Colorado St.,1161,78,Memphis,1272,70,0
-2025,134,Maryland,1268,81,Grand Canyon,1213,49,0
-2025,134,Drake,1179,67,Missouri,1281,57,0
-2025,134,Texas Tech,1403,82,UNC Wilmington,1423,72,0
-2025,134,Arkansas,1116,79,Kansas,1242,72,0
-2025,134,St. John's,1385,83,Omaha,1303,53,0
-2025,134,Florida,1196,95,Norfolk St.,1313,69,0
-2025,134,UConn,1163,67,Oklahoma,1328,59,0
-2025,134,Colorado St.,1161,78,Memphis,1272,70,0
-2025,134,Maryland,1268,81,Grand Canyon,1213,49,0
-2025,134,Drake,1179,67,Missouri,1281,57,0
-2025,134,Texas Tech,1403,82,UNC Wilmington,1423,72,0
-2025,134,Arkansas,1116,79,Kansas,1242,72,0
-2025,134,St. John's,1385,83,Omaha,1303,53,0
-
+2025,134,Alabama St.,1106,70,Saint Francis PA,1384,68,0
+2025,134,North Carolina,1314,95,San Diego St.,1361,68,0
+2025,135,Mt St. Mary's,1291,83,American Univ,1110,72,0
+2025,135,Xavier,1462,86,Texas,1400,80,0
+2025,136,Arkansas,1116,79,Kansas,1242,72,0
+2025,136,Auburn,1120,83,Alabama St.,1106,63,0
+2025,136,BYU,1140,80,VCU,1433,71,0
+2025,136,Creighton,1166,89,Louisville,1257,75,0
+2025,136,Drake,1179,67,Missouri,1281,57,0
+2025,136,Gonzaga,1211,89,Georgia,1208,68,0
+2025,136,Houston,1222,78,SIUE,1188,40,0
+2025,136,McNeese St.,1270,69,Clemson,1155,67,0
+2025,136,Michigan,1276,68,UC San Diego,1471,65,0
+2025,136,Purdue,1345,75,High Point,1219,63,0
+2025,136,St. John's,1385,83,NE Omaha,1303,53,0
+2025,136,Tennessee,1397,77,Wofford,1459,62,0
+2025,136,Texas A&M,1401,80,Yale,1463,71,0
+2025,136,Texas Tech,1403,82,UNC Wilmington,1423,72,0
+2025,136,UCLA,1417,72,Utah St.,1429,47,0
+2025,136,Wisconsin,1458,85,Montana,1285,66,0
+2025,137,Alabama,1104,90,Robert Morris,1352,81,0
+2025,137,Arizona,1112,93,Akron,1103,65,0
+2025,137,Baylor,1124,75,Mississippi St.,1280,72,0
+2025,137,Colorado St.,1161,78,Memphis,1272,70,0
+2025,137,Duke,1181,93,Mt St. Mary's,1291,49,0
+2025,137,Florida,1196,95,Norfolk St.,1313,69,0
+2025,137,Illinois,1228,86,Xavier,1462,73,0
+2025,137,Iowa St.,1235,82,Lipscomb,1252,55,0
+2025,137,Kentucky,1246,76,Troy,1407,57,0
+2025,137,Maryland,1268,81,Grand Canyon,1213,49,0
+2025,137,Michigan St.,1277,87,Bryant,1136,62,0
+2025,137,Mississippi,1279,71,North Carolina,1314,64,0
+2025,137,New Mexico,1307,75,Marquette,1266,66,0
+2025,137,Oregon,1332,81,Liberty,1251,52,0
+2025,137,Saint Mary's,1388,59,Vanderbilt,1435,56,0
+2025,137,Connecticut,1163,67,Oklahoma,1328,59,0
+2025,138,Arkansas,1116,75,St. John's,1385,66,0
+2025,138,Auburn,1120,82,Creighton,1166,70,0
+2025,138,BYU,1140,91,Wisconsin,1458,89,0
+2025,138,Houston,1222,81,Gonzaga,1211,76,0
+2025,138,Michigan,1276,91,Texas A&M,1401,79,0
+2025,138,Purdue,1345,76,McNeese St.,1270,62,0
+2025,138,Tennessee,1397,67,UCLA,1417,58,0
+2025,138,Texas Tech,1403,77,Drake,1179,64,0
+2025,139,Alabama,1104,80,Saint Mary's,1388,66,0
+2025,139,Arizona,1112,87,Oregon,1332,83,0
+2025,139,Duke,1181,89,Baylor,1124,66,0
+2025,139,Florida,1196,77,Connecticut,1163,75,0
+2025,139,Kentucky,1246,84,Illinois,1228,75,0
+2025,139,Maryland,1268,72,Colorado St.,1161,71,0
+2025,139,Michigan St.,1277,71,New Mexico,1307,63,0
+2025,139,Mississippi,1279,91,Iowa St.,1235,78,0
+2025,143,Alabama,1104,113,BYU,1140,88,0
+2025,143,Duke,1181,100,Arizona,1112,93,0
+2025,143,Florida,1196,87,Maryland,1268,71,0
+2025,143,Texas Tech,1403,85,Arkansas,1116,83,1
+2025,144,Auburn,1120,78,Michigan,1276,65,0
+2025,144,Houston,1222,62,Purdue,1345,60,0
+2025,144,Michigan St.,1277,73,Mississippi,1279,70,0
+2025,144,Tennessee,1397,78,Kentucky,1246,65,0
+2025,145,Duke,1181,85,Alabama,1104,65,0
+2025,145,Florida,1196,84,Texas Tech,1403,79,0
+2025,146,Auburn,1120,70,Michigan St.,1277,64,0
+2025,146,Houston,1222,69,Tennessee,1397,50,0
+2025,152,Florida,1196,79,Auburn,1120,73,0
+2025,152,Houston,1222,70,Duke,1181,67,0
+2025,154,Florida,1196,65,Houston,1222,63,0

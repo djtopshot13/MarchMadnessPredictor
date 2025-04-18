@@ -397,7 +397,7 @@ class BracketSimulation:
             strong_region_code = row['StrongSeed'][0]  # Extract W, X, Y, Z
             # Handle non-standard seed formats like '16a' by using regex to extract just the numeric part
             import re
-            strong_seed_match = re.search(r'(\d+)', row['StrongSeed'][1:])
+            strong_seed_match = re.search(r'^\d+$', row['StrongSeed'][1:])
             
             if strong_seed_match:
                 strong_seed_num = int(strong_seed_match.group())
@@ -761,10 +761,10 @@ class BracketSimulation:
             return
             
         region_name = {
-                'W': 'WEST',
-                'X': 'EAST',
-                'Y': 'SOUTH',
-                'Z': 'MIDWEST',
+                'W': 'West',
+                'X': 'East',
+                'Y': 'Souh',
+                'Z': 'Midwest',
                 'Final Four': 'Final Four',
                 'Championship': 'Championship'
         }
@@ -778,14 +778,12 @@ class BracketSimulation:
         team2_color = '#d81b60'  # Red
         
         for i, (matchup, stats) in enumerate(matchup_items):
-            if not isinstance(matchup, tuple) or len(matchup) != 2:
-                continue  # Skip invalid matchups
                 
             team1, team2 = matchup
             
             # Get team names with error handling
-            team1_name = self.brackets[0].get_team_name(team1) if not pd.isna(team1) else "Unknown Team"
-            team2_name = self.brackets[0].get_team_name(team2) if not pd.isna(team2) else "Unknown Team"
+            team1_name = self.brackets[0].get_team_name(team1)
+            team2_name = self.brackets[0].get_team_name(team2) 
             
             # Calculate percentages
             total = sum(stats.values())
@@ -824,19 +822,15 @@ class BracketSimulation:
             plt.xticks([25, 50, 75], ['25%', '50%', '75%'], color='#777777', fontsize=9)
             
             # Get seeds with error handling
-            try:
-                team1_seed = tourney_seeds[
-                    (tourney_seeds['Season'] == self.season) & 
-                    (tourney_seeds['TeamID'] == team1)
-                ]['SeedNum'].iloc[0] if not pd.isna(team1) else '?'
-                
-                team2_seed = tourney_seeds[
-                    (tourney_seeds['Season'] == self.season) & 
-                    (tourney_seeds['TeamID'] == team2)
-                ]['SeedNum'].iloc[0] if not pd.isna(team2) else '?'
-            except IndexError:
-                team1_seed = '?' if not pd.isna(team1) else 'NaN'
-                team2_seed = '?' if not pd.isna(team2) else 'NaN'
+            team1_seed = tourney_seeds[
+                (tourney_seeds['Season'] == self.season) & 
+                (tourney_seeds['TeamID'] == team1)
+            ]['SeedNum'].iloc[0] 
+            
+            team2_seed = tourney_seeds[
+                (tourney_seeds['Season'] == self.season) & 
+                (tourney_seeds['TeamID'] == team2)
+            ]['SeedNum'].iloc[0] 
             
             # Add a title that shows seeds with improved formatting
             plt.title(f'({team1_seed}) {team1_name} vs ({team2_seed}) {team2_name}', 

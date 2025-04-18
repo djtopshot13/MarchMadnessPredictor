@@ -89,16 +89,16 @@ def clean_ncaa_tourney_compact_results():
     file_name = "MNCAATourneyCompactResults.csv"
     ntcr_df = load_data(file_name)
 
-    ntcr_df.drop(columns=["LName", "WName"], inplace=True)
+    ntcr_df.drop(columns=["WTeamID", "LTeamID"], inplace=True)
 
-    ntcr_df.insert(column="WName", loc=2, value=None)
-    ntcr_df.insert(column="LName", loc=5, value=None)
+    ntcr_df.insert(column="WTeamID", loc=3, value=None)
+    ntcr_df.insert(column="LTeamID", loc=6, value=None)
 
     # Create dictionaries for to populate team names properly to their respective names
-    team_dict = dict(zip(teams_df.TeamID, teams_df.TeamName))
+    team_dict = dict(zip(teams_df.TeamName, teams_df.TeamID))
 
-    ntcr_df["WName"] = ntcr_df["WTeamID"].map(team_dict)
-    ntcr_df["LName"] = ntcr_df["LTeamID"].map(team_dict)
+    ntcr_df["WTeamID"] = ntcr_df["WName"].map(team_dict)
+    ntcr_df["LTeamID"] = ntcr_df["LName"].map(team_dict)
 
     write_data(ntcr_df, file_name)
 

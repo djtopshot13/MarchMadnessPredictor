@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\ehthe\CS5300\project5\MarchMadnessPredictor\pycaret_env
+set VIRTUAL_ENV=C:\Users\DJtop\Downloads\MarchMadnessPredictor\pycaret_env
 
 if not defined PROMPT set PROMPT=$P$G
 
