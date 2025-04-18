@@ -59,6 +59,9 @@ def extract_seed(seed_str):
 
 tourney_seeds['SeedNum'] = tourney_seeds['Seed'].apply(extract_seed)
 
+print(tourney_seeds[tourney_seeds['Season'] == 2025].to_string())
+
+
 # =============================================================================
 # 2. Build the Matchup Training Dataset from Tournament Results
 # =============================================================================
@@ -763,7 +766,7 @@ class BracketSimulation:
         region_name = {
                 'W': 'West',
                 'X': 'East',
-                'Y': 'Souh',
+                'Y': 'South',
                 'Z': 'Midwest',
                 'Final Four': 'Final Four',
                 'Championship': 'Championship'
