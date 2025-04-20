@@ -53,14 +53,25 @@ team_stats['AvgMargin'] = team_stats['AvgPoints'] - team_stats['AvgOppPoints']
 # Process Tournament Seeds
 # ----------------------------
 # Extract numeric seed values (e.g., "W01" becomes 1)
+# Modified extract_seed function
 def extract_seed(seed_str):
+    """Returns None (instead of NaN) if seed extraction fails"""
     match = re.search(r'[W-Z](\d+)$', seed_str)
-    return int(match.group(1)) if match else np.nan
+    return int(match.group(1)) if match else None  # ⬅️ Critical change: None instead of NaN
 
-tourney_seeds['SeedNum'] = tourney_seeds['Seed'].apply(extract_seed)
-tourney_seeds = tourney_seeds.dropna(subset=['SeedNum'])
-# After dropping NaN values, safely convert to integers
-tourney_seeds['SeedNum'] = tourney_seeds['SeedNum'].astype(int)
+# Assign -1 to invalid seeds (as shown in previous answer)
+tourney_seeds['SeedNum'] = tourney_seeds['Seed'].apply(extract_seed).fillna(-1).astype(int)
+
+# Drop rows where SeedNum is -1
+tourney_seeds = tourney_seeds[tourney_seeds['SeedNum'] != -1]
+
+# Reset index if needed
+tourney_seeds.reset_index(drop=True, inplace=True)
+
+print(team_stats[(team_stats['Season'] == 2025) & (team_stats['TeamID'] == 1291)])
+print(tourney_seeds[(tourney_seeds['Season'] == 2025) & (tourney_seeds['TeamID'] == 1291)])
+
+
 
 
 # tourney_seeds = tourney_seeds[tourney_seeds['SeedNum'].notna()]
@@ -79,6 +90,7 @@ def get_team_features(season, team_id):
     feat = team_features[(team_features['Season'] == season) & (team_features['TeamID'] == team_id)]
     feat = feat.dropna(subset=["SeedNum"])
     feat['SeedNum'] = feat['SeedNum'].astype(int)
+    # print(f"TeamFeaturesCheck: {feat}") #Add 
     return feat.iloc[0] if not feat.empty else None
 
 training_rows = []
@@ -319,6 +331,8 @@ class Bracket:
     def simulate_matchup(self, team1_id, team2_id):
         team1_feat = get_team_features(self.season, team1_id)
         team2_feat = get_team_features(self.season, team2_id)
+        if team2_feat is None:
+            team2_feat = get_team_features(self.season, 1291)
         
         if team1_feat is None or team2_feat is None:
             print(f"Missing features for team {team1_id} or {team2_id} in season {self.season}")
@@ -372,7 +386,8 @@ class Bracket:
         return team['TeamName'].iloc[0] if not team.empty else f"Team {team_id}"
 
 class BracketSimulation:
-    def __init__(self, season, model, scaler_obj=None, num_simulations=1000):
+    def __init__(self, tourney_seeds, season, model, scaler_obj=None, num_simulations=1000):
+        self.tourney_seeds = tourney_seeds
         self.season = season
         self.model = model
         self.scaler = scaler_obj
@@ -786,12 +801,18 @@ class BracketSimulation:
         team2_color = '#d81b60'  # Red
         
         for i, (matchup, stats) in enumerate(matchup_items):
-                
+            
+            print(matchup)
             team1, team2 = matchup
+
             
             # Get team names with error handling
             team1_name = self.brackets[0].get_team_name(team1)
-            team2_name = self.brackets[0].get_team_name(team2) 
+            if type(team2):
+                team2_name = self.brackets[0].get_team_name(team2) 
+            else: 
+                print("Invalid Team ID")
+                team2_name = self.brackets[0].get_team_name(1291)
             
             # Calculate percentages
             total = sum(stats.values())
@@ -830,14 +851,16 @@ class BracketSimulation:
             plt.xticks([25, 50, 75], ['25%', '50%', '75%'], color='#777777', fontsize=9)
             
             # Get seeds with error handling
-            team1_seed = tourney_seeds[
-                (tourney_seeds['Season'] == self.season) & 
-                (tourney_seeds['TeamID'] == team1)
+            team1_seed = self.tourney_seeds[
+                (self.tourney_seeds['Season'] == self.season) & 
+                (self.tourney_seeds['TeamID'] == team1)
             ]['SeedNum'].iloc[0] 
             
-            team2_seed = tourney_seeds[
-                (tourney_seeds['Season'] == self.season) & 
-                (tourney_seeds['TeamID'] == team2)
+            if type(team2) != int:
+                team2 = 1291
+            team2_seed = self.tourney_seeds[
+                (self.tourney_seeds['Season'] == self.season) & 
+                (self.tourney_seeds['TeamID'] == team2)
             ]['SeedNum'].iloc[0] 
             
             # Add a title that shows seeds with improved formatting
@@ -894,6 +917,6 @@ predictor = TournamentPredictor(season_to_simulate, early_model, middle_model, f
 
 # Run tournament simulation with round-based predictions
 print("\nTournament Predictions (Round-Based):")
-simulation = BracketSimulation(season_to_simulate, predictor, scaler, num_simulations=100)
+simulation = BracketSimulation(tourney_seeds, season_to_simulate, predictor, scaler, num_simulations=100)
 simulation.simulate_brackets()
 simulation.visualize_matchup_stats()
